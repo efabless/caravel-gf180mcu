@@ -1,0 +1,62 @@
+Things that went wrong when making simple_por that need to be fixed:
+--------------------------------------------------------------------
+(1) Resistors in the PDK don't simulate correctly (not getting length
+    and width) (ngspice/primitives library issue).
+
+(2) Capacitors in the PDK don't handle M correctly (behave as if it
+    is not there and defaults to 1) (ngspice/primitives library issue).
+
+(3) PDK pre-processor is not parsing the metal stack in the device
+    generator script.  It gets METALS5 correct but not THICKMET0P9;
+    mim_2p0fF_draw has top_type = m5 (correct) but contact_size =
+    0.36 (not correct).
+
+    (Fixed---note that "#elseif" in preproc.py is defined like
+    "elseifdef" because "#elseif defined(...)" does not work.)
+
+(4) Even after fixing (3), the contact spacing on the cap needed to
+    be corrected.
+    (Fixed)
+
+(5) Crosshair is missing from magic's Option window
+    (Fixed)
+
+(6) Magic reports "MV P-field overlap" error (DF.5).  Pwell should
+    be purely optional, right?  Otherwise, sub surround for pwell/
+    substrate should be 0.16um.
+    (Complicated;  rule is for deep nwell only;  probably okay to
+     use for no well, but strictly speaking not an error.  Fixed
+     by adding the 0.16um surround in the generator script.)
+
+(7) mvpmos is created with an nsubdiff guard ring, NOT mvnsubdiff.
+    Caused by compose rules.
+    (Fixed in tech file)
+
+(8) ppolyf_u_1k and ppolyf_u_1k_6p0:  Fixed the GDS input/output rules
+    while working on the layout.  However, there are multiple issues
+    both with the rule checking and the device generation.  Needs a
+    lot of work.
+
+    The biggest issue is that the contact must be an exact distance
+    from the resistor.  This will need to be somehow enforced by
+    DRC rules, maybe??
+
+(9) ppoly and mim (all res and cap) use different names for length and
+    width and need to be fixed in "res_convert" and "cap_convert".
+    (Fixed)
+    
+(10) All combinations of LV and MV diff are not allowed, but MV FET +
+     LV guard ring is not flagged (guard ring is transformed on
+     tapeout;  needs check for MV vs. LV well, such as is in sky130)
+     (Rule DV.9)
+     (Fixed)
+
+(11) Need separate 6v device for high-sheet-rho poly.
+     (Fixed)
+--------------------------------------------------------------------
+
+(12) MiM cap rules need fixing.  In particular, the bottom plate
+     spacing rule, and bottom plate surround of contact.  No
+     "cifsurround" rule, so will need to construct a cifwidth rule.
+
+

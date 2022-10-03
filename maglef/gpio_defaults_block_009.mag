@@ -1,0 +1,74 @@
+magic
+tech gf180mcuC
+magscale 1 10
+timestamp 1655473165
+<< obsm1 >>
+rect 499 218 13043 1122
+<< metal2 >>
+rect 0 5 56 589
+rect 1456 5 1512 322
+rect 3018 0 3074 589
+rect 4474 0 4530 564
+rect 6038 0 6094 589
+rect 7494 0 7550 589
+rect 9058 0 9114 589
+rect 10514 0 10570 589
+rect 12078 0 12134 589
+rect 13534 0 13590 589
+<< obsm2 >>
+rect 56 649 13534 1099
+rect 116 382 2958 649
+rect 3134 624 5978 649
+rect 116 237 1396 382
+rect 1572 237 2958 382
+rect 3134 237 4414 624
+rect 4590 237 5978 624
+rect 6154 237 7434 649
+rect 7610 237 8998 649
+rect 9174 237 10454 649
+rect 10630 237 12018 649
+rect 12194 237 13474 649
+<< obsm3 >>
+rect 519 237 13022 1099
+<< obsm4 >>
+rect 519 237 13022 1099
+<< metal5 >>
+rect 351 915 532 1235
+rect 351 115 541 435
+<< obsm5 >>
+rect 632 815 13247 1235
+rect 532 535 13247 815
+rect 641 115 13247 535
+<< labels >>
+rlabel metal2 s 0 5 56 589 6 gpio_defaults[0]
+port 1 nsew
+rlabel metal2 s 1456 5 1512 322 6 gpio_defaults[1]
+port 2 nsew
+rlabel metal2 s 3018 0 3074 589 6 gpio_defaults[2]
+port 3 nsew
+rlabel metal2 s 4474 0 4530 564 6 gpio_defaults[3]
+port 4 nsew
+rlabel metal2 s 6038 0 6094 589 6 gpio_defaults[4]
+port 5 nsew
+rlabel metal2 s 7494 0 7550 589 6 gpio_defaults[5]
+port 6 nsew
+rlabel metal2 s 9058 0 9114 589 6 gpio_defaults[6]
+port 7 nsew
+rlabel metal2 s 10514 0 10570 589 6 gpio_defaults[7]
+port 8 nsew
+rlabel metal2 s 12078 0 12134 589 6 gpio_defaults[8]
+port 9 nsew
+rlabel metal2 s 13534 0 13590 589 6 gpio_defaults[9]
+port 10 nsew
+rlabel metal5 s 351 915 532 1235 6 VDD
+port 11 nsew power default
+rlabel metal5 s 351 115 541 435 6 VSS
+port 12 nsew ground default
+<< properties >>
+string FIXED_BBOX 0 0 13590 1235
+string GDS_END 31370
+string GDS_FILE ../gds/gpio_defaults_block_009.gds.gz
+string GDS_START 9868
+string LEFclass BLOCK
+string LEFview TRUE
+<< end >>

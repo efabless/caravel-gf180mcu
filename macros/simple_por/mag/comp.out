@@ -1,0 +1,218 @@
+Warning: Equate pins:  cell pmos_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pmos_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pmos_6p0                        |Circuit 2: pmos_6p0                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pmos_6p0 and pmos_6p0 are equivalent.
+Warning: Equate pins:  cell nmos_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nmos_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nmos_6p0                        |Circuit 2: nmos_6p0                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nmos_6p0 and nmos_6p0 are equivalent.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k_6p0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k_6p0                 |Circuit 2: ppolyf_u_1k_6p0                 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u_1k_6p0 and ppolyf_u_1k_6p0 are equivalent.
+Warning: Equate pins:  cell mim_2p0fF is a placeholder, treated as a black box.
+Warning: Equate pins:  cell mim_2p0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: mim_2p0fF                       |Circuit 2: mim_2p0fF                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes mim_2p0fF and mim_2p0fF are equivalent.
+Flattening unmatched subcell pmos_6p0_MUW2NR in circuit std_inverter (0)(1 instance)
+Flattening unmatched subcell nmos_6p0_BUMBJU in circuit std_inverter (0)(1 instance)
+
+Class std_inverter (0):  Merged 1 parallel devices.
+Subcircuit summary:
+Circuit 1: std_inverter                    |Circuit 2: std_inverter                    
+-------------------------------------------|-------------------------------------------
+pmos_6p0 (2->1)                            |pmos_6p0 (1)                               
+nmos_6p0 (1)                               |nmos_6p0 (1)                               
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: std_inverter                    |Circuit 2: std_inverter                    
+-------------------------------------------|-------------------------------------------
+Vout                                       |Vout                                       
+Vin                                        |Vin                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes std_inverter and std_inverter are equivalent.
+Flattening unmatched subcell pmos_6p0_GUW2N9 in circuit std_buffer (0)(1 instance)
+Flattening unmatched subcell nmos_6p0_BUMBUS in circuit std_buffer (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: std_buffer                      |Circuit 2: std_buffer                      
+-------------------------------------------|-------------------------------------------
+pmos_6p0 (1)                               |pmos_6p0 (1)                               
+nmos_6p0 (1)                               |nmos_6p0 (1)                               
+std_inverter (1)                           |std_inverter (1)                           
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: std_buffer                      |Circuit 2: std_buffer                      
+-------------------------------------------|-------------------------------------------
+Vout                                       |Vout                                       
+Vin                                        |Vin                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes std_buffer and std_buffer are equivalent.
+Flattening unmatched subcell nmos_6p0_BJPB5U in circuit reduction_mirror (0)(1 instance)
+Flattening unmatched subcell pmos_6p0_EYEQQM in circuit reduction_mirror (0)(1 instance)
+Flattening unmatched subcell nmos_6p0_B4TB5U in circuit reduction_mirror (0)(1 instance)
+Flattening unmatched subcell pmos_6p0_CYEQN4 in circuit reduction_mirror (0)(6 instances)
+Flattening unmatched subcell nmos_6p0_BJXXPT in circuit reduction_mirror (0)(1 instance)
+Flattening unmatched subcell ppolyf_u_1k_6p0_TRTT7C in circuit reduction_mirror (0)(1 instance)
+Flattening unmatched subcell pmos_6p0_HUEQQM in circuit reduction_mirror (0)(1 instance)
+
+Class reduction_mirror (0):  Merged 19 parallel devices.
+Class reduction_mirror (0):  Merged 86 series devices.
+Subcircuit summary:
+Circuit 1: reduction_mirror                |Circuit 2: reduction_mirror                
+-------------------------------------------|-------------------------------------------
+nmos_6p0 (9->3)                            |nmos_6p0 (3)                               
+pmos_6p0 (21->8)                           |pmos_6p0 (8)                               
+ppolyf_u_1k_6p0 (88->2)                    |ppolyf_u_1k_6p0 (2)                        
+Number of devices: 13                      |Number of devices: 13                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Property errors were found.
+Netlists match uniquely.
+There were property errors.
+ppolyf_u_1k_6p0_TRTT7C_0/ppolyf_u_1k_6p0:5 vs. ppolyf_u_1k_6p0:R1:
+ r_length circuit1: 2.5e-05   circuit2: 0.002   (delta=195%, cutoff=0%)
+ S circuit1: 80   circuit2: 1   (delta=79, cutoff=0)
+ppolyf_u_1k_6p0_TRTT7C_0/ppolyf_u_1k_6p0:27 vs. ppolyf_u_1k_6p0:R2:
+ r_length circuit1: 2.5e-05   circuit2: 0.0002   (delta=156%, cutoff=0%)
+ S circuit1: 8   circuit2: 1   (delta=7, cutoff=0)
+
+Subcircuit pins:
+Circuit 1: reduction_mirror                |Circuit 2: reduction_mirror                
+-------------------------------------------|-------------------------------------------
+Vout                                       |Vout                                       
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes reduction_mirror and reduction_mirror are equivalent.
+Flattening unmatched subcell mim_2p0fF_8KW78G in circuit large_mimcap (0)(9 instances)
+
+Subcircuit summary:
+Circuit 1: large_mimcap                    |Circuit 2: large_mimcap                    
+-------------------------------------------|-------------------------------------------
+mim_2p0fF (9)                              |mim_2p0fF (9)                              
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match with 1 symmetry.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: large_mimcap                    |Circuit 2: large_mimcap                    
+-------------------------------------------|-------------------------------------------
+In                                         |In                                         
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes large_mimcap and large_mimcap are equivalent.
+Flattening unmatched subcell pmos_6p0_UXEQNM in circuit schmitt_inverter (0)(1 instance)
+Flattening unmatched subcell nmos_6p0_L3YBEV in circuit schmitt_inverter (0)(1 instance)
+Flattening unmatched subcell nmos_6p0_BJPB5U in circuit schmitt_inverter (0)(2 instances)
+Flattening unmatched subcell pmos_6p0_9YEQN4 in circuit schmitt_inverter (0)(1 instance)
+Flattening unmatched subcell pmos_6p0_9859UL in circuit schmitt_inverter (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: schmitt_inverter                |Circuit 2: schmitt_inverter                
+-------------------------------------------|-------------------------------------------
+pmos_6p0 (3)                               |pmos_6p0 (3)                               
+nmos_6p0 (3)                               |nmos_6p0 (3)                               
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: schmitt_inverter                |Circuit 2: schmitt_inverter                
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+Vin                                        |Vin                                        
+Vout                                       |Vout                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes schmitt_inverter and schmitt_inverter are equivalent.
+
+Removing zero-valued device r from cell simple_por (1) makes a better match
+Making another compare attempt.
+
+Subcircuit summary:
+Circuit 1: simple_por                      |Circuit 2: simple_por                      
+-------------------------------------------|-------------------------------------------
+std_buffer (1)                             |std_buffer (1)                             
+reduction_mirror (1)                       |reduction_mirror (1)                       
+large_mimcap (1)                           |large_mimcap (1)                           
+schmitt_inverter (1)                       |schmitt_inverter (1)                       
+std_inverter (1)                           |std_inverter (1)                           
+Number of devices: 5                       |Number of devices: 5                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: simple_por                      |Circuit 2: simple_por                      
+-------------------------------------------|-------------------------------------------
+vss                                        |vss                                        
+porb                                       |porb                                       
+por                                        |por                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes simple_por and simple_por are equivalent.
+Circuits match uniquely.
+The following cells had property errors:
+ reduction_mirror

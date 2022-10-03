@@ -1,0 +1,244 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO caravel_clocking
+  CLASS BLOCK ;
+  FOREIGN caravel_clocking ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 180.000 BY 70.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 23.940 3.620 25.540 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 66.700 3.620 68.300 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 109.460 3.620 111.060 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 152.220 3.620 153.820 63.020 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 10.890 174.460 12.490 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 26.430 174.460 28.030 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 41.970 174.460 43.570 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 57.510 174.460 59.110 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 45.320 3.620 46.920 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 88.080 3.620 89.680 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 130.840 3.620 132.440 63.020 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 18.660 174.460 20.260 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 34.200 174.460 35.800 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 3.060 49.740 174.460 51.340 ;
+    END
+  END VSS
+  PIN core_clk
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 64.120 66.000 64.680 70.000 ;
+    END
+  END core_clk
+  PIN ext_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 38.360 66.000 38.920 70.000 ;
+    END
+  END ext_clk
+  PIN ext_clk_sel
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 4.200 180.000 4.760 ;
+    END
+  END ext_clk_sel
+  PIN ext_reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 65.240 180.000 65.800 ;
+    END
+  END ext_reset
+  PIN pll_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 141.400 66.000 141.960 70.000 ;
+    END
+  END pll_clk
+  PIN pll_clk90
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 167.160 66.000 167.720 70.000 ;
+    END
+  END pll_clk90
+  PIN resetb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 12.600 66.000 13.160 70.000 ;
+    END
+  END resetb
+  PIN resetb_sync
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 115.640 66.000 116.200 70.000 ;
+    END
+  END resetb_sync
+  PIN sel2[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 38.920 180.000 39.480 ;
+    END
+  END sel2[0]
+  PIN sel2[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 47.880 180.000 48.440 ;
+    END
+  END sel2[1]
+  PIN sel2[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 56.280 180.000 56.840 ;
+    END
+  END sel2[2]
+  PIN sel[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 12.600 180.000 13.160 ;
+    END
+  END sel[0]
+  PIN sel[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 21.560 180.000 22.120 ;
+    END
+  END sel[1]
+  PIN sel[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 176.000 29.960 180.000 30.520 ;
+    END
+  END sel[2]
+  PIN user_clk
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 89.880 66.000 90.440 70.000 ;
+    END
+  END user_clk
+  OBS
+      LAYER Metal1 ;
+        RECT 3.360 2.110 174.160 63.020 ;
+      LAYER Metal2 ;
+        RECT 4.900 65.700 12.300 66.000 ;
+        RECT 13.460 65.700 38.060 66.000 ;
+        RECT 39.220 65.700 63.820 66.000 ;
+        RECT 64.980 65.700 89.580 66.000 ;
+        RECT 90.740 65.700 115.340 66.000 ;
+        RECT 116.500 65.700 141.100 66.000 ;
+        RECT 142.260 65.700 166.860 66.000 ;
+        RECT 168.020 65.700 173.740 66.000 ;
+        RECT 4.900 2.050 173.740 65.700 ;
+      LAYER Metal3 ;
+        RECT 4.850 64.940 175.700 65.660 ;
+        RECT 4.850 57.140 176.000 64.940 ;
+        RECT 4.850 55.980 175.700 57.140 ;
+        RECT 4.850 48.740 176.000 55.980 ;
+        RECT 4.850 47.580 175.700 48.740 ;
+        RECT 4.850 39.780 176.000 47.580 ;
+        RECT 4.850 38.620 175.700 39.780 ;
+        RECT 4.850 30.820 176.000 38.620 ;
+        RECT 4.850 29.660 175.700 30.820 ;
+        RECT 4.850 22.420 176.000 29.660 ;
+        RECT 4.850 21.260 175.700 22.420 ;
+        RECT 4.850 13.460 176.000 21.260 ;
+        RECT 4.850 12.300 175.700 13.460 ;
+        RECT 4.850 5.060 176.000 12.300 ;
+        RECT 4.850 3.900 175.700 5.060 ;
+        RECT 4.850 2.660 176.000 3.900 ;
+      LAYER Metal4 ;
+        RECT 16.660 63.320 172.060 65.710 ;
+        RECT 16.660 4.850 23.640 63.320 ;
+        RECT 25.840 4.850 45.020 63.320 ;
+        RECT 47.220 4.850 66.400 63.320 ;
+        RECT 68.600 4.850 87.780 63.320 ;
+        RECT 89.980 4.850 109.160 63.320 ;
+        RECT 111.360 4.850 130.540 63.320 ;
+        RECT 132.740 4.850 151.920 63.320 ;
+        RECT 154.120 4.850 172.060 63.320 ;
+      LAYER Metal5 ;
+        RECT 32.820 44.070 172.140 48.820 ;
+        RECT 32.820 36.300 172.140 41.470 ;
+        RECT 32.820 28.530 172.140 33.700 ;
+        RECT 32.820 20.760 172.140 25.930 ;
+        RECT 32.820 12.990 172.140 18.160 ;
+        RECT 32.820 5.180 172.140 10.390 ;
+  END
+END caravel_clocking
+END LIBRARY
+

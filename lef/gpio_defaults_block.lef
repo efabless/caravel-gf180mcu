@@ -1,0 +1,111 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gpio_defaults_block
+  CLASS BLOCK ;
+  FOREIGN gpio_defaults_block ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 67.950 BY 6.175 ;
+  PIN gpio_defaults[0]
+    PORT
+      LAYER Metal2 ;
+        RECT 0.000 0.025 0.280 2.945 ;
+    END
+  END gpio_defaults[0]
+  PIN gpio_defaults[1]
+    PORT
+      LAYER Metal2 ;
+        RECT 7.280 0.025 7.560 1.610 ;
+    END
+  END gpio_defaults[1]
+  PIN gpio_defaults[2]
+    PORT
+      LAYER Metal2 ;
+        RECT 15.090 0.000 15.370 2.945 ;
+    END
+  END gpio_defaults[2]
+  PIN gpio_defaults[3]
+    PORT
+      LAYER Metal2 ;
+        RECT 22.370 0.000 22.650 2.820 ;
+    END
+  END gpio_defaults[3]
+  PIN gpio_defaults[4]
+    PORT
+      LAYER Metal2 ;
+        RECT 30.190 0.000 30.470 2.945 ;
+    END
+  END gpio_defaults[4]
+  PIN gpio_defaults[5]
+    PORT
+      LAYER Metal2 ;
+        RECT 37.470 0.000 37.750 2.945 ;
+    END
+  END gpio_defaults[5]
+  PIN gpio_defaults[6]
+    PORT
+      LAYER Metal2 ;
+        RECT 45.290 0.000 45.570 2.945 ;
+    END
+  END gpio_defaults[6]
+  PIN gpio_defaults[7]
+    PORT
+      LAYER Metal2 ;
+        RECT 52.570 0.000 52.850 2.945 ;
+    END
+  END gpio_defaults[7]
+  PIN gpio_defaults[8]
+    PORT
+      LAYER Metal2 ;
+        RECT 60.390 0.000 60.670 2.945 ;
+    END
+  END gpio_defaults[8]
+  PIN gpio_defaults[9]
+    PORT
+      LAYER Metal2 ;
+        RECT 67.670 0.000 67.950 2.945 ;
+    END
+  END gpio_defaults[9]
+  PIN VDD
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT 1.755 4.575 2.660 6.175 ;
+    END
+  END VDD
+  PIN VSS
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT 1.755 0.575 2.705 2.175 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT 2.495 1.090 65.215 5.610 ;
+      LAYER Metal2 ;
+        RECT 0.280 3.245 67.670 5.495 ;
+        RECT 0.580 1.910 14.790 3.245 ;
+        RECT 0.580 1.185 6.980 1.910 ;
+        RECT 7.860 1.185 14.790 1.910 ;
+        RECT 15.670 3.120 29.890 3.245 ;
+        RECT 15.670 1.185 22.070 3.120 ;
+        RECT 22.950 1.185 29.890 3.120 ;
+        RECT 30.770 1.185 37.170 3.245 ;
+        RECT 38.050 1.185 44.990 3.245 ;
+        RECT 45.870 1.185 52.270 3.245 ;
+        RECT 53.150 1.185 60.090 3.245 ;
+        RECT 60.970 1.185 67.370 3.245 ;
+      LAYER Metal3 ;
+        RECT 2.595 1.185 65.110 5.495 ;
+      LAYER Metal4 ;
+        RECT 2.595 1.185 65.110 5.495 ;
+      LAYER Metal5 ;
+        RECT 3.160 4.075 66.235 6.175 ;
+        RECT 2.660 2.675 66.235 4.075 ;
+        RECT 3.205 0.575 66.235 2.675 ;
+  END
+END gpio_defaults_block
+END LIBRARY
+

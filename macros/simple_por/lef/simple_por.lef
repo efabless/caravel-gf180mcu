@@ -1,0 +1,55 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO simple_por
+  CLASS BLOCK ;
+  FOREIGN simple_por ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 125.780 BY 43.580 ;
+  PIN vdd
+    PORT
+      LAYER Metal5 ;
+        RECT 0.120 39.570 19.815 43.570 ;
+    END
+  END vdd
+  PIN vss
+    PORT
+      LAYER Metal5 ;
+        RECT 0.120 29.420 20.015 33.420 ;
+    END
+  END vss
+  PIN porb
+    PORT
+      LAYER Metal2 ;
+        RECT 124.450 31.710 125.545 32.710 ;
+    END
+  END porb
+  PIN por
+    PORT
+      LAYER Metal2 ;
+        RECT 124.445 34.085 125.540 35.085 ;
+    END
+  END por
+  OBS
+      LAYER Metal1 ;
+        RECT 0.450 0.495 125.560 43.580 ;
+      LAYER Metal2 ;
+        RECT 1.715 35.385 124.450 43.570 ;
+        RECT 1.715 33.785 124.145 35.385 ;
+        RECT 1.715 33.010 124.450 33.785 ;
+        RECT 1.715 31.410 124.150 33.010 ;
+        RECT 1.715 27.365 124.450 31.410 ;
+      LAYER Metal3 ;
+        RECT 19.615 29.040 89.535 43.570 ;
+      LAYER Metal4 ;
+        RECT 19.615 2.135 89.535 43.570 ;
+      LAYER Metal5 ;
+        RECT 20.315 39.070 89.535 43.570 ;
+        RECT 19.815 33.920 89.535 39.070 ;
+        RECT 20.515 28.920 89.535 33.920 ;
+        RECT 19.815 0.370 89.535 28.920 ;
+  END
+END simple_por
+END LIBRARY
+

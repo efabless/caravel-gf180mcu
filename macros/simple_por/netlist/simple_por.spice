@@ -1,0 +1,81 @@
+* Simple POR for GF180MCU (gf180mcuC)
+* Calibrated to about 40-50ms rise time
+
+* 5V Schmitt trigger inverter
+
+.subckt schmitt_inverter VDD VSS Vin Vout
+XM1 MP Vin VDD VDD pmos_6p0 W=6u L=0.55u
+XM2 Vout Vin MP VDD pmos_6p0 W=1u L=0.55u
+XM3 Vout Vin MN VSS nmos_6p0 W=2u L=0.7u
+XM4 MN Vin VSS VSS nmos_6p0 W=2u L=0.7u
+
+XM5 MP Vout VSS VDD pmos_6p0 W=0.5u L=2u
+X6 MN Vout VDD VSS nmos_6p0 W=7u L=1u
+.ends
+
+* 5V standard inverter
+.subckt std_inverter VDD VSS Vin Vout
+XM0 Vout Vin VDD VDD pmos_6p0 W=10u L=0.55u
+XM1 Vout Vin VSS VSS nmos_6p0 W=3u L=0.7u
+.ends
+
+* 5V standard buffer
+.subckt std_buffer VDD VSS Vin Vout
+XM2 Vmid Vin VDD VDD pmos_6p0 W=3u L=0.55u
+XM3 Vmid Vin VSS VSS nmos_6p0 W=1u L=0.7u
+X0 VDD VSS Vmid Vout std_inverter
+.ends
+
+
+* Charging capacitor made from MiM cap
+* (Why doesn't M=... work here?)
+
+.subckt large_mimcap In VSS
+XC1 In VSS mim_2p0fF c_width=10u c_length=10u
+XC2 In VSS mim_2p0fF c_width=10u c_length=10u
+XC3 In VSS mim_2p0fF c_width=10u c_length=10u
+XC4 In VSS mim_2p0fF c_width=10u c_length=10u
+XC5 In VSS mim_2p0fF c_width=10u c_length=10u
+XC6 In VSS mim_2p0fF c_width=10u c_length=10u
+XC7 In VSS mim_2p0fF c_width=10u c_length=10u
+XC8 In VSS mim_2p0fF c_width=10u c_length=10u
+XC9 In VSS mim_2p0fF c_width=10u c_length=10u
+.ends
+
+* Biasing circuit to charge the capacitor at a reduced
+* rate using a step-down current mirror.
+.subckt reduction_mirror VDD VSS Vout
+* NOTE:  ppolyf resistors do not simulate correctly!  Swap out
+* for ideal resistors for simulation.
+XR1 VDD nBias VSS ppolyf_u_1k_6p0 r_length=2000u r_width=1.0u
+XR2 nBias VSS VSS ppolyf_u_1k_6p0 r_length=200u r_width=1.0u
+* R1 VDD nBias 2Meg
+* R2 nBias VSS 200k	$ Prefer 210k
+* Stepped mirrors with cascodes on the pFET side.
+* 1st column
+XM0 net1 nBias VSS VSS nmos_6p0 W=2u L=0.7u
+XM1 net1 net1 net2 VDD pmos_6p0 W=2u L=0.55u
+XM2 net2 net2 VDD VDD pmos_6p0 W=16u L=0.55u
+* 2nd column (step down 8x)
+XM3 mid1 net2 VDD VDD pmos_6p0 W=2u L=0.55u
+XM4 net3 net1 mid1 VDD pmos_6p0 W=2u L=0.55u
+XM5 net3 net3 VSS VSS nmos_6p0 W=14u L=0.7u
+* 3rd column (step down 7x)
+XM6 net4 net3 VSS VSS nmos_6p0 W=2u L=0.7u
+XM7 net4 net4 net5 VDD pmos_6p0 W=2u L=0.55u
+XM8 net5 net5 VDD VDD pmos_6p0 W=14u L=0.55u
+* 4th column (step down 8x)
+XM9 mid2 net5 VDD VDD pmos_6p0 W=2u L=0.55u
+XM10 Vout net4 mid2 VDD pmos_6p0 W=2u L=0.55u
+.ends
+
+* Instantiate the entire POR
+
+.subckt simple_por vdd vss porb por
+X0 vdd vss capt reduction_mirror
+R0 capt cap 0
+X1 cap vss large_mimcap
+X2 vdd vss cap mid schmitt_inverter
+X3 vdd vss mid porb std_inverter
+X3 vdd vss mid por std_buffer
+.ends

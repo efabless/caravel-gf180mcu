@@ -1,0 +1,451 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gpio_control_block
+  CLASS BLOCK ;
+  FOREIGN gpio_control_block ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 30.000 BY 175.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 1.880 3.620 3.480 168.860 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 11.880 3.620 13.480 168.860 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 21.880 3.620 23.480 168.860 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 4.620 28.300 6.220 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 39.620 28.300 41.220 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 74.620 28.300 76.220 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 109.620 28.300 111.220 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 144.620 28.300 146.220 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 6.880 3.620 8.480 168.860 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 16.880 3.620 18.480 168.860 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 26.880 3.620 28.480 168.860 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 22.120 28.480 23.720 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 57.120 28.480 58.720 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 92.120 28.480 93.720 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 127.120 28.480 128.720 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 1.380 162.120 28.480 163.720 ;
+    END
+  END VSS
+  PIN gpio_defaults[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 24.500 174.720 30.500 175.000 ;
+    END
+  END gpio_defaults[0]
+  PIN gpio_defaults[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 26.740 167.440 30.500 167.720 ;
+    END
+  END gpio_defaults[1]
+  PIN gpio_defaults[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 27.300 159.630 30.500 159.910 ;
+    END
+  END gpio_defaults[2]
+  PIN gpio_defaults[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 152.350 30.500 152.630 ;
+    END
+  END gpio_defaults[3]
+  PIN gpio_defaults[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 144.530 30.500 144.810 ;
+    END
+  END gpio_defaults[4]
+  PIN gpio_defaults[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 137.250 30.500 137.530 ;
+    END
+  END gpio_defaults[5]
+  PIN gpio_defaults[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 129.430 30.500 129.710 ;
+    END
+  END gpio_defaults[6]
+  PIN gpio_defaults[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 122.150 30.500 122.430 ;
+    END
+  END gpio_defaults[7]
+  PIN gpio_defaults[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 27.580 114.330 30.500 114.610 ;
+    END
+  END gpio_defaults[8]
+  PIN gpio_defaults[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 28.980 107.050 30.500 107.330 ;
+    END
+  END gpio_defaults[9]
+  PIN mgmt_gpio_in
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 24.220 78.820 30.000 79.100 ;
+    END
+  END mgmt_gpio_in
+  PIN mgmt_gpio_oeb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 19.180 87.780 30.000 88.060 ;
+    END
+  END mgmt_gpio_oeb
+  PIN mgmt_gpio_out
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 27.020 92.260 30.000 92.540 ;
+    END
+  END mgmt_gpio_out
+  PIN one
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 23.940 83.300 30.000 83.580 ;
+    END
+  END one
+  PIN pad_gpio_drive_sel[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 67.510 0.500 67.890 ;
+    END
+  END pad_gpio_drive_sel[0]
+  PIN pad_gpio_drive_sel[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 66.800 0.500 67.180 ;
+    END
+  END pad_gpio_drive_sel[1]
+  PIN pad_gpio_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 3.760 0.500 4.140 ;
+    END
+  END pad_gpio_in
+  PIN pad_gpio_inen
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 63.235 0.500 63.615 ;
+    END
+  END pad_gpio_inen
+  PIN pad_gpio_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 5.220 0.500 5.600 ;
+    END
+  END pad_gpio_out
+  PIN pad_gpio_outen
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 4.490 0.500 4.870 ;
+    END
+  END pad_gpio_outen
+  PIN pad_gpio_pulldown_sel
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 64.290 0.500 64.670 ;
+    END
+  END pad_gpio_pulldown_sel
+  PIN pad_gpio_pullup_sel
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 68.655 0.500 69.035 ;
+    END
+  END pad_gpio_pullup_sel
+  PIN pad_gpio_schmitt_sel
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 71.260 0.500 71.640 ;
+    END
+  END pad_gpio_schmitt_sel
+  PIN pad_gpio_slew_sel
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT -0.500 5.950 0.500 6.330 ;
+    END
+  END pad_gpio_slew_sel
+  PIN resetn
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.060 169.810 11.340 176.000 ;
+    END
+  END resetn
+  PIN resetn_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.060 -1.000 11.340 13.020 ;
+    END
+  END resetn_out
+  PIN serial_clock
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 15.540 162.820 15.820 176.000 ;
+    END
+  END serial_clock
+  PIN serial_clock_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 15.540 -1.000 15.820 16.940 ;
+    END
+  END serial_clock_out
+  PIN serial_data_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 17.780 172.340 18.060 176.000 ;
+    END
+  END serial_data_in
+  PIN serial_data_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 13.300 -1.000 13.580 6.860 ;
+    END
+  END serial_data_out
+  PIN serial_load
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 13.300 165.620 13.580 176.000 ;
+    END
+  END serial_load
+  PIN serial_load_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 17.780 -1.000 18.060 2.940 ;
+    END
+  END serial_load_out
+  PIN user_gpio_in
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 26.460 81.060 30.000 81.340 ;
+    END
+  END user_gpio_in
+  PIN user_gpio_oeb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 29.000 90.020 30.000 90.300 ;
+    END
+  END user_gpio_oeb
+  PIN user_gpio_out
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 25.340 94.500 30.000 94.780 ;
+    END
+  END user_gpio_out
+  PIN zero
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 24.220 85.540 30.000 85.820 ;
+    END
+  END zero
+  OBS
+      LAYER Metal1 ;
+        RECT 1.680 3.620 28.480 169.810 ;
+      LAYER Metal2 ;
+        RECT 0.420 169.510 10.760 174.720 ;
+        RECT 11.640 169.510 13.000 174.720 ;
+        RECT 0.420 165.320 13.000 169.510 ;
+        RECT 13.880 165.320 15.240 174.720 ;
+        RECT 0.420 162.520 15.240 165.320 ;
+        RECT 16.120 172.040 17.480 174.720 ;
+        RECT 18.360 174.420 24.200 174.720 ;
+        RECT 18.360 172.040 29.820 174.420 ;
+        RECT 16.120 168.020 29.820 172.040 ;
+        RECT 16.120 167.140 26.440 168.020 ;
+        RECT 16.120 162.520 29.820 167.140 ;
+        RECT 0.420 160.210 29.820 162.520 ;
+        RECT 0.420 159.330 27.000 160.210 ;
+        RECT 0.420 152.930 29.820 159.330 ;
+        RECT 0.420 152.050 28.680 152.930 ;
+        RECT 0.420 145.110 29.820 152.050 ;
+        RECT 0.420 144.230 28.680 145.110 ;
+        RECT 0.420 137.830 29.820 144.230 ;
+        RECT 0.420 136.950 28.680 137.830 ;
+        RECT 0.420 130.010 29.820 136.950 ;
+        RECT 0.420 129.130 28.680 130.010 ;
+        RECT 0.420 122.730 29.820 129.130 ;
+        RECT 0.420 121.850 28.680 122.730 ;
+        RECT 0.420 114.910 29.820 121.850 ;
+        RECT 0.420 114.030 27.280 114.910 ;
+        RECT 0.420 107.630 29.820 114.030 ;
+        RECT 0.420 106.750 28.680 107.630 ;
+        RECT 0.420 71.940 29.820 106.750 ;
+        RECT 0.800 70.960 29.820 71.940 ;
+        RECT 0.420 69.335 29.820 70.960 ;
+        RECT 0.800 68.355 29.820 69.335 ;
+        RECT 0.420 68.190 29.820 68.355 ;
+        RECT 0.800 66.500 29.820 68.190 ;
+        RECT 0.420 64.970 29.820 66.500 ;
+        RECT 0.800 63.990 29.820 64.970 ;
+        RECT 0.420 63.915 29.820 63.990 ;
+        RECT 0.800 62.935 29.820 63.915 ;
+        RECT 0.420 17.240 29.820 62.935 ;
+        RECT 0.420 13.320 15.240 17.240 ;
+        RECT 0.420 6.630 10.760 13.320 ;
+        RECT 0.800 3.460 10.760 6.630 ;
+        RECT 0.420 2.660 10.760 3.460 ;
+        RECT 11.640 7.160 15.240 13.320 ;
+        RECT 11.640 2.660 13.000 7.160 ;
+        RECT 13.880 2.660 15.240 7.160 ;
+        RECT 16.120 3.240 29.820 17.240 ;
+        RECT 16.120 2.660 17.480 3.240 ;
+        RECT 18.360 2.660 29.820 3.240 ;
+      LAYER Metal3 ;
+        RECT 0.370 95.080 29.870 168.700 ;
+        RECT 0.370 94.200 25.040 95.080 ;
+        RECT 0.370 92.840 29.870 94.200 ;
+        RECT 0.370 91.960 26.720 92.840 ;
+        RECT 0.370 90.600 29.870 91.960 ;
+        RECT 0.370 89.720 28.700 90.600 ;
+        RECT 0.370 88.360 29.870 89.720 ;
+        RECT 0.370 87.480 18.880 88.360 ;
+        RECT 0.370 86.120 29.870 87.480 ;
+        RECT 0.370 85.240 23.920 86.120 ;
+        RECT 0.370 83.880 29.870 85.240 ;
+        RECT 0.370 83.000 23.640 83.880 ;
+        RECT 0.370 81.640 29.870 83.000 ;
+        RECT 0.370 80.760 26.160 81.640 ;
+        RECT 0.370 79.400 29.870 80.760 ;
+        RECT 0.370 78.520 23.920 79.400 ;
+        RECT 0.370 3.780 29.870 78.520 ;
+      LAYER Metal4 ;
+        RECT 0.980 13.810 1.580 160.910 ;
+        RECT 3.780 13.810 6.580 160.910 ;
+        RECT 8.780 13.810 11.580 160.910 ;
+        RECT 13.780 13.810 16.580 160.910 ;
+        RECT 18.780 13.810 21.580 160.910 ;
+        RECT 23.780 13.810 26.580 160.910 ;
+        RECT 28.780 13.810 29.820 160.910 ;
+  END
+END gpio_control_block
+END LIBRARY
+
