@@ -1264,7 +1264,7 @@ endif
 
 .PHONY: pdk-with-volare
 pdk-with-volare: check-python install-volare 
-	@volare enable ${OPEN_PDKS_COMMIT}
+	@volare enable --pdk gf180mcu ${OPEN_PDKS_COMMIT}
 
 check-python:
 ifeq ($(shell which python3),)
