@@ -26,15 +26,13 @@
     /* NOTE: Need to pass the PDK root directory to iverilog with option -I */
 	`default_nettype wire
     `ifdef  EF_STYLE 
-	`include "libs.ref/verilog/gf180mcu_io/GF018green_ipio_5p0c_75.v"
-	`include "libs.ref/verilog/gf180mcu_sc7_hv/GF018hv5v_mcu_sc7_udp.v"
-	`include "libs.ref/verilog/gf180mcu_sc7_hv/GF018hv5v_mcu_sc7.v"
-	`include "libs.ref/verilog/gf180mcu_sram/GF018_5VGreen_SRAM_1P_512x8M8WM1.v"
+	`include "libs.ref/verilog/gf180mcu_fd_io/gf180mcu_fd_io.v"
+	`include "libs.ref/verilog/gf180mcu_fd_sc_mcu7t5v0/gf180mcu_fd_sc_mcu7t5v0.v"
+	`include "libs.ref/verilog/gf180mcu_fd_ip_sram/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
     `else 
-	`include "libs.ref/gf180mcu_io/verilog/GF018green_ipio_5p0c_75.v"
-	`include "libs.ref/gf180mcu_sc7_hv/verilog/GF018hv5v_mcu_sc7_udp.v"
-	`include "libs.ref/gf180mcu_sc7_hv/verilog/GF018hv5v_mcu_sc7.v"
-	`include "libs.ref/gf180mcu_sram/verilog/GF018_5VGreen_SRAM_1P_512x8M8WM1.v"
+	`include "libs.ref/gf180mcu_fd_io/verilog/gf180mcu_fd_io.v"
+	`include "libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/gf180mcu_fd_sc_mcu7t5v0.v"
+	`include "libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
     `endif 
 
 	`default_nettype none
