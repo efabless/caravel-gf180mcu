@@ -660,27 +660,242 @@ module caravel (
     wire [`MPRJ_IO_PADS*10-1:0] gpio_defaults;
 
     /* Fixed defaults for the first 5 GPIO pins */
+    /* GPIO 0 = 009 = output with bidirectional control */
+    /* GPIO 1 = 009 = output with bidirectional control (SDO) */
+    /* GPIO 2 = 007 = input (SDI) */
+    /* GPIO 3 = 087 = input with pullup (CSB) */
+    /* GPIO 4 = 007 = input (SCK) */
 
     gpio_defaults_block #(
 	.GPIO_CONFIG_INIT(10'h009)
-    ) gpio_defaults_block_0 [1:0] (
+    ) gpio_defaults_block_0 (
     	`ifdef USE_POWER_PINS
 	    .VDD(VDD),
 	    .VSS(VSS),
         `endif
-	.gpio_defaults(gpio_defaults[19:0])
+	.gpio_defaults(gpio_defaults[9:0])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h009)
+    ) gpio_defaults_block_1 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[19:10])
     );
 
     gpio_defaults_block #(
 	.GPIO_CONFIG_INIT(10'h007)
-    ) gpio_defaults_block_2 [2:0] (
+    ) gpio_defaults_block_2 (
     	`ifdef USE_POWER_PINS
 	    .VDD(VDD),
 	    .VSS(VSS),
         `endif
-	.gpio_defaults(gpio_defaults[49:20])
+	.gpio_defaults(gpio_defaults[29:20])
     );
 
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h087)
+    ) gpio_defaults_block_3 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[39:30])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h007)
+    ) gpio_defaults_block_4 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[49:40])
+    );
+
+    /* Via-programmable defaults for the rest of the GPIO pins */
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_5_INIT)
+    ) gpio_defaults_block_5 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[59:50])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_6_INIT)
+    ) gpio_defaults_block_6 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[69:60])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_7_INIT)
+    ) gpio_defaults_block_7 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[79:70])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_8_INIT)
+    ) gpio_defaults_block_8 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[89:80])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_9_INIT)
+    ) gpio_defaults_block_9 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[99:90])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_10_INIT)
+    ) gpio_defaults_block_10 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[109:100])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_11_INIT)
+    ) gpio_defaults_block_11 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[119:110])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_12_INIT)
+    ) gpio_defaults_block_12 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[129:120])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_13_INIT)
+    ) gpio_defaults_block_13 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[139:130])
+    /* Via-programmable defaults for the rest of the GPIO pins */
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_5_INIT)
+    ) gpio_defaults_block_5 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[59:50])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_6_INIT)
+    ) gpio_defaults_block_6 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[69:60])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_7_INIT)
+    ) gpio_defaults_block_7 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[79:70])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_8_INIT)
+    ) gpio_defaults_block_8 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[89:80])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_9_INIT)
+    ) gpio_defaults_block_9 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[99:90])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_10_INIT)
+    ) gpio_defaults_block_10 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[109:100])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_11_INIT)
+    ) gpio_defaults_block_11 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[119:110])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_12_INIT)
+    ) gpio_defaults_block_12 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[129:120])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(`USER_CONFIG_GPIO_13_INIT)
+    ) gpio_defaults_block_13 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[139:130])
     /* Via-programmable defaults for the rest of the GPIO pins */
 
     gpio_defaults_block #(
