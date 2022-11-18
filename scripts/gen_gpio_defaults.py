@@ -45,16 +45,16 @@
 # Signal                Via position (um)
 # name		        X       Y
 #-------------------------------------------------------------------
-# gpio_defaults[0]   	 7.26   2.785
-# gpio_defaults[1]	13.98   2.785
-# gpio_defaults[2]	19.58   2.785
-# gpio_defaults[3]	26.30   2.785
-# gpio_defaults[4]	31.90   2.785
-# gpio_defaults[5]	38.62   2.785
-# gpio_defaults[6]	44.22   2.785
-# gpio_defaults[7]   	50.94   2.785
-# gpio_defaults[8]   	56.54   2.785
-# gpio_defaults[9]   	63.26   2.785
+# gpio_defaults[0]   	 4.765  1.395
+# gpio_defaults[1]	 4.765  6.445
+# gpio_defaults[2]	 4.765  9.235
+# gpio_defaults[3]	 4.765 14.285
+# gpio_defaults[4]	11.485  1.395
+# gpio_defaults[5]	11.485  6.445
+# gpio_defaults[6]	11.485  9.235
+# gpio_defaults[7]   	17.085  9.235
+# gpio_defaults[8]   	17.085  1.395
+# gpio_defaults[9]   	17.085  6.445
 #-------------------------------------------------------------------
 
 import os
@@ -76,9 +76,10 @@ def usage():
 if __name__ == '__main__':
 
     # Coordinate pairs in microns for the zero position on each bit
-    via_pos = [[7.26, 2.785], [13.98, 2.785], [19.58, 2.785], [26.30, 2.785],
-	[31.90, 2.785], [38.62, 2.785], [44.22, 2.785], [50.94, 2.785],
-   	[56.54, 2.785], [63.26, 2.785]]
+    via_pos = [[4.765,  1.395], [4.765,  6.445], [4.765,  9.235],
+	[4.765, 14.285], [11.485, 1.395], [11.485, 6.445],
+	[11.485, 9.235], [17.085, 9.235], [17.085, 1.395],
+	[17.085, 6.445]]
 
     optionlist = []
     arguments = []
