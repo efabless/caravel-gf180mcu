@@ -60,6 +60,16 @@
 // The management side still uses OE on selected GPIO, and
 // OE is grounded on all GPIO that have no associated
 // bidirectional function for the management SoC.
+//
+// Updated 11/18/2022:
+// For GF180MCU, porting changes made to the sky130 version
+// since the GF180MCU test chip tapeout.  Includes ensuring
+// that all signals are declared before being used, and
+// correcting the default configuration for the CSB pin to
+// a pull-up type.  Added one clock cycle to the wishbone
+// back-door interface to guarantee the reset of the transfer
+// bit so that the GPIO configuration doesn't get triggered
+// multiple times.
 //-----------------------------------------------------------
 
 //------------------------------------------------------------
@@ -243,6 +253,18 @@ module housekeeping #(
     wire	cwstb;	// Combination of SPI write strobe and back door write strobe
     wire	csclk;	// Combination of SPI SCK and back door access trigger
 
+    wire	serial_data_1;
+    wire	serial_data_2;
+    wire	serial_clock;
+    wire	serial_resetn;
+    wire	serial_load;
+
+    reg		serial_busy;
+
+    wire [11:0] mfgr_id;
+    wire [7:0]  prod_id;
+    wire [31:0] mask_rev;
+
     // Housekeeping side 3-wire interface to GPIOs (see below)
     wire [`MPRJ_IO_PADS-1:0] mgmt_gpio_out;
 
@@ -313,6 +335,7 @@ module housekeeping #(
     `define WBBD_SETUP3	4'h7	/* Apply address and data for byte 4 of 4 */
     `define WBBD_RW3	4'h8	/* Latch data for byte 4 of 4 */
     `define WBBD_DONE	4'h9	/* Send ACK back to wishbone */
+    `define WBBD_RESET	4'ha	/* Send ACK back to wishbone */
 
     assign sys_select = (wb_adr_i[31:8] == SYS_BASE_ADR[31:8]);
     assign gpio_select = (wb_adr_i[31:8] == GPIO_BASE_ADR[31:8]);
@@ -602,6 +625,7 @@ module housekeeping #(
 	end else begin
 	    case (wbbd_state)
 		`WBBD_IDLE: begin
+		    wbbd_sck <= 1'b0;
 		    wbbd_busy <= 1'b0;
 		    if ((sys_select | gpio_select | spi_select) &&
 	    	    		 wb_cyc_i && wb_stb_i) begin
@@ -690,6 +714,13 @@ module housekeeping #(
 		    wbbd_sck <= 1'b0;
 		    wb_ack_o <= 1'b0;	// Reset for next access
 		    wbbd_write <= 1'b0;
+		    wbbd_state <= `WBBD_RESET;
+		end
+		`WBBD_RESET: begin
+		    wbbd_busy <= 1'b1;
+		    wbbd_sck <= 1'b1;
+		    wb_ack_o <= 1'b0;
+		    wbbd_write <= 1'b0;
 		    wbbd_state <= `WBBD_IDLE;
 		end
 	    endcase
@@ -702,7 +733,7 @@ module housekeeping #(
 	.reset(~porb),
     	.SCK(mgmt_gpio_in[4]),
     	.SDI(mgmt_gpio_in[2]),
-    	.CSB((spi_is_active) ? mgmt_gpio_in[3] : 1'b1),
+    	.CSB((spi_is_enabled) ? mgmt_gpio_in[3] : 1'b1),
     	.SDO(sdo),
     	.sdoenb(sdo_enb),
     	.idata(odata),
@@ -827,12 +858,6 @@ module housekeeping #(
     reg serial_clock_pre;
     reg serial_resetn_pre;
     reg serial_load_pre;
-    reg serial_busy;
-    wire serial_data_1;
-    wire serial_data_2;
-    wire serial_clock;
-    wire serial_resetn;
-    wire serial_load;
     reg [IO_CTRL_BITS-1:0] serial_data_staging_1;
     reg [IO_CTRL_BITS-1:0] serial_data_staging_2;
 
@@ -938,10 +963,6 @@ module housekeeping #(
 
     // SPI Identification
 
-    wire [11:0] mfgr_id;
-    wire [7:0]  prod_id;
-    wire [31:0] mask_rev;
-
     assign mfgr_id = 12'h456;		// Hard-coded
     assign prod_id = 8'h20;		// Hard-coded (hex 20 = GF caravel)
     assign mask_rev = mask_rev_in;	// Copy in to out.
@@ -997,7 +1018,12 @@ module housekeeping #(
 		if ((j < 2) || (j >= `MPRJ_IO_PADS - 2)) begin
 		    gpio_configure[j] <= 'h009;
                 end else begin
-	            gpio_configure[j] <= 'h007;
+		    if (j == 3) begin
+			// j == 3 corresponds to CSB, which is a weak pull-up
+			gpio_configure[j] <= 'h087;
+		    end else begin
+			gpio_configure[j] <= 'h007;
+		    end
 		end
 	    end
 
