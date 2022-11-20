@@ -55,8 +55,8 @@ module chip_io(
 	output flash_io1_di_core,
 
 	// Constant value inputs for fixed GPIO configuration
-	input [5:0] const_zero;
-	input [1:0] const_one;
+	input [5:0] const_zero,
+	input [1:0] const_one,
 
 	// User project IOs
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,

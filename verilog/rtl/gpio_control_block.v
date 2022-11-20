@@ -15,7 +15,7 @@
 
 `default_nettype none
 /*
- *---------------------------------------------------------------------
+ *-------------------------------------------gpio_load_2--------------------------
  *
  * This module instantiates a shift register chain that passes through
  * each gpio cell.  These are connected end-to-end around the padframe
@@ -132,9 +132,18 @@ module gpio_control_block #(
 
     /* Propagate the clock and reset signals so that they aren't wired	*/
     /* all over the chip, but are just wired between the blocks.	*/
-    assign serial_clock_out = serial_clock;
-    assign resetn_out = resetn;
-    assign serial_load_out = serial_load;
+    // assign serial_clock_out = serial_clock;
+    // assign resetn_out = resetn;
+    // assign serial_load_out = serial_load;
+    (* keep *) gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 BUF[2:0] (
+		`ifdef USE_POWER_PINS
+			.VDD(VDD),
+			.VSS(VSS),
+		`endif
+		.I({serial_clock, resetn, serial_load}), 
+		.Z({serial_clock_out, resetn_out, serial_load_out})); 
+
+
 
     always @(posedge serial_clock or negedge resetn) begin
 	if (resetn == 1'b0) begin
