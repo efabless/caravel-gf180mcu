@@ -115,46 +115,26 @@ module gpio_control_block #(
     wire	zero;
 
     wire user_gpio_in;
-    wire serial_data_pre;
-    wire serial_data_post_1;
-    wire serial_data_post_2;
+    reg  serial_data_out;
 
     /* Serial shift for the above (latched) values */
     reg [PAD_CTRL_BITS-1:0] shift_register;
 
-    /* Create internal reset and load signals from input reset and clock */
-    assign serial_data_pre = shift_register[PAD_CTRL_BITS-1]; 
+    /* Latch the output on the clock negative edge */
+    always @(negedge serial_clock or negedge resetn) begin
+	if (resetn == 1'b0) begin
+	    /* Clear the shift register output */
+	    serial_data_out <= 1'b0;
+	end else begin
+	    serial_data_out <= shift_register[PAD_CTRL_BITS-1];
+	end
+    end
 
     /* Propagate the clock and reset signals so that they aren't wired	*/
     /* all over the chip, but are just wired between the blocks.	*/
     assign serial_clock_out = serial_clock;
     assign resetn_out = resetn;
     assign serial_load_out = serial_load;
-
-    /* Serial data should be buffered again to avoid hold violations	*/
-    /* Do this in two ways:  (1) Add internal delay cells, and (2)	*/
-    /* add a final logic gate after that.  The logic gate is		*/
-    /* synthesized and will be sized appropriately for an output buffer	*/
-
-    gf180mcu_fd_sc_mcu7t5v0__dlya_2 data_delay_1 (
-`ifdef USE_POWER_PINS
-            .VDD(VDD),
-            .VSS(VSS),
-`endif
-            .I(serial_data_pre),
-            .Z(serial_data_post_1)
-    );
-
-    gf180mcu_fd_sc_mcu7t5v0__dlya_2 data_delay_2 (
-`ifdef USE_POWER_PINS
-            .VDD(VDD),
-            .VSS(VSS),
-`endif
-            .I(serial_data_post_1),
-            .Z(serial_data_post_2)
-    );
-
-    assign serial_data_out = serial_data_post_2 & one;
 
     always @(posedge serial_clock or negedge resetn) begin
 	if (resetn == 1'b0) begin

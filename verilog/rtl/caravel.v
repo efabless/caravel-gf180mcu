@@ -193,6 +193,11 @@ module caravel (
     wire flash_io0_do,  flash_io1_do;
     wire flash_io0_di,  flash_io1_di;
 
+    // Constant value inputs for chip_io (taken from control
+    // blocks and routed during top-level routing)
+    wire [4:0] const_zero;
+    wire [2:0] const_one;
+
     chip_io padframe(
 	// Package Pins
 `ifdef USE_POWER_PINS
@@ -247,7 +252,11 @@ module caravel (
 	.mprj_io_pullup_sel(mprj_io_pullup_sel),
 	.mprj_io_pulldown_sel(mprj_io_pulldown_sel),
 	.mprj_io_slew_sel(mprj_io_slew_sel),
-	.mprj_io_drive_sel(mprj_io_drive_sel)
+	.mprj_io_drive_sel(mprj_io_drive_sel),
+
+	// constant value inputs
+	.const_zero({const_zero[4], const_zero}),
+	.const_one(const_one[1:0])
     );
 
     // SoC core
@@ -660,25 +669,60 @@ module caravel (
     wire [`MPRJ_IO_PADS*10-1:0] gpio_defaults;
 
     /* Fixed defaults for the first 5 GPIO pins */
+    /* GPIO 0 = 009 = output with bidirectional control */
+    /* GPIO 1 = 009 = output with bidirectional control (SDO) */
+    /* GPIO 2 = 007 = input (SDI) */
+    /* GPIO 3 = 087 = input with pullup (CSB) */
+    /* GPIO 4 = 007 = input (SCK) */
 
     gpio_defaults_block #(
 	.GPIO_CONFIG_INIT(10'h009)
-    ) gpio_defaults_block_0 [1:0] (
+    ) gpio_defaults_block_0 (
     	`ifdef USE_POWER_PINS
 	    .VDD(VDD),
 	    .VSS(VSS),
         `endif
-	.gpio_defaults(gpio_defaults[19:0])
+	.gpio_defaults(gpio_defaults[9:0])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h009)
+    ) gpio_defaults_block_1 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[19:10])
     );
 
     gpio_defaults_block #(
 	.GPIO_CONFIG_INIT(10'h007)
-    ) gpio_defaults_block_2 [2:0] (
+    ) gpio_defaults_block_2 (
     	`ifdef USE_POWER_PINS
 	    .VDD(VDD),
 	    .VSS(VSS),
         `endif
-	.gpio_defaults(gpio_defaults[49:20])
+	.gpio_defaults(gpio_defaults[29:20])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h087)
+    ) gpio_defaults_block_3 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[39:30])
+    );
+
+    gpio_defaults_block #(
+	.GPIO_CONFIG_INIT(10'h007)
+    ) gpio_defaults_block_4 (
+    	`ifdef USE_POWER_PINS
+	    .VDD(VDD),
+	    .VSS(VSS),
+        `endif
+	.gpio_defaults(gpio_defaults[49:40])
     );
 
     /* Via-programmable defaults for the rest of the GPIO pins */
@@ -1052,7 +1096,7 @@ module caravel (
 	.mgmt_gpio_oeb(mgmt_io_oeb[1:0]),
 
         .one(),
-        .zero(),
+        .zero(const_zero[1:0]),
 
     	// Serial data chain for pad configuration
     	.serial_data_in(gpio_serial_link_1_shifted[1:0]),
@@ -1198,8 +1242,8 @@ module caravel (
 	.mgmt_gpio_out(mgmt_io_out[(`MPRJ_IO_PADS-1):(`MPRJ_IO_PADS-3)]),
 	.mgmt_gpio_oeb(mgmt_io_oeb[4:2]),
 
-        .one(),
-        .zero(),
+        .one(const_one),
+        .zero(const_zero[4:2]),
 
     	// Serial data chain for pad configuration
     	.serial_data_in(gpio_serial_link_2_shifted[(`MPRJ_IO_PADS_2-1):(`MPRJ_IO_PADS_2-3)]),
@@ -1316,6 +1360,11 @@ module caravel (
 
 `ifdef TOP_ROUTING
     caravel_gf180_pdn caravel_gf180_pdn();
+    copyright_block copyright_block();
+    caravel_logo caravel_logo();
+    caravel_motto caravel_motto();
+    open_source open_source();
+    user_id_textblock user_id_textblock();
 `endif
 endmodule
 // `default_nettype wire

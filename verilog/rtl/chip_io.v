@@ -54,6 +54,10 @@ module chip_io(
 	output flash_io0_di_core,
 	output flash_io1_di_core,
 
+	// Constant value inputs for fixed GPIO configuration
+	input [5:0] const_zero;
+	input [1:0] const_one;
+
 	// User project IOs
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,
 	input [`MPRJ_IO_PADS-1:0] mprj_io_out,
@@ -204,8 +208,8 @@ module chip_io(
 		.DVSS(VSS),
 		.VDD(VDD),
 		.VSS(VSS),
-		.PU(VSS),
-		.PD(VSS),
+		.PU(const_zero[4]),
+		.PD(const_zero[4]),
 		.PAD(clock),
 		.Y(clock_core)
 	);
@@ -236,14 +240,14 @@ module chip_io(
 		.VDD(VDD),
 		.VSS(VSS),
 		.PAD(flash_io0),
-		.CS(VSS),
-		.SL(VSS),
+		.CS(const_zero[1]),
+		.SL(const_zero[1]),
 		.IE(flash_io0_ie_core),
 		.OE(flash_io0_oe_core),
-		.PU(VSS),
-		.PD(VSS),
-		.PDRV0(VSS),
-		.PDRV1(VSS),
+		.PU(const_zero[1]),
+		.PD(const_zero[1]),
+		.PDRV0(const_zero[1]),
+		.PDRV1(const_zero[1]),
 		.A(flash_io0_do_core),
 		.Y(flash_io0_di_core)
 	);
@@ -254,14 +258,14 @@ module chip_io(
 		.VDD(VDD),
 		.VSS(VSS),
 		.PAD(flash_io1),
-		.CS(VSS),
-		.SL(VSS),
+		.CS(const_zero[0]),
+		.SL(const_zero[0]),
 		.IE(flash_io1_ie_core),
 		.OE(flash_io1_oe_core),
-		.PU(VSS),
-		.PD(VSS),
-		.PDRV0(VSS),
-		.PDRV1(VSS),
+		.PU(const_zero[0]),
+		.PD(const_zero[0]),
+		.PDRV0(const_zero[0]),
+		.PDRV1(const_zero[0]),
 		.A(flash_io1_do_core),
 		.Y(flash_io1_di_core)
 	);
@@ -272,14 +276,14 @@ module chip_io(
 		.VDD(VDD),
 		.VSS(VSS),
 		.PAD(flash_csb),
-		.CS(VSS),
-		.SL(VSS),
-		.IE(VSS),
+		.CS(const_zero[3]),
+		.SL(const_zero[3]),
+		.IE(const_zero[3]),
 		.OE(flash_csb_oe_core),
-		.PU(VDD),
-		.PD(VSS),
-		.PDRV0(VSS),
-		.PDRV1(VSS),
+		.PU(const_one[0]),
+		.PD(const_zero[3]),
+		.PDRV0(const_zero[3]),
+		.PDRV1(const_zero[3]),
 		.A(flash_csb_core),
 		.Y()
 	);
@@ -290,14 +294,14 @@ module chip_io(
 		.VDD(VDD),
 		.VSS(VSS),
 		.PAD(flash_clk),
-		.CS(VSS),
-		.SL(VSS),
-		.IE(VSS),
+		.CS(const_zero[2]),
+		.SL(const_zero[2]),
+		.IE(const_zero[2]),
 		.OE(flash_clk_oe_core),
-		.PU(VDD),
-		.PD(VSS),
-		.PDRV0(VSS),
-		.PDRV1(VSS),
+		.PU(const_zero[2]),
+		.PD(const_zero[2]),
+		.PDRV0(const_zero[2]),
+		.PDRV1(const_zero[2]),
 		.A(flash_clk_core),
 		.Y()
 	);
@@ -309,8 +313,8 @@ module chip_io(
 		.DVSS(VSS),
 		.VDD(VDD),
 		.VSS(VSS),
-		.PU(VSS),
-		.PD(VDD),
+		.PU(const_one[1]),
+		.PD(const_zero[5]),
 		.PAD(resetb),
 		.Y(resetb_core)
 	);
