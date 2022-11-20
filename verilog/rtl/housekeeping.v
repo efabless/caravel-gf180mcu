@@ -297,6 +297,13 @@ module housekeeping #(
     reg		wb_ack_o;	/* acknowledge signal back to wishbone bus */
     reg [31:0]	wb_dat_o;	/* data output to wishbone bus */
 
+
+    wire [11:0] mfgr_id;
+    wire [7:0]  prod_id;
+    wire [31:0] mask_rev;
+    reg serial_busy;
+
+
     // This defines a state machine that accesses the SPI registers through
     // the back door wishbone interface.  The process is relatively slow
     // since the SPI data are byte-wide, so four individual accesses are
@@ -588,6 +595,17 @@ module housekeeping #(
 	end
     endfunction
 
+	
+    // SPI is considered active when the GPIO for CSB is set to input and
+    // CSB is low.  SPI is considered "busy" when rdstb or wrstb are high,
+    // indicating that the SPI will read or write a byte on the next SCK
+    // transition.
+
+    wire spi_is_enabled = (gpio_configure[3][IE]) & (~hkspi_disable);
+    wire spi_is_active = spi_is_enabled && (mgmt_gpio_in[3] == 1'b0);
+    wire spi_is_busy = spi_is_active && (rdstb || wrstb);
+
+
     /* Wishbone back-door state machine and address translation */
 
     always @(posedge wb_clk_i or posedge wb_rst_i) begin
@@ -718,14 +736,7 @@ module housekeeping #(
     	.pass_thru_user_reset(pass_thru_user_reset)
     );
 
-    // SPI is considered active when the GPIO for CSB is set to input and
-    // CSB is low.  SPI is considered "busy" when rdstb or wrstb are high,
-    // indicating that the SPI will read or write a byte on the next SCK
-    // transition.
 
-    wire spi_is_enabled = (gpio_configure[3][IE]) & (~hkspi_disable);
-    wire spi_is_active = spi_is_enabled && (mgmt_gpio_in[3] == 1'b0);
-    wire spi_is_busy = spi_is_active && (rdstb || wrstb);
 
     // GPIO data handling to and from the management SoC
 
@@ -827,7 +838,6 @@ module housekeeping #(
     reg serial_clock_pre;
     reg serial_resetn_pre;
     reg serial_load_pre;
-    reg serial_busy;
     wire serial_data_1;
     wire serial_data_2;
     wire serial_clock;
@@ -937,10 +947,6 @@ module housekeeping #(
     end
 
     // SPI Identification
-
-    wire [11:0] mfgr_id;
-    wire [7:0]  prod_id;
-    wire [31:0] mask_rev;
 
     assign mfgr_id = 12'h456;		// Hard-coded
     assign prod_id = 8'h20;		// Hard-coded (hex 20 = GF caravel)
