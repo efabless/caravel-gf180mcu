@@ -239,6 +239,10 @@ module caravel_core (
     wire 	mprj_clock2;
     wire 	mprj_reset;
 
+	
+    assign const_zero = 6'b000000;
+    assign const_one  = 2'b11;
+	
     // Management processor (wrapper).  Any management core
     // implementation must match this pinout.
 
