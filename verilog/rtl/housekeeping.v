@@ -611,6 +611,15 @@ module housekeeping #(
 	end
     endfunction
 
+    // SPI is considered active when the GPIO for CSB is set to input and
+    // CSB is low.  SPI is considered "busy" when rdstb or wrstb are high,
+    // indicating that the SPI will read or write a byte on the next SCK
+    // transition.
+
+    wire spi_is_enabled = (gpio_configure[3][IE]) & (~hkspi_disable);
+    wire spi_is_active = spi_is_enabled && (mgmt_gpio_in[3] == 1'b0);
+    wire spi_is_busy = spi_is_active && (rdstb || wrstb);
+	
     /* Wishbone back-door state machine and address translation */
 
     always @(posedge wb_clk_i or posedge wb_rst_i) begin
@@ -749,14 +758,6 @@ module housekeeping #(
     	.pass_thru_user_reset(pass_thru_user_reset)
     );
 
-    // SPI is considered active when the GPIO for CSB is set to input and
-    // CSB is low.  SPI is considered "busy" when rdstb or wrstb are high,
-    // indicating that the SPI will read or write a byte on the next SCK
-    // transition.
-
-    wire spi_is_enabled = (gpio_configure[3][IE]) & (~hkspi_disable);
-    wire spi_is_active = spi_is_enabled && (mgmt_gpio_in[3] == 1'b0);
-    wire spi_is_busy = spi_is_active && (rdstb || wrstb);
 
     // GPIO data handling to and from the management SoC
 
