@@ -14,7 +14,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # DON'T TOUCH THE FOLLOWING SECTIONS
-set script_dir [file dirname [file normalize [info script]]]
 
 # This makes sure that the core rings are outside the boundaries
 # of your block.
@@ -23,11 +22,12 @@ set ::env(MAGIC_ZEROIZE_ORIGIN) 0
 # Area Configurations. DON'T TOUCH.
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 3000 3000"
+set ::env(CORE_AREA) "21.5 21.5 2978.5 2978.5"
 
 set ::env(RUN_CVC) 0
 
 # Pin Configurations. DON'T TOUCH
-set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
+set ::env(FP_PIN_ORDER_CFG) $script_dir/../../pin_order.cfg
 
 set ::unit 2.4
 set ::env(FP_IO_VEXTEND) [expr 2*$::unit]
@@ -46,11 +46,13 @@ set ::env(FP_PDN_CORE_RING_VOFFSET) 14
 set ::env(FP_PDN_CORE_RING_HOFFSET) $::env(FP_PDN_CORE_RING_VOFFSET)
 set ::env(FP_PDN_CORE_RING_VSPACING) 1.7
 set ::env(FP_PDN_CORE_RING_HSPACING) $::env(FP_PDN_CORE_RING_VSPACING)
+set ::env(FP_PDN_HOFFSET) 5
+set ::env(FP_PDN_HPITCH) [expr 60 + abs(int($::env(FP_PDN_HPITCH_MULT))) * 30]
 
 set ::env(FP_PDN_VWIDTH) 3.1
 set ::env(FP_PDN_HWIDTH) 3.1
 set ::env(FP_PDN_VSPACING) [expr 5*$::env(FP_PDN_CORE_RING_VWIDTH)]
-set ::env(FP_PDN_HSPACING) [expr 5*$::env(FP_PDN_CORE_RING_HWIDTH)]
+set ::env(FP_PDN_HSPACING) 26.9
 
 set ::env(VDD_NETS) [list {vdd}]
 set ::env(GND_NETS) [list {vss}]
