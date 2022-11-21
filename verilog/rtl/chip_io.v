@@ -55,8 +55,8 @@ module chip_io(
 	output flash_io1_di_core,
 
 	// Constant value inputs for fixed GPIO configuration
-	input [5:0] const_zero;
-	input [1:0] const_one;
+	input [5:0] const_zero,
+	input [1:0] const_one,
 
 	// User project IOs
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,
@@ -85,7 +85,7 @@ module chip_io(
 	// domain.  The VDD breaker cell divides VDD domains;
 	// however, all VSS domains are tied together.
 
-    	GF_NI_DVDD mgmt_vddio_pad_0 (
+    	gf180mcu_fd_io__dvdd mgmt_vddio_pad_0 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
@@ -93,43 +93,43 @@ module chip_io(
 
 	// lies in user area---Does not belong to management domain
 	// like it does on the Sky130 version.
-    	GF_NI_DVDD mgmt_vddio_pad_1 (
+    	gf180mcu_fd_io__dvdd mgmt_vddio_pad_1 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVDD mgmt_vdda_pad (
+    	gf180mcu_fd_io__dvdd mgmt_vdda_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVDD mgmt_vccd_pad (
+    	gf180mcu_fd_io__dvdd mgmt_vccd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVSS mgmt_vssio_pad_0 (
+    	gf180mcu_fd_io__dvss mgmt_vssio_pad_0 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
-    	GF_NI_DVSS mgmt_vssio_pad_1 (
+    	gf180mcu_fd_io__dvss mgmt_vssio_pad_1 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
-    	GF_NI_DVSS mgmt_vssa_pad (
+    	gf180mcu_fd_io__dvss mgmt_vssa_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
-    	GF_NI_DVSS mgmt_vssd_pad (
+    	gf180mcu_fd_io__dvss mgmt_vssd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
@@ -138,38 +138,38 @@ module chip_io(
 	// Instantiate power and ground pads for user 1 domain
 	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
 
-    	GF_NI_DVDD user1_vdda_pad_0 (
+    	gf180mcu_fd_io__dvdd user1_vdda_pad_0 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-	GF_NI_DVDD user1_vdda_pad_1 (
+	gf180mcu_fd_io__dvdd user1_vdda_pad_1 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVDD user1_vccd_pad (
+    	gf180mcu_fd_io__dvdd user1_vccd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVSS user1_vssa_pad_0 (
+    	gf180mcu_fd_io__dvss user1_vssa_pad_0 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
 
-    	GF_NI_DVSS user1_vssa_pad_1 (
+    	gf180mcu_fd_io__dvss user1_vssa_pad_1 (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
-    	GF_NI_DVSS user1_vssd_pad (
+    	gf180mcu_fd_io__dvss user1_vssd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
@@ -178,32 +178,32 @@ module chip_io(
 	// Instantiate power and ground pads for user 2 domain
 	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
 
-    	GF_NI_DVDD user2_vdda_pad (
+    	gf180mcu_fd_io__dvdd user2_vdda_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVDD user2_vccd_pad (
+    	gf180mcu_fd_io__dvdd user2_vccd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VSS(VSS)
     	);
 
-    	GF_NI_DVSS user2_vssa_pad (
+    	gf180mcu_fd_io__dvss user2_vssa_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
-    	GF_NI_DVSS user2_vssd_pad (
+    	gf180mcu_fd_io__dvss user2_vssd_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD)
     	);
 
 	// Management clock input pad
-	GF_NI_IN_C mgmt_clock_input_pad (
+	gf180mcu_fd_io__in_c mgmt_clock_input_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -215,7 +215,7 @@ module chip_io(
 	);
 
 	// Management GPIO pad
-	GF_NI_BI_T mgmt_gpio_pad (
+	gf180mcu_fd_io__bi_t mgmt_gpio_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -234,7 +234,7 @@ module chip_io(
 	);
 
 	// Management Flash SPI pads
-	GF_NI_BI_T flash_io0_pad (
+	gf180mcu_fd_io__bi_t flash_io0_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -252,7 +252,7 @@ module chip_io(
 		.Y(flash_io0_di_core)
 	);
 	
-	GF_NI_BI_T flash_io1_pad (
+	gf180mcu_fd_io__bi_t flash_io1_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -270,7 +270,7 @@ module chip_io(
 		.Y(flash_io1_di_core)
 	);
 
-	GF_NI_BI_T flash_csb_pad (
+	gf180mcu_fd_io__bi_t flash_csb_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -288,7 +288,7 @@ module chip_io(
 		.Y()
 	);
 
-	GF_NI_BI_T flash_clk_pad (
+	gf180mcu_fd_io__bi_t flash_clk_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -308,7 +308,7 @@ module chip_io(
 
 	// NOTE:  Resetb is active low and is configured as a pull-up
 
-	GF_NI_IN_S resetb_pad (
+	gf180mcu_fd_io__in_s resetb_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -322,28 +322,28 @@ module chip_io(
 	// Corner cells (These are overlay cells;  it is not clear what is normally
     	// supposed to go under them.)
 
-	GF_NI_COR mgmt_corner [1:0] (
+	gf180mcu_fd_io__cor mgmt_corner [1:0] (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
 		.VSS(VSS)
 	);
 
-	GF_NI_COR user1_corner (
+	gf180mcu_fd_io__cor user1_corner (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
 		.VSS(VSS)
     	);
 
-	GF_NI_COR user2_corner (
+	gf180mcu_fd_io__cor user2_corner (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
 		.VSS(VSS)
     	);
 
-	GF_NI_BI_T mprj_pads[`MPRJ_IO_PADS-1:0] (
+	gf180mcu_fd_io__bi_t mprj_pads[`MPRJ_IO_PADS-1:0] (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
