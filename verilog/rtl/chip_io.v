@@ -55,8 +55,8 @@ module chip_io(
 	output flash_io1_di_core,
 
 	// Constant value inputs for fixed GPIO configuration
-	input [5:0] const_zero;
-	input [1:0] const_one;
+	input [5:0] const_zero,
+	input [1:0] const_one,
 
 	// User project IOs
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,
@@ -203,7 +203,7 @@ module chip_io(
     	);
 
 	// Management clock input pad
-	gf180mcu_fd_io__IN_C mgmt_clock_input_pad (
+	gf180mcu_fd_io__in_c mgmt_clock_input_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -215,7 +215,7 @@ module chip_io(
 	);
 
 	// Management GPIO pad
-	gf180mcu_fd_io__bt_t mgmt_gpio_pad (
+	gf180mcu_fd_io__bi_t mgmt_gpio_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -234,7 +234,7 @@ module chip_io(
 	);
 
 	// Management Flash SPI pads
-	gf180mcu_fd_io__bt_t flash_io0_pad (
+	gf180mcu_fd_io__bi_t flash_io0_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -252,7 +252,7 @@ module chip_io(
 		.Y(flash_io0_di_core)
 	);
 	
-	gf180mcu_fd_io__bt_t flash_io1_pad (
+	gf180mcu_fd_io__bi_t flash_io1_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -270,7 +270,7 @@ module chip_io(
 		.Y(flash_io1_di_core)
 	);
 
-	gf180mcu_fd_io__bt_t flash_csb_pad (
+	gf180mcu_fd_io__bi_t flash_csb_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -288,7 +288,7 @@ module chip_io(
 		.Y()
 	);
 
-	gf180mcu_fd_io__bt_t flash_clk_pad (
+	gf180mcu_fd_io__bi_t flash_clk_pad (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
@@ -343,7 +343,7 @@ module chip_io(
 		.VSS(VSS)
     	);
 
-	gf180mcu_fd_io__bt_t mprj_pads[`MPRJ_IO_PADS-1:0] (
+	gf180mcu_fd_io__bi_t mprj_pads[`MPRJ_IO_PADS-1:0] (
 		.DVDD(VDD),
 		.DVSS(VSS),
 		.VDD(VDD),
