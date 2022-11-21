@@ -1,0 +1,159 @@
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+Startpoint: mgmt_gpio_in[11] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: mgmt_gpio_in_buf[11] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.60    1.60 v input external delay
+                  0.20    0.10    1.70 v mgmt_gpio_in[11] (in)
+     2    0.01                           mgmt_gpio_in[11] (net)
+                  0.20    0.00    1.70 v BUF[32]/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+                  0.29    0.45    2.15 v BUF[32]/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+     1    0.07                           mgmt_gpio_in_buf[11] (net)
+                  0.29    0.00    2.15 v mgmt_gpio_in_buf[11] (out)
+                                  2.15   data arrival time
+
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -1.60   -1.35   output external delay
+                                 -1.35   data required time
+-----------------------------------------------------------------------------
+                                 -1.35   data required time
+                                 -2.15   data arrival time
+-----------------------------------------------------------------------------
+                                  3.50   slack (MET)
+
+
+Startpoint: mgmt_gpio_out[11] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: mgmt_gpio_out_buf[11] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.60    1.60 v input external delay
+                  0.21    0.10    1.70 v mgmt_gpio_out[11] (in)
+     2    0.01                           mgmt_gpio_out[11] (net)
+                  0.21    0.00    1.70 v BUF[11]/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+                  0.28    0.45    2.15 v BUF[11]/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+     1    0.07                           mgmt_gpio_out_buf[11] (net)
+                  0.28    0.00    2.15 v mgmt_gpio_out_buf[11] (out)
+                                  2.15   data arrival time
+
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -1.60   -1.35   output external delay
+                                 -1.35   data required time
+-----------------------------------------------------------------------------
+                                 -1.35   data required time
+                                 -2.15   data arrival time
+-----------------------------------------------------------------------------
+                                  3.50   slack (MET)
+
+
+Startpoint: mgmt_gpio_out[12] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: mgmt_gpio_out_buf[12] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.60    1.60 v input external delay
+                  0.21    0.10    1.70 v mgmt_gpio_out[12] (in)
+     2    0.01                           mgmt_gpio_out[12] (net)
+                  0.21    0.00    1.70 v BUF[12]/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+                  0.30    0.46    2.16 v BUF[12]/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+     1    0.07                           mgmt_gpio_out_buf[12] (net)
+                  0.30    0.00    2.16 v mgmt_gpio_out_buf[12] (out)
+                                  2.16   data arrival time
+
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -1.60   -1.35   output external delay
+                                 -1.35   data required time
+-----------------------------------------------------------------------------
+                                 -1.35   data required time
+                                 -2.16   data arrival time
+-----------------------------------------------------------------------------
+                                  3.51   slack (MET)
+
+
+Startpoint: mgmt_gpio_in[7] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: mgmt_gpio_in_buf[7] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.60    1.60 v input external delay
+                  0.22    0.11    1.71 v mgmt_gpio_in[7] (in)
+     2    0.02                           mgmt_gpio_in[7] (net)
+                  0.22    0.00    1.71 v BUF[28]/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+                  0.29    0.46    2.16 v BUF[28]/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+     1    0.07                           mgmt_gpio_in_buf[7] (net)
+                  0.29    0.00    2.17 v mgmt_gpio_in_buf[7] (out)
+                                  2.17   data arrival time
+
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -1.60   -1.35   output external delay
+                                 -1.35   data required time
+-----------------------------------------------------------------------------
+                                 -1.35   data required time
+                                 -2.17   data arrival time
+-----------------------------------------------------------------------------
+                                  3.52   slack (MET)
+
+
+Startpoint: mgmt_gpio_in[8] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: mgmt_gpio_in_buf[8] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          1.60    1.60 v input external delay
+                  0.21    0.11    1.71 v mgmt_gpio_in[8] (in)
+     2    0.01                           mgmt_gpio_in[8] (net)
+                  0.21    0.00    1.71 v BUF[29]/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+                  0.29    0.46    2.16 v BUF[29]/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_8)
+     1    0.07                           mgmt_gpio_in_buf[8] (net)
+                  0.29    0.00    2.17 v mgmt_gpio_in_buf[8] (out)
+                                  2.17   data arrival time
+
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -1.60   -1.35   output external delay
+                                 -1.35   data required time
+-----------------------------------------------------------------------------
+                                 -1.35   data required time
+                                 -2.17   data arrival time
+-----------------------------------------------------------------------------
+                                  3.52   slack (MET)
+
+

@@ -1,0 +1,762 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO mprj_io_buffer
+  CLASS BLOCK ;
+  FOREIGN mprj_io_buffer ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 85.000 BY 65.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 10.610 7.540 12.210 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 31.190 7.540 32.790 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 51.770 7.540 53.370 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 72.350 7.540 73.950 55.180 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 20.900 7.540 22.500 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 41.480 7.540 43.080 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 62.060 7.540 63.660 55.180 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 82.640 7.540 84.240 55.180 ;
+    END
+  END VSS
+  PIN mgmt_gpio_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2.800 0.000 3.360 4.000 ;
+    END
+  END mgmt_gpio_in[0]
+  PIN mgmt_gpio_in[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 25.200 0.000 25.760 4.000 ;
+    END
+  END mgmt_gpio_in[10]
+  PIN mgmt_gpio_in[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 27.440 0.000 28.000 4.000 ;
+    END
+  END mgmt_gpio_in[11]
+  PIN mgmt_gpio_in[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 29.680 0.000 30.240 4.000 ;
+    END
+  END mgmt_gpio_in[12]
+  PIN mgmt_gpio_in[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 31.920 0.000 32.480 4.000 ;
+    END
+  END mgmt_gpio_in[13]
+  PIN mgmt_gpio_in[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 34.160 0.000 34.720 4.000 ;
+    END
+  END mgmt_gpio_in[14]
+  PIN mgmt_gpio_in[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 36.400 0.000 36.960 4.000 ;
+    END
+  END mgmt_gpio_in[15]
+  PIN mgmt_gpio_in[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 38.640 0.000 39.200 4.000 ;
+    END
+  END mgmt_gpio_in[16]
+  PIN mgmt_gpio_in[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 40.880 0.000 41.440 4.000 ;
+    END
+  END mgmt_gpio_in[17]
+  PIN mgmt_gpio_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.040 0.000 5.600 4.000 ;
+    END
+  END mgmt_gpio_in[1]
+  PIN mgmt_gpio_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.280 0.000 7.840 4.000 ;
+    END
+  END mgmt_gpio_in[2]
+  PIN mgmt_gpio_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 9.520 0.000 10.080 4.000 ;
+    END
+  END mgmt_gpio_in[3]
+  PIN mgmt_gpio_in[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.760 0.000 12.320 4.000 ;
+    END
+  END mgmt_gpio_in[4]
+  PIN mgmt_gpio_in[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 14.000 0.000 14.560 4.000 ;
+    END
+  END mgmt_gpio_in[5]
+  PIN mgmt_gpio_in[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 16.240 0.000 16.800 4.000 ;
+    END
+  END mgmt_gpio_in[6]
+  PIN mgmt_gpio_in[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 18.480 0.000 19.040 4.000 ;
+    END
+  END mgmt_gpio_in[7]
+  PIN mgmt_gpio_in[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 20.720 0.000 21.280 4.000 ;
+    END
+  END mgmt_gpio_in[8]
+  PIN mgmt_gpio_in[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 22.960 0.000 23.520 4.000 ;
+    END
+  END mgmt_gpio_in[9]
+  PIN mgmt_gpio_in_buf[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2.800 61.000 3.360 65.000 ;
+    END
+  END mgmt_gpio_in_buf[0]
+  PIN mgmt_gpio_in_buf[10]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 25.200 61.000 25.760 65.000 ;
+    END
+  END mgmt_gpio_in_buf[10]
+  PIN mgmt_gpio_in_buf[11]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 27.440 61.000 28.000 65.000 ;
+    END
+  END mgmt_gpio_in_buf[11]
+  PIN mgmt_gpio_in_buf[12]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 29.680 61.000 30.240 65.000 ;
+    END
+  END mgmt_gpio_in_buf[12]
+  PIN mgmt_gpio_in_buf[13]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 31.920 61.000 32.480 65.000 ;
+    END
+  END mgmt_gpio_in_buf[13]
+  PIN mgmt_gpio_in_buf[14]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 34.160 61.000 34.720 65.000 ;
+    END
+  END mgmt_gpio_in_buf[14]
+  PIN mgmt_gpio_in_buf[15]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 36.400 61.000 36.960 65.000 ;
+    END
+  END mgmt_gpio_in_buf[15]
+  PIN mgmt_gpio_in_buf[16]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 38.640 61.000 39.200 65.000 ;
+    END
+  END mgmt_gpio_in_buf[16]
+  PIN mgmt_gpio_in_buf[17]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 40.880 61.000 41.440 65.000 ;
+    END
+  END mgmt_gpio_in_buf[17]
+  PIN mgmt_gpio_in_buf[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 5.040 61.000 5.600 65.000 ;
+    END
+  END mgmt_gpio_in_buf[1]
+  PIN mgmt_gpio_in_buf[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 7.280 61.000 7.840 65.000 ;
+    END
+  END mgmt_gpio_in_buf[2]
+  PIN mgmt_gpio_in_buf[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 9.520 61.000 10.080 65.000 ;
+    END
+  END mgmt_gpio_in_buf[3]
+  PIN mgmt_gpio_in_buf[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 11.760 61.000 12.320 65.000 ;
+    END
+  END mgmt_gpio_in_buf[4]
+  PIN mgmt_gpio_in_buf[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 14.000 61.000 14.560 65.000 ;
+    END
+  END mgmt_gpio_in_buf[5]
+  PIN mgmt_gpio_in_buf[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 16.240 61.000 16.800 65.000 ;
+    END
+  END mgmt_gpio_in_buf[6]
+  PIN mgmt_gpio_in_buf[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 18.480 61.000 19.040 65.000 ;
+    END
+  END mgmt_gpio_in_buf[7]
+  PIN mgmt_gpio_in_buf[8]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 20.720 61.000 21.280 65.000 ;
+    END
+  END mgmt_gpio_in_buf[8]
+  PIN mgmt_gpio_in_buf[9]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 22.960 61.000 23.520 65.000 ;
+    END
+  END mgmt_gpio_in_buf[9]
+  PIN mgmt_gpio_oeb[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 10.640 4.000 11.200 ;
+    END
+  END mgmt_gpio_oeb[0]
+  PIN mgmt_gpio_oeb[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 31.920 4.000 32.480 ;
+    END
+  END mgmt_gpio_oeb[1]
+  PIN mgmt_gpio_oeb[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 53.200 4.000 53.760 ;
+    END
+  END mgmt_gpio_oeb[2]
+  PIN mgmt_gpio_oeb_buf[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 81.000 10.640 85.000 11.200 ;
+    END
+  END mgmt_gpio_oeb_buf[0]
+  PIN mgmt_gpio_oeb_buf[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 81.000 31.920 85.000 32.480 ;
+    END
+  END mgmt_gpio_oeb_buf[1]
+  PIN mgmt_gpio_oeb_buf[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 81.000 53.200 85.000 53.760 ;
+    END
+  END mgmt_gpio_oeb_buf[2]
+  PIN mgmt_gpio_out[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 43.120 61.000 43.680 65.000 ;
+    END
+  END mgmt_gpio_out[0]
+  PIN mgmt_gpio_out[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 65.520 61.000 66.080 65.000 ;
+    END
+  END mgmt_gpio_out[10]
+  PIN mgmt_gpio_out[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 67.760 61.000 68.320 65.000 ;
+    END
+  END mgmt_gpio_out[11]
+  PIN mgmt_gpio_out[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.000 61.000 70.560 65.000 ;
+    END
+  END mgmt_gpio_out[12]
+  PIN mgmt_gpio_out[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 72.240 61.000 72.800 65.000 ;
+    END
+  END mgmt_gpio_out[13]
+  PIN mgmt_gpio_out[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 74.480 61.000 75.040 65.000 ;
+    END
+  END mgmt_gpio_out[14]
+  PIN mgmt_gpio_out[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 76.720 61.000 77.280 65.000 ;
+    END
+  END mgmt_gpio_out[15]
+  PIN mgmt_gpio_out[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 78.960 61.000 79.520 65.000 ;
+    END
+  END mgmt_gpio_out[16]
+  PIN mgmt_gpio_out[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 81.200 61.000 81.760 65.000 ;
+    END
+  END mgmt_gpio_out[17]
+  PIN mgmt_gpio_out[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 45.360 61.000 45.920 65.000 ;
+    END
+  END mgmt_gpio_out[1]
+  PIN mgmt_gpio_out[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 47.600 61.000 48.160 65.000 ;
+    END
+  END mgmt_gpio_out[2]
+  PIN mgmt_gpio_out[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 49.840 61.000 50.400 65.000 ;
+    END
+  END mgmt_gpio_out[3]
+  PIN mgmt_gpio_out[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 52.080 61.000 52.640 65.000 ;
+    END
+  END mgmt_gpio_out[4]
+  PIN mgmt_gpio_out[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 54.320 61.000 54.880 65.000 ;
+    END
+  END mgmt_gpio_out[5]
+  PIN mgmt_gpio_out[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 56.560 61.000 57.120 65.000 ;
+    END
+  END mgmt_gpio_out[6]
+  PIN mgmt_gpio_out[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 58.800 61.000 59.360 65.000 ;
+    END
+  END mgmt_gpio_out[7]
+  PIN mgmt_gpio_out[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 61.040 61.000 61.600 65.000 ;
+    END
+  END mgmt_gpio_out[8]
+  PIN mgmt_gpio_out[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 63.280 61.000 63.840 65.000 ;
+    END
+  END mgmt_gpio_out[9]
+  PIN mgmt_gpio_out_buf[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 43.120 0.000 43.680 4.000 ;
+    END
+  END mgmt_gpio_out_buf[0]
+  PIN mgmt_gpio_out_buf[10]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 65.520 0.000 66.080 4.000 ;
+    END
+  END mgmt_gpio_out_buf[10]
+  PIN mgmt_gpio_out_buf[11]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 67.760 0.000 68.320 4.000 ;
+    END
+  END mgmt_gpio_out_buf[11]
+  PIN mgmt_gpio_out_buf[12]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 70.000 0.000 70.560 4.000 ;
+    END
+  END mgmt_gpio_out_buf[12]
+  PIN mgmt_gpio_out_buf[13]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 72.240 0.000 72.800 4.000 ;
+    END
+  END mgmt_gpio_out_buf[13]
+  PIN mgmt_gpio_out_buf[14]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 74.480 0.000 75.040 4.000 ;
+    END
+  END mgmt_gpio_out_buf[14]
+  PIN mgmt_gpio_out_buf[15]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 76.720 0.000 77.280 4.000 ;
+    END
+  END mgmt_gpio_out_buf[15]
+  PIN mgmt_gpio_out_buf[16]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 78.960 0.000 79.520 4.000 ;
+    END
+  END mgmt_gpio_out_buf[16]
+  PIN mgmt_gpio_out_buf[17]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 81.200 0.000 81.760 4.000 ;
+    END
+  END mgmt_gpio_out_buf[17]
+  PIN mgmt_gpio_out_buf[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 45.360 0.000 45.920 4.000 ;
+    END
+  END mgmt_gpio_out_buf[1]
+  PIN mgmt_gpio_out_buf[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 47.600 0.000 48.160 4.000 ;
+    END
+  END mgmt_gpio_out_buf[2]
+  PIN mgmt_gpio_out_buf[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 49.840 0.000 50.400 4.000 ;
+    END
+  END mgmt_gpio_out_buf[3]
+  PIN mgmt_gpio_out_buf[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 52.080 0.000 52.640 4.000 ;
+    END
+  END mgmt_gpio_out_buf[4]
+  PIN mgmt_gpio_out_buf[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 54.320 0.000 54.880 4.000 ;
+    END
+  END mgmt_gpio_out_buf[5]
+  PIN mgmt_gpio_out_buf[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 56.560 0.000 57.120 4.000 ;
+    END
+  END mgmt_gpio_out_buf[6]
+  PIN mgmt_gpio_out_buf[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 58.800 0.000 59.360 4.000 ;
+    END
+  END mgmt_gpio_out_buf[7]
+  PIN mgmt_gpio_out_buf[8]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 61.040 0.000 61.600 4.000 ;
+    END
+  END mgmt_gpio_out_buf[8]
+  PIN mgmt_gpio_out_buf[9]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 63.280 0.000 63.840 4.000 ;
+    END
+  END mgmt_gpio_out_buf[9]
+  OBS
+      LAYER Metal1 ;
+        RECT 1.120 7.540 84.240 56.410 ;
+      LAYER Metal2 ;
+        RECT 3.660 60.700 4.740 61.000 ;
+        RECT 5.900 60.700 6.980 61.000 ;
+        RECT 8.140 60.700 9.220 61.000 ;
+        RECT 10.380 60.700 11.460 61.000 ;
+        RECT 12.620 60.700 13.700 61.000 ;
+        RECT 14.860 60.700 15.940 61.000 ;
+        RECT 17.100 60.700 18.180 61.000 ;
+        RECT 19.340 60.700 20.420 61.000 ;
+        RECT 21.580 60.700 22.660 61.000 ;
+        RECT 23.820 60.700 24.900 61.000 ;
+        RECT 26.060 60.700 27.140 61.000 ;
+        RECT 28.300 60.700 29.380 61.000 ;
+        RECT 30.540 60.700 31.620 61.000 ;
+        RECT 32.780 60.700 33.860 61.000 ;
+        RECT 35.020 60.700 36.100 61.000 ;
+        RECT 37.260 60.700 38.340 61.000 ;
+        RECT 39.500 60.700 40.580 61.000 ;
+        RECT 41.740 60.700 42.820 61.000 ;
+        RECT 43.980 60.700 45.060 61.000 ;
+        RECT 46.220 60.700 47.300 61.000 ;
+        RECT 48.460 60.700 49.540 61.000 ;
+        RECT 50.700 60.700 51.780 61.000 ;
+        RECT 52.940 60.700 54.020 61.000 ;
+        RECT 55.180 60.700 56.260 61.000 ;
+        RECT 57.420 60.700 58.500 61.000 ;
+        RECT 59.660 60.700 60.740 61.000 ;
+        RECT 61.900 60.700 62.980 61.000 ;
+        RECT 64.140 60.700 65.220 61.000 ;
+        RECT 66.380 60.700 67.460 61.000 ;
+        RECT 68.620 60.700 69.700 61.000 ;
+        RECT 70.860 60.700 71.940 61.000 ;
+        RECT 73.100 60.700 74.180 61.000 ;
+        RECT 75.340 60.700 76.420 61.000 ;
+        RECT 77.580 60.700 78.660 61.000 ;
+        RECT 79.820 60.700 80.900 61.000 ;
+        RECT 82.060 60.700 84.100 61.000 ;
+        RECT 2.940 4.300 84.100 60.700 ;
+        RECT 3.660 4.000 4.740 4.300 ;
+        RECT 5.900 4.000 6.980 4.300 ;
+        RECT 8.140 4.000 9.220 4.300 ;
+        RECT 10.380 4.000 11.460 4.300 ;
+        RECT 12.620 4.000 13.700 4.300 ;
+        RECT 14.860 4.000 15.940 4.300 ;
+        RECT 17.100 4.000 18.180 4.300 ;
+        RECT 19.340 4.000 20.420 4.300 ;
+        RECT 21.580 4.000 22.660 4.300 ;
+        RECT 23.820 4.000 24.900 4.300 ;
+        RECT 26.060 4.000 27.140 4.300 ;
+        RECT 28.300 4.000 29.380 4.300 ;
+        RECT 30.540 4.000 31.620 4.300 ;
+        RECT 32.780 4.000 33.860 4.300 ;
+        RECT 35.020 4.000 36.100 4.300 ;
+        RECT 37.260 4.000 38.340 4.300 ;
+        RECT 39.500 4.000 40.580 4.300 ;
+        RECT 41.740 4.000 42.820 4.300 ;
+        RECT 43.980 4.000 45.060 4.300 ;
+        RECT 46.220 4.000 47.300 4.300 ;
+        RECT 48.460 4.000 49.540 4.300 ;
+        RECT 50.700 4.000 51.780 4.300 ;
+        RECT 52.940 4.000 54.020 4.300 ;
+        RECT 55.180 4.000 56.260 4.300 ;
+        RECT 57.420 4.000 58.500 4.300 ;
+        RECT 59.660 4.000 60.740 4.300 ;
+        RECT 61.900 4.000 62.980 4.300 ;
+        RECT 64.140 4.000 65.220 4.300 ;
+        RECT 66.380 4.000 67.460 4.300 ;
+        RECT 68.620 4.000 69.700 4.300 ;
+        RECT 70.860 4.000 71.940 4.300 ;
+        RECT 73.100 4.000 74.180 4.300 ;
+        RECT 75.340 4.000 76.420 4.300 ;
+        RECT 77.580 4.000 78.660 4.300 ;
+        RECT 79.820 4.000 80.900 4.300 ;
+        RECT 82.060 4.000 84.100 4.300 ;
+      LAYER Metal3 ;
+        RECT 2.890 54.060 84.150 55.020 ;
+        RECT 4.300 52.900 80.700 54.060 ;
+        RECT 2.890 32.780 84.150 52.900 ;
+        RECT 4.300 31.620 80.700 32.780 ;
+        RECT 2.890 11.500 84.150 31.620 ;
+        RECT 4.300 10.340 80.700 11.500 ;
+        RECT 2.890 7.700 84.150 10.340 ;
+  END
+END mprj_io_buffer
+END LIBRARY
+
