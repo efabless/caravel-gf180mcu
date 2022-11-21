@@ -1,0 +1,444 @@
+VERSION 5.7 ;
+   NAMESCASESENSITIVE ON ;
+   DIVIDERCHAR "/" ;
+   BUSBITCHARS "()" ;
+   DESIGN gpio_defaults_block ;
+   TECHNOLOGY gf180mcuC ;
+   UNITS DISTANCE MICRONS 400 ;
+   DIEAREA ( -172 -172 ) ( 7788 6444 ) ;
+
+VIAS 5 ;
+   - Via2_1058_120_hh
+      + RECT Metal2 ( -549 -60 ) ( 549 60 )
+      + RECT Metal3 ( -549 -60 ) ( 549 60 )
+      + RECT Via2 ( -468 -52 ) ( -364 52 )
+      + RECT Via2 ( -260 -52 ) ( -156 52 )
+      + RECT Via2 ( -52 -52 ) ( 52 52 )
+      + RECT Via2 ( 156 -52 ) ( 260 52 )
+      + RECT Via2 ( 364 -52 ) ( 468 52 ) ;
+   - Via1_1058_120_vx
+      + RECT Metal1 ( -529 -84 ) ( 529 84 )
+      + RECT Metal2 ( -533 -64 ) ( 533 64 )
+      + RECT Via1 ( -468 -52 ) ( -364 52 )
+      + RECT Via1 ( -260 -52 ) ( -156 52 )
+      + RECT Via1 ( -52 -52 ) ( 52 52 )
+      + RECT Via1 ( 156 -52 ) ( 260 52 )
+      + RECT Via1 ( 364 -52 ) ( 468 52 ) ;
+   - Via2_1138_120_hh
+      + RECT Metal2 ( -589 -60 ) ( 589 60 )
+      + RECT Metal3 ( -589 -60 ) ( 589 60 )
+      + RECT Via2 ( -468 -52 ) ( -364 52 )
+      + RECT Via2 ( -260 -52 ) ( -156 52 )
+      + RECT Via2 ( -52 -52 ) ( 52 52 )
+      + RECT Via2 ( 156 -52 ) ( 260 52 )
+      + RECT Via2 ( 364 -52 ) ( 468 52 ) ;
+   - Via1_1138_120_vx
+      + RECT Metal1 ( -569 -84 ) ( 569 84 )
+      + RECT Metal2 ( -573 -64 ) ( 573 64 )
+      + RECT Via1 ( -468 -52 ) ( -364 52 )
+      + RECT Via1 ( -260 -52 ) ( -156 52 )
+      + RECT Via1 ( -52 -52 ) ( 52 52 )
+      + RECT Via1 ( 156 -52 ) ( 260 52 )
+      + RECT Via1 ( 364 -52 ) ( 468 52 ) ;
+   - Via1_120_120_vx
+      + RECT Metal1 ( -60 -84 ) ( 60 84 )
+      + RECT Metal2 ( -64 -64 ) ( 64 64 )
+      + RECT Via1 ( -52 -52 ) ( 52 52 ) ;
+END VIAS
+
+COMPONENTS 40 ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_0 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 0 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__filltie_4 gf180mcu_fd_sc_mcu7t5v0__filltie
+      + PLACED ( 0 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_0 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 448 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_13 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 448 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_0 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 2240 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_3 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 2240 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_0 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 1344 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_13 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 1344 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_1 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 3136 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_12 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 3136 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__filltie_0 gf180mcu_fd_sc_mcu7t5v0__filltie
+      + PLACED ( 4928 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__filltie_5 gf180mcu_fd_sc_mcu7t5v0__filltie
+      + PLACED ( 4928 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_1 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 4032 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_12 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 4032 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_2 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 5376 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_4 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 5376 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__filltie_1 gf180mcu_fd_sc_mcu7t5v0__filltie
+      + PLACED ( 7168 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__filltie_2 gf180mcu_fd_sc_mcu7t5v0__filltie
+      + PLACED ( 7168 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_2 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 6272 0 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_4 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 6272 1568 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_4 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 0 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_8 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 448 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_6 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 2240 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_8 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 1344 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_9 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 3136 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_5 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 4928 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_9 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 4032 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_11 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 5376 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_6 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 7168 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_11 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 6272 3136 ) N ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_3 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 0 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_7 gf180mcu_fd_sc_mcu7t5v0__tieh
+      + PLACED ( 448 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_1 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 2240 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__tiel_7 gf180mcu_fd_sc_mcu7t5v0__tiel
+      + PLACED ( 1344 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_5 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 3136 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_1 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 4928 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_2 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 4032 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_7 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 5376 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__endcap_2 gf180mcu_fd_sc_mcu7t5v0__endcap
+      + PLACED ( 7168 4704 ) FS ;
+   - gf180mcu_fd_sc_mcu7t5v0__fillcap_4_4 gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+      + PLACED ( 6272 4704 ) FS ;
+END COMPONENTS
+
+PINS 12 ;
+   - VDD + NET VDD
+     + PORT
+        + LAYER Metal3 ( -606 -803 ) ( 606 803 )        + PLACED ( 4152 697 ) N ;
+   - VSS + NET VSS
+     + PORT
+        + LAYER Metal3 ( -606 -803 ) ( 606 803 )        + PLACED ( 738 913 ) N ;
+   - gpio_defaults[0] + NET gpio_defaults[0]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 1456 66 ) N ;
+   - gpio_defaults[1] + NET gpio_defaults[1]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 2128 66 ) N ;
+   - gpio_defaults[2] + NET gpio_defaults[2]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 2800 66 ) N ;
+   - gpio_defaults[3] + NET gpio_defaults[3]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 3472 66 ) N ;
+   - gpio_defaults[4] + NET gpio_defaults[4]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 4144 66 ) N ;
+   - gpio_defaults[5] + NET gpio_defaults[5]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 4816 66 ) N ;
+   - gpio_defaults[6] + NET gpio_defaults[6]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 5488 66 ) N ;
+   - gpio_defaults[7] + NET gpio_defaults[7]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 6160 66 ) N ;
+   - gpio_defaults[8] + NET gpio_defaults[8]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 6832 66 ) N ;
+   - gpio_defaults[9] + NET gpio_defaults[9]
+     + PORT
+        + LAYER Metal2 ( -56 -234 ) ( 56 234 )        + PLACED ( 7504 66 ) N ;
+END PINS
+
+NONDEFAULTRULES 4 ;
+  - Metal2_width_128
+     + LAYER Metal1 WIDTH 92 WIREEXT 46
+     + LAYER Metal3 WIDTH 112 WIREEXT 56
+     + LAYER Metal4 WIDTH 84 WIREEXT 42
+     + LAYER Metal5 WIDTH 152 WIREEXT 76
+     + LAYER Metal2 WIDTH 128 ;
+  - Metal1_width_144
+     + LAYER Metal3 WIDTH 112 WIREEXT 56
+     + LAYER Metal2 WIDTH 112 WIREEXT 56
+     + LAYER Metal4 WIDTH 84 WIREEXT 42
+     + LAYER Metal5 WIDTH 152 WIREEXT 76
+     + LAYER Metal1 WIDTH 144 ;
+  - Metal2_width_120
+     + LAYER Metal1 WIDTH 92 WIREEXT 46
+     + LAYER Metal3 WIDTH 112 WIREEXT 56
+     + LAYER Metal4 WIDTH 84 WIREEXT 42
+     + LAYER Metal5 WIDTH 152 WIREEXT 76
+     + LAYER Metal2 WIDTH 120 ;
+  - Metal1_width_150
+     + LAYER Metal3 WIDTH 112 WIREEXT 56
+     + LAYER Metal2 WIDTH 112 WIREEXT 56
+     + LAYER Metal4 WIDTH 84 WIREEXT 42
+     + LAYER Metal5 WIDTH 152 WIREEXT 76
+     + LAYER Metal1 WIDTH 150 ;
+END NONDEFAULTRULES
+
+SPECIALNETS 2 ;
+   - VSS ( PIN VSS ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_7 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_4 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_7 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_2 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_5 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_7 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_1 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_1 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_8 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_2 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_8 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_13 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_4 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_13 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_3 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_9 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_5 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_9 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_4 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_12 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_12 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_6 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_2 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_2 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_1 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_11 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_1 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_5 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_0 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_1 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_2 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_3 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_0 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_0 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_4 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_11 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_6 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_0 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_4 VSS )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_0 VSS )
+      + ROUTED Metal3 1212  ( 738 62 ) ( * 3080 )
+      NEW Metal3 34  ( 149 3080 ) ( * 3200 )
+      NEW Metal3 1212  ( 738 3200 ) ( * 6220 )
+      NEW Metal3 34  ( 149 6220 ) ( * 6340 )
+      NEW Metal3 44  ( 132 6362 ) ( 1344 * )
+      NEW Metal3 40  ( 1324 6220 ) ( * 6340 )
+      NEW Metal2 22  ( 140 6351 ) ( 1332 * )
+      NEW Metal2 28  ( 1318 6220 ) ( * 6340 )
+      NEW Metal2 24  ( 140 6208 ) ( 1332 * )
+      NEW Metal2 26  ( 153 6220 ) ( * 6340 )
+      NEW Metal2 120  ( 735 6280 ) Via2_1138_120_hh 
+      NEW Metal2 120  ( 735 6280 ) Via1_1138_120_vx 
+      NEW Metal3 40  ( 1324 3080 ) ( * 3200 )
+      NEW Metal2 22  ( 140 3211 ) ( 1332 * )
+      NEW Metal2 28  ( 1318 3080 ) ( * 3200 )
+      NEW Metal2 24  ( 140 3068 ) ( 1332 * )
+      NEW Metal2 26  ( 153 3080 ) ( * 3200 )
+      NEW Metal2 120  ( 735 3140 ) Via2_1138_120_hh 
+      NEW Metal2 120  ( 735 3140 ) Via1_1138_120_vx 
+      NEW Metal3 102  ( 1293 -58 ) ( * 62 )
+      NEW Metal3 48  ( 132 -82 ) ( 1344 * )
+      NEW Metal3 52  ( 158 -58 ) ( * 62 )
+      NEW Metal2 24  ( 160 74 ) ( 1266 * )
+      NEW Metal2 24  ( 1254 -58 ) ( * 62 )
+      NEW Metal2 22  ( 160 -69 ) ( 1266 * )
+      NEW Metal2 24  ( 172 -58 ) ( * 62 )
+      NEW Metal2 120  ( 713 2 ) Via2_1058_120_hh 
+      NEW Metal2 120  ( 713 2 ) Via1_1058_120_vx  ;
+   - VDD ( PIN VDD ) ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_1 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_0 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_2 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_7 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_1 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_9 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_8 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_3 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_6 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_2 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_0 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_3 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_0 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_4 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_4 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_12 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_13 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_7 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_8 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_12 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_5 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_0 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_4 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_2 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_1 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_11 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_0 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__filltie_4 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_1 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_5 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_13 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_11 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_2 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_4 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_2 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tiel_1 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_9 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_5 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__endcap_6 VDD )
+       ( gf180mcu_fd_sc_mcu7t5v0__fillcap_4_7 VDD )
+      + ROUTED Metal3 1212  ( 4152 -106 ) ( * 1500 )
+      NEW Metal3 40  ( 3566 1500 ) ( * 1620 )
+      NEW Metal3 1212  ( 4152 1620 ) ( * 4660 )
+      NEW Metal3 40  ( 3566 4660 ) ( * 4780 )
+      NEW Metal3 1212  ( 4152 4780 ) ( * 6384 )
+      NEW Metal3 34  ( 4741 4660 ) ( * 4780 )
+      NEW Metal2 22  ( 3560 4791 ) ( 4752 * )
+      NEW Metal2 28  ( 4738 4660 ) ( * 4780 )
+      NEW Metal2 24  ( 3560 4648 ) ( 4752 * )
+      NEW Metal2 26  ( 3573 4660 ) ( * 4780 )
+      NEW Metal2 120  ( 4155 4720 ) Via2_1138_120_hh 
+      NEW Metal2 120  ( 4155 4720 ) Via1_1138_120_vx 
+      NEW Metal3 34  ( 4741 1500 ) ( * 1620 )
+      NEW Metal2 22  ( 3560 1631 ) ( 4752 * )
+      NEW Metal2 28  ( 4738 1500 ) ( * 1620 )
+      NEW Metal2 24  ( 3560 1488 ) ( 4752 * )
+      NEW Metal2 26  ( 3573 1500 ) ( * 1620 )
+      NEW Metal2 120  ( 4155 1560 ) Via2_1138_120_hh 
+      NEW Metal2 120  ( 4155 1560 ) Via1_1138_120_vx  ;
+END SPECIALNETS
+
+NETS 20 ;
+   - gpio_defaults[9] ( PIN gpio_defaults[9] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_4 ZN )
+      + ROUTED Metal2  ( 7504 -112 ) ( * 2458 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 6082 2578 ) ( 7560 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6835 2638 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6835 2476 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6834 2578 ) Via1_120_120_vx  ;
+   - gpio_defaults[8] ( PIN gpio_defaults[8] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_2 ZN )
+      + ROUTED Metal2  ( 6832 -112 ) ( * 438 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 6086 558 ) ( 6924 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6835 212 ) ( * 660 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6834 558 ) Via1_120_120_vx  ;
+   - gpio_defaults[4] ( PIN gpio_defaults[4] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_1 ZN )
+      + ROUTED Metal2  ( 4144 -112 ) ( * 438 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 3830 558 ) ( 4696 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4595 212 ) ( * 660 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4594 558 ) Via1_120_120_vx  ;
+   - gpio_defaults[0] ( PIN gpio_defaults[0] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_0 ZN )
+      + ROUTED Metal2  ( 1456 -112 ) ( * 438 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 1144 558 ) ( 2008 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 212 ) ( * 660 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1906 558 ) Via1_120_120_vx  ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_13/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_13 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 1008 2214 ) ( * 2396 )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 936 2324 ) ( 1346 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1271 2396 ) ( * 2904 ) ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_12/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_12 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 3696 2214 ) ( * 2396 )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 3624 2324 ) ( 4034 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 3959 2396 ) ( * 2904 ) ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_11/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_11 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 5864 3948 ) ( 6274 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 5936 3876 ) ( * 4058 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6199 3368 ) ( * 3876 ) ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_8/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_8 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 936 3948 ) ( 1346 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 1008 3876 ) ( * 4058 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1271 3368 ) ( * 3876 ) ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_9/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_9 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 3624 3948 ) ( 4034 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 3696 3876 ) ( * 4058 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 3959 3368 ) ( * 3876 ) ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_7/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_7 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 1008 5350 ) ( * 5532 )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 936 5460 ) ( 1346 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1271 5532 ) ( * 6040 ) ;
+   - gpio_defaults[1] ( PIN gpio_defaults[1] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_13 ZN )
+      + ROUTED Metal2  ( 2128 -112 ) ( * 138 )
+      NEW Metal2 TAPERRULE Metal2_width_120  ( 2072 254 ) ( 2264 * )
+      NEW Metal2  ( 2208 370 ) ( * 2458 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 1170 2578 ) ( 2264 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 2638 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 2476 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1906 2578 ) Via1_120_120_vx  ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_4/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_4 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 5936 2214 ) ( * 2396 )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 5864 2324 ) ( 6274 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6199 2396 ) ( * 2904 ) ;
+   - gpio_defaults[5] ( PIN gpio_defaults[5] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_12 ZN )
+      + ROUTED Metal2  ( 4816 -112 ) ( * 180 )
+      NEW Metal2 ( 4816 292 ) ( 4936 * )
+      NEW Metal2  ( 4936 404 ) ( * 2458 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 3858 2578 ) ( 4992 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4595 2638 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4595 2476 ) ( * 2924 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4594 2578 ) Via1_120_120_vx  ;
+   - gpio_defaults[6] ( PIN gpio_defaults[6] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_9 ZN )
+      + ROUTED Metal2  ( 5488 -112 ) ( * 3574 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 3858 3694 ) ( 5544 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4595 3348 ) ( * 3796 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 4594 3694 ) Via1_120_120_vx  ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_2/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_2 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 5864 812 ) ( 6274 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 5936 740 ) ( * 922 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6199 232 ) ( * 740 ) ;
+   - gpio_defaults[2] ( PIN gpio_defaults[2] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_8 ZN )
+      + ROUTED Metal2  ( 2800 -112 ) ( * 3574 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 1170 3694 ) ( 2856 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 3348 ) ( * 3796 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1906 3694 ) Via1_120_120_vx  ;
+   - gpio_defaults[7] ( PIN gpio_defaults[7] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_11 ZN )
+      + ROUTED Metal2  ( 6160 -112 ) ( * 186 )
+      NEW Metal2  ( 5898 298 ) ( 6160 * )
+      NEW Metal2  ( 5898 410 ) ( * 3574 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 5842 3694 ) ( 6936 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6835 3348 ) ( * 3796 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 6834 3694 ) Via1_120_120_vx  ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_1/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_1 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 3624 812 ) ( 4034 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 3696 740 ) ( * 922 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 3959 232 ) ( * 740 ) ;
+   - gpio_defaults[3] ( PIN gpio_defaults[3] ) ( gf180mcu_fd_sc_mcu7t5v0__tiel_7 ZN )
+      + ROUTED Metal2  ( 3472 -112 ) ( * 824 )
+      NEW Metal2  ( 3342 936 ) ( 3472 * )
+      NEW Metal2  ( 3342 1048 ) ( * 5594 )
+      NEW Metal2 TAPERRULE Metal2_width_128  ( 1152 5714 ) ( 3398 * )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 5774 ) ( * 6060 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1907 5612 ) ( * 6060 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1906 5714 ) Via1_120_120_vx  ;
+   - gf180mcu_fd_sc_mcu7t5v0__tieh_0/Z
+       ( gf180mcu_fd_sc_mcu7t5v0__tieh_0 Z )
+      + ROUTED Metal1 TAPERRULE Metal1_width_144  ( 936 812 ) ( 1346 * )
+      NEW Metal1 TAPERRULE Metal1_width_144  ( 1008 740 ) ( * 922 )
+      NEW Metal1 TAPERRULE Metal1_width_150  ( 1271 232 ) ( * 740 ) ;
+END NETS
+
+END DESIGN
+
