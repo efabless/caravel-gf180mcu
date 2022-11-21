@@ -1,5 +1,8 @@
     module caravel (
-    
+	`ifdef USE_POWER_PINS
+    inout VDD,		// Common 5.0V padframe/ESD power
+    inout VSS,		// Common padframe/ESD ground
+	`endif
     inout gpio,		// Used for external LDO control
     inout [`MPRJ_IO_PADS-1:0] mprj_io,
     input clock,    	// CMOS core clock input, not a crystal

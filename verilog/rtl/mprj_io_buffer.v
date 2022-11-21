@@ -3,19 +3,12 @@ module mprj_io_buffer (
 		inout VDD,
 		inout VSS,
 	`endif
-    mgmt_gpio_in,
-    mgmt_gpio_in_buf,
-    mgmt_gpio_oeb,
-    mgmt_gpio_oeb_buf,
-    mgmt_gpio_out,
-    mgmt_gpio_out_buf);
-
- input [17:0] mgmt_gpio_in;
- output [17:0] mgmt_gpio_in_buf;
- input [2:0] mgmt_gpio_oeb;
- output [2:0] mgmt_gpio_oeb_buf;
- input [17:0] mgmt_gpio_out;
- output [17:0] mgmt_gpio_out_buf;
+     input [17:0]  mgmt_gpio_in,
+     output [17:0] mgmt_gpio_in_buf,
+     input [2:0]   mgmt_gpio_oeb,
+     output [2:0]  mgmt_gpio_oeb_buf,
+     input [17:0]  mgmt_gpio_out,
+     output [17:0] mgmt_gpio_out_buf);
 
 gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 BUF[38:0] (
 		`ifdef USE_POWER_PINS
