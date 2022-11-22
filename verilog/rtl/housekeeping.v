@@ -1038,6 +1038,7 @@ module housekeeping #(
 	    serial_bb_resetn <= 1'b0;
 	    serial_xfer <= 1'b0;
 	    hkspi_disable <= 1'b0;
+	    pwr_ctrl_out <= 'd0;
 
         end else begin
 	    if (cwstb == 1'b1) begin
