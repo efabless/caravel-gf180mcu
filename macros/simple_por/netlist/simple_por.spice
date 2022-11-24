@@ -71,11 +71,11 @@ XM10 Vout net4 mid2 VDD pmos_6p0 W=2u L=0.55u
 
 * Instantiate the entire POR
 
-.subckt simple_por vdd vss porb por
-X0 vdd vss capt reduction_mirror
+.subckt simple_por VDD VSS porb por
+X0 VDD VSS capt reduction_mirror
 R0 capt cap 0
-X1 cap vss large_mimcap
-X2 vdd vss cap mid schmitt_inverter
-X3 vdd vss mid porb std_inverter
-X3 vdd vss mid por std_buffer
+X1 cap VSS large_mimcap
+X2 VDD VSS cap mid schmitt_inverter
+X3 VDD VSS mid porb std_inverter
+X3 VDD VSS mid por std_buffer
 .ends

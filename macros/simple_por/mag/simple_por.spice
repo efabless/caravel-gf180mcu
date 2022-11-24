@@ -289,11 +289,11 @@ XXM3 Vin VSS m1_1243_n1927# VSS nmos_6p0_BJPB5U
 XXM5 m1_1072_n872# Vout VSS VDD pmos_6p0_9859UL
 .ends
 
-.subckt simple_por vdd vss porb por
-Xstd_buffer_0 vdd X3/Vin por vss std_buffer
-XX0 vdd vss X1/In reduction_mirror
-XX1 X1/In vss large_mimcap
-XX2 vdd vss X1/In X3/Vin schmitt_inverter
-XX3 vdd X3/Vin porb vss std_inverter
+.subckt simple_por VDD VSS porb por
+Xstd_buffer_0 VDD X3/Vin por VSS std_buffer
+XX0 VDD VSS X1/In reduction_mirror
+XX1 X1/In VSS large_mimcap
+XX2 VDD VSS X1/In X3/Vin schmitt_inverter
+XX3 VDD X3/Vin porb VSS std_inverter
 .ends
 
