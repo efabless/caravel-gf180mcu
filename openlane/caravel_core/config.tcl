@@ -158,9 +158,9 @@ set ::env(CTS_SINK_CLUSTERING_SIZE) 12
 set ::env(CTS_SINK_CLUSTERING_MAX_DIAMETER) 30
 
 ##PLACEMENT
-set ::env(PL_ROUTABILITY_DRIVEN) 0
+set ::env(PL_ROUTABILITY_DRIVEN) 1
 set ::env(PL_TIME_DRIVEN) 1
-set ::env(PL_TARGET_DENSITY) 0.5
+set ::env(PL_TARGET_DENSITY) 0.58
 
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
@@ -170,7 +170,7 @@ set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 1
 set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 1200
 # set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
 # set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) 150
-set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 40
+set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 20
 
 ##ROUTING
 set ::env(GRT_ALLOW_CONGESTION) 1
@@ -193,11 +193,11 @@ set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 1200
 
 ## Antenna
 set ::env(DIODE_INSERTION_STRATEGY) 3
-set ::env(GRT_ANT_ITERS) 15
-set ::env(GRT_MAX_DIODE_INS_ITERS) 15
+set ::env(GRT_ANT_ITERS) 20
+set ::env(GRT_MAX_DIODE_INS_ITERS) 20
 set ::env(DIODE_PADDING) 0
 
-## MUST CHANGE LATER
+## MUST BE 0 BEFORE SIGNOFF
 set ::env(MAGIC_DEF_LABELS) 0
 
 ## MACROS
@@ -252,63 +252,4 @@ set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu
 set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
 set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
 
-# set ::env(DONT_USE_CELLS) "\
-# gf180mcu_fd_sc_mcu7t5v0__mux2_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai33_2 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffq_1 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffq_2 \ 
-# gf180mcu_fd_sc_mcu7t5v0__sdffq_4 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2 \
-# gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi21_1 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi21_2 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi22_1 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi22_2 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi211_1 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi211_2 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi221_1 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi221_2 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi222_1 \
-# gf180mcu_fd_sc_mcu7t5v0__aoi222_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai21_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai21_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai22_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai22_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai31_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai31_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai32_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai32_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai33_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai33_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai211_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai211_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai221_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai221_2 \
-# gf180mcu_fd_sc_mcu7t5v0__oai222_1 \
-# gf180mcu_fd_sc_mcu7t5v0__oai222_2 \
-# gf180mcu_fd_sc_mcu7t5v0__nor4_1 \
-# gf180mcu_fd_sc_mcu7t5v0__nor4_2 \
-# gf180mcu_fd_sc_mcu7t5v0__nor3_1 \
-# gf180mcu_fd_sc_mcu7t5v0__nor2_1 \
-# gf180mcu_fd_sc_mcu7t5v0__or2_1 \
-# gf180mcu_fd_sc_mcu7t5v0__or3_1 \
-# gf180mcu_fd_sc_mcu7t5v0__or4_1 \
-# gf180mcu_fd_sc_mcu7t5v0__or4_2 \
-# gf180mcu_fd_sc_mcu7t5v0__nand2_1 \
-# gf180mcu_fd_sc_mcu7t5v0__nand3_1 \
-# gf180mcu_fd_sc_mcu7t5v0__nand4_1 \
-# gf180mcu_fd_sc_mcu7t5v0__nand4_2 \
-# gf180mcu_fd_sc_mcu7t5v0__buf_1 \
-# gf180mcu_fd_sc_mcu7t5v0__and2_1 \
-# gf180mcu_fd_sc_mcu7t5v0__and3_1 \
-# gf180mcu_fd_sc_mcu7t5v0__and4_1 \
-# gf180mcu_fd_sc_mcu7t5v0__and4_2"
-
-set ::env(RSZ_DONT_TOUCH_RX) "const"
+set ::env(RSZ_DONT_TOUCH_RX) "const|serial_clock|serial_load"
