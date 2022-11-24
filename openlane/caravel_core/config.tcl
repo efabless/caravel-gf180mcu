@@ -203,39 +203,42 @@ set ::env(MAGIC_DEF_LABELS) 0
 ## MACROS
 set ::env(MACRO_PLACEMENT_CFG) [glob $::env(DESIGN_DIR)/macro_placement.cfg]
 
-set ::env(VERILOG_FILES_BLACKBOX) "$::env(DESIGN_DIR)/../../verilog/gl/__user_project_wrapper.v \
-                        $::env(DESIGN_DIR)/../../verilog/gl/housekeeping.v \
-                        $::env(DESIGN_DIR)/../../verilog/rtl/simple_por.v \
-                        $::env(DESIGN_DIR)/../../verilog/rtl/user_id_programming.v \
-                        $::env(DESIGN_DIR)/../../verilog/gl/spare_logic_block.v \
-                        $::env(DESIGN_DIR)/../../verilog/gl/mprj_io_buffer.v \
-                        $::env(DESIGN_DIR)/../../verilog/rtl/gpio_defaults_block.v \
-                        $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
+set ::env(VERILOG_FILES_BLACKBOX) "\
+    $::env(DESIGN_DIR)/../../verilog/gl/__user_project_wrapper.v \
+    $::env(DESIGN_DIR)/../../verilog/gl/housekeeping.v \
+    $::env(DESIGN_DIR)/../../verilog/rtl/simple_por.v \
+    $::env(DESIGN_DIR)/../../verilog/rtl/user_id_programming.v \
+    $::env(DESIGN_DIR)/../../verilog/gl/spare_logic_block.v \
+    $::env(DESIGN_DIR)/../../verilog/gl/mprj_io_buffer.v \
+    $::env(DESIGN_DIR)/../../verilog/rtl/gpio_defaults_block.v \
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
 
-set ::env(EXTRA_LEFS) "$::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
-                        $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
-                        $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
-                        $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
-                        $::env(DESIGN_DIR)/../../lef/spare_logic_block.lef \
-                        $::env(DESIGN_DIR)/../../lef/mprj_io_buffer.lef \
-                        $::env(DESIGN_DIR)/../../lef/gpio_defaults_block.lef \
-                        $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
+set ::env(EXTRA_LEFS) "\
+    $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
+    $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
+    $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
+    $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
+    $::env(DESIGN_DIR)/../../lef/spare_logic_block.lef \
+    $::env(DESIGN_DIR)/../../lef/mprj_io_buffer.lef \
+    $::env(DESIGN_DIR)/../../lef/gpio_defaults_block.lef \
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
 
-set ::env(EXTRA_GDS_FILES) "$::env(DESIGN_DIR)/../../gds/user_project_wrapper.gds \
-                        $::env(DESIGN_DIR)/../../gds/housekeeping.gds \
-                        $::env(DESIGN_DIR)/../../macros/simple_por/gds/simple_por.gds \
-                        $::env(DESIGN_DIR)/../../gds/user_id_programming.gds \
-                        $::env(DESIGN_DIR)/../../gds/spare_logic_block.gds \
-                        $::env(DESIGN_DIR)/../../gds/mprj_io_buffer.gds \
-                        $::env(DESIGN_DIR)/../../gds/gpio_defaults_block.gds \
-                        $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds"
+set ::env(EXTRA_GDS_FILES) "\
+    $::env(DESIGN_DIR)/../../gds/user_project_wrapper.gds \
+    $::env(DESIGN_DIR)/../../gds/housekeeping.gds \
+    $::env(DESIGN_DIR)/../../macros/simple_por/gds/simple_por.gds \
+    $::env(DESIGN_DIR)/../../gds/user_id_programming.gds \
+    $::env(DESIGN_DIR)/../../gds/spare_logic_block.gds \
+    $::env(DESIGN_DIR)/../../gds/mprj_io_buffer.gds \
+    $::env(DESIGN_DIR)/../../gds/gpio_defaults_block.gds \
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds"
 
-set ::env(EXTRA_LIB_FILES) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lib/gf180mcu_fd_ip_sram__sram512x8m8wm1.lib \
-                        $::env(DESIGN_DIR)/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib \
-                        $::env(DESIGN_DIR)/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib"
+set ::env(EXTRA_LIBS) "\
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib \
+    $::env(DESIGN_DIR)/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib \
+    $::env(DESIGN_DIR)/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib"
 
-## To prevent OR crash
-set ::env(STA_WRITE_LIB) 0
+set ::env(STA_WRITE_LIB) 1
 
 ## For faster development
 set ::env(QUIT_ON_TR_DRC) 1

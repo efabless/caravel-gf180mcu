@@ -47,9 +47,9 @@ set ::env(ECO_ENABLE) {0}
 set ::env(ECO_FINISH) {0}
 set ::env(ECO_ITER) {0}
 set ::env(ECO_SKIP_PIN) {1}
-set ::env(EXTRA_GDS_FILES) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_project_wrapper.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/housekeeping.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/gds/simple_por.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_id_programming.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/spare_logic_block.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/mprj_io_buffer.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/gpio_defaults_block.gds  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds}
-set ::env(EXTRA_LEFS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_project_wrapper.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/housekeeping.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/lef/simple_por.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_id_programming.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/spare_logic_block.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/mprj_io_buffer.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/gpio_defaults_block.lef  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef}
-set ::env(EXTRA_LIB_FILES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lib/gf180mcu_fd_ip_sram__sram512x8m8wm1.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib}
+set ::env(EXTRA_GDS_FILES) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_project_wrapper.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/housekeeping.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/gds/simple_por.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_id_programming.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/spare_logic_block.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/mprj_io_buffer.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/gpio_defaults_block.gds  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds}
+set ::env(EXTRA_LEFS) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_project_wrapper.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/housekeeping.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/lef/simple_por.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_id_programming.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/spare_logic_block.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/mprj_io_buffer.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/gpio_defaults_block.lef  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef}
+set ::env(EXTRA_LIBS) { /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib}
 set ::env(FILL_CELL) {gf180mcu_fd_sc_mcu7t5v0__fill_*}
 set ::env(FP_ASPECT_RATIO) {1}
 set ::env(FP_CORE_UTIL) {50}
@@ -104,7 +104,7 @@ set ::env(FP_WELLTAP_CELL) {gf180mcu_fd_sc_mcu7t5v0__filltie}
 set ::env(FULL_ADDER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/fa_map.v}
 set ::env(GDS_FILES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds}
 set ::env(GENERATE_FINAL_SUMMARY_REPORT) {1}
-set ::env(GLB_CFG_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/config.tcl}
+set ::env(GLB_CFG_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/config.tcl}
 set ::env(GLB_OPTIMIZE_MIRRORING) {1}
 set ::env(GLB_RESIZER_ALLOW_SETUP_VIOS) {0}
 set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) {50}
@@ -144,7 +144,7 @@ set ::env(LIB_FASTEST) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180
 set ::env(LIB_SLOWEST) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib}
 set ::env(LIB_SYNTH) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
 set ::env(LIB_TYPICAL) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
-set ::env(LOGS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs}
+set ::env(LOGS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs}
 set ::env(LVS_CONNECT_BY_LABEL) {0}
 set ::env(LVS_INSERT_POWER_PINS) {1}
 set ::env(MACRO_BLOCKAGES_LAYER) {Metal1 Metal2 Metal3 Metal4 Metal5}
@@ -221,8 +221,8 @@ set ::env(RCX_RULES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openla
 set ::env(RCX_RULES_MAX) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/RCmax.rules}
 set ::env(RCX_RULES_MIN) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/RCmin.rules}
 set ::env(RCX_SDC_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/rcx.sdc}
-set ::env(REPORTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports}
-set ::env(RESULTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results}
+set ::env(REPORTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports}
+set ::env(RESULTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results}
 set ::env(RIGHT_MARGIN_MULT) {12}
 set ::env(RIPPLE_CARRY_ADDER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/rca_map.v}
 set ::env(ROUTING_CORES) {36}
@@ -231,7 +231,7 @@ set ::env(RSZ_USE_OLD_REMOVER) {0}
 set ::env(RT_MAX_LAYER) {Metal5}
 set ::env(RT_MIN_LAYER) {Metal2}
 set ::env(RUN_CVC) {1}
-set ::env(RUN_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32}
+set ::env(RUN_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40}
 set ::env(RUN_DRT) {1}
 set ::env(RUN_FILL_INSERTION) {1}
 set ::env(RUN_IRDROP_REPORT) {0}
@@ -242,13 +242,13 @@ set ::env(RUN_LVS) {1}
 set ::env(RUN_MAGIC) {1}
 set ::env(RUN_MAGIC_DRC) {1}
 set ::env(RUN_SPEF_EXTRACTION) {1}
-set ::env(RUN_TAG) {RUN_2022.11.24_00.13.32}
+set ::env(RUN_TAG) {RUN_2022.11.24_11.11.40}
 set ::env(RUN_TAP_DECAP_INSERTION) {1}
 set ::env(SCLPATH) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/gf180mcu_fd_sc_mcu7t5v0}
 set ::env(SPEF_EXTRACTOR) {openrcx}
-set ::env(START_TIME) {2022.11.24_00.13.32}
+set ::env(START_TIME) {2022.11.24_11.11.40}
 set ::env(STA_REPORT_POWER) {1}
-set ::env(STA_WRITE_LIB) {0}
+set ::env(STA_WRITE_LIB) {1}
 set ::env(STD_CELL_GROUND_PINS) {VSS}
 set ::env(STD_CELL_LIBRARY) {gf180mcu_fd_sc_mcu7t5v0}
 set ::env(STD_CELL_LIBRARY_CDL) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/cdl/gf180mcu_fd_sc_mcu7t5v0.cdl}
@@ -282,7 +282,7 @@ set ::env(SYNTH_TIMING_DERATE) {0.05}
 set ::env(TAKE_LAYOUT_SCROT) {0}
 set ::env(TECH_LEF) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0.tlef}
 set ::env(TERMINAL_OUTPUT) {/dev/null}
-set ::env(TMP_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp}
+set ::env(TMP_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp}
 set ::env(TOP_MARGIN_MULT) {4}
 set ::env(TRACKS_INFO_FILE) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tracks.info}
 set ::env(TRISTATE_BUFFER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tribuff_map.v}
@@ -291,47 +291,47 @@ set ::env(USE_GPIO_PADS) {0}
 set ::env(VDD_NETS) {VDD}
 set ::env(VDD_PIN) {VDD}
 set ::env(VERILOG_FILES) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/defines.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_defines.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/caravel_core.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/mgmt_protect.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/digital_pll.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/clock_div.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/caravel_clocking.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_control_block.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/mgmt_core_wrapper.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/mgmt_core.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/sram.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/GF180_RAM_512x32.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/VexRiscv_MinDebugCache.v}
-set ::env(VERILOG_FILES_BLACKBOX) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/__user_project_wrapper.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/housekeeping.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/simple_por.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_id_programming.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/spare_logic_block.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/mprj_io_buffer.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_defaults_block.v  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v}
+set ::env(VERILOG_FILES_BLACKBOX) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/__user_project_wrapper.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/housekeeping.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/simple_por.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_id_programming.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/spare_logic_block.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/mprj_io_buffer.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_defaults_block.v  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v}
 set ::env(WIRE_RC_LAYER) {Metal2}
 set ::env(YOSYS_REWRITE_VERILOG) {0}
-set ::env(cts_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/cts}
-set ::env(cts_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/cts}
-set ::env(cts_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/cts}
-set ::env(cts_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/cts}
-set ::env(eco_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/eco}
-set ::env(eco_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/eco}
-set ::env(eco_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/eco}
-set ::env(eco_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/eco}
-set ::env(floorplan_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/floorplan}
-set ::env(floorplan_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/floorplan}
-set ::env(floorplan_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/floorplan}
-set ::env(floorplan_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/floorplan}
-set ::env(placement_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/placement}
-set ::env(placement_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/placement}
-set ::env(placement_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/placement}
-set ::env(placement_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/placement}
-set ::env(routing_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/routing}
-set ::env(routing_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/routing}
-set ::env(routing_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing}
-set ::env(routing_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing}
-set ::env(signoff_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/signoff}
-set ::env(signoff_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/signoff}
-set ::env(signoff_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/signoff}
-set ::env(signoff_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff}
-set ::env(synthesis_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/synthesis}
-set ::env(synthesis_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/synthesis}
-set ::env(synthesis_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/synthesis}
-set ::env(synthesis_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis}
+set ::env(cts_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/cts}
+set ::env(cts_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/cts}
+set ::env(cts_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/cts}
+set ::env(cts_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/cts}
+set ::env(eco_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/eco}
+set ::env(eco_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/eco}
+set ::env(eco_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/eco}
+set ::env(eco_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/eco}
+set ::env(floorplan_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/floorplan}
+set ::env(floorplan_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/floorplan}
+set ::env(floorplan_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/floorplan}
+set ::env(floorplan_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/floorplan}
+set ::env(placement_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/placement}
+set ::env(placement_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/placement}
+set ::env(placement_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/placement}
+set ::env(placement_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/placement}
+set ::env(routing_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/routing}
+set ::env(routing_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/routing}
+set ::env(routing_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing}
+set ::env(routing_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing}
+set ::env(signoff_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/signoff}
+set ::env(signoff_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/signoff}
+set ::env(signoff_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/signoff}
+set ::env(signoff_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff}
+set ::env(synthesis_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/synthesis}
+set ::env(synthesis_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/synthesis}
+set ::env(synthesis_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/synthesis}
+set ::env(synthesis_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis}
 set ::env(SYNTH_MAX_TRAN) {3.0}
 set ::env(CURRENT_INDEX) 29
-set ::env(CURRENT_DEF) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.def
-set ::env(CURRENT_GUIDE) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing/15-global.guide
-set ::env(CURRENT_NETLIST) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.nl.v
+set ::env(CURRENT_DEF) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.def
+set ::env(CURRENT_GUIDE) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing/15-global.guide
+set ::env(CURRENT_NETLIST) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.nl.v
 set ::env(CURRENT_POWERED_NETLIST) {0}
-set ::env(CURRENT_ODB) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.odb
+set ::env(CURRENT_ODB) /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.odb
 set ::env(PDK_ROOT) {/home/hosni/GF180/OpenLane/pdks}
-set ::env(ANTENNA_CHECK_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.p.def}
-set ::env(ANTENNA_VIOLATOR_LIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/signoff/29-antenna_violators.rpt}
+set ::env(ANTENNA_CHECK_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.p.def}
+set ::env(ANTENNA_VIOLATOR_LIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/signoff/29-antenna_violators.rpt}
 set ::env(BASE_SDC_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/base.sdc}
 set ::env(BASIC_PREP_COMPLETE) {1}
 set ::env(BOTTOM_MARGIN_MULT) {4}
@@ -353,7 +353,7 @@ set ::env(CORE_HEIGHT) {4308.08}
 set ::env(CORE_WIDTH) {3121.44}
 set ::env(CTS_CLK_BUFFER_LIST) {gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 gf180mcu_fd_sc_mcu7t5v0__clkbuf_8}
 set ::env(CTS_CLK_MAX_WIRE_LENGTH) {0}
-set ::env(CTS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/placement/caravel_core.def}
+set ::env(CTS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/placement/caravel_core.def}
 set ::env(CTS_DISABLE_POST_PROCESSING) {0}
 set ::env(CTS_DISTANCE_BETWEEN_BUFFERS) {0}
 set ::env(CTS_MAX_CAP) {0.15}
@@ -363,17 +363,18 @@ set ::env(CTS_SINK_CLUSTERING_MAX_DIAMETER) {30}
 set ::env(CTS_SINK_CLUSTERING_SIZE) {12}
 set ::env(CTS_TARGET_SKEW) {200}
 set ::env(CTS_TOLERANCE) {10}
-set ::env(CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.p.def}
-set ::env(CURRENT_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing}
-set ::env(CURRENT_GDS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/signoff/caravel_core.gds}
-set ::env(CURRENT_GUIDE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing/15-global.guide}
+set ::env(CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.p.def}
+set ::env(CURRENT_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing}
+set ::env(CURRENT_GDS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/signoff/caravel_core.gds}
+set ::env(CURRENT_GUIDE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing/15-global.guide}
 set ::env(CURRENT_INDEX) {29}
-set ::env(CURRENT_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.nl.v}
-set ::env(CURRENT_ODB) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.odb}
-set ::env(CURRENT_POWERED_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.pnl.v}
-set ::env(CURRENT_SDC) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/13-caravel_core.sdc}
-set ::env(CURRENT_SDF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/mca/process_corner_nom/caravel_core.sdf}
-set ::env(CURRENT_SPEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/mca/process_corner_nom/caravel_core.spef}
+set ::env(CURRENT_LIB) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/mca/process_corner_nom/caravel_core.lib}
+set ::env(CURRENT_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.nl.v}
+set ::env(CURRENT_ODB) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.odb}
+set ::env(CURRENT_POWERED_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.pnl.v}
+set ::env(CURRENT_SDC) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/13-caravel_core.sdc}
+set ::env(CURRENT_SDF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/mca/process_corner_nom/caravel_core.sdf}
+set ::env(CURRENT_SPEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/mca/process_corner_nom/caravel_core.spef}
 set ::env(CURRENT_STEP) {}
 set ::env(DATA_WIRE_RC_LAYER) {Metal2}
 set ::env(DECAP_CELL) {gf180mcu_fd_sc_mcu7t5v0__fillcap_*}
@@ -387,12 +388,12 @@ set ::env(DETAILED_ROUTER) {tritonroute}
 set ::env(DIE_AREA) {0.0 0.0 3170.0 4360.0}
 set ::env(DIODE_CELL) {gf180mcu_fd_sc_mcu7t5v0__antenna}
 set ::env(DIODE_CELL_PIN) {I}
-set ::env(DIODE_INSERTION_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.def}
+set ::env(DIODE_INSERTION_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.def}
 set ::env(DIODE_INSERTION_STRATEGY) {3}
 set ::env(DIODE_PADDING) {0}
 set ::env(DONT_USE_CELLS) {gf180mcu_fd_sc_mcu7t5v0__sdffq_1 gf180mcu_fd_sc_mcu7t5v0__sdffq_2 gf180mcu_fd_sc_mcu7t5v0__sdffq_4 gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1 gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2 gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4 gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1 gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2 gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4 gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1 gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2 gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4 gf180mcu_fd_sc_mcu7t5v0__aoi21_1 gf180mcu_fd_sc_mcu7t5v0__aoi21_2 gf180mcu_fd_sc_mcu7t5v0__aoi22_1 gf180mcu_fd_sc_mcu7t5v0__aoi22_2 gf180mcu_fd_sc_mcu7t5v0__aoi211_1 gf180mcu_fd_sc_mcu7t5v0__aoi211_2 gf180mcu_fd_sc_mcu7t5v0__aoi221_1 gf180mcu_fd_sc_mcu7t5v0__aoi221_2 gf180mcu_fd_sc_mcu7t5v0__aoi222_1 gf180mcu_fd_sc_mcu7t5v0__aoi222_2 gf180mcu_fd_sc_mcu7t5v0__oai21_1 gf180mcu_fd_sc_mcu7t5v0__oai21_2 gf180mcu_fd_sc_mcu7t5v0__oai22_1 gf180mcu_fd_sc_mcu7t5v0__oai22_2 gf180mcu_fd_sc_mcu7t5v0__oai31_1 gf180mcu_fd_sc_mcu7t5v0__oai31_2 gf180mcu_fd_sc_mcu7t5v0__oai32_1 gf180mcu_fd_sc_mcu7t5v0__oai32_2 gf180mcu_fd_sc_mcu7t5v0__oai33_1 gf180mcu_fd_sc_mcu7t5v0__oai33_2 gf180mcu_fd_sc_mcu7t5v0__oai211_1 gf180mcu_fd_sc_mcu7t5v0__oai211_2 gf180mcu_fd_sc_mcu7t5v0__oai221_1 gf180mcu_fd_sc_mcu7t5v0__oai221_2 gf180mcu_fd_sc_mcu7t5v0__oai222_1 gf180mcu_fd_sc_mcu7t5v0__oai222_2 gf180mcu_fd_sc_mcu7t5v0__nor4_1 gf180mcu_fd_sc_mcu7t5v0__nor4_2 gf180mcu_fd_sc_mcu7t5v0__nor3_1 gf180mcu_fd_sc_mcu7t5v0__nor3_2 gf180mcu_fd_sc_mcu7t5v0__nor2_1 gf180mcu_fd_sc_mcu7t5v0__or2_1 gf180mcu_fd_sc_mcu7t5v0__or3_1 gf180mcu_fd_sc_mcu7t5v0__or3_2 gf180mcu_fd_sc_mcu7t5v0__or4_1 gf180mcu_fd_sc_mcu7t5v0__or4_2 gf180mcu_fd_sc_mcu7t5v0__nand2_1 gf180mcu_fd_sc_mcu7t5v0__nand3_1 gf180mcu_fd_sc_mcu7t5v0__nand3_2 gf180mcu_fd_sc_mcu7t5v0__nand4_1 gf180mcu_fd_sc_mcu7t5v0__nand4_2 gf180mcu_fd_sc_mcu7t5v0__buf_1 gf180mcu_fd_sc_mcu7t5v0__and2_1 gf180mcu_fd_sc_mcu7t5v0__and2_2 gf180mcu_fd_sc_mcu7t5v0__and3_1 gf180mcu_fd_sc_mcu7t5v0__and3_2 gf180mcu_fd_sc_mcu7t5v0__and4_1 gf180mcu_fd_sc_mcu7t5v0__and4_2 }
 set ::env(DPL_CELL_PADDING) {2}
-set ::env(DRC_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff/24-caravel_core.p.def}
+set ::env(DRC_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff/24-caravel_core.p.def}
 set ::env(DRC_EXCLUDE_CELL_LIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/no_synth.cells}
 set ::env(DRC_EXCLUDE_CELL_LIST_OPT) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/drc_exclude.cells}
 set ::env(DRT_MIN_LAYER) {Metal1}
@@ -401,10 +402,10 @@ set ::env(ECO_ENABLE) {0}
 set ::env(ECO_FINISH) {0}
 set ::env(ECO_ITER) {0}
 set ::env(ECO_SKIP_PIN) {1}
-set ::env(EXTRA_GDS_FILES) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_project_wrapper.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/housekeeping.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/gds/simple_por.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_id_programming.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/spare_logic_block.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/mprj_io_buffer.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/gpio_defaults_block.gds  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds}
-set ::env(EXTRA_LEFS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_project_wrapper.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/housekeeping.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/lef/simple_por.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_id_programming.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/spare_logic_block.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/mprj_io_buffer.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/gpio_defaults_block.lef  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef}
-set ::env(EXTRA_LIB_FILES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lib/gf180mcu_fd_ip_sram__sram512x8m8wm1.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib}
-set ::env(EXT_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/signoff/caravel_core.spice}
+set ::env(EXTRA_GDS_FILES) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_project_wrapper.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/housekeeping.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/gds/simple_por.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/user_id_programming.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/spare_logic_block.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/mprj_io_buffer.gds  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../gds/gpio_defaults_block.gds  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds}
+set ::env(EXTRA_LEFS) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_project_wrapper.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/housekeeping.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../macros/simple_por/lef/simple_por.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/user_id_programming.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/spare_logic_block.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/mprj_io_buffer.lef  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../lef/gpio_defaults_block.lef  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef}
+set ::env(EXTRA_LIBS) { /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib}
+set ::env(EXT_NETLIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/signoff/caravel_core.spice}
 set ::env(FILL_CELL) {gf180mcu_fd_sc_mcu7t5v0__fill_*}
 set ::env(FP_ASPECT_RATIO) {1}
 set ::env(FP_CORE_UTIL) {50}
@@ -459,7 +460,7 @@ set ::env(FP_WELLTAP_CELL) {gf180mcu_fd_sc_mcu7t5v0__filltie}
 set ::env(FULL_ADDER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/fa_map.v}
 set ::env(GDS_FILES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds}
 set ::env(GENERATE_FINAL_SUMMARY_REPORT) {1}
-set ::env(GLB_CFG_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/config.tcl}
+set ::env(GLB_CFG_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/config.tcl}
 set ::env(GLB_OPTIMIZE_MIRRORING) {1}
 set ::env(GLB_RESIZER_ALLOW_SETUP_VIOS) {0}
 set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) {50}
@@ -488,7 +489,7 @@ set ::env(GRT_MACRO_EXTENSION) {0}
 set ::env(GRT_MAX_DIODE_INS_ITERS) {20}
 set ::env(GRT_OVERFLOW_ITERS) {200}
 set ::env(HOME) {/}
-set ::env(HOSTNAME) {893eaa47f347}
+set ::env(HOSTNAME) {901817cdb9d7}
 set ::env(IO_PCT) {0.2}
 set ::env(KLAYOUT_DRC_KLAYOUT_GDS) {0}
 set ::env(KLAYOUT_DRC_TECH_SCRIPT) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/klayout/gf180mcuC_mr.drc}
@@ -497,24 +498,24 @@ set ::env(KLAYOUT_TECH) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/kla
 set ::env(KLAYOUT_XOR_GDS) {1}
 set ::env(KLAYOUT_XOR_XML) {1}
 set ::env(LANG) {en_US.UTF-8}
-set ::env(LAST_TIMING_REPORT_TAG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/signoff/22-rcx_sta}
+set ::env(LAST_TIMING_REPORT_TAG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/signoff/22-rcx_sta}
 set ::env(LC_ALL) {en_US.UTF-8}
 set ::env(LC_CTYPE) {en_US.UTF-8}
 set ::env(LD_LIBRARY_PATH) {/build//lib:/build//lib/Linux-x86_64:}
 set ::env(LEC_ENABLE) {0}
 set ::env(LEFT_MARGIN_MULT) {12}
-set ::env(LIB_CTS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/cts/cts.lib}
+set ::env(LIB_CTS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/cts/cts.lib}
 set ::env(LIB_FASTEST) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib}
 set ::env(LIB_SLOWEST) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib}
-set ::env(LIB_SYNTH) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis/trimmed.lib}
+set ::env(LIB_SYNTH) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis/trimmed.lib}
 set ::env(LIB_SYNTH_COMPLETE) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
-set ::env(LIB_SYNTH_COMPLETE_NO_PG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis/1-gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.no_pg.lib}
-set ::env(LIB_SYNTH_MERGED) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis/merged.lib}
-set ::env(LIB_SYNTH_NO_PG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis/1-trimmed.no_pg.lib}
+set ::env(LIB_SYNTH_COMPLETE_NO_PG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis/1-gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.no_pg.lib}
+set ::env(LIB_SYNTH_MERGED) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis/merged.lib}
+set ::env(LIB_SYNTH_NO_PG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis/1-trimmed.no_pg.lib}
 set ::env(LIB_TYPICAL) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
-set ::env(LOGS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs}
+set ::env(LOGS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs}
 set ::env(LVS_CONNECT_BY_LABEL) {0}
-set ::env(LVS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.def}
+set ::env(LVS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.def}
 set ::env(LVS_INSERT_POWER_PINS) {1}
 set ::env(MACRO_BLOCKAGES_LAYER) {Metal1 Metal2 Metal3 Metal4 Metal5}
 set ::env(MACRO_PLACEMENT_CFG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/macro_placement.cfg}
@@ -524,7 +525,7 @@ set ::env(MAGIC_DEF_NO_BLOCKAGES) {1}
 set ::env(MAGIC_DISABLE_HIER_GDS) {1}
 set ::env(MAGIC_DRC_USE_GDS) {1}
 set ::env(MAGIC_EXT_USE_GDS) {0}
-set ::env(MAGIC_GDS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/signoff/caravel_core.magic.gds}
+set ::env(MAGIC_GDS) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/signoff/caravel_core.magic.gds}
 set ::env(MAGIC_GENERATE_GDS) {1}
 set ::env(MAGIC_GENERATE_LEF) {1}
 set ::env(MAGIC_GENERATE_MAGLEF) {1}
@@ -538,26 +539,26 @@ set ::env(MAGTYPE) {maglef}
 set ::env(MANPATH) {/build//share/man:}
 set ::env(MAX_METAL_LAYER) {5}
 set ::env(MCW_ROOT) {/home/hosni/GF180/caravel_mgmt_soc_gf180mcu}
-set ::env(MC_SDF_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/mca/sdf}
-set ::env(MC_SPEF_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/mca/spef}
-set ::env(MERGED_LEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/merged.nom.lef}
+set ::env(MC_SDF_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/mca/sdf}
+set ::env(MC_SPEF_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/mca/spef}
+set ::env(MERGED_LEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/merged.nom.lef}
 set ::env(METAL_LAYER_NAMES) {Metal1 Metal2 Metal3 Metal4 Metal5}
 set ::env(MISMATCHES_OK) {1}
 set ::env(NETGEN_SETUP_FILE) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/netgen/gf180mcuC_setup.tcl}
 set ::env(NO_SYNTH_CELL_LIST) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/no_synth.cells}
 set ::env(OPENLANE_ROOT) {/openlane}
-set ::env(OPENLANE_RUN_TAG) {22_11_23_16_13}
+set ::env(OPENLANE_RUN_TAG) {22_11_24_03_11}
 set ::env(OPENLANE_VERBOSE) {1}
 set ::env(OPENLANE_VERSION) {ff85171cfb10dc44911db7a62cc2d86f03807756}
 set ::env(OPENROAD) {/build/}
 set ::env(OPENROAD_BIN) {openroad}
-set ::env(PARSITICS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing/caravel_core.def}
+set ::env(PARSITICS_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing/caravel_core.def}
 set ::env(PATH) {/openlane:/openlane/scripts:/build//bin:/build//bin/Linux-x86_64:/build//pdn/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin}
 set ::env(PDK) {gf180mcuC}
 set ::env(PDKPATH) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC}
 set ::env(PDK_ROOT) {/home/hosni/GF180/OpenLane/pdks}
 set ::env(PDN_CFG) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/pdn.tcl}
-set ::env(PLACEMENT_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/floorplan/7-pdn.def}
+set ::env(PLACEMENT_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/floorplan/7-pdn.def}
 set ::env(PLACE_SITE) {GF018hv5v_mcu_sc7}
 set ::env(PLACE_SITE_HEIGHT) {3.92}
 set ::env(PLACE_SITE_WIDTH) {0.56}
@@ -612,19 +613,19 @@ set ::env(RCX_RULES) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openla
 set ::env(RCX_RULES_MAX) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/RCmax.rules}
 set ::env(RCX_RULES_MIN) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/RCmin.rules}
 set ::env(RCX_SDC_FILE) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/rcx.sdc}
-set ::env(REPORTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports}
-set ::env(RESULTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results}
+set ::env(REPORTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports}
+set ::env(RESULTS_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results}
 set ::env(RIGHT_MARGIN_MULT) {12}
 set ::env(RIPPLE_CARRY_ADDER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/rca_map.v}
 set ::env(ROUTING_CORES) {36}
-set ::env(ROUTING_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/cts/12-caravel_core.resized.def}
+set ::env(ROUTING_CURRENT_DEF) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/cts/12-caravel_core.resized.def}
 set ::env(RSZ_DONT_TOUCH_RX) {const|serial_clock|serial_load}
-set ::env(RSZ_LIB) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis/resizer_gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
+set ::env(RSZ_LIB) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis/resizer_gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}
 set ::env(RSZ_USE_OLD_REMOVER) {0}
 set ::env(RT_MAX_LAYER) {Metal5}
 set ::env(RT_MIN_LAYER) {Metal2}
 set ::env(RUN_CVC) {1}
-set ::env(RUN_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32}
+set ::env(RUN_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40}
 set ::env(RUN_DRT) {1}
 set ::env(RUN_FILL_INSERTION) {1}
 set ::env(RUN_IRDROP_REPORT) {0}
@@ -636,16 +637,16 @@ set ::env(RUN_MAGIC) {1}
 set ::env(RUN_MAGIC_DRC) {1}
 set ::env(RUN_SPEF_EXTRACTION) {1}
 set ::env(RUN_STANDALONE) {1}
-set ::env(RUN_TAG) {RUN_2022.11.24_00.13.32}
+set ::env(RUN_TAG) {RUN_2022.11.24_11.11.40}
 set ::env(RUN_TAP_DECAP_INSERTION) {1}
 set ::env(SCLPATH) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/gf180mcu_fd_sc_mcu7t5v0}
 set ::env(SCRIPTS_DIR) {/openlane/scripts}
 set ::env(SHLVL) {1}
 set ::env(SPEF_EXTRACTOR) {openrcx}
-set ::env(START_TIME) {2022.11.24_00.13.32}
+set ::env(START_TIME) {2022.11.24_11.11.40}
 set ::env(STA_PRE_CTS) {0}
 set ::env(STA_REPORT_POWER) {1}
-set ::env(STA_WRITE_LIB) {0}
+set ::env(STA_WRITE_LIB) {1}
 set ::env(STD_CELL_GROUND_PINS) {VSS}
 set ::env(STD_CELL_LIBRARY) {gf180mcu_fd_sc_mcu7t5v0}
 set ::env(STD_CELL_LIBRARY_CDL) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/cdl/gf180mcu_fd_sc_mcu7t5v0.cdl}
@@ -683,10 +684,10 @@ set ::env(TECH_LEF) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu
 set ::env(TECH_METAL_LAYERS) {Metal1 Metal2 Metal3 Metal4 Metal5}
 set ::env(TERM) {xterm}
 set ::env(TERMINAL_OUTPUT) {/dev/null}
-set ::env(TMP_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp}
+set ::env(TMP_DIR) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp}
 set ::env(TOP_MARGIN_MULT) {4}
 set ::env(TRACKS_INFO_FILE) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tracks.info}
-set ::env(TRACKS_INFO_FILE_PROCESSED) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing/config.tracks}
+set ::env(TRACKS_INFO_FILE_PROCESSED) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing/config.tracks}
 set ::env(TRISTATE_BUFFER_MAP) {/home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tribuff_map.v}
 set ::env(USE_ARC_ANTENNA_CHECK) {1}
 set ::env(USE_GPIO_PADS) {0}
@@ -695,41 +696,41 @@ set ::env(VDD_NET) {VDD}
 set ::env(VDD_NETS) {VDD}
 set ::env(VDD_PIN) {VDD}
 set ::env(VERILOG_FILES) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/defines.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_defines.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/caravel_core.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/mgmt_protect.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/digital_pll.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/clock_div.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/caravel_clocking.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_control_block.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/mgmt_core_wrapper.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/mgmt_core.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/sram.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/GF180_RAM_512x32.v  /home/hosni/GF180/caravel_mgmt_soc_gf180mcu/verilog/rtl/VexRiscv_MinDebugCache.v}
-set ::env(VERILOG_FILES_BLACKBOX) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/__user_project_wrapper.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/housekeeping.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/simple_por.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_id_programming.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/spare_logic_block.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/mprj_io_buffer.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_defaults_block.v  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v}
+set ::env(VERILOG_FILES_BLACKBOX) { /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/__user_project_wrapper.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/housekeeping.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/simple_por.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/user_id_programming.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/spare_logic_block.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/gl/mprj_io_buffer.v  /home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/../../verilog/rtl/gpio_defaults_block.v  /home/hosni/GF180/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v}
 set ::env(WIRE_RC_LAYER) {Metal2}
 set ::env(YOSYS_REWRITE_VERILOG) {0}
 set ::env(_) {/openlane/flow.tcl}
-set ::env(cts_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/cts}
-set ::env(cts_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/cts}
-set ::env(cts_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/cts}
-set ::env(cts_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/cts}
-set ::env(drc_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/signoff/drc}
-set ::env(eco_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/eco}
-set ::env(eco_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/eco}
-set ::env(eco_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/eco}
-set ::env(eco_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/eco}
-set ::env(floorplan_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/floorplan}
-set ::env(floorplan_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/floorplan}
-set ::env(floorplan_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/floorplan}
-set ::env(floorplan_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/floorplan}
-set ::env(fp_report_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/floorplan/3-initial_fp}
-set ::env(placement_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/placement}
-set ::env(placement_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/placement}
-set ::env(placement_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/placement}
-set ::env(placement_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/placement}
-set ::env(routing_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/routing}
-set ::env(routing_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/routing}
-set ::env(routing_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/routing}
-set ::env(routing_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/routing}
-set ::env(signoff_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/signoff}
-set ::env(signoff_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/signoff}
-set ::env(signoff_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/signoff}
-set ::env(signoff_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/signoff}
-set ::env(synth_report_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/synthesis/1-synthesis}
-set ::env(synthesis_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/logs/synthesis}
-set ::env(synthesis_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/reports/synthesis}
-set ::env(synthesis_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/results/synthesis}
-set ::env(synthesis_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_00.13.32/tmp/synthesis}
-set ::env(timer_end) {1669250359}
-set ::env(timer_routed) {1669249225}
-set ::env(timer_start) {1669248811}
+set ::env(cts_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/cts}
+set ::env(cts_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/cts}
+set ::env(cts_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/cts}
+set ::env(cts_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/cts}
+set ::env(drc_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/signoff/drc}
+set ::env(eco_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/eco}
+set ::env(eco_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/eco}
+set ::env(eco_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/eco}
+set ::env(eco_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/eco}
+set ::env(floorplan_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/floorplan}
+set ::env(floorplan_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/floorplan}
+set ::env(floorplan_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/floorplan}
+set ::env(floorplan_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/floorplan}
+set ::env(fp_report_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/floorplan/3-initial_fp}
+set ::env(placement_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/placement}
+set ::env(placement_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/placement}
+set ::env(placement_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/placement}
+set ::env(placement_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/placement}
+set ::env(routing_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/routing}
+set ::env(routing_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/routing}
+set ::env(routing_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/routing}
+set ::env(routing_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/routing}
+set ::env(signoff_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/signoff}
+set ::env(signoff_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/signoff}
+set ::env(signoff_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/signoff}
+set ::env(signoff_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/signoff}
+set ::env(synth_report_prefix) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/synthesis/1-synthesis}
+set ::env(synthesis_logs) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/logs/synthesis}
+set ::env(synthesis_reports) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/reports/synthesis}
+set ::env(synthesis_results) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/results/synthesis}
+set ::env(synthesis_tmpfiles) {/home/hosni/GF180/PnR/caravel-gf180mcu/openlane/caravel_core/runs/RUN_2022.11.24_11.11.40/tmp/synthesis}
+set ::env(timer_end) {1669289882}
+set ::env(timer_routed) {1669288705}
+set ::env(timer_start) {1669288300}
