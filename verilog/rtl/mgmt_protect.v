@@ -20,6 +20,10 @@
 /* caravel, this consists mainly of protecting against unconnected	*/
 /* inputs.								*/
 /*----------------------------------------------------------------------*/
+/* 11/24/2022:  Removed tri-state buffers in favor of AND gates; i.e.,	*/
+/* outputs from the management SoC, when disabled, will drive value	*/
+/* zero instead of tristating.						*/
+/*----------------------------------------------------------------------*/
 
 module mgmt_protect (
 `ifdef USE_POWER_PINS
@@ -102,14 +106,7 @@ module mgmt_protect (
 		.A2(la_data_in_enable)
 	);
 
-	gf180mcu_fd_sc_mcu7t5v0__inv_8 user_to_mprj_in_buffers [63:0] (
-`ifdef USE_POWER_PINS
-                .VDD(VDD),
-                .VSS(VSS),
-`endif
-		.ZN(la_data_in_mprj),
-		.I(la_data_in_mprj_bar)
-	);
+	assign la_data_in_mprj = ~la_data_in_mprj_bar;
 
 	// Protection, similar to the above, for the three user IRQ lines
 
@@ -125,14 +122,7 @@ module mgmt_protect (
 		.A2(user_irq_enable)
 	);
 
-	gf180mcu_fd_sc_mcu7t5v0__inv_8 user_irq_buffers [2:0] (
-`ifdef USE_POWER_PINS
-                .VDD(VDD),
-                .VSS(VSS),
-`endif
-		.ZN(user_irq),
-		.I(user_irq_bar)
-	);
+	assign user_irq = ~user_irq_bar;
 
 	// Protection, similar to the above, for the return
 	// signals from user area to managment on the wishbone bus
@@ -149,14 +139,7 @@ module mgmt_protect (
 		.A2(wb_in_enable)
 	);
 
-	gf180mcu_fd_sc_mcu7t5v0__inv_8 user_wb_dat_buffers [31:0] (
-`ifdef USE_POWER_PINS
-                .VDD(VDD),
-                .VSS(VSS),
-`endif
-		.ZN(mprj_dat_i_core),
-		.I(mprj_dat_i_core_bar)
-	);
+	assign mprj_dat_i_core = ~mprj_dat_i_core_bar;
 
 	gf180mcu_fd_sc_mcu7t5v0__nand2_4 user_wb_ack_gate (
 `ifdef USE_POWER_PINS
@@ -168,20 +151,15 @@ module mgmt_protect (
 		.A2(wb_in_enable)
 	);
 
-	gf180mcu_fd_sc_mcu7t5v0__inv_8 user_wb_ack_buffer (
-`ifdef USE_POWER_PINS
-                .VDD(VDD),
-                .VSS(VSS),
-`endif
-		.ZN(mprj_ack_i_core),
-		.I(mprj_ack_i_core_bar)
-	);
+	assign mprj_ack_i_core = ~mprj_ack_i_core_bar;
 
-	// The remaining circuitry guards against the management
-	// SoC dumping current into the user project area when
-	// the user project area is powered down.
+	// The remaining assignments are generally non-functional;
+	// the original intent was to AND the signals with tie-high
+ 	// gates from the user project power supply.  As long as the
+	// power supplies are not separated on-chip, there is no
+	// need for this.
 	
-	assign user_reset = caravel_rstn;
+	assign user_reset = ~caravel_rstn;
 	assign user_clock = caravel_clk;
 	assign user_clock2 = caravel_clk2;
 	assign mprj_cyc_o_user = mprj_cyc_o_core;
@@ -192,21 +170,7 @@ module mgmt_protect (
 	assign mprj_dat_o_user = mprj_dat_o_core;
 	assign la_data_out_enable = ~la_oenb_mprj;
 
-	/* Project data out from the managment side to the user project	*/
-	/* area when the user project is powered down.			*/
-
-        gf180mcu_fd_sc_mcu7t5v0__bufz_8 la_buf [63:0] (
-`ifdef USE_POWER_PINS
-                .VDD(VDD),
-                .VSS(VSS),
-`endif
-                .Z(la_data_in_core),
-                .I(la_data_out_mprj),
-                .EN(la_data_out_enable)
-        );
-
-	/* Project data out enable (bar) from the managment side to the	*/
-	/* user project	area when the user project is powered down.	*/
+	assign la_data_in_core = la_data_out_mprj & la_data_out_enable;
 
 	assign la_oenb_core = la_oenb_mprj;
 
