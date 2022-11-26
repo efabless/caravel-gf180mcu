@@ -462,6 +462,17 @@ module caravel_core (
     wire [4:0] spi_pll_div;
     wire [25:0] spi_pll_trim;
 
+
+		// mprj_gpio_buffer
+	wire [17:0] gpio_buf_mgmt_io_in;	
+    wire [17:0] gpio_buf_mgmt_io_out;	
+    wire [2:0] gpio_buf_mgmt_io_oeb;	
+	//
+	wire [17:0] gpio_buf_mgmt_io_in_buf;	
+    wire [17:0] gpio_buf_mgmt_io_out_buf;	
+    wire [2:0] gpio_buf_mgmt_io_oeb_buf;	
+	//
+	
     // Clocking control
 
     caravel_clocking clock_ctrl (
@@ -597,15 +608,6 @@ module caravel_core (
 	.pad_flash_io1_di(flash_io1_di)
     );
 
-		// mprj_gpio_buffer
-	wire [17:0] gpio_buf_mgmt_io_in;	
-    wire [17:0] gpio_buf_mgmt_io_out;	
-    wire [2:0] gpio_buf_mgmt_io_oeb;	
-	//
-	wire [17:0] gpio_buf_mgmt_io_in_buf;	
-    wire [17:0] gpio_buf_mgmt_io_out_buf;	
-    wire [2:0] gpio_buf_mgmt_io_oeb_buf;	
-	//
 
 	mprj_io_buffer gpio_buf(
     `ifdef USE_POWER_PINS
