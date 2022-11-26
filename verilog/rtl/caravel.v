@@ -177,10 +177,10 @@ module caravel (
 
 	.flash_csb_frame(flash_csb_frame),
 	.flash_clk_frame(flash_clk_frame),
-	.flash_csb_oe(flash_clk_frame),
+	.flash_csb_oe(flash_csb_oe),
 	.flash_clk_oe(flash_clk_oe),
-	.flash_io0_oe(flash_clk_oe),
-	.flash_io1_oe(flash_clk_oe),
+	.flash_io0_oe(flash_io0_oe),
+	.flash_io1_oe(flash_io1_oe),
 	.flash_io0_ie(flash_io0_ie),
 	.flash_io1_ie(flash_io1_ie),
 	.flash_io0_do(flash_io0_do),
