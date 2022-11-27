@@ -41,11 +41,12 @@ set ::env(SYNTH_STRATEGY) "DELAY 0"
 set ::env(SYNTH_MAX_FANOUT) 12
 set ::env(SYNTH_BUFFERING) 0
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
-# set ::env(NO_SYNTH_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]
+set ::env(NO_SYNTH_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]
+set ::env(DRC_EXCLUDE_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]
 
 ## Floorplan
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 520 780"
+set ::env(DIE_AREA) "0 0 620 780"
 # set ::env(FP_CORE_UTIL) 10
 
 set ::env(FP_PIN_ORDER_CFG) [glob $::env(DESIGN_DIR)/pin_order.cfg]
@@ -59,19 +60,19 @@ set ::env(FP_PDN_HSPACING) 28.4
 set ::env(FP_PDN_HOFFSET) 6.41
 
 ## Placement
-set ::env(PL_TARGET_DENSITY) 0.34
+set ::env(PL_TARGET_DENSITY) 0.48
 set ::env(PL_TIME_DRIVEN) 1
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
 # set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 250
-# set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 0.4
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 1
 
-set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.1
-set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 10
-set ::env(PL_RESIZER_MAX_CAP_MARGIN) 10
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.01
+set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 30
+set ::env(PL_RESIZER_MAX_CAP_MARGIN) 30
 
 # set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
-# set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 1
+set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 0
 set ::env(CLOCK_TREE_SYNTH) 1
 
 ## Routing 
@@ -84,7 +85,7 @@ set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 1
 # set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 250
 # set ::env(GLB_RESIZER_MAX_SLEW_MARGIN) "30"
 # set ::env(GLB_RESIZER_MAX_CAP_MARGIN) "30"
-set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 0.1
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 0.5
 
 ## Diode Insertion
 set ::env(DIODE_INSERTION_STRATEGY) 3
@@ -94,8 +95,6 @@ set ::env(GRT_MAX_DIODE_INS_ITERS) 10
 set ::env(DIODE_PADDING) 0
 
 ## clock buffering
-# set ::env(CTS_CLK_BUFFER_LIST) {sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__clkbuf_4}
-# set ::env(CTS_ROOT_BUFFER) {sky130_fd_sc_hd__clkbuf_8}
 # set ::env(CTS_CLK_MAX_WIRE_LENGTH) 120
 set ::env(CTS_MAX_CAP) 0.2
 
