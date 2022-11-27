@@ -11395,9 +11395,9 @@ Warning: Line 3242, Cell 'gf180mcu_fd_io__in_s', pin 'VSS', The 'VSS' Pin/bus on
 Error: Can't find library '*'. (UIL-103)
 
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM256.v'
-Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v'
-Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'
+Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
+Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_core.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM128.v'
 Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_proj_example.v'
@@ -11415,9 +11415,9 @@ Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_bl
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_009.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v'
 Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v'
-Loading db file '/tmp/_pt1rk4LgEB/1.db'
+Loading db file '/tmp/_pt1rv0k8DV/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ff_n40C_5v50.lib'
-Loading db file '/tmp/_pt1rtzNm0H/1.db'
+Loading db file '/tmp/_pt1rcHje39/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'
 Error: Problem in read_lib: No designs were read. (DBR-011)
 Error: Cannot read link_path file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'. (LNK-001)
@@ -12071,14 +12071,6 @@ Design 'housekeeping' was successfully linked.
 Information: There are 6455 leaf cells, ports, hiers and 6269 nets in the design (LNK-047)
 
 Reading SDC version 2.1...
-Warning: No pin objects matched '_7322_/Q' (SEL-004)
-Error: Nothing matched for pins (SEL-005)
-Error: Nothing matched for source_list (SEL-005)
-Warning: No clock objects matched 'wbbd_sck' (SEL-004)
-Error: Nothing matched for clocks (SEL-005)
-Error: Nothing matched for object_list (SEL-005)
-Warning: Nothing implicitly matched 'wbbd_sck' (SEL-003)
-Error: Nothing matched for object_list (SEL-005)
 1
 [INFO]: Spef mapping done
 Information: Checked out license 'PrimeTime-SI' (PT-019)
@@ -12087,31 +12079,36 @@ Information: Log for 'report_annotated_parasitics command' will be generated in 
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Building multi voltage information for entire design. (MV-022)
 Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Warning: No clock-gating check is inferred for clock wbbd_sck at pins _4072_/A1 and _4072_/A2 of cell _4072_. (PTE-060)
+Warning: No clock-gating check is inferred for clock wbbd_sck at pins _4072_/B1 and _4072_/A2 of cell _4072_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4072_/A1 and _4072_/B2 of cell _4072_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4072_/B1 and _4072_/B2 of cell _4072_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4075_/I0 and _4075_/I1 of cell _4075_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4075_/S and _4075_/I1 of cell _4075_. (PTE-060)
+Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/I0 and _4067_/I1 of cell _4067_. (PTE-060)
+Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/S and _4067_/I1 of cell _4067_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4057_/I0 and _4057_/I1 of cell _4057_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4057_/S and _4057_/I1 of cell _4057_. (PTE-060)
 Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/I0 and _4066_/I1 of cell _4066_. (PTE-060)
 Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/S and _4066_/I1 of cell _4066_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4072_/A1 and _4072_/B2 of cell _4072_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4072_/A2 and _4072_/B2 of cell _4072_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4072_/B1 and _4072_/B2 of cell _4072_. (PTE-060)
-Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/I0 and _4067_/I1 of cell _4067_. (PTE-060)
-Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/S and _4067_/I1 of cell _4067_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4075_/I0 and _4075_/I1 of cell _4075_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4075_/S and _4075_/I1 of cell _4075_. (PTE-060)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
-Information: Number of nets evaluated in the previous iteration: 6249. (XTALK-105)
+Information: Expanding clock 'user_clock' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
+Information: Expanding clock 'wb_clk_i' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
+Information: Expanding clock 'wbbd_sck' to base period of 120.000 (old period was 60.000, added 2 edges). (PTE-016)
+Information: Number of nets evaluated in the previous iteration: 6248. (XTALK-105)
 ****************************************
 Report : write_sdf /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/sdf/ff/housekeeping.nom.sdf
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Sun Nov 27 09:30:44 2022
+Date   : Sun Nov 27 09:50:05 2022
 ****************************************
 
 Warning: Variable si_filter_keep_all_port_aggressors is set to FALSE (MEXT-80)
 Information: For model extraction, min_period and min_pulse_width arcs are extracted at the context slew. (MEXT-105)
 Information: Elapsed time for model extraction: 7 seconds (MEXT-096)
 Wrote the LIB file /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/lib/ff/housekeeping.nom.lib
+Wrote the propagated generated clocks in /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/lib/ff/housekeeping.nom_constr.pt.
 Information: Elapsed time for lib file writing: 0 seconds (MEXT-096)
 Information: Defining new variable 'verilog'. (CMD-041)
 Suppressed Messages Summary:
@@ -12120,10 +12117,10 @@ Id          Severity      Occurrences   Suppressed
 DB-1        Error                   5            5
 PARA-040    Warning             24112        22612
 Total 2 types of messages are suppressed
-Maximum memory usage for this session: 3090.88 MB
-CPU usage for this session: 38 seconds 
+Maximum memory usage for this session: 3089.31 MB
+CPU usage for this session: 39 seconds 
 Elapsed time for this session: 19 seconds
-Diagnostics summary: 7 errors, 17 warnings, 36 informationals
+Diagnostics summary: 2 errors, 15 warnings, 39 informationals
 
 Thank you for using pt_shell!
 STA run Passed!

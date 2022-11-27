@@ -16,7 +16,7 @@ Report : timing
 	-include_hierarchical_pins
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Sun Nov 27 09:30:43 2022
+Date   : Sun Nov 27 09:50:05 2022
 ****************************************
 
 
@@ -41,11 +41,11 @@ Date   : Sun Nov 27 09:30:43 2022
   _4067_/I1 (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                                 0.0000   0.1344   1.0000   0.0000   0.0097 &  15.5503 f
   _4067_/Z (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                                           0.1359   1.0000            0.2750 &  15.8253 f
   net214 (net)                                                   1   0.0184 
-  output214/I (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                               0.0360   0.1359   1.0000   0.0138   0.0142 &  15.8395 f
-  output214/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                                        0.7620   1.0000            1.4662 &  17.3057 f
+  output214/I (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                               0.0663   0.1359   1.0000   0.0255   0.0258 &  15.8512 f
+  output214/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                                        0.7620   1.0000            1.4662 &  17.3174 f
   mgmt_gpio_out[14] (net)                                        1   0.1071 
-  mgmt_gpio_out[14] (out)                                                     0.0000   0.7623   1.0000   0.0000   0.0040 &  17.3097 f
-  data arrival time                                                                                                         17.3097
+  mgmt_gpio_out[14] (out)                                                     0.0000   0.7623   1.0000   0.0000   0.0040 &  17.3213 f
+  data arrival time                                                                                                         17.3213
 
   clock wb_clk_i (rise edge)                                                                                     30.0000    30.0000
   clock reconvergence pessimism                                                                                   0.0000    30.0000
@@ -54,9 +54,9 @@ Date   : Sun Nov 27 09:30:43 2022
   data required time                                                                                                        24.9000
   ------------------------------------------------------------------------------------------------------------------------------------
   data required time                                                                                                        24.9000
-  data arrival time                                                                                                        -17.3097
+  data arrival time                                                                                                        -17.3213
   ------------------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                                7.5903
+  slack (MET)                                                                                                                7.5787
 
 
   Startpoint: user_clock (clock source 'user_clock')
@@ -77,8 +77,8 @@ Date   : Sun Nov 27 09:30:43 2022
   output215/I (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)               0.0319   0.1502   1.0000   0.0124   0.0132 &  15.3133 f
   output215/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                        0.7884   1.0000            1.4887 &  16.8020 f
   mgmt_gpio_out[15] (net)                        1   0.1113 
-  mgmt_gpio_out[15] (out)                                     0.0021   0.7885   1.0000   0.0008   0.0042 &  16.8062 f
-  data arrival time                                                                                         16.8062
+  mgmt_gpio_out[15] (out)                                     0.0280   0.7885   1.0000   0.0106   0.0140 &  16.8160 f
+  data arrival time                                                                                         16.8160
 
   clock wb_clk_i (rise edge)                                                                     30.0000    30.0000
   clock reconvergence pessimism                                                                   0.0000    30.0000
@@ -87,9 +87,9 @@ Date   : Sun Nov 27 09:30:43 2022
   data required time                                                                                        24.9000
   --------------------------------------------------------------------------------------------------------------------
   data required time                                                                                        24.9000
-  data arrival time                                                                                        -16.8062
+  data arrival time                                                                                        -16.8160
   --------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                8.0938
+  slack (MET)                                                                                                8.0840
 
 
 1

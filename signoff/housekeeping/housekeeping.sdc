@@ -17,7 +17,7 @@ create_clock -name sck -period 120.0000 [get_ports {mgmt_gpio_in[4]}]
 set_clock_transition 2.000 [get_clocks {sck}]
 set_clock_uncertainty 0.1000 sck
 set_propagated_clock [get_clocks {sck}]
-create_generated_clock -name wbbd_sck -source [get_ports {wb_clk_i}] -divide_by 2 [get_pins {_7322_/Q}]
+create_generated_clock -name wbbd_sck -source [get_ports {wb_clk_i}] -divide_by 2 [get_pins {_7278_/Q}]
 set_propagated_clock [get_clocks {wbbd_sck}]
 set_clock_uncertainty 0.1000 wbbd_sck
 set_clock_groups -name group1 -logically_exclusive \
