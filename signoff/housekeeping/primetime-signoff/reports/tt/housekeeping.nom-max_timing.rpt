@@ -1,0 +1,95 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-input_pins
+	-nets
+	-nworst 5
+	-slack_lesser_than 10.0000
+	-max_paths 10000
+	-unique_pins
+	-transition_time
+	-capacitance
+	-crosstalk_delta
+	-derate
+	-sort_by slack
+	-include_hierarchical_pins
+Design : housekeeping
+Version: T-2022.03-SP3
+Date   : Sun Nov 27 09:30:04 2022
+****************************************
+
+
+  Startpoint: wb_clk_i (clock source 'wb_clk_i')
+  Endpoint: mgmt_gpio_out[14]
+               (output port clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                                        Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------------------
+  clock wb_clk_i (fall edge)                                                                                     15.0000    15.0000
+  clock source latency                                                                                            0.0000    15.0000
+  wb_clk_i (in)                                                                        0.0000                     0.0000 &  15.0000 f
+  wb_clk_i (net)                                                 1   0.1075 
+  clkbuf_0_wb_clk_i/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)                    0.0000   0.0192   1.0000   0.0000   0.0095 &  15.0095 f
+  clkbuf_0_wb_clk_i/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)                             0.4302   1.0000            0.4216 &  15.4311 f
+  clknet_0_wb_clk_i (net)                                        8   0.3774 
+  clkbuf_3_7__f_wb_clk_i/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)               0.0000   0.4323   1.0000   0.0000   0.0152 &  15.4463 f
+  clkbuf_3_7__f_wb_clk_i/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)                        0.2047   1.0000            0.3877 &  15.8340 f
+  clknet_3_7__leaf_wb_clk_i (net)                               18   0.1313 
+  _4067_/I1 (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                                 0.0000   0.2062   1.0000   0.0000   0.0095 &  15.8435 f
+  _4067_/Z (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                                           0.2078   1.0000            0.4409 &  16.2844 f
+  net214 (net)                                                   1   0.0183 
+  output214/I (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                               0.0548   0.2078   1.0000   0.0210   0.0214 &  16.3058 f
+  output214/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                                        1.1517   1.0000            2.4143 &  18.7201 f
+  mgmt_gpio_out[14] (net)                                        1   0.1071 
+  mgmt_gpio_out[14] (out)                                                     0.0000   1.1519   1.0000   0.0000   0.0039 &  18.7241 f
+  data arrival time                                                                                                         18.7241
+
+  clock wb_clk_i (rise edge)                                                                                     30.0000    30.0000
+  clock reconvergence pessimism                                                                                   0.0000    30.0000
+  clock uncertainty                                                                                              -0.1000    29.9000
+  output external delay                                                                                          -5.0000    24.9000
+  data required time                                                                                                        24.9000
+  ------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                        24.9000
+  data arrival time                                                                                                        -18.7241
+  ------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                                6.1759
+
+
+  Startpoint: user_clock (clock source 'user_clock')
+  Endpoint: mgmt_gpio_out[15]
+               (output port clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                        Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------------------------
+  clock user_clock (fall edge)                                                                   15.0000    15.0000
+  clock source latency                                                                            0.0000    15.0000
+  user_clock (in)                                                      0.0000                     0.0000 &  15.0000 f
+  user_clock (net)                               4   0.1678 
+  _4066_/I1 (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                 0.0000   0.0459   1.0000   0.0000   0.0210 &  15.0210 f
+  _4066_/Z (gf180mcu_fd_sc_mcu7t5v0__mux2_2)                           0.2312   1.0000            0.4434 &  15.4644 f
+  net215 (net)                                   1   0.0249 
+  output215/I (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)               0.0484   0.2312   1.0000   0.0188   0.0196 &  15.4840 f
+  output215/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)                        1.1904   1.0000            2.4483 &  17.9323 f
+  mgmt_gpio_out[15] (net)                        1   0.1113 
+  mgmt_gpio_out[15] (out)                                     0.0000   1.1905   1.0000   0.0000   0.0034 &  17.9357 f
+  data arrival time                                                                                         17.9357
+
+  clock wb_clk_i (rise edge)                                                                     30.0000    30.0000
+  clock reconvergence pessimism                                                                   0.0000    30.0000
+  clock uncertainty                                                                              -0.1000    29.9000
+  output external delay                                                                          -5.0000    24.9000
+  data required time                                                                                        24.9000
+  --------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                        24.9000
+  data arrival time                                                                                        -17.9357
+  --------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                6.9643
+
+
+1
