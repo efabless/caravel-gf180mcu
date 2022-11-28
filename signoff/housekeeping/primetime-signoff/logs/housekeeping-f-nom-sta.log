@@ -49,7 +49,7 @@ if {\
         read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -pin_cap_included 
       } else {
         # read_parasitics -keep_capacitive_coupling -verbose $::env(CARAVEL_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -complete_with wlm -pin_cap_included
-        read_parasitics -keep_capacitive_coupling -verbose $::env(CARAVEL_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -pin_cap_included
+        read_parasitics -keep_capacitive_coupling -verbose $::env(CARAVEL_ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included
       }
       report_annotated_parasitics
     }
@@ -103,7 +103,7 @@ if {\
         -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
       }
 
-      write_sdf -version 3.0 -significant_digits 4 $::env(OUT_DIR)/sdf/${proc_corner}${proc_corner}/${design}.${rc_corner}.sdf
+      write_sdf -version 3.0 -significant_digits 3 $::env(OUT_DIR)/sdf/${proc_corner}${proc_corner}/${design}.${rc_corner}.sdf
 
       # Extract timing model
       set extract_model_clock_transition_limit 0.75
@@ -11396,8 +11396,8 @@ Error: Can't find library '*'. (UIL-103)
 
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM256.v'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'
-Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v'
+Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_core.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM128.v'
 Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_proj_example.v'
@@ -11415,9 +11415,9 @@ Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_bl
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_009.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v'
 Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v'
-Loading db file '/tmp/_pt1rv0k8DV/1.db'
+Loading db file '/tmp/_pt1ruxtX5B/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ff_n40C_5v50.lib'
-Loading db file '/tmp/_pt1rcHje39/1.db'
+Loading db file '/tmp/_pt1rnTdNLu/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'
 Error: Problem in read_lib: No designs were read. (DBR-011)
 Error: Cannot read link_path file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'. (LNK-001)
@@ -12046,7 +12046,7 @@ Error: Can't find library '*'. (UIL-103)
 Error: Problem in read_lib: No designs were read. (DBR-011)
 Error: Cannot read link_path file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'. (LNK-001)
 Linking design housekeeping...
-Removed 17775 unconnected cells and blackboxes.
+Removed 17723 unconnected cells and blackboxes.
 Information: Removing 19 unneeded designs..... (LNK-034)
 Information: Module 'gpio_control_block' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_control_block.v' is not used in the current design.  (LNK-039)
 Information: Module 'gpio_defaults_block_007' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v' is not used in the current design.  (LNK-039)
@@ -12068,7 +12068,7 @@ Information: Module 'user_project_wrapper' in file '/home/passant/caravel_user_p
 Information: Module 'user_proj_example' in file '/home/passant/caravel_user_project/verilog/gl/user_proj_example.v' is not used in the current design.  (LNK-039)
 Information: Module 'user_analog_project_wrapper' in file '/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v' is not used in the current design.  (LNK-039)
 Design 'housekeeping' was successfully linked.
-Information: There are 6455 leaf cells, ports, hiers and 6269 nets in the design (LNK-047)
+Information: There are 6417 leaf cells, ports, hiers and 6239 nets in the design (LNK-047)
 
 Reading SDC version 2.1...
 1
@@ -12096,12 +12096,12 @@ Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
 Information: Expanding clock 'user_clock' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
 Information: Expanding clock 'wb_clk_i' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
 Information: Expanding clock 'wbbd_sck' to base period of 120.000 (old period was 60.000, added 2 edges). (PTE-016)
-Information: Number of nets evaluated in the previous iteration: 6248. (XTALK-105)
+Information: Number of nets evaluated in the previous iteration: 6218. (XTALK-105)
 ****************************************
 Report : write_sdf /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/sdf/ff/housekeeping.nom.sdf
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Sun Nov 27 09:50:05 2022
+Date   : Mon Nov 28 12:49:34 2022
 ****************************************
 
 Warning: Variable si_filter_keep_all_port_aggressors is set to FALSE (MEXT-80)
@@ -12115,9 +12115,8 @@ Suppressed Messages Summary:
 Id          Severity      Occurrences   Suppressed
 -------------------------------------------------------------------------------
 DB-1        Error                   5            5
-PARA-040    Warning             24112        22612
-Total 2 types of messages are suppressed
-Maximum memory usage for this session: 3089.31 MB
+Total 1 type of message is suppressed
+Maximum memory usage for this session: 3095.83 MB
 CPU usage for this session: 39 seconds 
 Elapsed time for this session: 19 seconds
 Diagnostics summary: 2 errors, 15 warnings, 39 informationals
