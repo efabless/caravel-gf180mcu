@@ -40,7 +40,7 @@ set ::env(SYNTH_STRATEGY) "DELAY 0"
 
 set ::env(SYNTH_MAX_FANOUT) 12
 set ::env(SYNTH_BUFFERING) 0
-set ::env(SYNTH_READ_BLACKBOX_LIB) 1
+set ::env(SYNTH_READ_BLACKBOX_LIB) 0
 set ::env(NO_SYNTH_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]
 set ::env(DRC_EXCLUDE_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]
 
@@ -100,11 +100,6 @@ set ::env(CTS_MAX_CAP) 0.2
 
 set ::env(MAGIC_DEF_LABELS) 0
 
-set ::env(RCX_RULES) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCnom.rules"
-set ::env(RCX_RULES_MAX) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCmax.rules"
-set ::env(RCX_RULES_MIN) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCmin.rules"
-set ::env(PL_LIB) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
-set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib"
-set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib"
-set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
-set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
+set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]

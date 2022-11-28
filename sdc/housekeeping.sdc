@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Mon Nov 21 23:52:46 2022
+# Mon Nov 28 17:25:41 2022
 ###############################################################################
 current_design housekeeping
 ###############################################################################
@@ -15,7 +15,7 @@ set_propagated_clock [get_clocks {user_clock}]
 create_clock -name sck -period 120.0000 [get_ports {mgmt_gpio_in[4]}]
 set_clock_uncertainty 1.0000 sck
 set_propagated_clock [get_clocks {sck}]
-create_generated_clock -name wbbd_sck -source [get_ports {wb_clk_i}] -divide_by 2 [get_pins {_7322_/Q}]
+create_generated_clock -name wbbd_sck -source [get_ports {wb_clk_i}] -divide_by 2 [get_pins {_7278_/Q}]
 set_clock_uncertainty 1.0000 wbbd_sck
 set_propagated_clock [get_clocks {wbbd_sck}]
 set_clock_groups -name group1 -logically_exclusive \
