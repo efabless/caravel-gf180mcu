@@ -46,6 +46,7 @@ set ::env(SYNTH_STRATEGY) "DELAY 0"
 set ::env(NO_SYNTH_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(DRC_EXCLUDE_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
+set ::env(SYNTH_MAX_FANOUT) 14
 # set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
@@ -54,7 +55,7 @@ set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_cont
 ## Floorplan
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 3170 4360"
-set ::env(CORE_AREA) "24 24 3146 4336"
+set ::env(CORE_AREA) "24 25 3145 4335"
 set ::env(FP_DEF_TEMPLATE) $::env(DESIGN_DIR)/io.def
 # set ::env(FP_PIN_ORDER_CFG) [glob $::env(DESIGN_DIR)/pin_order.cfg]
 # set ::env(FP_IO_MODE) 0
@@ -149,56 +150,56 @@ set ::env(FP_PDN_HOFFSET) 30.65
 set ::env(FP_PDN_VOFFSET) 3.5
 
 ##CTS
-set ::env(CTS_MAX_CAP) 0.15
+set ::env(CTS_MAX_CAP) 0.25
 set ::env(CTS_REPORT_TIMING) 0
 # set ::env(CTS_CLK_MAX_WIRE_LENGTH) 700
 # set ::env(CTS_DISTANCE_BETWEEN_BUFFERS) 500
 set ::env(CTS_TOLERANCE) 10
 set ::env(CTS_SINK_CLUSTERING_SIZE) 12
 set ::env(CTS_SINK_CLUSTERING_MAX_DIAMETER) 30
+set ::env(CTS_ROOT_BUFFER) "$::env(STD_CELL_LIBRARY)__clkbuf_20"
 
 ##PLACEMENT
-set ::env(PL_ROUTABILITY_DRIVEN) 1
+set ::env(PL_ROUTABILITY_DRIVEN) 0
 set ::env(PL_TIME_DRIVEN) 1
-set ::env(PL_TARGET_DENSITY) 0.58
+set ::env(PL_TARGET_DENSITY) 0.62
 
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.05
-set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 1
-# set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 1
+set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 0
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 4
 set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 1200
 # set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
 # set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) 150
-set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 20
+set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 50
+set ::env(PL_RESIZER_CAP_SLEW_MARGIN) 65
 
 ##ROUTING
 set ::env(GRT_ALLOW_CONGESTION) 1
 # set ::env(GRT_OBS) "Metal5 2872 92 2882 106"
 
-# set ::env(GRT_ADJUSTMENT) 0.22
+set ::env(GRT_ADJUSTMENT) 0.4
 # ##                              met1,met2,met3,met4,met5
 # set ::env(GRT_LAYER_ADJUSTMENTS) "0.25,0.30,0.22,0.40,0.22"
 set ::env(GRT_OVERFLOW_ITERS) 200
 set ::evn(DRT_OPT_ITERS) 12
-set ::env(GRT_ESTIMATE_PARASITICS) 0
+set ::env(GRT_ESTIMATE_PARASITICS) 1
 
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 1
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.05
-set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 1
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 3
 set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 1200
 # set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
 # set ::env(GLB_RESIZER_SETUP_MAX_BUFFER_PERCENT) 150
-# set ::env(GLB_RESIZER_MAX_SLEW_MARGIN) 40
+set ::env(GLB_RESIZER_MAX_SLEW_MARGIN) 60
+set ::env(GLB_RESIZER_CAP_SLEW_MARGIN) 60
 
 ## Antenna
 set ::env(DIODE_INSERTION_STRATEGY) 3
 set ::env(GRT_ANT_ITERS) 20
 set ::env(GRT_MAX_DIODE_INS_ITERS) 20
 set ::env(DIODE_PADDING) 0
-
-## MUST BE 0 BEFORE SIGNOFF
-set ::env(MAGIC_DEF_LABELS) 0
 
 ## MACROS
 set ::env(MACRO_PLACEMENT_CFG) [glob $::env(DESIGN_DIR)/macro_placement.cfg]
@@ -214,13 +215,13 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
 
 set ::env(EXTRA_LEFS) "\
-    $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
-    $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
+    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/user_project_wrapper.lef \
+    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/housekeeping.lef \
     $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
     $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
-    $::env(DESIGN_DIR)/../../lef/spare_logic_block.lef \
+    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/spare_logic_block.lef \
     $::env(DESIGN_DIR)/../../lef/mprj_io_buffer.lef \
-    $::env(DESIGN_DIR)/../../lef/gpio_defaults_block.lef \
+    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/gpio_defaults_block.lef \
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
@@ -246,13 +247,10 @@ set ::env(QUIT_ON_LVS_ERROR) 0
 set ::env(QUIT_ON_MAGIC_DRC) 0
 # set ::emv(RUN_SPEF_EXTRACTION) 1
 
-set ::env(RCX_RULES) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCnom.rules"
-set ::env(RCX_RULES_MAX) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCmax.rules"
-set ::env(RCX_RULES_MIN) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/RCmin.rules"
-set ::env(PL_LIB) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
-set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib"
-set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib"
-set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
-set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
+set ::env(MAGIC_DEF_LABELS) 0
+
+set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 
 set ::env(RSZ_DONT_TOUCH_RX) "const|serial_clock|serial_load"

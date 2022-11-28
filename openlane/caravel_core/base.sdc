@@ -3,7 +3,8 @@
 ### Date: 28/10/2022
 
 ## MASTER CLOCKS
-create_clock -name clk -period 25 [get_pins {_17584_/ZN}] 
+create_clock -name clk -period 30 [get_pins {_18022_/ZN}] 
+# create_clock -name clk -period 30 [get_ports {clock_core}] 
 
 create_clock -name hkspi_clk -period 120 [get_ports {mgmt_io_in[4]}] 
 # create_clock -name hk_serial_clk -period 60 [get_pins {housekeeping/serial_clock}]
@@ -85,7 +86,7 @@ set_output_delay $output_delay_value  -clock [get_clocks {clk}] -add_delay [get_
 
 # set_output_delay $output_delay_value  -clock [get_clocks {hkspi_clk}] -add_delay [get_ports {mprj_io[1]}]
 
-set_max_fanout 18 [current_design]
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
 # synthesis max fanout should be less than 12 (7 maybe)
 
 ## Set system monitoring mux select to zero so that the clock/user_clk monitoring is disabled 
