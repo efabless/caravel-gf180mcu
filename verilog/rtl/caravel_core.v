@@ -1206,7 +1206,7 @@ module caravel_core (
 
     	.mgmt_gpio_in(mgmt_io_in[(`MPRJ_IO_PADS-1):(`MPRJ_IO_PADS-3)]),
 	.mgmt_gpio_out(mgmt_io_out[(`MPRJ_IO_PADS-1):(`MPRJ_IO_PADS-3)]),
-	.mgmt_gpio_oeb(mgmt_io_oeb[4:2]),
+	.mgmt_gpio_oeb(gpio_buf_mgmt_io_oeb_buf),
 
         .one(),
         .zero(),
