@@ -55,7 +55,7 @@ set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_cont
 ## Floorplan
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 3170 4360"
-set ::env(CORE_AREA) "24 25 3145 4335"
+set ::env(CORE_AREA) "24 25 3146 4335"
 set ::env(FP_DEF_TEMPLATE) $::env(DESIGN_DIR)/io.def
 # set ::env(FP_PIN_ORDER_CFG) [glob $::env(DESIGN_DIR)/pin_order.cfg]
 # set ::env(FP_IO_MODE) 0
@@ -160,9 +160,9 @@ set ::env(CTS_SINK_CLUSTERING_MAX_DIAMETER) 30
 set ::env(CTS_ROOT_BUFFER) "$::env(STD_CELL_LIBRARY)__clkbuf_20"
 
 ##PLACEMENT
-set ::env(PL_ROUTABILITY_DRIVEN) 0
+set ::env(PL_ROUTABILITY_DRIVEN) 1
 set ::env(PL_TIME_DRIVEN) 1
-set ::env(PL_TARGET_DENSITY) 0.62
+set ::env(PL_TARGET_DENSITY) 0.59
 
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
