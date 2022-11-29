@@ -182,7 +182,7 @@ set ::env(GRT_ALLOW_CONGESTION) 1
 set ::env(GRT_ADJUSTMENT) 0.4
 # ##                              met1,met2,met3,met4,met5
 # set ::env(GRT_LAYER_ADJUSTMENTS) "0.25,0.30,0.22,0.40,0.22"
-set ::env(GRT_OVERFLOW_ITERS) 200
+set ::env(GRT_OVERFLOW_ITERS) 50
 set ::evn(DRT_OPT_ITERS) 12
 set ::env(GRT_ESTIMATE_PARASITICS) 1
 
@@ -239,7 +239,7 @@ set ::env(EXTRA_LIBS) "\
     $::env(DESIGN_DIR)/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib \
     $::env(DESIGN_DIR)/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib"
 
-set ::env(STA_WRITE_LIB) 1
+set ::env(STA_WRITE_LIB) 0
 
 ## For faster development
 set ::env(QUIT_ON_TR_DRC) 1
@@ -248,9 +248,10 @@ set ::env(QUIT_ON_MAGIC_DRC) 0
 # set ::emv(RUN_SPEF_EXTRACTION) 1
 
 set ::env(MAGIC_DEF_LABELS) 0
+set ::env(MAGIC_EXT_USE_GDS) 0
 
 set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 
-set ::env(RSZ_DONT_TOUCH_RX) "const|serial_clock|serial_load"
+set ::env(RSZ_DONT_TOUCH_RX) "const|serial_clock_out|serial_load_out|ram512x32"
