@@ -27,6 +27,6 @@ exec rm -rf $script_dir/runs/final
 exec ln -sf $script_dir/runs/$::env(OPENLANE_RUN_TAG) $script_dir/runs/final
 
 save_views \
-    -nl_path $script_dir/runs/$::env(RUN_TAG)/results/synthesis/chip_io.v \
+    -pnl_path $script_dir/runs/$::env(RUN_TAG)/results/synthesis/chip_io.v \
     -save_path $save_path
 
