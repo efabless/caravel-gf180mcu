@@ -4,9 +4,16 @@ Report : constraint
 	-path slack_only
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Mon Nov 28 12:49:13 2022
+Date   : Tue Nov 29 12:00:15 2022
 ****************************************
 
+
+   max_delay/setup ('wb_clk_i' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   serial_clock                                            -1.2337  (VIOLATED)
+   serial_load                                             -0.7556  (VIOLATED)
 
 
 
@@ -17,6 +24,8 @@ Date   : Mon Nov 28 12:49:13 2022
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   output300/Z                0.9887         2.0608        -1.0721  (VIOLATED)
+   output303/Z                0.9887         2.0515        -1.0628  (VIOLATED)
    hold52/Z                   0.4936         0.8018        -0.3082  (VIOLATED)
    hold62/Z                   0.4936         0.7466        -0.2530  (VIOLATED)
    hold86/Z                   0.4936         0.7343        -0.2407  (VIOLATED)
@@ -31,6 +40,10 @@ Date   : Mon Nov 28 12:49:13 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   serial_clock               4.0000        14.8323       -10.8323  (VIOLATED)
+   output300/Z                4.0000        14.8138       -10.8138  (VIOLATED)
+   serial_load                4.0000        14.7668       -10.7668  (VIOLATED)
+   output303/Z                4.0000        14.7520       -10.7520  (VIOLATED)
    _5624_/I0                  4.0000        11.4468        -7.4468  (VIOLATED)
    _5651_/I1                  4.0000        11.4467        -7.4467  (VIOLATED)
    _5789_/I0                  4.0000        11.4465        -7.4465  (VIOLATED)

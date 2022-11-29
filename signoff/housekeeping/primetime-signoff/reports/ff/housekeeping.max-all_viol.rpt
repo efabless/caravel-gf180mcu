@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Mon Nov 28 12:49:54 2022
+Date   : Tue Nov 29 12:00:55 2022
 ****************************************
 
 
@@ -17,6 +17,8 @@ Date   : Mon Nov 28 12:49:54 2022
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   output300/Z                0.9369         2.0759        -1.1390  (VIOLATED)
+   output303/Z                0.9369         2.0627        -1.1258  (VIOLATED)
    hold52/Z                   0.4692         0.9560        -0.4868  (VIOLATED)
    hold62/Z                   0.4692         0.8830        -0.4138  (VIOLATED)
    hold86/Z                   0.4692         0.8662        -0.3970  (VIOLATED)
@@ -32,6 +34,8 @@ Date   : Mon Nov 28 12:49:54 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   output303/Z                2.6000         6.1945        -3.5945  (VIOLATED)
+   output300/Z                2.6000         6.0198        -3.4198  (VIOLATED)
    _5735_/I0                  2.6000         5.4248        -2.8248  (VIOLATED)
    _5888_/I0                  2.6000         5.4248        -2.8248  (VIOLATED)
    _5561_/I0                  2.6000         5.4248        -2.8248  (VIOLATED)
@@ -138,6 +142,7 @@ Date   : Mon Nov 28 12:49:54 2022
    _5862_/I0                  2.6000         5.0320        -2.4320  (VIOLATED)
    _4251_/I0                  2.6000         5.0300        -2.4300  (VIOLATED)
    hold62/Z                   2.6000         5.0295        -2.4295  (VIOLATED)
+   serial_load                4.0000         6.3601        -2.3601  (VIOLATED)
    _5788_/I0                  2.6000         4.9260        -2.3260  (VIOLATED)
    _5560_/I0                  2.6000         4.9260        -2.3260  (VIOLATED)
    _5887_/I0                  2.6000         4.9258        -2.3258  (VIOLATED)
@@ -293,6 +298,7 @@ Date   : Mon Nov 28 12:49:54 2022
    _5636_/I0                  2.6000         4.8259        -2.2259  (VIOLATED)
    _5627_/I0                  2.6000         4.8257        -2.2257  (VIOLATED)
    _5783_/I0                  2.6000         4.8240        -2.2240  (VIOLATED)
+   serial_clock               4.0000         6.2154        -2.2154  (VIOLATED)
    hold15/Z                   2.6000         4.8146        -2.2146  (VIOLATED)
    _5775_/I0                  2.6000         4.7562        -2.1562  (VIOLATED)
    _4157_/I0                  2.6000         4.7562        -2.1562  (VIOLATED)

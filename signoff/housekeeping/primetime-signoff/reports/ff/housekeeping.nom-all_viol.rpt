@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Mon Nov 28 12:49:33 2022
+Date   : Tue Nov 29 12:00:35 2022
 ****************************************
 
 
@@ -17,6 +17,8 @@ Date   : Mon Nov 28 12:49:33 2022
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   output300/Z                0.9369         2.0676        -1.1307  (VIOLATED)
+   output303/Z                0.9369         2.0566        -1.1197  (VIOLATED)
    hold52/Z                   0.4692         0.8649        -0.3957  (VIOLATED)
    hold62/Z                   0.4692         0.8003        -0.3311  (VIOLATED)
    hold86/Z                   0.4692         0.7894        -0.3202  (VIOLATED)
@@ -31,6 +33,8 @@ Date   : Mon Nov 28 12:49:33 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   output300/Z                2.6000         5.9837        -3.3837  (VIOLATED)
+   output303/Z                2.6000         5.9054        -3.3054  (VIOLATED)
    _5888_/I0                  2.6000         4.8570        -2.2570  (VIOLATED)
    _5744_/I0                  2.6000         4.8552        -2.2552  (VIOLATED)
    _5735_/I0                  2.6000         4.8550        -2.2550  (VIOLATED)
@@ -84,6 +88,8 @@ Date   : Mon Nov 28 12:49:33 2022
    _5642_/I1                  2.6000         4.8386        -2.2386  (VIOLATED)
    _5606_/I0                  2.6000         4.8386        -2.2386  (VIOLATED)
    hold52/Z                   2.6000         4.8378        -2.2378  (VIOLATED)
+   serial_clock               4.0000         6.0271        -2.0271  (VIOLATED)
+   serial_load                4.0000         5.9597        -1.9597  (VIOLATED)
    _5571_/I0                  2.6000         4.5362        -1.9362  (VIOLATED)
    _5625_/I0                  2.6000         4.5362        -1.9362  (VIOLATED)
    _5697_/I0                  2.6000         4.5362        -1.9362  (VIOLATED)

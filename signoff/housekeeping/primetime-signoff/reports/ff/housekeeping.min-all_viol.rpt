@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Mon Nov 28 12:50:15 2022
+Date   : Tue Nov 29 12:01:17 2022
 ****************************************
 
 
@@ -17,6 +17,8 @@ Date   : Mon Nov 28 12:50:15 2022
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   output300/Z                0.9369         2.0608        -1.1239  (VIOLATED)
+   output303/Z                0.9369         2.0515        -1.1146  (VIOLATED)
    hold52/Z                   0.4692         0.7925        -0.3233  (VIOLATED)
    hold62/Z                   0.4692         0.7372        -0.2680  (VIOLATED)
    hold86/Z                   0.4692         0.7247        -0.2555  (VIOLATED)
@@ -31,6 +33,10 @@ Date   : Mon Nov 28 12:50:15 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   output300/Z                2.6000         5.8914        -3.2914  (VIOLATED)
+   output303/Z                2.6000         5.8430        -3.2430  (VIOLATED)
+   serial_clock               4.0000         5.9299        -1.9299  (VIOLATED)
+   serial_load                4.0000         5.8745        -1.8745  (VIOLATED)
    _5780_/I0                  2.6000         4.4476        -1.8476  (VIOLATED)
    _5579_/I1                  2.6000         4.4469        -1.8469  (VIOLATED)
    _5561_/I0                  2.6000         4.4463        -1.8463  (VIOLATED)

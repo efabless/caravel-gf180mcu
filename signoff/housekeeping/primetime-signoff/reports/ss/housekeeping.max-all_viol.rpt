@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Mon Nov 28 12:48:52 2022
+Date   : Tue Nov 29 11:59:54 2022
 ****************************************
 
 
@@ -12,6 +12,8 @@ Date   : Mon Nov 28 12:48:52 2022
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
+   serial_clock                                            -2.0399  (VIOLATED)
+   serial_load                                             -1.5281  (VIOLATED)
    _6814_/D                                                -0.6579  (VIOLATED)
    _6804_/D                                                -0.0124  (VIOLATED)
 
@@ -24,6 +26,8 @@ Date   : Mon Nov 28 12:48:52 2022
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   output300/Z                0.9887         2.0759        -1.0872  (VIOLATED)
+   output303/Z                0.9887         2.0627        -1.0740  (VIOLATED)
    hold52/Z                   0.4936         0.9651        -0.4715  (VIOLATED)
    hold62/Z                   0.4936         0.8921        -0.3985  (VIOLATED)
    hold86/Z                   0.4936         0.8758        -0.3822  (VIOLATED)
@@ -39,6 +43,10 @@ Date   : Mon Nov 28 12:48:52 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   serial_clock               4.0000        15.2528       -11.2528  (VIOLATED)
+   serial_load                4.0000        15.1238       -11.1238  (VIOLATED)
+   output300/Z                4.0000        15.1212       -11.1212  (VIOLATED)
+   output303/Z                4.0000        15.0119       -11.0119  (VIOLATED)
    _5888_/I0                  4.0000        13.8454        -9.8454  (VIOLATED)
    _5744_/I0                  4.0000        13.8413        -9.8413  (VIOLATED)
    _5735_/I0                  4.0000        13.8391        -9.8391  (VIOLATED)
