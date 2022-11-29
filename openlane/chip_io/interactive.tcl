@@ -15,11 +15,11 @@
 
 package require openlane
 set script_dir [file dirname [file normalize [info script]]]
-set save_path $::env(PROJECT_ROOT)
+set save_path $::env(CARAVEL_ROOT)
 
 # FOR LVS AND CREATING PORT LABELS
 #
-prep -design $script_dir -tag $::env(OPENLANE_RUN_TAG) -overwrite -verbose 2
+prep -design $script_dir -tag $::env(OPENLANE_RUN_TAG) -overwrite
 set ::env(SYNTH_DEFINES) "USE_POWER_PINS"
 verilog_elaborate
 
@@ -27,6 +27,6 @@ exec rm -rf $script_dir/runs/final
 exec ln -sf $script_dir/runs/$::env(OPENLANE_RUN_TAG) $script_dir/runs/final
 
 save_views \
-    -verilog_path $script_dir/runs/$::env(RUN_TAG)/results/synthesis/chip_io.v \
+    -nl_path $script_dir/runs/$::env(RUN_TAG)/results/synthesis/chip_io.v \
     -save_path $save_path
 
