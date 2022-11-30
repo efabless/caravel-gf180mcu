@@ -128,9 +128,7 @@ set_clock_uncertainty $sck_clk_uncer [get_clocks {wbbd_sck}]
 # set_clock_transition $sck_clk_tran [get_clocks {sck}]
 
 # ## FANOUT
-# set ::env(SYNTH_MAX_FANOUT) 20
-# puts "\[INFO\]: Setting maximum fanout to: $::env(SYNTH_MAX_FANOUT)"
-# set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
 
 # ## MAX Transition
 set_max_trans 3 [current_design]

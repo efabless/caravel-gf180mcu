@@ -38,7 +38,7 @@ set ::env(RCX_SDC_FILE) [glob $::env(DESIGN_DIR)/signoff.sdc]
 ## Synthesis 
 set ::env(SYNTH_STRATEGY) "DELAY 0"
 
-set ::env(SYNTH_MAX_FANOUT) 12
+set ::env(SYNTH_MAX_FANOUT) 10
 set ::env(SYNTH_BUFFERING) 0
 set ::env(SYNTH_READ_BLACKBOX_LIB) 0
 set ::env(NO_SYNTH_CELL_LIST) [glob $::env(DESIGN_DIR)/no_synth.cells]

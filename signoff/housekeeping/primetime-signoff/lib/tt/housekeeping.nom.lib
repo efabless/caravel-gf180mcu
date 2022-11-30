@@ -158,7 +158,7 @@ pin("debug_in") {
 	capacitance : 0.069692 ;
 
 	/* Other user defined attributes. */
-	original_pin : debug_in;
+	
 	timing () {
 		related_pin : "debug_mode" ;
 		timing_type : combinational ;
@@ -341,7 +341,7 @@ pin("debug_mode") {
 	capacitance : 0.004596 ;
 
 	/* Other user defined attributes. */
-	original_pin : debug_mode;
+	
 } /* end of pin debug_mode */
 
 pin("debug_oeb") {
@@ -350,7 +350,7 @@ pin("debug_oeb") {
 	capacitance : 0.034586 ;
 
 	/* Other user defined attributes. */
-	original_pin : debug_oeb;
+	
 } /* end of pin debug_oeb */
 
 pin("debug_out") {
@@ -359,7 +359,7 @@ pin("debug_out") {
 	capacitance : 0.039948 ;
 
 	/* Other user defined attributes. */
-	original_pin : debug_out;
+	
 } /* end of pin debug_out */
 
 pin("pad_flash_clk") {
@@ -369,7 +369,7 @@ pin("pad_flash_clk") {
 	capacitance : 0.022811 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_clk;
+	
 	timing () {
 		related_pin : "spimemio_flash_clk" ;
 		timing_type : combinational ;
@@ -466,7 +466,7 @@ pin("pad_flash_clk_oe") {
 	capacitance : 0.071340 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_clk_oe;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -561,7 +561,7 @@ pin("pad_flash_csb") {
 	capacitance : 0.053529 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_csb;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[3]" ;
 		timing_type : combinational ;
@@ -745,7 +745,7 @@ pin("pad_flash_csb_oe") {
 	capacitance : 0.074932 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_csb_oe;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -839,7 +839,7 @@ pin("pad_flash_io0_di") {
 	capacitance : 0.027734 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io0_di;
+	
 } /* end of pin pad_flash_io0_di */
 
 pin("pad_flash_io0_do") {
@@ -849,7 +849,7 @@ pin("pad_flash_io0_do") {
 	capacitance : 0.058249 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io0_do;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[2]" ;
 		timing_type : combinational ;
@@ -1033,7 +1033,7 @@ pin("pad_flash_io0_ie") {
 	capacitance : 0.062013 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io0_ie;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -1215,7 +1215,7 @@ pin("pad_flash_io0_oe") {
 	capacitance : 0.066851 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io0_oe;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -1396,7 +1396,7 @@ pin("pad_flash_io1_di") {
 	capacitance : 0.025506 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io1_di;
+	
 } /* end of pin pad_flash_io1_di */
 
 pin("pad_flash_io1_do") {
@@ -1406,7 +1406,7 @@ pin("pad_flash_io1_do") {
 	capacitance : 0.064936 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io1_do;
+	
 	timing () {
 		related_pin : "spimemio_flash_io1_do" ;
 		timing_type : combinational ;
@@ -1503,7 +1503,7 @@ pin("pad_flash_io1_ie") {
 	capacitance : 0.068882 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io1_ie;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -1685,7 +1685,7 @@ pin("pad_flash_io1_oe") {
 	capacitance : 0.067821 ;
 
 	/* Other user defined attributes. */
-	original_pin : pad_flash_io1_oe;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -1867,7 +1867,7 @@ pin("pll_bypass") {
 	capacitance : 0.038249 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_bypass;
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -1962,7 +1962,7 @@ pin("pll_dco_ena") {
 	capacitance : 0.065557 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_dco_ena;
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -2057,7 +2057,7 @@ pin("pll_ena") {
 	capacitance : 0.059364 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_ena;
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -2152,7 +2152,7 @@ pin("porb") {
 	is_unconstrained : true;
 
 	/* Other user defined attributes. */
-	original_pin : porb;
+	
 	is_unconstrained : true;
 } /* end of pin porb */
 
@@ -2163,7 +2163,7 @@ pin("pwr_ctrl_out") {
 	capacitance : 0.088132 ;
 
 	/* Other user defined attributes. */
-	original_pin : pwr_ctrl_out;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : rising_edge ;
@@ -2342,7 +2342,7 @@ pin("qspi_enabled") {
 	capacitance : 0.007186 ;
 
 	/* Other user defined attributes. */
-	original_pin : qspi_enabled;
+	
 } /* end of pin qspi_enabled */
 
 pin("reset") {
@@ -2352,7 +2352,7 @@ pin("reset") {
 	capacitance : 0.060924 ;
 
 	/* Other user defined attributes. */
-	original_pin : reset;
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -2447,7 +2447,7 @@ pin("ser_rx") {
 	capacitance : 0.054517 ;
 
 	/* Other user defined attributes. */
-	original_pin : ser_rx;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[5]" ;
 		timing_type : combinational ;
@@ -2630,7 +2630,7 @@ pin("ser_tx") {
 	capacitance : 0.014825 ;
 
 	/* Other user defined attributes. */
-	original_pin : ser_tx;
+	
 } /* end of pin ser_tx */
 
 pin("serial_clock") {
@@ -2640,7 +2640,7 @@ pin("serial_clock") {
 	capacitance : 0.067641 ;
 
 	/* Other user defined attributes. */
-	original_pin : serial_clock;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -2820,7 +2820,7 @@ pin("serial_data_1") {
 	capacitance : 0.065459 ;
 
 	/* Other user defined attributes. */
-	original_pin : serial_data_1;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -3000,7 +3000,7 @@ pin("serial_data_2") {
 	capacitance : 0.051495 ;
 
 	/* Other user defined attributes. */
-	original_pin : serial_data_2;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -3180,7 +3180,7 @@ pin("serial_load") {
 	capacitance : 0.056569 ;
 
 	/* Other user defined attributes. */
-	original_pin : serial_load;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -3360,7 +3360,7 @@ pin("serial_resetn") {
 	capacitance : 0.064409 ;
 
 	/* Other user defined attributes. */
-	original_pin : serial_resetn;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -3539,7 +3539,7 @@ pin("spi_csb") {
 	capacitance : 0.018985 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_csb;
+	
 } /* end of pin spi_csb */
 
 pin("spi_enabled") {
@@ -3548,7 +3548,7 @@ pin("spi_enabled") {
 	capacitance : 0.009842 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_enabled;
+	
 } /* end of pin spi_enabled */
 
 pin("spi_sck") {
@@ -3557,7 +3557,7 @@ pin("spi_sck") {
 	capacitance : 0.022749 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_sck;
+	
 } /* end of pin spi_sck */
 
 pin("spi_sdi") {
@@ -3567,7 +3567,7 @@ pin("spi_sdi") {
 	capacitance : 0.058078 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_sdi;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[34]" ;
 		timing_type : combinational ;
@@ -3750,7 +3750,7 @@ pin("spi_sdo") {
 	capacitance : 0.025304 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_sdo;
+	
 } /* end of pin spi_sdo */
 
 pin("spi_sdoenb") {
@@ -3759,7 +3759,7 @@ pin("spi_sdoenb") {
 	capacitance : 0.024992 ;
 
 	/* Other user defined attributes. */
-	original_pin : spi_sdoenb;
+	
 } /* end of pin spi_sdoenb */
 
 pin("spimemio_flash_clk") {
@@ -3768,7 +3768,7 @@ pin("spimemio_flash_clk") {
 	capacitance : 0.004781 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_clk;
+	
 } /* end of pin spimemio_flash_clk */
 
 pin("spimemio_flash_csb") {
@@ -3777,7 +3777,7 @@ pin("spimemio_flash_csb") {
 	capacitance : 0.005393 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_csb;
+	
 } /* end of pin spimemio_flash_csb */
 
 pin("spimemio_flash_io0_di") {
@@ -3787,7 +3787,7 @@ pin("spimemio_flash_io0_di") {
 	capacitance : 0.007361 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io0_di;
+	
 	timing () {
 		related_pin : "pad_flash_io0_di" ;
 		timing_type : combinational ;
@@ -3883,7 +3883,7 @@ pin("spimemio_flash_io0_do") {
 	capacitance : 0.007264 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io0_do;
+	
 } /* end of pin spimemio_flash_io0_do */
 
 pin("spimemio_flash_io0_oeb") {
@@ -3893,7 +3893,7 @@ pin("spimemio_flash_io0_oeb") {
 	is_unconstrained : true;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io0_oeb;
+	
 	is_unconstrained : true;
 } /* end of pin spimemio_flash_io0_oeb */
 
@@ -3904,7 +3904,7 @@ pin("spimemio_flash_io1_di") {
 	capacitance : 0.009691 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io1_di;
+	
 	timing () {
 		related_pin : "pad_flash_io1_di" ;
 		timing_type : combinational ;
@@ -4000,7 +4000,7 @@ pin("spimemio_flash_io1_do") {
 	capacitance : 0.005237 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io1_do;
+	
 } /* end of pin spimemio_flash_io1_do */
 
 pin("spimemio_flash_io1_oeb") {
@@ -4010,7 +4010,7 @@ pin("spimemio_flash_io1_oeb") {
 	is_unconstrained : true;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io1_oeb;
+	
 	is_unconstrained : true;
 } /* end of pin spimemio_flash_io1_oeb */
 
@@ -4021,7 +4021,7 @@ pin("spimemio_flash_io2_di") {
 	capacitance : 0.007778 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io2_di;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[36]" ;
 		timing_type : combinational ;
@@ -4117,7 +4117,7 @@ pin("spimemio_flash_io2_do") {
 	capacitance : 0.003936 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io2_do;
+	
 } /* end of pin spimemio_flash_io2_do */
 
 pin("spimemio_flash_io2_oeb") {
@@ -4126,7 +4126,7 @@ pin("spimemio_flash_io2_oeb") {
 	capacitance : 0.004516 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io2_oeb;
+	
 } /* end of pin spimemio_flash_io2_oeb */
 
 pin("spimemio_flash_io3_di") {
@@ -4136,7 +4136,7 @@ pin("spimemio_flash_io3_di") {
 	capacitance : 0.009666 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io3_di;
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[37]" ;
 		timing_type : combinational ;
@@ -4232,7 +4232,7 @@ pin("spimemio_flash_io3_do") {
 	capacitance : 0.004067 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io3_do;
+	
 } /* end of pin spimemio_flash_io3_do */
 
 pin("spimemio_flash_io3_oeb") {
@@ -4241,7 +4241,7 @@ pin("spimemio_flash_io3_oeb") {
 	capacitance : 0.005026 ;
 
 	/* Other user defined attributes. */
-	original_pin : spimemio_flash_io3_oeb;
+	
 } /* end of pin spimemio_flash_io3_oeb */
 
 pin("trap") {
@@ -4250,7 +4250,7 @@ pin("trap") {
 	capacitance : 0.019573 ;
 
 	/* Other user defined attributes. */
-	original_pin : trap;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -4307,7 +4307,7 @@ pin("uart_enabled") {
 	capacitance : 0.012566 ;
 
 	/* Other user defined attributes. */
-	original_pin : uart_enabled;
+	
 } /* end of pin uart_enabled */
 
 pin("user_clock") {
@@ -4317,7 +4317,7 @@ pin("user_clock") {
 	capacitance : 0.153927 ;
 
 	/* Other user defined attributes. */
-	original_pin : user_clock;
+	
 } /* end of pin user_clock */
 
 pin("wb_ack_o") {
@@ -4327,7 +4327,7 @@ pin("wb_ack_o") {
 	capacitance : 0.057005 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_ack_o;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -4421,7 +4421,7 @@ pin("wb_clk_i") {
 	capacitance : 0.102394 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_clk_i;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : minimum_period ;
@@ -4460,7 +4460,7 @@ pin("wb_cyc_i") {
 	capacitance : 0.006592 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_cyc_i;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -4518,7 +4518,7 @@ pin("wb_rstn_i") {
 	is_unconstrained : true;
 
 	/* Other user defined attributes. */
-	original_pin : wb_rstn_i;
+	
 	is_unconstrained : true;
 } /* end of pin wb_rstn_i */
 
@@ -4528,7 +4528,7 @@ pin("wb_stb_i") {
 	capacitance : 0.006342 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_stb_i;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -4585,7 +4585,7 @@ pin("wb_we_i") {
 	capacitance : 0.007911 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_we_i;
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -4667,7 +4667,7 @@ pin("irq[2]") {
 	capacitance : 0.060958 ;
 
 	/* Other user defined attributes. */
-	original_pin : irq[2];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[12]" ;
 		timing_type : combinational ;
@@ -4849,7 +4849,7 @@ pin("irq[1]") {
 	capacitance : 0.077216 ;
 
 	/* Other user defined attributes. */
-	original_pin : irq[1];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[7]" ;
 		timing_type : combinational ;
@@ -5031,7 +5031,7 @@ pin("irq[0]") {
 	capacitance : 0.062903 ;
 
 	/* Other user defined attributes. */
-	original_pin : irq[0];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -5130,7 +5130,7 @@ pin("mask_rev_in[31]") {
 	capacitance : 0.013292 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[31];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5187,7 +5187,7 @@ pin("mask_rev_in[30]") {
 	capacitance : 0.012590 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[30];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5244,7 +5244,7 @@ pin("mask_rev_in[29]") {
 	capacitance : 0.011887 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[29];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5301,7 +5301,7 @@ pin("mask_rev_in[28]") {
 	capacitance : 0.013989 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[28];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5358,7 +5358,7 @@ pin("mask_rev_in[27]") {
 	capacitance : 0.013937 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[27];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5415,7 +5415,7 @@ pin("mask_rev_in[26]") {
 	capacitance : 0.017135 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[26];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5472,7 +5472,7 @@ pin("mask_rev_in[25]") {
 	capacitance : 0.016885 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[25];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5529,7 +5529,7 @@ pin("mask_rev_in[24]") {
 	capacitance : 0.017102 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[24];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5586,7 +5586,7 @@ pin("mask_rev_in[23]") {
 	capacitance : 0.016748 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[23];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5643,7 +5643,7 @@ pin("mask_rev_in[22]") {
 	capacitance : 0.019277 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[22];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5700,7 +5700,7 @@ pin("mask_rev_in[21]") {
 	capacitance : 0.015712 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[21];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5757,7 +5757,7 @@ pin("mask_rev_in[20]") {
 	capacitance : 0.017203 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[20];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5814,7 +5814,7 @@ pin("mask_rev_in[19]") {
 	capacitance : 0.016184 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[19];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5871,7 +5871,7 @@ pin("mask_rev_in[18]") {
 	capacitance : 0.016838 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[18];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5928,7 +5928,7 @@ pin("mask_rev_in[17]") {
 	capacitance : 0.016232 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[17];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -5985,7 +5985,7 @@ pin("mask_rev_in[16]") {
 	capacitance : 0.018452 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[16];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6042,7 +6042,7 @@ pin("mask_rev_in[15]") {
 	capacitance : 0.014652 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[15];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6099,7 +6099,7 @@ pin("mask_rev_in[14]") {
 	capacitance : 0.017963 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6156,7 +6156,7 @@ pin("mask_rev_in[13]") {
 	capacitance : 0.012665 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[13];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6213,7 +6213,7 @@ pin("mask_rev_in[12]") {
 	capacitance : 0.014539 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[12];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6270,7 +6270,7 @@ pin("mask_rev_in[11]") {
 	capacitance : 0.016721 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[11];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6327,7 +6327,7 @@ pin("mask_rev_in[10]") {
 	capacitance : 0.010034 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[10];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6384,7 +6384,7 @@ pin("mask_rev_in[9]") {
 	capacitance : 0.013903 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[9];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6441,7 +6441,7 @@ pin("mask_rev_in[8]") {
 	capacitance : 0.011477 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[8];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6498,7 +6498,7 @@ pin("mask_rev_in[7]") {
 	capacitance : 0.009451 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[7];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6555,7 +6555,7 @@ pin("mask_rev_in[6]") {
 	capacitance : 0.010061 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[6];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6612,7 +6612,7 @@ pin("mask_rev_in[5]") {
 	capacitance : 0.012136 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[5];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6669,7 +6669,7 @@ pin("mask_rev_in[4]") {
 	capacitance : 0.010705 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[4];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6726,7 +6726,7 @@ pin("mask_rev_in[3]") {
 	capacitance : 0.009792 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6783,7 +6783,7 @@ pin("mask_rev_in[2]") {
 	capacitance : 0.007794 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6840,7 +6840,7 @@ pin("mask_rev_in[1]") {
 	capacitance : 0.007792 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6897,7 +6897,7 @@ pin("mask_rev_in[0]") {
 	capacitance : 0.009088 ;
 
 	/* Other user defined attributes. */
-	original_pin : mask_rev_in[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -6959,7 +6959,7 @@ pin("mgmt_gpio_in[37]") {
 	capacitance : 0.005316 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[37];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7016,7 +7016,7 @@ pin("mgmt_gpio_in[36]") {
 	capacitance : 0.005515 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[36];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7073,7 +7073,7 @@ pin("mgmt_gpio_in[35]") {
 	capacitance : 0.004878 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[35];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7130,7 +7130,7 @@ pin("mgmt_gpio_in[34]") {
 	capacitance : 0.007347 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[34];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7187,7 +7187,7 @@ pin("mgmt_gpio_in[33]") {
 	capacitance : 0.006640 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[33];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7244,7 +7244,7 @@ pin("mgmt_gpio_in[32]") {
 	capacitance : 0.007046 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[32];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7301,7 +7301,7 @@ pin("mgmt_gpio_in[31]") {
 	capacitance : 0.010211 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[31];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7358,7 +7358,7 @@ pin("mgmt_gpio_in[30]") {
 	capacitance : 0.014091 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[30];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7415,7 +7415,7 @@ pin("mgmt_gpio_in[29]") {
 	capacitance : 0.009735 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[29];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7472,7 +7472,7 @@ pin("mgmt_gpio_in[28]") {
 	capacitance : 0.006970 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[28];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7529,7 +7529,7 @@ pin("mgmt_gpio_in[27]") {
 	capacitance : 0.005134 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[27];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7586,7 +7586,7 @@ pin("mgmt_gpio_in[26]") {
 	capacitance : 0.008393 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[26];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7643,7 +7643,7 @@ pin("mgmt_gpio_in[25]") {
 	capacitance : 0.008685 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[25];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7700,7 +7700,7 @@ pin("mgmt_gpio_in[24]") {
 	capacitance : 0.009219 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[24];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7757,7 +7757,7 @@ pin("mgmt_gpio_in[23]") {
 	capacitance : 0.007599 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[23];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7814,7 +7814,7 @@ pin("mgmt_gpio_in[22]") {
 	capacitance : 0.007500 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[22];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7871,7 +7871,7 @@ pin("mgmt_gpio_in[21]") {
 	capacitance : 0.005169 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[21];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7928,7 +7928,7 @@ pin("mgmt_gpio_in[20]") {
 	capacitance : 0.006812 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[20];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -7985,7 +7985,7 @@ pin("mgmt_gpio_in[19]") {
 	capacitance : 0.006724 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[19];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8042,7 +8042,7 @@ pin("mgmt_gpio_in[18]") {
 	capacitance : 0.005837 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[18];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8099,7 +8099,7 @@ pin("mgmt_gpio_in[17]") {
 	capacitance : 0.006693 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[17];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8156,7 +8156,7 @@ pin("mgmt_gpio_in[16]") {
 	capacitance : 0.006046 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[16];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8213,7 +8213,7 @@ pin("mgmt_gpio_in[15]") {
 	capacitance : 0.005763 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[15];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8270,7 +8270,7 @@ pin("mgmt_gpio_in[14]") {
 	capacitance : 0.006155 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8327,7 +8327,7 @@ pin("mgmt_gpio_in[13]") {
 	capacitance : 0.005933 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[13];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8384,7 +8384,7 @@ pin("mgmt_gpio_in[12]") {
 	capacitance : 0.006269 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[12];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8441,7 +8441,7 @@ pin("mgmt_gpio_in[11]") {
 	capacitance : 0.005839 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[11];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8498,7 +8498,7 @@ pin("mgmt_gpio_in[10]") {
 	capacitance : 0.006866 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[10];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8555,7 +8555,7 @@ pin("mgmt_gpio_in[9]") {
 	capacitance : 0.005631 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[9];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8612,7 +8612,7 @@ pin("mgmt_gpio_in[8]") {
 	capacitance : 0.006328 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[8];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8669,7 +8669,7 @@ pin("mgmt_gpio_in[7]") {
 	capacitance : 0.005888 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[7];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8726,7 +8726,7 @@ pin("mgmt_gpio_in[6]") {
 	capacitance : 0.006619 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[6];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8783,7 +8783,7 @@ pin("mgmt_gpio_in[5]") {
 	capacitance : 0.008883 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[5];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8841,7 +8841,7 @@ pin("mgmt_gpio_in[4]") {
 	capacitance : 0.103589 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[4];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[4]" ;
 		timing_type : minimum_period ;
@@ -8880,7 +8880,7 @@ pin("mgmt_gpio_in[3]") {
 	capacitance : 0.007322 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -8985,7 +8985,7 @@ pin("mgmt_gpio_in[2]") {
 	capacitance : 0.040214 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -9090,7 +9090,7 @@ pin("mgmt_gpio_in[1]") {
 	capacitance : 0.005715 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -9147,7 +9147,7 @@ pin("mgmt_gpio_in[0]") {
 	capacitance : 0.006308 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_in[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -9210,7 +9210,7 @@ pin("mgmt_gpio_oeb[37]") {
 	capacitance : 0.003651 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[37];
+	
 	timing () {
 		related_pin : "qspi_enabled" ;
 		timing_type : combinational ;
@@ -9566,7 +9566,7 @@ pin("mgmt_gpio_oeb[36]") {
 	capacitance : 0.004102 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[36];
+	
 	timing () {
 		related_pin : "qspi_enabled" ;
 		timing_type : combinational ;
@@ -9922,7 +9922,7 @@ pin("mgmt_gpio_oeb[35]") {
 	capacitance : 0.001428 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[35];
+	
 	timing () {
 		related_pin : "spi_enabled" ;
 		timing_type : combinational ;
@@ -10278,7 +10278,7 @@ pin("mgmt_gpio_oeb[34]") {
 	capacitance : 0.001656 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[34];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10373,7 +10373,7 @@ pin("mgmt_gpio_oeb[33]") {
 	capacitance : 0.002939 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[33];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10468,7 +10468,7 @@ pin("mgmt_gpio_oeb[32]") {
 	capacitance : 0.004327 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[32];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10563,7 +10563,7 @@ pin("mgmt_gpio_oeb[31]") {
 	capacitance : 0.005937 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[31];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10658,7 +10658,7 @@ pin("mgmt_gpio_oeb[30]") {
 	capacitance : 0.007782 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[30];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10753,7 +10753,7 @@ pin("mgmt_gpio_oeb[29]") {
 	capacitance : 0.005728 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[29];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10848,7 +10848,7 @@ pin("mgmt_gpio_oeb[28]") {
 	capacitance : 0.008954 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[28];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -10943,7 +10943,7 @@ pin("mgmt_gpio_oeb[27]") {
 	capacitance : 0.009724 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[27];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11038,7 +11038,7 @@ pin("mgmt_gpio_oeb[26]") {
 	capacitance : 0.009334 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[26];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11133,7 +11133,7 @@ pin("mgmt_gpio_oeb[25]") {
 	capacitance : 0.002689 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[25];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11228,7 +11228,7 @@ pin("mgmt_gpio_oeb[24]") {
 	capacitance : 0.004557 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[24];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11323,7 +11323,7 @@ pin("mgmt_gpio_oeb[23]") {
 	capacitance : 0.005513 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[23];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11418,7 +11418,7 @@ pin("mgmt_gpio_oeb[22]") {
 	capacitance : 0.007468 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[22];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11513,7 +11513,7 @@ pin("mgmt_gpio_oeb[21]") {
 	capacitance : 0.010509 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[21];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11608,7 +11608,7 @@ pin("mgmt_gpio_oeb[20]") {
 	capacitance : 0.009832 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[20];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11703,7 +11703,7 @@ pin("mgmt_gpio_oeb[19]") {
 	capacitance : 0.001492 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[19];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11798,7 +11798,7 @@ pin("mgmt_gpio_oeb[18]") {
 	capacitance : 0.003605 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[18];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11893,7 +11893,7 @@ pin("mgmt_gpio_oeb[17]") {
 	capacitance : 0.006240 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[17];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -11988,7 +11988,7 @@ pin("mgmt_gpio_oeb[16]") {
 	capacitance : 0.015485 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[16];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12083,7 +12083,7 @@ pin("mgmt_gpio_oeb[15]") {
 	capacitance : 0.016413 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[15];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12178,7 +12178,7 @@ pin("mgmt_gpio_oeb[14]") {
 	capacitance : 0.023195 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[14];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12273,7 +12273,7 @@ pin("mgmt_gpio_oeb[13]") {
 	capacitance : 0.018240 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[13];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12368,7 +12368,7 @@ pin("mgmt_gpio_oeb[12]") {
 	capacitance : 0.020058 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[12];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12463,7 +12463,7 @@ pin("mgmt_gpio_oeb[11]") {
 	capacitance : 0.017963 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[11];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12558,7 +12558,7 @@ pin("mgmt_gpio_oeb[10]") {
 	capacitance : 0.007844 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[10];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12653,7 +12653,7 @@ pin("mgmt_gpio_oeb[9]") {
 	capacitance : 0.009760 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[9];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12748,7 +12748,7 @@ pin("mgmt_gpio_oeb[8]") {
 	capacitance : 0.010612 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[8];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12843,7 +12843,7 @@ pin("mgmt_gpio_oeb[7]") {
 	capacitance : 0.016733 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[7];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -12938,7 +12938,7 @@ pin("mgmt_gpio_oeb[6]") {
 	capacitance : 0.014605 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[6];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -13033,7 +13033,7 @@ pin("mgmt_gpio_oeb[5]") {
 	capacitance : 0.018331 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[5];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -13128,7 +13128,7 @@ pin("mgmt_gpio_oeb[4]") {
 	capacitance : 0.029070 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[4];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -13223,7 +13223,7 @@ pin("mgmt_gpio_oeb[3]") {
 	capacitance : 0.020368 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[3];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -13318,7 +13318,7 @@ pin("mgmt_gpio_oeb[2]") {
 	capacitance : 0.040188 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -13413,7 +13413,7 @@ pin("mgmt_gpio_oeb[1]") {
 	capacitance : 0.040706 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[1];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[3]" ;
 		timing_type : combinational ;
@@ -13682,7 +13682,7 @@ pin("mgmt_gpio_oeb[0]") {
 	capacitance : 0.047602 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_oeb[0];
+	
 	timing () {
 		related_pin : "debug_mode" ;
 		timing_type : combinational ;
@@ -14043,7 +14043,7 @@ pin("mgmt_gpio_out[37]") {
 	capacitance : 0.003930 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[37];
+	
 	timing () {
 		related_pin : "qspi_enabled" ;
 		timing_type : combinational ;
@@ -14399,7 +14399,7 @@ pin("mgmt_gpio_out[36]") {
 	capacitance : 0.005905 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[36];
+	
 	timing () {
 		related_pin : "qspi_enabled" ;
 		timing_type : combinational ;
@@ -14755,7 +14755,7 @@ pin("mgmt_gpio_out[35]") {
 	capacitance : 0.002325 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[35];
+	
 	timing () {
 		related_pin : "spi_enabled" ;
 		timing_type : combinational ;
@@ -15111,7 +15111,7 @@ pin("mgmt_gpio_out[34]") {
 	capacitance : 0.001649 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[34];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -15206,7 +15206,7 @@ pin("mgmt_gpio_out[33]") {
 	capacitance : 0.003375 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[33];
+	
 	timing () {
 		related_pin : "spi_csb" ;
 		timing_type : combinational ;
@@ -15562,7 +15562,7 @@ pin("mgmt_gpio_out[32]") {
 	capacitance : 0.003486 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[32];
+	
 	timing () {
 		related_pin : "spi_enabled" ;
 		timing_type : combinational ;
@@ -15918,7 +15918,7 @@ pin("mgmt_gpio_out[31]") {
 	capacitance : 0.005881 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[31];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16013,7 +16013,7 @@ pin("mgmt_gpio_out[30]") {
 	capacitance : 0.008150 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[30];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16108,7 +16108,7 @@ pin("mgmt_gpio_out[29]") {
 	capacitance : 0.004918 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[29];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16203,7 +16203,7 @@ pin("mgmt_gpio_out[28]") {
 	capacitance : 0.006488 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[28];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16298,7 +16298,7 @@ pin("mgmt_gpio_out[27]") {
 	capacitance : 0.003160 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[27];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16393,7 +16393,7 @@ pin("mgmt_gpio_out[26]") {
 	capacitance : 0.006786 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[26];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16488,7 +16488,7 @@ pin("mgmt_gpio_out[25]") {
 	capacitance : 0.003772 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[25];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16583,7 +16583,7 @@ pin("mgmt_gpio_out[24]") {
 	capacitance : 0.005261 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[24];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16678,7 +16678,7 @@ pin("mgmt_gpio_out[23]") {
 	capacitance : 0.007044 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[23];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16773,7 +16773,7 @@ pin("mgmt_gpio_out[22]") {
 	capacitance : 0.009485 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[22];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16868,7 +16868,7 @@ pin("mgmt_gpio_out[21]") {
 	capacitance : 0.008254 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[21];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -16963,7 +16963,7 @@ pin("mgmt_gpio_out[20]") {
 	capacitance : 0.011659 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[20];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -17058,7 +17058,7 @@ pin("mgmt_gpio_out[19]") {
 	capacitance : 0.003689 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[19];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -17153,7 +17153,7 @@ pin("mgmt_gpio_out[18]") {
 	capacitance : 0.003049 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[18];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -17248,7 +17248,7 @@ pin("mgmt_gpio_out[17]") {
 	capacitance : 0.004451 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[17];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -17343,7 +17343,7 @@ pin("mgmt_gpio_out[16]") {
 	capacitance : 0.012715 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[16];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -17438,7 +17438,7 @@ pin("mgmt_gpio_out[15]") {
 	capacitance : 0.009597 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[15];
+	
 	timing () {
 		related_pin : "user_clock" ;
 		timing_type : combinational ;
@@ -17620,7 +17620,7 @@ pin("mgmt_gpio_out[14]") {
 	capacitance : 0.007124 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : combinational ;
@@ -17802,7 +17802,7 @@ pin("mgmt_gpio_out[13]") {
 	capacitance : 0.020421 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[13];
+	
 	timing () {
 		related_pin : "trap" ;
 		timing_type : combinational ;
@@ -17984,7 +17984,7 @@ pin("mgmt_gpio_out[12]") {
 	capacitance : 0.010271 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[12];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -18079,7 +18079,7 @@ pin("mgmt_gpio_out[11]") {
 	capacitance : 0.013385 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[11];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -18174,7 +18174,7 @@ pin("mgmt_gpio_out[10]") {
 	capacitance : 0.011872 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[10];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[2]" ;
 		timing_type : combinational ;
@@ -18356,7 +18356,7 @@ pin("mgmt_gpio_out[9]") {
 	capacitance : 0.007280 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[9];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -18451,7 +18451,7 @@ pin("mgmt_gpio_out[8]") {
 	capacitance : 0.007977 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[8];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[3]" ;
 		timing_type : combinational ;
@@ -18633,7 +18633,7 @@ pin("mgmt_gpio_out[7]") {
 	capacitance : 0.006514 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[7];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -18728,7 +18728,7 @@ pin("mgmt_gpio_out[6]") {
 	capacitance : 0.015767 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[6];
+	
 	timing () {
 		related_pin : "ser_tx" ;
 		timing_type : combinational ;
@@ -19084,7 +19084,7 @@ pin("mgmt_gpio_out[5]") {
 	capacitance : 0.013572 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[5];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -19179,7 +19179,7 @@ pin("mgmt_gpio_out[4]") {
 	capacitance : 0.006481 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[4];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -19274,7 +19274,7 @@ pin("mgmt_gpio_out[3]") {
 	capacitance : 0.023232 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[3];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -19369,7 +19369,7 @@ pin("mgmt_gpio_out[2]") {
 	capacitance : 0.031762 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -19464,7 +19464,7 @@ pin("mgmt_gpio_out[1]") {
 	capacitance : 0.017838 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[1];
+	
 	timing () {
 		related_pin : "mgmt_gpio_in[11]" ;
 		timing_type : combinational ;
@@ -19907,7 +19907,7 @@ pin("mgmt_gpio_out[0]") {
 	capacitance : 0.050402 ;
 
 	/* Other user defined attributes. */
-	original_pin : mgmt_gpio_out[0];
+	
 	timing () {
 		related_pin : "debug_mode" ;
 		timing_type : combinational ;
@@ -20268,7 +20268,7 @@ pin("pll90_sel[2]") {
 	capacitance : 0.041703 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll90_sel[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20363,7 +20363,7 @@ pin("pll90_sel[1]") {
 	capacitance : 0.033800 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll90_sel[1];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20458,7 +20458,7 @@ pin("pll90_sel[0]") {
 	capacitance : 0.049002 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll90_sel[0];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20558,7 +20558,7 @@ pin("pll_div[4]") {
 	capacitance : 0.046705 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_div[4];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20653,7 +20653,7 @@ pin("pll_div[3]") {
 	capacitance : 0.054423 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_div[3];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20748,7 +20748,7 @@ pin("pll_div[2]") {
 	capacitance : 0.054088 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_div[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20843,7 +20843,7 @@ pin("pll_div[1]") {
 	capacitance : 0.058964 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_div[1];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -20938,7 +20938,7 @@ pin("pll_div[0]") {
 	capacitance : 0.074278 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_div[0];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21038,7 +21038,7 @@ pin("pll_sel[2]") {
 	capacitance : 0.046284 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_sel[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21133,7 +21133,7 @@ pin("pll_sel[1]") {
 	capacitance : 0.048575 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_sel[1];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21228,7 +21228,7 @@ pin("pll_sel[0]") {
 	capacitance : 0.052894 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_sel[0];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21328,7 +21328,7 @@ pin("pll_trim[25]") {
 	capacitance : 0.041560 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[25];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21423,7 +21423,7 @@ pin("pll_trim[24]") {
 	capacitance : 0.030076 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[24];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21518,7 +21518,7 @@ pin("pll_trim[23]") {
 	capacitance : 0.033007 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[23];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21613,7 +21613,7 @@ pin("pll_trim[22]") {
 	capacitance : 0.033189 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[22];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21708,7 +21708,7 @@ pin("pll_trim[21]") {
 	capacitance : 0.034159 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[21];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21803,7 +21803,7 @@ pin("pll_trim[20]") {
 	capacitance : 0.036546 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[20];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21898,7 +21898,7 @@ pin("pll_trim[19]") {
 	capacitance : 0.025954 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[19];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -21993,7 +21993,7 @@ pin("pll_trim[18]") {
 	capacitance : 0.022295 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[18];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22088,7 +22088,7 @@ pin("pll_trim[17]") {
 	capacitance : 0.019551 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[17];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22183,7 +22183,7 @@ pin("pll_trim[16]") {
 	capacitance : 0.023174 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[16];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22278,7 +22278,7 @@ pin("pll_trim[15]") {
 	capacitance : 0.026942 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[15];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22373,7 +22373,7 @@ pin("pll_trim[14]") {
 	capacitance : 0.033722 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[14];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22468,7 +22468,7 @@ pin("pll_trim[13]") {
 	capacitance : 0.032429 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[13];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22563,7 +22563,7 @@ pin("pll_trim[12]") {
 	capacitance : 0.030761 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[12];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22658,7 +22658,7 @@ pin("pll_trim[11]") {
 	capacitance : 0.034107 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[11];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22753,7 +22753,7 @@ pin("pll_trim[10]") {
 	capacitance : 0.035265 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[10];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22848,7 +22848,7 @@ pin("pll_trim[9]") {
 	capacitance : 0.025501 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[9];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -22943,7 +22943,7 @@ pin("pll_trim[8]") {
 	capacitance : 0.032654 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[8];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23038,7 +23038,7 @@ pin("pll_trim[7]") {
 	capacitance : 0.037666 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[7];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23133,7 +23133,7 @@ pin("pll_trim[6]") {
 	capacitance : 0.035546 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[6];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23228,7 +23228,7 @@ pin("pll_trim[5]") {
 	capacitance : 0.035796 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[5];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23323,7 +23323,7 @@ pin("pll_trim[4]") {
 	capacitance : 0.038091 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[4];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23418,7 +23418,7 @@ pin("pll_trim[3]") {
 	capacitance : 0.031462 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[3];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23513,7 +23513,7 @@ pin("pll_trim[2]") {
 	capacitance : 0.040688 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[2];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23608,7 +23608,7 @@ pin("pll_trim[1]") {
 	capacitance : 0.032090 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[1];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23703,7 +23703,7 @@ pin("pll_trim[0]") {
 	capacitance : 0.040028 ;
 
 	/* Other user defined attributes. */
-	original_pin : pll_trim[0];
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : rising_edge ;
@@ -23802,7 +23802,7 @@ pin("wb_adr_i[31]") {
 	capacitance : 0.005867 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[31];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -23859,7 +23859,7 @@ pin("wb_adr_i[30]") {
 	capacitance : 0.005314 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[30];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -23916,7 +23916,7 @@ pin("wb_adr_i[29]") {
 	capacitance : 0.005711 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[29];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -23973,7 +23973,7 @@ pin("wb_adr_i[28]") {
 	capacitance : 0.005496 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[28];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24030,7 +24030,7 @@ pin("wb_adr_i[27]") {
 	capacitance : 0.005158 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[27];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24087,7 +24087,7 @@ pin("wb_adr_i[26]") {
 	capacitance : 0.008496 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[26];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24144,7 +24144,7 @@ pin("wb_adr_i[25]") {
 	capacitance : 0.009203 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[25];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24201,7 +24201,7 @@ pin("wb_adr_i[24]") {
 	capacitance : 0.004970 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[24];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24258,7 +24258,7 @@ pin("wb_adr_i[23]") {
 	capacitance : 0.012837 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[23];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24315,7 +24315,7 @@ pin("wb_adr_i[22]") {
 	capacitance : 0.012713 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[22];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24372,7 +24372,7 @@ pin("wb_adr_i[21]") {
 	capacitance : 0.021818 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[21];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24429,7 +24429,7 @@ pin("wb_adr_i[20]") {
 	capacitance : 0.030293 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[20];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24486,7 +24486,7 @@ pin("wb_adr_i[19]") {
 	capacitance : 0.007320 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[19];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24543,7 +24543,7 @@ pin("wb_adr_i[18]") {
 	capacitance : 0.006863 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[18];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24600,7 +24600,7 @@ pin("wb_adr_i[17]") {
 	capacitance : 0.005890 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[17];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24657,7 +24657,7 @@ pin("wb_adr_i[16]") {
 	capacitance : 0.005497 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[16];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24714,7 +24714,7 @@ pin("wb_adr_i[15]") {
 	capacitance : 0.005537 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[15];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24771,7 +24771,7 @@ pin("wb_adr_i[14]") {
 	capacitance : 0.005537 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24828,7 +24828,7 @@ pin("wb_adr_i[13]") {
 	capacitance : 0.005537 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[13];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24885,7 +24885,7 @@ pin("wb_adr_i[12]") {
 	capacitance : 0.005524 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[12];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24942,7 +24942,7 @@ pin("wb_adr_i[11]") {
 	capacitance : 0.005553 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[11];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -24999,7 +24999,7 @@ pin("wb_adr_i[10]") {
 	capacitance : 0.005973 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[10];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25056,7 +25056,7 @@ pin("wb_adr_i[9]") {
 	capacitance : 0.008864 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[9];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25113,7 +25113,7 @@ pin("wb_adr_i[8]") {
 	capacitance : 0.011371 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[8];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25170,7 +25170,7 @@ pin("wb_adr_i[7]") {
 	capacitance : 0.041213 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[7];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25227,7 +25227,7 @@ pin("wb_adr_i[6]") {
 	capacitance : 0.031081 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[6];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25284,7 +25284,7 @@ pin("wb_adr_i[5]") {
 	capacitance : 0.048845 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[5];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25341,7 +25341,7 @@ pin("wb_adr_i[4]") {
 	capacitance : 0.042124 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[4];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25398,7 +25398,7 @@ pin("wb_adr_i[3]") {
 	capacitance : 0.049116 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25455,7 +25455,7 @@ pin("wb_adr_i[2]") {
 	capacitance : 0.039274 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25512,7 +25512,7 @@ pin("wb_adr_i[1]") {
 	capacitance : 0.041123 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25569,7 +25569,7 @@ pin("wb_adr_i[0]") {
 	capacitance : 0.039892 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_adr_i[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25631,7 +25631,7 @@ pin("wb_dat_i[31]") {
 	capacitance : 0.005580 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[31];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25688,7 +25688,7 @@ pin("wb_dat_i[30]") {
 	capacitance : 0.005757 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[30];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25745,7 +25745,7 @@ pin("wb_dat_i[29]") {
 	capacitance : 0.006697 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[29];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25802,7 +25802,7 @@ pin("wb_dat_i[28]") {
 	capacitance : 0.005630 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[28];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25859,7 +25859,7 @@ pin("wb_dat_i[27]") {
 	capacitance : 0.005980 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[27];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25916,7 +25916,7 @@ pin("wb_dat_i[26]") {
 	capacitance : 0.005703 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[26];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -25973,7 +25973,7 @@ pin("wb_dat_i[25]") {
 	capacitance : 0.005675 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[25];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26030,7 +26030,7 @@ pin("wb_dat_i[24]") {
 	capacitance : 0.005629 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[24];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26087,7 +26087,7 @@ pin("wb_dat_i[23]") {
 	capacitance : 0.005889 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[23];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26144,7 +26144,7 @@ pin("wb_dat_i[22]") {
 	capacitance : 0.006849 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[22];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26201,7 +26201,7 @@ pin("wb_dat_i[21]") {
 	capacitance : 0.005614 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[21];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26258,7 +26258,7 @@ pin("wb_dat_i[20]") {
 	capacitance : 0.006266 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[20];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26315,7 +26315,7 @@ pin("wb_dat_i[19]") {
 	capacitance : 0.005619 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[19];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26372,7 +26372,7 @@ pin("wb_dat_i[18]") {
 	capacitance : 0.005781 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[18];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26429,7 +26429,7 @@ pin("wb_dat_i[17]") {
 	capacitance : 0.005678 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[17];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26486,7 +26486,7 @@ pin("wb_dat_i[16]") {
 	capacitance : 0.005768 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[16];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26543,7 +26543,7 @@ pin("wb_dat_i[15]") {
 	capacitance : 0.007089 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[15];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26600,7 +26600,7 @@ pin("wb_dat_i[14]") {
 	capacitance : 0.005761 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26657,7 +26657,7 @@ pin("wb_dat_i[13]") {
 	capacitance : 0.006084 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[13];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26714,7 +26714,7 @@ pin("wb_dat_i[12]") {
 	capacitance : 0.005646 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[12];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26771,7 +26771,7 @@ pin("wb_dat_i[11]") {
 	capacitance : 0.005635 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[11];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26828,7 +26828,7 @@ pin("wb_dat_i[10]") {
 	capacitance : 0.006119 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[10];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26885,7 +26885,7 @@ pin("wb_dat_i[9]") {
 	capacitance : 0.007744 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[9];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26942,7 +26942,7 @@ pin("wb_dat_i[8]") {
 	capacitance : 0.005540 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[8];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -26999,7 +26999,7 @@ pin("wb_dat_i[7]") {
 	capacitance : 0.006787 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[7];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27056,7 +27056,7 @@ pin("wb_dat_i[6]") {
 	capacitance : 0.005057 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[6];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27113,7 +27113,7 @@ pin("wb_dat_i[5]") {
 	capacitance : 0.005462 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[5];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27170,7 +27170,7 @@ pin("wb_dat_i[4]") {
 	capacitance : 0.004755 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[4];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27227,7 +27227,7 @@ pin("wb_dat_i[3]") {
 	capacitance : 0.004560 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27284,7 +27284,7 @@ pin("wb_dat_i[2]") {
 	capacitance : 0.006749 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27341,7 +27341,7 @@ pin("wb_dat_i[1]") {
 	capacitance : 0.005380 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27398,7 +27398,7 @@ pin("wb_dat_i[0]") {
 	capacitance : 0.005753 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_i[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -27461,7 +27461,7 @@ pin("wb_dat_o[31]") {
 	capacitance : 0.005811 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[31];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -27556,7 +27556,7 @@ pin("wb_dat_o[30]") {
 	capacitance : 0.011666 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[30];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -27651,7 +27651,7 @@ pin("wb_dat_o[29]") {
 	capacitance : 0.011588 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[29];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -27746,7 +27746,7 @@ pin("wb_dat_o[28]") {
 	capacitance : 0.019382 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[28];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -27841,7 +27841,7 @@ pin("wb_dat_o[27]") {
 	capacitance : 0.014608 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[27];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -27936,7 +27936,7 @@ pin("wb_dat_o[26]") {
 	capacitance : 0.021536 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[26];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28031,7 +28031,7 @@ pin("wb_dat_o[25]") {
 	capacitance : 0.014592 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[25];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28126,7 +28126,7 @@ pin("wb_dat_o[24]") {
 	capacitance : 0.012545 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[24];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28221,7 +28221,7 @@ pin("wb_dat_o[23]") {
 	capacitance : 0.016854 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[23];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28316,7 +28316,7 @@ pin("wb_dat_o[22]") {
 	capacitance : 0.019937 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[22];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28411,7 +28411,7 @@ pin("wb_dat_o[21]") {
 	capacitance : 0.021822 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[21];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28506,7 +28506,7 @@ pin("wb_dat_o[20]") {
 	capacitance : 0.011828 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[20];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28601,7 +28601,7 @@ pin("wb_dat_o[19]") {
 	capacitance : 0.012922 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[19];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28696,7 +28696,7 @@ pin("wb_dat_o[18]") {
 	capacitance : 0.011203 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[18];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28791,7 +28791,7 @@ pin("wb_dat_o[17]") {
 	capacitance : 0.028876 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[17];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28886,7 +28886,7 @@ pin("wb_dat_o[16]") {
 	capacitance : 0.018396 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[16];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -28981,7 +28981,7 @@ pin("wb_dat_o[15]") {
 	capacitance : 0.018357 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[15];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29076,7 +29076,7 @@ pin("wb_dat_o[14]") {
 	capacitance : 0.022139 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[14];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29171,7 +29171,7 @@ pin("wb_dat_o[13]") {
 	capacitance : 0.035305 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[13];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29266,7 +29266,7 @@ pin("wb_dat_o[12]") {
 	capacitance : 0.028149 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[12];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29361,7 +29361,7 @@ pin("wb_dat_o[11]") {
 	capacitance : 0.039786 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[11];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29456,7 +29456,7 @@ pin("wb_dat_o[10]") {
 	capacitance : 0.037030 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[10];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29551,7 +29551,7 @@ pin("wb_dat_o[9]") {
 	capacitance : 0.024923 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[9];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29646,7 +29646,7 @@ pin("wb_dat_o[8]") {
 	capacitance : 0.037728 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[8];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29741,7 +29741,7 @@ pin("wb_dat_o[7]") {
 	capacitance : 0.034401 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[7];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29836,7 +29836,7 @@ pin("wb_dat_o[6]") {
 	capacitance : 0.034274 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[6];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -29931,7 +29931,7 @@ pin("wb_dat_o[5]") {
 	capacitance : 0.043275 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[5];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30026,7 +30026,7 @@ pin("wb_dat_o[4]") {
 	capacitance : 0.043817 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[4];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30121,7 +30121,7 @@ pin("wb_dat_o[3]") {
 	capacitance : 0.045789 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30216,7 +30216,7 @@ pin("wb_dat_o[2]") {
 	capacitance : 0.047706 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30311,7 +30311,7 @@ pin("wb_dat_o[1]") {
 	capacitance : 0.048297 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30406,7 +30406,7 @@ pin("wb_dat_o[0]") {
 	capacitance : 0.059775 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_dat_o[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : rising_edge ;
@@ -30505,7 +30505,7 @@ pin("wb_sel_i[3]") {
 	capacitance : 0.005620 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_sel_i[3];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -30562,7 +30562,7 @@ pin("wb_sel_i[2]") {
 	capacitance : 0.005803 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_sel_i[2];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -30619,7 +30619,7 @@ pin("wb_sel_i[1]") {
 	capacitance : 0.005600 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_sel_i[1];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -30676,7 +30676,7 @@ pin("wb_sel_i[0]") {
 	capacitance : 0.005556 ;
 
 	/* Other user defined attributes. */
-	original_pin : wb_sel_i[0];
+	
 	timing () {
 		related_pin : "wb_clk_i" ;
 		timing_type : setup_rising ;
@@ -30738,7 +30738,7 @@ pin("wbbd_sck") {
 	capacitance : 0.000000 ;
 
 	/* Other user defined attributes. */
-	original_pin : _7278_/Q;
+	
 	timing () {
 		related_pin : "wbbd_sck" ;
 		timing_type : minimum_period ;
