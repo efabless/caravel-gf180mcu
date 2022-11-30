@@ -6,15 +6,15 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/housekeeping/Sta
 	-keep_capacitive_coupling
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Tue Nov 29 12:00:54 2022
+Date   : Wed Nov 30 10:15:29 2022
 ****************************************
 
         0 error(s)
         Format is SPEF
-        Annotated nets                   :         6219
-        Annotated capacitances           :        59912
-        Annotated resistances            :        53850
-        Annotated coupling capacitances  :       162114
+        Annotated nets                   :         6692
+        Annotated capacitances           :        61494
+        Annotated resistances            :        54947
+        Annotated coupling capacitances  :       164473
         Annotated PI models              :            0
         Annotated Elmore delays          :            0
 
@@ -26,23 +26,23 @@ Report : annotated_parasitics
 	-boundary_nets
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Tue Nov 29 12:00:54 2022
+Date   : Wed Nov 30 10:15:29 2022
 ****************************************
 
                     |         |         |         |   RC    | Coupled |   Not   |
 Net Type            |  Total  | Lumped  |  RC pi  | network | network |Annotated|
 --------------------+---------+---------+---------+---------+---------+---------+
 Internal nets       |         |         |         |         |         |         |
-  - Pin to pin nets |    5874 |       0 |       0 |      11 |    5863 |       0 |
+  - Pin to pin nets |    6347 |       0 |       0 |      12 |    6335 |       0 |
   - Driverless nets |      20 |       0 |       0 |       0 |       0 |      20 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+---------+
 Boundary/port nets  |         |         |         |         |         |         |
-  - Pin to pin nets |     345 |       0 |       0 |      11 |     334 |       0 |
+  - Pin to pin nets |     345 |       0 |       0 |       2 |     343 |       0 |
   - Driverless nets |       0 |       0 |       0 |       0 |       0 |       0 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+---------+
-                    |    6239 |       0 |       0 |      22 |    6197 |      20 |
+                    |    6712 |       0 |       0 |      14 |    6678 |      20 |
 
 ****************************************
 Report : annotated_parasitics
@@ -51,21 +51,21 @@ Report : annotated_parasitics
 	-boundary_nets
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Tue Nov 29 12:00:54 2022
+Date   : Wed Nov 30 10:15:29 2022
 ****************************************
 
                     |         |         |         |   RC    | Coupled |   Not   |
 Net Type            |  Total  | Lumped  |  RC pi  | network | network |Annotated|
 --------------------+---------+---------+---------+---------+---------+---------+
 Internal nets       |         |         |         |         |         |         |
-  - Pin to pin nets |    5874 |       0 |       0 |      11 |    5863 |       0 |
+  - Pin to pin nets |    6347 |       0 |       0 |      12 |    6335 |       0 |
   - Driverless nets |      20 |       0 |       0 |       0 |       0 |      20 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+---------+
 Boundary/port nets  |         |         |         |         |         |         |
-  - Pin to pin nets |     345 |       0 |       0 |      11 |     334 |       0 |
+  - Pin to pin nets |     345 |       0 |       0 |       2 |     343 |       0 |
   - Driverless nets |       0 |       0 |       0 |       0 |       0 |       0 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+---------+
-                    |    6239 |       0 |       0 |      22 |    6197 |      20 |
+                    |    6712 |       0 |       0 |      14 |    6678 |      20 |
 
