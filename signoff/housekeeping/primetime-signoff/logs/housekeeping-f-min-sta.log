@@ -2,27 +2,16 @@ if {\
   [catch {
     ##PT script
     # Adding SCL and IO link libraries based on the process corner specified
-    if {$::env(PROC_CORNER) == "t"} {
-      set link_path "* $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/liberty/$::env(STD_CELL_LIBRARY)__tt_025C_5v00.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__tt_025C_5v00.lib \
-      "
-    } elseif {$::env(PROC_CORNER) == "f"} {
-      set link_path "* $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/liberty/$::env(STD_CELL_LIBRARY)__ff_n40C_5v50.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ff_n40C_5v50.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib \
-      "
-    } elseif {$::env(PROC_CORNER) == "s"} {
-      set link_path "* $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/liberty/$::env(STD_CELL_LIBRARY)__ss_125C_4v50.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ss_125C_4v50.lib \
-      $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ss_125C_4v50.lib \
-      "
+    if {[string match gf180* $::env(PDK)]} {
+      source ./gf180_libs.tcl
+    } elseif {[string match sky130* $::env(PDK)]} {
+      source ./sky130_libs.tcl
     }
 
     # Reading design netlist
     set search_path "$::env(CARAVEL_ROOT)/verilog/gl $::env(MCW_ROOT)/verilog/gl $::env(UPRJ_ROOT)/verilog/gl"
     puts "list of verilog files:"
-    foreach verilog "[glob $::env(CARAVEL_ROOT)/verilog/gl/*.v] [glob $::env(MCW_ROOT)/verilog/gl/*.v] [glob $::env(UPRJ_ROOT)/verilog/gl/*.v]" {
+    foreach verilog "[glob $::env(UPRJ_ROOT)/verilog/gl/*.v] [glob $::env(CARAVEL_ROOT)/verilog/gl/*.v] [glob $::env(MCW_ROOT)/verilog/gl/*.v]" {
         puts $verilog
         read_verilog $verilog
     }
@@ -68,7 +57,7 @@ if {\
 
       report_si_bottleneck -significant_digits 4 -nosplit -slack_lesser_than 10 -all_nets > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-si_bottleneck.rpt
 
-      if {$design == "caravel" | $design == "caravan"} {
+      if {$design == "caravel" | $design == "caravan" | $design == "caravel_core"} {
         report_timing -unique_pins -delay min -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit -group clk \
         -max_paths 10000 -nworst 5 -slack_lesser_than 10 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-clk-min_timing.rpt
         
@@ -130,7 +119,10 @@ if {\
 } {
   puts stderr $err
   exit 1
-}list of verilog files:
+}[INFO]: set link_path for PDK: gf180mcuC
+list of verilog files:
+/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_project_wrapper.v
+/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_proj_example.v
 /home/passant/caravel-gf180mcu/verilog/gl/gpio_control_block.v
 /home/passant/caravel-gf180mcu/verilog/gl/housekeeping.v
 /home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v
@@ -148,9 +140,6 @@ if {\
 /home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v
 /home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM128.v
 /home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM256.v
-/home/passant/caravel_user_project/verilog/gl/user_project_wrapper.v
-/home/passant/caravel_user_project/verilog/gl/user_proj_example.v
-/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v
 Information: current_design won't return any data before link (DES-071)
 Beginning read_lib...
 Using exec: /tools/snps/lc/T-2022.03-SP3/linux64/lc/bin/lc_shell_exec
@@ -11395,13 +11384,13 @@ Warning: Line 3242, Cell 'gf180mcu_fd_io__in_s', pin 'VSS', The 'VSS' Pin/bus on
 Error: Can't find library '*'. (UIL-103)
 
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM256.v'
-Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'
-Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
+Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v'
+Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_core.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM128.v'
-Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_proj_example.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/housekeeping.v'
+Loading verilog file '/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_proj_example.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/mgmt_protect.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/digital_pll.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_clocking.v'
@@ -11410,18 +11399,17 @@ Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/mprj_io_buffer.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/chip_io.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/spare_logic_block.v'
-Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_project_wrapper.v'
+Loading verilog file '/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_project_wrapper.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_009.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v'
-Loading verilog file '/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v'
-Loading db file '/tmp/_pt1rUL4Zin/1.db'
+Loading db file '/tmp/_pt1rzWoePs/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ff_n40C_5v50.lib'
-Loading db file '/tmp/_pt1rqTbkpr/1.db'
+Loading db file '/tmp/_pt1ruJqy1p/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'
 Error: Problem in read_lib: No designs were read. (DBR-011)
 Error: Cannot read link_path file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'. (LNK-001)
-Warning: Ignoring user_project_wrapper in verilog file /home/passant/caravel_user_project/verilog/gl/user_project_wrapper.v, as another module with same name is read already. (LNK-067)
+Warning: Ignoring user_project_wrapper in verilog file /home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v, as another module with same name is read already. (LNK-067)
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'
 Beginning read_lib...
 Using exec: /tools/snps/lc/T-2022.03-SP3/linux64/lc/bin/lc_shell_exec
@@ -12046,8 +12034,10 @@ Error: Can't find library '*'. (UIL-103)
 Error: Problem in read_lib: No designs were read. (DBR-011)
 Error: Cannot read link_path file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'. (LNK-001)
 Linking design housekeeping...
-Removed 17723 unconnected cells and blackboxes.
-Information: Removing 19 unneeded designs..... (LNK-034)
+Removed 18183 unconnected cells and blackboxes.
+Information: Removing 18 unneeded designs..... (LNK-034)
+Information: Module 'user_project_wrapper' in file '/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_project_wrapper.v' is not used in the current design.  (LNK-039)
+Information: Module 'user_proj_example' in file '/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_proj_example.v' is not used in the current design.  (LNK-039)
 Information: Module 'gpio_control_block' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_control_block.v' is not used in the current design.  (LNK-039)
 Information: Module 'gpio_defaults_block_007' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v' is not used in the current design.  (LNK-039)
 Information: Module 'caravel_clocking' in file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_clocking.v' is not used in the current design.  (LNK-039)
@@ -12064,11 +12054,8 @@ Information: Module 'digital_pll' in file '/home/passant/caravel-gf180mcu/verilo
 Information: Module 'mgmt_core_wrapper' in file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/mgmt_core_wrapper.v' is not used in the current design.  (LNK-039)
 Information: Module 'RAM128' in file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM128.v' is not used in the current design.  (LNK-039)
 Information: Module 'RAM256' in file '/home/passant/caravel_mgmt_soc_litex/verilog/gl/RAM256.v' is not used in the current design.  (LNK-039)
-Information: Module 'user_project_wrapper' in file '/home/passant/caravel_user_project/verilog/gl/user_project_wrapper.v' is not used in the current design.  (LNK-039)
-Information: Module 'user_proj_example' in file '/home/passant/caravel_user_project/verilog/gl/user_proj_example.v' is not used in the current design.  (LNK-039)
-Information: Module 'user_analog_project_wrapper' in file '/home/passant/caravel_user_project/verilog/gl/user_analog_project_wrapper.v' is not used in the current design.  (LNK-039)
 Design 'housekeeping' was successfully linked.
-Information: There are 6417 leaf cells, ports, hiers and 6239 nets in the design (LNK-047)
+Information: There are 6886 leaf cells, ports, hiers and 6712 nets in the design (LNK-047)
 
 Reading SDC version 2.1...
 1
@@ -12079,29 +12066,29 @@ Information: Log for 'report_annotated_parasitics command' will be generated in 
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Building multi voltage information for entire design. (MV-022)
 Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
-Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/I0 and _4067_/I1 of cell _4067_. (PTE-060)
-Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/S and _4067_/I1 of cell _4067_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4075_/I0 and _4075_/I1 of cell _4075_. (PTE-060)
+Warning: No clock-gating check is inferred for clock sck at pins _4075_/S and _4075_/I1 of cell _4075_. (PTE-060)
+Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/I0 and _4066_/I1 of cell _4066_. (PTE-060)
+Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/S and _4066_/I1 of cell _4066_. (PTE-060)
 Warning: No clock-gating check is inferred for clock wbbd_sck at pins _4072_/A1 and _4072_/A2 of cell _4072_. (PTE-060)
 Warning: No clock-gating check is inferred for clock wbbd_sck at pins _4072_/B1 and _4072_/A2 of cell _4072_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4072_/A1 and _4072_/B2 of cell _4072_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4072_/B1 and _4072_/B2 of cell _4072_. (PTE-060)
-Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/I0 and _4066_/I1 of cell _4066_. (PTE-060)
-Warning: No clock-gating check is inferred for clock user_clock at pins _4066_/S and _4066_/I1 of cell _4066_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4057_/I0 and _4057_/I1 of cell _4057_. (PTE-060)
 Warning: No clock-gating check is inferred for clock sck at pins _4057_/S and _4057_/I1 of cell _4057_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4075_/I0 and _4075_/I1 of cell _4075_. (PTE-060)
-Warning: No clock-gating check is inferred for clock sck at pins _4075_/S and _4075_/I1 of cell _4075_. (PTE-060)
+Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/I0 and _4067_/I1 of cell _4067_. (PTE-060)
+Warning: No clock-gating check is inferred for clock wb_clk_i at pins _4067_/S and _4067_/I1 of cell _4067_. (PTE-060)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
 Information: Expanding clock 'user_clock' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
 Information: Expanding clock 'wb_clk_i' to base period of 120.000 (old period was 30.000, added 6 edges). (PTE-016)
 Information: Expanding clock 'wbbd_sck' to base period of 120.000 (old period was 60.000, added 2 edges). (PTE-016)
-Information: Number of nets evaluated in the previous iteration: 6218. (XTALK-105)
+Information: Number of nets evaluated in the previous iteration: 6691. (XTALK-105)
 ****************************************
 Report : write_sdf /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/sdf/ff/housekeeping.min.sdf
 Design : housekeeping
 Version: T-2022.03-SP3
-Date   : Tue Nov 29 12:01:18 2022
+Date   : Wed Nov 30 10:15:54 2022
 ****************************************
 
 Warning: Variable si_filter_keep_all_port_aggressors is set to FALSE (MEXT-80)
@@ -12116,11 +12103,10 @@ Id          Severity      Occurrences   Suppressed
 -------------------------------------------------------------------------------
 DB-1        Error                   5            5
 Total 1 type of message is suppressed
-Maximum memory usage for this session: 3090.31 MB
-CPU usage for this session: 38 seconds 
-Elapsed time for this session: 19 seconds
-Diagnostics summary: 2 errors, 15 warnings, 39 informationals
+Maximum memory usage for this session: 2907.41 MB
+CPU usage for this session: 41 seconds 
+Elapsed time for this session: 20 seconds
+Diagnostics summary: 2 errors, 15 warnings, 38 informationals
 
 Thank you for using pt_shell!
 STA run Passed!
-There are max_transition and max_capacitance violations. check report: /home/passant/caravel-gf180mcu/signoff/housekeeping/primetime-signoff/reports/ff/housekeeping.min-all_viol.rpt
