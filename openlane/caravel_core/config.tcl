@@ -47,7 +47,7 @@ set ::env(NO_SYNTH_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(DRC_EXCLUDE_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 set ::env(SYNTH_MAX_FANOUT) 14
-# set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
+set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
 set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_control_block/yosys_mapping.v"
@@ -57,8 +57,6 @@ set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 3170 4360"
 set ::env(CORE_AREA) "24 25 3145 4335"
 set ::env(FP_DEF_TEMPLATE) $::env(DESIGN_DIR)/io.def
-# set ::env(FP_PIN_ORDER_CFG) [glob $::env(DESIGN_DIR)/pin_order.cfg]
-# set ::env(FP_IO_MODE) 0
 
 set ::env(FP_PDN_VERTICAL_HALO) "8"
 set ::env(FP_PDN_HORIZONTAL_HALO) "-2"
@@ -152,26 +150,22 @@ set ::env(FP_PDN_VOFFSET) 3.5
 ##CTS
 set ::env(CTS_MAX_CAP) 0.25
 set ::env(CTS_REPORT_TIMING) 0
-# set ::env(CTS_CLK_MAX_WIRE_LENGTH) 700
-# set ::env(CTS_DISTANCE_BETWEEN_BUFFERS) 500
 set ::env(CTS_TOLERANCE) 10
 set ::env(CTS_SINK_CLUSTERING_SIZE) 12
 set ::env(CTS_SINK_CLUSTERING_MAX_DIAMETER) 30
 set ::env(CTS_ROOT_BUFFER) "$::env(STD_CELL_LIBRARY)__clkbuf_20"
 
 ##PLACEMENT
-set ::env(PL_ROUTABILITY_DRIVEN) 0
+set ::env(PL_ROUTABILITY_DRIVEN) 1
 set ::env(PL_TIME_DRIVEN) 1
-set ::env(PL_TARGET_DENSITY) 0.63
+set ::env(PL_TARGET_DENSITY) 0.55
 
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.05
 set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 0
-set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 4
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 8
 set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 1200
-# set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
-# set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) 150
 set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 50
 set ::env(PL_RESIZER_CAP_SLEW_MARGIN) 65
 
@@ -180,7 +174,7 @@ set ::env(GRT_ALLOW_CONGESTION) 1
 # set ::env(GRT_OBS) "Metal5 2872 92 2882 106"
 
 set ::env(GRT_ADJUSTMENT) 0.4
-# ##                              met1,met2,met3,met4,met5
+# ##                                met1,met2,met3,met4,met5
 # set ::env(GRT_LAYER_ADJUSTMENTS) "0.25,0.30,0.22,0.40,0.22"
 set ::env(GRT_OVERFLOW_ITERS) 50
 set ::evn(DRT_OPT_ITERS) 12
@@ -188,10 +182,8 @@ set ::env(GRT_ESTIMATE_PARASITICS) 1
 
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 1
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.05
-set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 3
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 6
 set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 1200
-# set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) 50
-# set ::env(GLB_RESIZER_SETUP_MAX_BUFFER_PERCENT) 150
 set ::env(GLB_RESIZER_MAX_SLEW_MARGIN) 60
 set ::env(GLB_RESIZER_CAP_SLEW_MARGIN) 60
 
@@ -245,7 +237,6 @@ set ::env(STA_WRITE_LIB) 0
 set ::env(QUIT_ON_TR_DRC) 1
 set ::env(QUIT_ON_LVS_ERROR) 0
 set ::env(QUIT_ON_MAGIC_DRC) 0
-# set ::emv(RUN_SPEF_EXTRACTION) 1
 
 set ::env(MAGIC_DEF_LABELS) 0
 set ::env(MAGIC_EXT_USE_GDS) 0

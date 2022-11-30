@@ -2,6 +2,7 @@ package require openlane
 variable SCRIPT_DIR [file dirname [file normalize [info script]]]
 prep -ignore_mismatches -design $SCRIPT_DIR -tag $::env(OPENLANE_RUN_TAG) -overwrite -verbose 0
 
+set save_path $::env(CARAVEL_ROOT)
 
 ##synthesis
 run_synthesis
@@ -93,6 +94,8 @@ if { ! [ info exists ::env(DRC_CURRENT_DEF) ] } {
     }
 ##saves to <RUN_DIR>/results/final
     save_final_views
+    ##saving views
+    save_views -save_path $save_path
 ## 
     calc_total_runtime
     save_state
@@ -109,3 +112,37 @@ if { ! [ info exists ::env(DRC_CURRENT_DEF) ] } {
     }
     puts_success "Flow complete."
     show_warnings "Note that the following warnings have been generated:"
+
+##Copying reports
+    set run_dir $::env(DESIGN_DIR)/runs/$::env(RUN_TAG)
+    ##copying signoff reports
+    set sourceDir $run_dir/reports/signoff
+    set targetDir $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/openlane-signoff/
+    foreach f [glob -directory $sourceDir -nocomplain *] {
+        file copy -force $f $targetDir
+    }
+    ##copying spefs
+    set sourceDir $run_dir/results/routing/mca/spef/
+    set targetDir $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/openlane-signoff/spef/
+    foreach f [glob -directory $sourceDir -nocomplain *] {
+        file copy -force $f $targetDir
+    }
+    ##copying sdf
+    set sourceDir $run_dir/results/routing/mca/sdf/nom/
+    set targetDir $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/openlane-signoff/sdf/nom/
+    foreach f [glob -directory $sourceDir -nocomplain *] {
+        file copy -force $f $targetDir
+    }
+    set sourceDir $run_dir/results/routing/mca/sdf/min/
+    set targetDir $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/openlane-signoff/sdf/min/
+    foreach f [glob -directory $sourceDir -nocomplain *] {
+        file copy -force $f $targetDir
+    }
+    set sourceDir $run_dir/results/routing/mca/sdf/max/
+    set targetDir $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/openlane-signoff/sdf/max/
+    foreach f [glob -directory $sourceDir -nocomplain *] {
+        file copy -force $f $targetDir
+    }
+    ##coping other files
+    set flist [list $run_dir/config.tcl $run_dir/openlane.log $run_dir/runtime.yaml $run_dir/warnings.log]
+    file copy -force {*}$flist $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN_NAME)/
