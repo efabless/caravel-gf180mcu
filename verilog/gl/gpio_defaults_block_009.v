@@ -35,12 +35,13 @@ module gpio_defaults_block_009(VDD, VSS, gpio_defaults);
    gf180mcu_fd_sc_mcu7t5v0__endcap ENDCAP_5 (.VDD(VDD), .VSS(VSS));
    gf180mcu_fd_sc_mcu7t5v0__endcap ENDCAP_6 (.VDD(VDD), .VSS(VSS));
 
-   /* 5 fillties */
+   /* 6 fillties */
    gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_0 (.VDD(VDD), .VSS(VSS));
    gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_1 (.VDD(VDD), .VSS(VSS));
    gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_2 (.VDD(VDD), .VSS(VSS));
    gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_3 (.VDD(VDD), .VSS(VSS));
    gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_4 (.VDD(VDD), .VSS(VSS));
+   gf180mcu_fd_sc_mcu7t5v0__filltie FILLTIE_5 (.VDD(VDD), .VSS(VSS));
 
    /* 8 fillcap_4s */
    gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLCAP_4_0 (.VDD(VDD),
