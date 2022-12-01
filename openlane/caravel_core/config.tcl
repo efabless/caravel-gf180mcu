@@ -47,7 +47,7 @@ set ::env(NO_SYNTH_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(DRC_EXCLUDE_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 set ::env(SYNTH_MAX_FANOUT) 14
-set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
+# set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
 set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_control_block/yosys_mapping.v"
@@ -55,7 +55,7 @@ set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_cont
 ## Floorplan
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 3170 4360"
-set ::env(CORE_AREA) "24 25 3145 4335"
+set ::env(CORE_AREA) "24 26 3145 4334"
 set ::env(FP_DEF_TEMPLATE) $::env(DESIGN_DIR)/io.def
 
 set ::env(FP_PDN_VERTICAL_HALO) "8"
@@ -77,8 +77,6 @@ set ::env(FP_PDN_SKIPTRIM) 0
 
 set ::env(VDD_NETS) "VDD"
 set ::env(GND_NETS) "VSS"
-
-set ::env(FP_PDN_SKIPTRIM) 1
 
 set ::env(FP_PDN_MACRO_HOOKS) "mprj VDD VSS vdd vss \
                                 housekeeping VDD VSS VDD VSS \
@@ -204,7 +202,7 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $::env(DESIGN_DIR)/../../verilog/gl/spare_logic_block.v \
     $::env(DESIGN_DIR)/../../verilog/gl/mprj_io_buffer.v \
     $::env(DESIGN_DIR)/../../verilog/rtl/gpio_defaults_block.v \
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
+    $::env(MCW_ROOT)/verilog/gl/gf180_ram_512x8_wrapper.v"
 
 set ::env(EXTRA_LEFS) "\
     $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/user_project_wrapper.lef \
@@ -214,7 +212,7 @@ set ::env(EXTRA_LEFS) "\
     $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/spare_logic_block.lef \
     $::env(DESIGN_DIR)/../../lef/mprj_io_buffer.lef \
     $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/gpio_defaults_block.lef \
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
+    $::env(MCW_ROOT)/lef/gf180_ram_512x8_wrapper.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
     $::env(DESIGN_DIR)/../../gds/user_project_wrapper.gds \
@@ -224,10 +222,10 @@ set ::env(EXTRA_GDS_FILES) "\
     $::env(DESIGN_DIR)/../../gds/spare_logic_block.gds \
     $::env(DESIGN_DIR)/../../gds/mprj_io_buffer.gds \
     $::env(DESIGN_DIR)/../../gds/gpio_defaults_block.gds \
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds"
+    $::env(MCW_ROOT)/gds/gf180_ram_512x8_wrapper.gds"
 
 set ::env(EXTRA_LIBS) "\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib \
+    $::env(DESIGN_DIR)/gf180_ram_512x8_wrapper.lib \
     $::env(DESIGN_DIR)/../../signoff/housekeeping/primetime-signoff/lib/tt/housekeeping.nom.lib \
     $::env(DESIGN_DIR)/../../signoff/mprj_io_buffer/primetime-signoff/lib/tt/mprj_io_buffer.nom.lib"
 
@@ -245,4 +243,4 @@ set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL
 set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
 
-set ::env(RSZ_DONT_TOUCH_RX) "const|serial_clock_out|serial_load_out|ram512x32"
+set ::env(RSZ_DONT_TOUCH_RX) "serial_clock_out|serial_load_out"

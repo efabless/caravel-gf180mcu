@@ -3,31 +3,11 @@
 ### Date: 28/10/2022
 
 ## MASTER CLOCKS
-create_clock -name clk -period 30 [get_pins {_18022_/ZN}] 
-# create_clock -name clk -period 30 [get_ports {clock_core}] 
+create_clock -name clk -period 30 [get_pins {_18015_/ZN}] 
 
-create_clock -name hkspi_clk -period 120 [get_ports {mgmt_io_in[4]}] 
-# create_clock -name hk_serial_clk -period 60 [get_pins {housekeeping/serial_clock}]
-# create_clock -name hk_serial_load -period 1200 [get_pins {housekeeping/serial_load}]
-# hk_serial_clk period is x2 core clock
-
-set_clock_uncertainty 0.4 [get_clocks {clk hkspi_clk}] 
-# set_clock_uncertainty 2 [get_clocks {hk_serial_clk hk_serial_load}]
-
-set_clock_groups \
-   -name clock_group \
-   -logically_exclusive \
-   -group [get_clocks {clk}]\
-   -group [get_clocks {hkspi_clk}]
-
-# clock <-> hk_serial_clk/load no paths
-# future note: CDC stuff
-# clock <-> hkspi_clk no paths with careful methods (clock is off)
+set_clock_uncertainty 0.4 [get_clocks {clk}] 
 
 set_propagated_clock [get_clocks {clk}]
-# set_propagated_clock [get_clocks {hk_serial_clk}]
-# set_propagated_clock [get_clocks {hk_serial_load}]
-set_propagated_clock [get_clocks {hkspi_clk}]
 
 ## INPUT/OUTPUT DELAYS
 set input_delay_value 4
