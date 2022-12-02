@@ -3510,12 +3510,12 @@ module caravel(vdd, vss, gpio, mprj_io, clock, resetb, flash_csb, flash_clk, fla
     .one(),
     .zero(\zero_loop2[9] )
   );
-  gpio_defaults_block_007 \gpio_defaults_block_0[0]  (
+  gpio_defaults_block_007 \gpio_defaults_block_0  (
     .VDD(vdd),
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[9] , \gpio_defaults[8] , \gpio_defaults[7] , \gpio_defaults[6] , \gpio_defaults[5] , \gpio_defaults[4] , \gpio_defaults[3] , \gpio_defaults[2] , \gpio_defaults[1] , \gpio_defaults[0]  })
   );
-  gpio_defaults_block_009 \gpio_defaults_block_0[1]  (
+  gpio_defaults_block_009 \gpio_defaults_block_1  (
     .VDD(vdd),
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[19] , \gpio_defaults[18] , \gpio_defaults[17] , \gpio_defaults[16] , \gpio_defaults[15] , \gpio_defaults[14] , \gpio_defaults[13] , \gpio_defaults[12] , \gpio_defaults[11] , \gpio_defaults[10]  })
@@ -3618,17 +3618,17 @@ module caravel(vdd, vss, gpio, mprj_io, clock, resetb, flash_csb, flash_clk, fla
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[299] , \gpio_defaults[298] , \gpio_defaults[297] , \gpio_defaults[296] , \gpio_defaults[295] , \gpio_defaults[294] , \gpio_defaults[293] , \gpio_defaults[292] , \gpio_defaults[291] , \gpio_defaults[290]  })
   );
-  gpio_defaults_block_007 \gpio_defaults_block_2[0]  (
+  gpio_defaults_block_007 \gpio_defaults_block_2  (
     .VDD(vdd),
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[29] , \gpio_defaults[28] , \gpio_defaults[27] , \gpio_defaults[26] , \gpio_defaults[25] , \gpio_defaults[24] , \gpio_defaults[23] , \gpio_defaults[22] , \gpio_defaults[21] , \gpio_defaults[20]  })
   );
-  gpio_defaults_block_007 \gpio_defaults_block_2[1]  (
+  gpio_defaults_block_007 \gpio_defaults_block_3  (
     .VDD(vdd),
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[39] , \gpio_defaults[38] , \gpio_defaults[37] , \gpio_defaults[36] , \gpio_defaults[35] , \gpio_defaults[34] , \gpio_defaults[33] , \gpio_defaults[32] , \gpio_defaults[31] , \gpio_defaults[30]  })
   );
-  gpio_defaults_block_007 \gpio_defaults_block_2[2]  (
+  gpio_defaults_block_007 \gpio_defaults_block_4  (
     .VDD(vdd),
     .VSS(vss),
     .gpio_defaults({ \gpio_defaults[49] , \gpio_defaults[48] , \gpio_defaults[47] , \gpio_defaults[46] , \gpio_defaults[45] , \gpio_defaults[44] , \gpio_defaults[43] , \gpio_defaults[42] , \gpio_defaults[41] , \gpio_defaults[40]  })

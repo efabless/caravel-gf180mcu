@@ -1,6 +1,6 @@
 /* Gate level verilog for gpio_defaults_block */
 
-module gpio_defaults_block(VDD, VSS, gpio_defaults);
+module gpio_defaults_block_087(VDD, VSS, gpio_defaults);
    input VDD;
    input VSS;
    output [9:0] gpio_defaults;
@@ -146,14 +146,14 @@ module gpio_defaults_block(VDD, VSS, gpio_defaults);
 	.VDD(VDD), .VSS(VSS), .VPW(VSS), .VNW(VDD),
 	.ZN(\gpio_defaults_low[9] )
    );
-   assign gpio_defaults[0] = \gpio_defaults_low[0] ;
-   assign gpio_defaults[1] = \gpio_defaults_low[1] ;
-   assign gpio_defaults[2] = \gpio_defaults_low[2] ;
+   assign gpio_defaults[0] = \gpio_defaults_high[0] ;
+   assign gpio_defaults[1] = \gpio_defaults_high[1] ;
+   assign gpio_defaults[2] = \gpio_defaults_high[2] ;
    assign gpio_defaults[3] = \gpio_defaults_low[3] ;
    assign gpio_defaults[4] = \gpio_defaults_low[4] ;
    assign gpio_defaults[5] = \gpio_defaults_low[5] ;
    assign gpio_defaults[6] = \gpio_defaults_low[6] ;
-   assign gpio_defaults[7] = \gpio_defaults_low[7] ;
+   assign gpio_defaults[7] = \gpio_defaults_high[7] ;
    assign gpio_defaults[8] = \gpio_defaults_low[8] ;
    assign gpio_defaults[9] = \gpio_defaults_low[9] ;
  endmodule
