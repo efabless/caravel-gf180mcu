@@ -46,7 +46,7 @@ set ::env(SYNTH_STRATEGY) "DELAY 0"
 set ::env(NO_SYNTH_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(DRC_EXCLUDE_CELL_LIST) $::env(DESIGN_DIR)/no_synth.cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
-set ::env(SYNTH_MAX_FANOUT) 14
+set ::env(SYNTH_MAX_FANOUT) 22
 # set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
@@ -73,7 +73,7 @@ set ::env(PDN_CFG) [glob $::env(DESIGN_DIR)/pdn.tcl]
 set ::env(FP_PDN_CHECK_NODES) 0
 
 set ::env(FP_PDN_CORE_RING) 1
-set ::env(FP_PDN_SKIPTRIM) 0
+set ::env(FP_PDN_SKIPTRIM) 1
 
 set ::env(VDD_NETS) "VDD"
 set ::env(GND_NETS) "VSS"
@@ -205,7 +205,7 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $::env(MCW_ROOT)/verilog/gl/gf180_ram_512x8_wrapper.v"
 
 set ::env(EXTRA_LEFS) "\
-    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/user_project_wrapper.lef \
+    $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
     $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/housekeeping.lef \
     $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
     $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
