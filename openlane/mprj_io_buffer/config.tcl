@@ -44,8 +44,4 @@ set ::env(RIGHT_MARGIN_MULT) {2}
 set ::env(LEFT_MARGIN_MULT) {2}
 set ::env(TOP_MARGIN_MULT) {2}
 set ::env(BOTTOM_MARGIN_MULT) {2}
-set ::env(MAGIC_EXT_USE_GDS) 0
-
-set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
-set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
-set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(MAGIC_EXT_USE_GDS) 1
