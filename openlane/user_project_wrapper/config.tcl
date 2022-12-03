@@ -21,13 +21,17 @@ set ::env(FP_PDN_ENABLE_RAILS) 0
 
 set ::env(CLOCK_PORT) "user_clock2"
 set ::env(CLOCK_NET) "mprj.clk"
+set ::env(FP_DEF_TEMPLATE) $script_dir/../../io.def
 
 set ::env(CLOCK_PERIOD) "10"
 
 set ::env(PL_OPENPHYSYN_OPTIMIZATIONS) 0
 set ::env(DIODE_INSERTION_STRATEGY) 0
 
-set ::env(MAGIC_WRITE_FULL_LEF) 0
+set ::env(DIODE_INSERTION_STRATEGY) 0
+set ::env(RUN_FILL_INSERTION) 0
+set ::env(RUN_TAP_DECAP_INSERTION) 0
+set ::env(CLOCK_TREE_SYNTH) 0
 
 set ::env(VERILOG_FILES) "\
 	$script_dir/../../../../verilog/rtl/defines.v \
