@@ -13,20 +13,20 @@
 # limitations under the License.
 # SPDX-License-Identifier: Apache-2.0
 
+package require openlane
 set script_dir [file dirname [file normalize [info script]]]
+set save_path $::env(CARAVEL_ROOT)
 
-set ::env(DESIGN_NAME) chip_io
+# FOR LVS AND CREATING PORT LABELS
+#
+prep -design $script_dir -tag $::env(OPENLANE_RUN_TAG) -overwrite
+set ::env(SYNTH_DEFINES) "USE_POWER_PINS"
+verilog_elaborate
 
-set verilog_root $::env(CARAVEL_ROOT)/verilog/
+exec rm -rf $script_dir/runs/final
+exec ln -sf $script_dir/runs/$::env(OPENLANE_RUN_TAG) $script_dir/runs/final
 
+save_views \
+    -pnl_path $script_dir/runs/$::env(RUN_TAG)/results/synthesis/gpio_defaults_block.v \
+    -save_path $save_path
 
-# Change if needed
-set ::env(VERILOG_FILES) "\
-    $verilog_root/rtl/user_defines.v \
-    $verilog_root/rtl/defines.v \
-    $verilog_root/rtl/chip_io.v \
-"
-
-set ::env(SYNTH_READ_BLACKBOX_LIB) 1
-# specific to gf180
-set ::env(EXTRA_LIBS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__tt_025C_3v30.lib"
