@@ -206,12 +206,12 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
 
 set ::env(EXTRA_LEFS) "\
     $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
-    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/housekeeping.lef \
+    $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
     $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
     $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
-    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/spare_logic_block.lef \
+    $::env(DESIGN_DIR)/../../lef/spare_logic_block.lef \
     $::env(DESIGN_DIR)/../../lef/mprj_io_buffer.lef \
-    $::env(DESIGN_DIR)/../../lef/lefs-for-PnR/gpio_defaults_block.lef \
+    $::env(DESIGN_DIR)/../../lef/gpio_defaults_block.lef \
     $::env(MCW_ROOT)/lef/gf180_ram_512x8_wrapper.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
@@ -237,10 +237,6 @@ set ::env(QUIT_ON_LVS_ERROR) 0
 set ::env(QUIT_ON_MAGIC_DRC) 0
 
 set ::env(MAGIC_DEF_LABELS) 0
-set ::env(MAGIC_EXT_USE_GDS) 0
-
-set ::env(TECH_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
-set ::env(TECH_LEF_MIN)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
-set ::env(TECH_LEF_MAX)  [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/*.tlef"]
+set ::env(MAGIC_EXT_USE_GDS) 1
 
 set ::env(RSZ_DONT_TOUCH_RX) "serial_clock_out|serial_load_out"
