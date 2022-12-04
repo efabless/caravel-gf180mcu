@@ -21,7 +21,8 @@ module caravel_clocking(
     input VDD,
     input VSS,
 `endif
-    input resetb, 	// Master (negative sense) reset
+    input porb,		// Master (negative sense) reset from power-on-reset
+    input resetb, 	// Master (negative sense) reset from RESETB pin
     input ext_clk_sel,	// 0=use PLL clock, 1=use external (pad) clock
     input ext_clk,	// External pad (slow) clock
     input pll_clk,	// Internal PLL (fast) clock
@@ -31,13 +32,15 @@ module caravel_clocking(
     input ext_reset,	// Positive sense reset from housekeeping SPI.
     output core_clk,	// Output core clock
     output user_clk,	// Output user (secondary) clock
-    output resetb_sync	// Output propagated and buffered reset
+    output resetb_sync,	// Output propagated and buffered reset
+    output resetb_async	// Output propagated asynchronous reset
 );
 
     wire pll_clk_sel;
     wire pll_clk_divided;
     wire pll_clk90_divided;
     wire core_ext_clk;
+    wire resetb_async;
     reg  use_pll_first;
     reg  use_pll_second;
     reg	 ext_clk_syncd_pre;
@@ -45,11 +48,18 @@ module caravel_clocking(
 
     assign pll_clk_sel = ~ext_clk_sel;
 
+    // Reset assignment.  "porb" comes from POR, while "resetb" comes
+    // from the RESETB pin, and "ext_reset" comes from standalone SPI
+    // (and is normally zero unless activated from the SPI).  All
+    // three sources are asynchronous with respect to the core clock.
+
+    assign resetb_async = porb & resetb & (!ext_reset);
+
     // Note that this implementation does not guard against switching to
     // the PLL clock if the PLL clock is not present.
 
-    always @(posedge pll_clk or negedge resetb) begin
-	if (resetb == 1'b0) begin
+    always @(posedge pll_clk or negedge resetb_async) begin
+	if (resetb_async == 1'b0) begin
 	    use_pll_first <= 1'b0;
 	    use_pll_second <= 1'b0;
 	    ext_clk_syncd <= 1'b0;
@@ -69,7 +79,7 @@ module caravel_clocking(
 	.in(pll_clk),
 	.out(pll_clk_divided),
 	.N(sel),
-	.resetb(resetb)
+	.resetb(resetb_async)
     ); 
 
     // Secondary PLL clock divider for user space access
@@ -80,9 +90,8 @@ module caravel_clocking(
 	.in(pll_clk90),
 	.out(pll_clk90_divided),
 	.N(sel2),
-	.resetb(resetb)
+	.resetb(resetb_async)
     ); 
-
 
     // Multiplex the clock output
 
@@ -90,22 +99,18 @@ module caravel_clocking(
     assign core_clk = (use_pll_second) ? pll_clk_divided : core_ext_clk;
     assign user_clk = (use_pll_second) ? pll_clk90_divided : core_ext_clk;
 
-    // Reset assignment.  "reset" comes from POR, while "ext_reset"
-    // comes from standalone SPI (and is normally zero unless
-    // activated from the SPI).
-
-    // Staged-delay reset
+    // Staged-delay synchronous reset
     reg [2:0] reset_delay;
 
-    always @(negedge core_clk or negedge resetb) begin
-        if (resetb == 1'b0) begin
-        reset_delay <= 3'b111;
+    always @(negedge core_clk or negedge resetb_async) begin
+        if (resetb_async == 1'b0) begin
+	    reset_delay <= 3'b111;
         end else begin
-        reset_delay <= {1'b0, reset_delay[2:1]};
+	    reset_delay <= {1'b0, reset_delay[2:1]};
         end
     end
 
-    assign resetb_sync = ~(reset_delay[0] | ext_reset);
+    assign resetb_sync = ~reset_delay[0];
 
 endmodule
 `default_nettype wire
