@@ -19,8 +19,8 @@ set_propagated_clock [get_clocks {clk}]
 set_propagated_clock [get_clocks {hkspi_clk}]
 
 ## INPUT/OUTPUT DELAYS
-set input_delay_value 4
-set output_delay_value 2
+set input_delay_value 1
+set output_delay_value 25
 puts "\[INFO\]: Setting output delay to: $output_delay_value"
 puts "\[INFO\]: Setting input delay to: $input_delay_value"
 set_input_delay $input_delay_value  -clock [get_clocks {clk}] -add_delay [all_inputs]
@@ -56,4 +56,4 @@ set_timing_derate -late [expr 1+$derate]
 
 ## MAX transition/cap
 set_max_trans 2 [current_design]
-set_max_cap 0.8 [current_design]
+set_max_cap 0.5 [current_design]
