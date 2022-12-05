@@ -77,7 +77,7 @@ module caravel_core (
 	output [`MPRJ_IO_PADS-1:0] mprj_io_slew_sel,
 	output [`MPRJ_IO_PADS*2-1:0] mprj_io_drive_sel,
 
-	output [5:0] const_zero,
+	output [9:0] const_zero,
 	output [1:0] const_one
 );
 
@@ -239,7 +239,7 @@ module caravel_core (
     wire 	mprj_reset;
 
 	
-    assign const_zero = 6'b000000;
+    assign const_zero = 10'b0000000000;
     assign const_one  = 2'b11;
 	
     // Management processor (wrapper).  Any management core
@@ -1207,7 +1207,7 @@ module caravel_core (
 
     	.mgmt_gpio_in(mgmt_io_in[(`MPRJ_IO_PADS-1):(`MPRJ_IO_PADS-3)]),
 	.mgmt_gpio_out(mgmt_io_out[(`MPRJ_IO_PADS-1):(`MPRJ_IO_PADS-3)]),
-	.mgmt_gpio_oeb(mgmt_io_oeb[4:2]),
+	.mgmt_gpio_oeb(gpio_buf_mgmt_io_oeb_buf),
 
         .one(),
         .zero(),
@@ -1311,7 +1311,7 @@ module caravel_core (
     wire [7:0] spare_xmx_nc;
     wire [7:0] spare_xfq_nc;
 
-    spare_logic_block spare_logic [3:0] (
+    (* keep *) spare_logic_block spare_logic [3:0] (
 	`ifdef USE_POWER_PINS
 		.VDD(VDD),
 		.VSS(VSS),
