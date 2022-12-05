@@ -19,7 +19,7 @@ set script_dir [file dirname [file normalize [info script]]]
 
 set ::env(DESIGN_NAME) spare_logic_block
 
-set ::env(VERILOG_FILES) $script_dir/../../verilog/rtl/spare_logic_block.v
+set ::env(VERILOG_FILES) $script_dir/../../../../verilog/rtl/spare_logic_block.v
 
 set ::env(CLOCK_PORT) ""
 set ::env(CLOCK_TREE_SYNTH) 0
@@ -38,11 +38,11 @@ set ::env(LEFT_MARGIN_MULT) "10"
 set ::env(RIGHT_MARGIN_MULT) "10"
 
 ## PDN
-# set ::env(FP_PDN_AUTO_ADJUST) 0
-# set ::env(FP_PDN_VOFFSET) 1
-# set ::env(FP_PDN_HOFFSET) 2
-# set ::env(FP_PDN_VPITCH) 20
-# set ::env(FP_PDN_HPITCH) 20
+set ::env(FP_PDN_VSPACING) {6.375}
+set ::env(FP_PDN_VPITCH) {15.95}
+set ::env(FP_PDN_HSPACING) {5.19}
+set ::env(FP_PDN_VPITCH) {15.95}
+set ::env(FP_PDN_AUTO_ADJUST) {0}
 
 
 ## Placement
@@ -55,3 +55,6 @@ set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
 
 # ## Routing
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
+
+##LVS
+set ::env(MAGIC_EXT_USE_GDS) 1

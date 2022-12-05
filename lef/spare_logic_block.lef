@@ -12,35 +12,19 @@ MACRO spare_logic_block
     USE POWER ;
     PORT
       LAYER Metal4 ;
-        RECT 12.775 7.540 14.375 59.100 ;
+        RECT 21.120 7.540 22.720 59.100 ;
     END
     PORT
       LAYER Metal4 ;
-        RECT 28.725 7.540 30.325 59.100 ;
+        RECT 37.070 7.540 38.670 59.100 ;
     END
     PORT
       LAYER Metal4 ;
-        RECT 44.675 7.540 46.275 59.100 ;
-    END
-    PORT
-      LAYER Metal4 ;
-        RECT 60.625 7.540 62.225 59.100 ;
+        RECT 53.020 7.540 54.620 59.100 ;
     END
     PORT
       LAYER Metal5 ;
-        RECT 5.300 13.830 69.180 15.430 ;
-    END
-    PORT
-      LAYER Metal5 ;
-        RECT 5.300 27.410 69.180 29.010 ;
-    END
-    PORT
-      LAYER Metal5 ;
-        RECT 5.300 40.990 69.180 42.590 ;
-    END
-    PORT
-      LAYER Metal5 ;
-        RECT 5.300 54.570 69.180 56.170 ;
+        RECT 5.300 23.690 69.180 25.290 ;
     END
   END VDD
   PIN VSS
@@ -48,27 +32,19 @@ MACRO spare_logic_block
     USE GROUND ;
     PORT
       LAYER Metal4 ;
-        RECT 20.750 7.540 22.350 59.100 ;
+        RECT 29.095 7.540 30.695 59.100 ;
     END
     PORT
       LAYER Metal4 ;
-        RECT 36.700 7.540 38.300 59.100 ;
+        RECT 45.045 7.540 46.645 59.100 ;
     END
     PORT
       LAYER Metal4 ;
-        RECT 52.650 7.540 54.250 59.100 ;
+        RECT 60.995 7.540 62.595 59.100 ;
     END
     PORT
       LAYER Metal5 ;
-        RECT 5.300 20.620 69.180 22.220 ;
-    END
-    PORT
-      LAYER Metal5 ;
-        RECT 5.300 34.200 69.180 35.800 ;
-    END
-    PORT
-      LAYER Metal5 ;
-        RECT 5.300 47.780 69.180 49.380 ;
+        RECT 5.300 30.480 69.180 32.080 ;
     END
   END VSS
   PIN spare_xfq[0]
@@ -76,7 +52,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 23.800 4.000 24.360 ;
+        RECT 0.000 23.520 4.000 24.080 ;
     END
   END spare_xfq[0]
   PIN spare_xfq[1]
@@ -84,7 +60,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 66.920 0.000 67.480 4.000 ;
+        RECT 67.200 0.000 67.760 4.000 ;
     END
   END spare_xfq[1]
   PIN spare_xi[0]
@@ -92,7 +68,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 33.320 66.000 33.880 70.000 ;
+        RECT 33.600 66.000 34.160 70.000 ;
     END
   END spare_xi[0]
   PIN spare_xi[1]
@@ -100,7 +76,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 26.600 0.000 27.160 4.000 ;
+        RECT 26.880 0.000 27.440 4.000 ;
     END
   END spare_xi[1]
   PIN spare_xi[2]
@@ -108,7 +84,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 10.360 75.000 10.920 ;
+        RECT 71.000 10.080 75.000 10.640 ;
     END
   END spare_xi[2]
   PIN spare_xi[3]
@@ -116,7 +92,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 50.680 4.000 51.240 ;
+        RECT 0.000 50.400 4.000 50.960 ;
     END
   END spare_xi[3]
   PIN spare_xib
@@ -124,7 +100,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 3.640 75.000 4.200 ;
+        RECT 71.000 3.360 75.000 3.920 ;
     END
   END spare_xib
   PIN spare_xmx[0]
@@ -132,7 +108,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 73.640 0.000 74.200 4.000 ;
+        RECT 73.920 0.000 74.480 4.000 ;
     END
   END spare_xmx[0]
   PIN spare_xmx[1]
@@ -140,7 +116,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 50.680 75.000 51.240 ;
+        RECT 71.000 50.400 75.000 50.960 ;
     END
   END spare_xmx[1]
   PIN spare_xna[0]
@@ -148,7 +124,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT -0.280 66.000 0.280 70.000 ;
+        RECT 0.000 66.000 0.560 70.000 ;
     END
   END spare_xna[0]
   PIN spare_xna[1]
@@ -156,7 +132,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 40.040 0.000 40.600 4.000 ;
+        RECT 40.320 0.000 40.880 4.000 ;
     END
   END spare_xna[1]
   PIN spare_xno[0]
@@ -164,7 +140,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 17.080 4.000 17.640 ;
+        RECT 0.000 16.800 4.000 17.360 ;
     END
   END spare_xno[0]
   PIN spare_xno[1]
@@ -172,7 +148,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 53.480 0.000 54.040 4.000 ;
+        RECT 53.760 0.000 54.320 4.000 ;
     END
   END spare_xno[1]
   PIN spare_xz[0]
@@ -180,7 +156,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 57.400 75.000 57.960 ;
+        RECT 71.000 57.120 75.000 57.680 ;
     END
   END spare_xz[0]
   PIN spare_xz[10]
@@ -188,7 +164,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 37.240 4.000 37.800 ;
+        RECT 0.000 36.960 4.000 37.520 ;
     END
   END spare_xz[10]
   PIN spare_xz[11]
@@ -196,7 +172,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 13.160 0.000 13.720 4.000 ;
+        RECT 13.440 0.000 14.000 4.000 ;
     END
   END spare_xz[11]
   PIN spare_xz[12]
@@ -204,7 +180,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 66.920 66.000 67.480 70.000 ;
+        RECT 67.200 66.000 67.760 70.000 ;
     END
   END spare_xz[12]
   PIN spare_xz[13]
@@ -212,7 +188,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 46.760 66.000 47.320 70.000 ;
+        RECT 47.040 66.000 47.600 70.000 ;
     END
   END spare_xz[13]
   PIN spare_xz[14]
@@ -220,7 +196,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 37.240 75.000 37.800 ;
+        RECT 71.000 36.960 75.000 37.520 ;
     END
   END spare_xz[14]
   PIN spare_xz[15]
@@ -228,7 +204,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 60.200 66.000 60.760 70.000 ;
+        RECT 60.480 66.000 61.040 70.000 ;
     END
   END spare_xz[15]
   PIN spare_xz[16]
@@ -236,7 +212,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 10.360 4.000 10.920 ;
+        RECT 0.000 10.080 4.000 10.640 ;
     END
   END spare_xz[16]
   PIN spare_xz[17]
@@ -244,7 +220,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 64.120 75.000 64.680 ;
+        RECT 71.000 63.840 75.000 64.400 ;
     END
   END spare_xz[17]
   PIN spare_xz[18]
@@ -252,7 +228,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 13.160 66.000 13.720 70.000 ;
+        RECT 13.440 66.000 14.000 70.000 ;
     END
   END spare_xz[18]
   PIN spare_xz[19]
@@ -260,7 +236,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 0.000 -0.280 4.000 0.280 ;
+        RECT 0.000 0.000 0.560 4.000 ;
     END
   END spare_xz[19]
   PIN spare_xz[1]
@@ -268,7 +244,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 40.040 66.000 40.600 70.000 ;
+        RECT 40.320 66.000 40.880 70.000 ;
     END
   END spare_xz[1]
   PIN spare_xz[20]
@@ -276,7 +252,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 43.960 75.000 44.520 ;
+        RECT 71.000 43.680 75.000 44.240 ;
     END
   END spare_xz[20]
   PIN spare_xz[21]
@@ -284,7 +260,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 6.440 66.000 7.000 70.000 ;
+        RECT 6.720 66.000 7.280 70.000 ;
     END
   END spare_xz[21]
   PIN spare_xz[22]
@@ -292,7 +268,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 3.640 4.000 4.200 ;
+        RECT 0.000 3.360 4.000 3.920 ;
     END
   END spare_xz[22]
   PIN spare_xz[23]
@@ -300,7 +276,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 60.200 0.000 60.760 4.000 ;
+        RECT 60.480 0.000 61.040 4.000 ;
     END
   END spare_xz[23]
   PIN spare_xz[24]
@@ -308,7 +284,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 53.480 66.000 54.040 70.000 ;
+        RECT 53.760 66.000 54.320 70.000 ;
     END
   END spare_xz[24]
   PIN spare_xz[25]
@@ -316,7 +292,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 17.080 75.000 17.640 ;
+        RECT 71.000 16.800 75.000 17.360 ;
     END
   END spare_xz[25]
   PIN spare_xz[26]
@@ -324,7 +300,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 6.440 0.000 7.000 4.000 ;
+        RECT 6.720 0.000 7.280 4.000 ;
     END
   END spare_xz[26]
   PIN spare_xz[27]
@@ -332,7 +308,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 19.880 0.000 20.440 4.000 ;
+        RECT 20.160 0.000 20.720 4.000 ;
     END
   END spare_xz[27]
   PIN spare_xz[28]
@@ -340,7 +316,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 57.400 4.000 57.960 ;
+        RECT 0.000 57.120 4.000 57.680 ;
     END
   END spare_xz[28]
   PIN spare_xz[29]
@@ -348,7 +324,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 23.800 75.000 24.360 ;
+        RECT 71.000 23.520 75.000 24.080 ;
     END
   END spare_xz[29]
   PIN spare_xz[2]
@@ -356,7 +332,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 33.320 0.000 33.880 4.000 ;
+        RECT 33.600 0.000 34.160 4.000 ;
     END
   END spare_xz[2]
   PIN spare_xz[30]
@@ -364,7 +340,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 43.960 4.000 44.520 ;
+        RECT 0.000 43.680 4.000 44.240 ;
     END
   END spare_xz[30]
   PIN spare_xz[3]
@@ -372,7 +348,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 73.640 66.000 74.200 70.000 ;
+        RECT 73.920 66.000 74.480 70.000 ;
     END
   END spare_xz[3]
   PIN spare_xz[4]
@@ -380,7 +356,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 19.880 66.000 20.440 70.000 ;
+        RECT 20.160 66.000 20.720 70.000 ;
     END
   END spare_xz[4]
   PIN spare_xz[5]
@@ -388,7 +364,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 26.600 66.000 27.160 70.000 ;
+        RECT 26.880 66.000 27.440 70.000 ;
     END
   END spare_xz[5]
   PIN spare_xz[6]
@@ -396,7 +372,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 46.760 0.000 47.320 4.000 ;
+        RECT 47.040 0.000 47.600 4.000 ;
     END
   END spare_xz[6]
   PIN spare_xz[7]
@@ -404,7 +380,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 30.520 4.000 31.080 ;
+        RECT 0.000 30.240 4.000 30.800 ;
     END
   END spare_xz[7]
   PIN spare_xz[8]
@@ -412,7 +388,7 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 64.120 4.000 64.680 ;
+        RECT 0.000 63.840 4.000 64.400 ;
     END
   END spare_xz[8]
   PIN spare_xz[9]
@@ -420,61 +396,58 @@ MACRO spare_logic_block
     USE SIGNAL ;
     PORT
       LAYER Metal3 ;
-        RECT 71.000 30.520 75.000 31.080 ;
+        RECT 71.000 30.240 75.000 30.800 ;
     END
   END spare_xz[9]
   OBS
       LAYER Metal1 ;
-        RECT 5.600 6.590 74.110 64.530 ;
+        RECT 5.600 7.540 74.390 59.100 ;
       LAYER Metal2 ;
-        RECT -0.140 65.700 0.140 66.000 ;
-        RECT 0.580 65.700 6.140 66.780 ;
-        RECT 7.300 65.700 12.860 66.780 ;
-        RECT 14.020 65.700 19.580 66.780 ;
-        RECT 20.740 65.700 26.300 66.780 ;
-        RECT 27.460 65.700 33.020 66.780 ;
-        RECT 34.180 65.700 39.740 66.780 ;
-        RECT 40.900 65.700 46.460 66.780 ;
-        RECT 47.620 65.700 53.180 66.780 ;
-        RECT 54.340 65.700 59.900 66.780 ;
-        RECT 61.060 65.700 66.620 66.780 ;
-        RECT 67.780 65.700 73.340 66.780 ;
-        RECT -0.140 63.700 74.060 65.700 ;
-        RECT 0.000 4.300 74.060 63.700 ;
-        RECT 0.000 0.580 6.140 4.300 ;
-        RECT 4.300 0.140 6.140 0.580 ;
-        RECT 4.000 0.000 6.140 0.140 ;
-        RECT 7.300 0.000 12.860 4.300 ;
-        RECT 14.020 0.000 19.580 4.300 ;
-        RECT 20.740 0.000 26.300 4.300 ;
-        RECT 27.460 0.000 33.020 4.300 ;
-        RECT 34.180 0.000 39.740 4.300 ;
-        RECT 40.900 0.000 46.460 4.300 ;
-        RECT 47.620 0.000 53.180 4.300 ;
-        RECT 54.340 0.000 59.900 4.300 ;
-        RECT 61.060 0.000 66.620 4.300 ;
-        RECT 67.780 0.000 73.340 4.300 ;
-        RECT 4.000 -0.140 5.740 0.000 ;
+        RECT 0.860 65.700 6.420 66.500 ;
+        RECT 7.580 65.700 13.140 66.500 ;
+        RECT 14.300 65.700 19.860 66.500 ;
+        RECT 21.020 65.700 26.580 66.500 ;
+        RECT 27.740 65.700 33.300 66.500 ;
+        RECT 34.460 65.700 40.020 66.500 ;
+        RECT 41.180 65.700 46.740 66.500 ;
+        RECT 47.900 65.700 53.460 66.500 ;
+        RECT 54.620 65.700 60.180 66.500 ;
+        RECT 61.340 65.700 66.900 66.500 ;
+        RECT 68.060 65.700 73.620 66.500 ;
+        RECT 0.140 4.300 74.340 65.700 ;
+        RECT 0.860 3.450 6.420 4.300 ;
+        RECT 7.580 3.450 13.140 4.300 ;
+        RECT 14.300 3.450 19.860 4.300 ;
+        RECT 21.020 3.450 26.580 4.300 ;
+        RECT 27.740 3.450 33.300 4.300 ;
+        RECT 34.460 3.450 40.020 4.300 ;
+        RECT 41.180 3.450 46.740 4.300 ;
+        RECT 47.900 3.450 53.460 4.300 ;
+        RECT 54.620 3.450 60.180 4.300 ;
+        RECT 61.340 3.450 66.900 4.300 ;
+        RECT 68.060 3.450 73.620 4.300 ;
       LAYER Metal3 ;
-        RECT 4.300 63.820 70.700 64.540 ;
-        RECT 0.370 58.260 71.820 63.820 ;
-        RECT 4.300 57.100 70.700 58.260 ;
-        RECT 0.370 51.540 71.820 57.100 ;
-        RECT 4.300 50.380 70.700 51.540 ;
-        RECT 0.370 44.820 71.820 50.380 ;
-        RECT 4.300 43.660 70.700 44.820 ;
-        RECT 0.370 38.100 71.820 43.660 ;
-        RECT 4.300 36.940 70.700 38.100 ;
-        RECT 0.370 31.380 71.820 36.940 ;
-        RECT 4.300 30.220 70.700 31.380 ;
-        RECT 0.370 24.660 71.820 30.220 ;
-        RECT 4.300 23.500 70.700 24.660 ;
-        RECT 0.370 17.940 71.820 23.500 ;
-        RECT 4.300 16.780 70.700 17.940 ;
-        RECT 0.370 11.220 71.820 16.780 ;
-        RECT 4.300 10.060 70.700 11.220 ;
-        RECT 0.370 4.500 71.820 10.060 ;
-        RECT 4.300 3.780 70.700 4.500 ;
+        RECT 4.300 63.540 70.700 64.260 ;
+        RECT 0.090 57.980 71.030 63.540 ;
+        RECT 4.300 56.820 70.700 57.980 ;
+        RECT 0.090 51.260 71.030 56.820 ;
+        RECT 4.300 50.100 70.700 51.260 ;
+        RECT 0.090 44.540 71.030 50.100 ;
+        RECT 4.300 43.380 70.700 44.540 ;
+        RECT 0.090 37.820 71.030 43.380 ;
+        RECT 4.300 36.660 70.700 37.820 ;
+        RECT 0.090 31.100 71.030 36.660 ;
+        RECT 4.300 29.940 70.700 31.100 ;
+        RECT 0.090 24.380 71.030 29.940 ;
+        RECT 4.300 23.220 70.700 24.380 ;
+        RECT 0.090 17.660 71.030 23.220 ;
+        RECT 4.300 16.500 70.700 17.660 ;
+        RECT 0.090 10.940 71.030 16.500 ;
+        RECT 4.300 9.780 70.700 10.940 ;
+        RECT 0.090 4.220 71.030 9.780 ;
+        RECT 4.300 3.500 70.700 4.220 ;
+      LAYER Metal5 ;
+        RECT 0 0 75.000 70.000 ;
   END
 END spare_logic_block
 END LIBRARY

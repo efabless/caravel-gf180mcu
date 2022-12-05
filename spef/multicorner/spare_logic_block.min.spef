@@ -1,0 +1,1505 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "spare_logic_block"
+*DATE "11:11:11 Fri 11 11, 1111"
+*VENDOR "OpenRCX"
+*PROGRAM "Parallel Extraction"
+*VERSION "1.0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*3 spare_xfq[0]
+*4 spare_xfq[1]
+*5 spare_xi[0]
+*6 spare_xi[1]
+*7 spare_xi[2]
+*8 spare_xi[3]
+*9 spare_xib
+*10 spare_xmx[0]
+*11 spare_xmx[1]
+*12 spare_xna[0]
+*13 spare_xna[1]
+*14 spare_xno[0]
+*15 spare_xno[1]
+*16 spare_xz[0]
+*17 spare_xz[10]
+*18 spare_xz[11]
+*19 spare_xz[12]
+*20 spare_xz[13]
+*21 spare_xz[14]
+*22 spare_xz[15]
+*23 spare_xz[16]
+*24 spare_xz[17]
+*25 spare_xz[18]
+*26 spare_xz[19]
+*27 spare_xz[1]
+*28 spare_xz[20]
+*29 spare_xz[21]
+*30 spare_xz[22]
+*31 spare_xz[23]
+*32 spare_xz[24]
+*33 spare_xz[25]
+*34 spare_xz[26]
+*35 spare_xz[27]
+*36 spare_xz[28]
+*37 spare_xz[29]
+*38 spare_xz[2]
+*39 spare_xz[30]
+*40 spare_xz[3]
+*41 spare_xz[4]
+*42 spare_xz[5]
+*43 spare_xz[6]
+*44 spare_xz[7]
+*45 spare_xz[8]
+*46 spare_xz[9]
+*47 ANTENNA_spare_logic_biginv_I
+*48 ANTENNA_spare_logic_flop\[0\]_CLK
+*49 ANTENNA_spare_logic_flop\[0\]_RN
+*50 ANTENNA_spare_logic_flop\[0\]_SETN
+*51 ANTENNA_spare_logic_flop\[1\]_CLK
+*52 ANTENNA_spare_logic_flop\[1\]_D
+*53 ANTENNA_spare_logic_flop\[1\]_RN
+*54 ANTENNA_spare_logic_flop\[1\]_SETN
+*55 ANTENNA_spare_logic_inv\[3\]_I
+*56 ANTENNA_spare_logic_mux\[1\]_I1
+*57 ANTENNA_spare_logic_mux\[1\]_S
+*58 ANTENNA_spare_logic_nand\[1\]_A2
+*59 ANTENNA_spare_logic_nor\[0\]_A1
+*60 ANTENNA_spare_logic_nor\[1\]_A1
+*61 FILLER_0_104
+*62 FILLER_0_107
+*63 FILLER_0_12
+*64 FILLER_0_2
+*65 FILLER_0_20
+*66 FILLER_0_24
+*67 FILLER_0_29
+*68 FILLER_0_33
+*69 FILLER_0_37
+*70 FILLER_0_42
+*71 FILLER_0_48
+*72 FILLER_0_52
+*73 FILLER_0_54
+*74 FILLER_0_59
+*75 FILLER_0_6
+*76 FILLER_0_63
+*77 FILLER_0_69
+*78 FILLER_0_72
+*79 FILLER_10_10
+*80 FILLER_10_101
+*81 FILLER_10_105
+*82 FILLER_10_108
+*83 FILLER_10_110
+*84 FILLER_10_15
+*85 FILLER_10_2
+*86 FILLER_10_31
+*87 FILLER_10_37
+*88 FILLER_10_53
+*89 FILLER_10_57
+*90 FILLER_10_63
+*91 FILLER_10_95
+*92 FILLER_11_110
+*93 FILLER_11_14
+*94 FILLER_11_2
+*95 FILLER_11_20
+*96 FILLER_11_36
+*97 FILLER_11_4
+*98 FILLER_11_44
+*99 FILLER_11_46
+*100 FILLER_11_49
+*101 FILLER_11_57
+*102 FILLER_11_65
+*103 FILLER_11_69
+*104 FILLER_11_73
+*105 FILLER_11_93
+*106 FILLER_12_104
+*107 FILLER_12_107
+*108 FILLER_12_12
+*109 FILLER_12_2
+*110 FILLER_12_28
+*111 FILLER_12_32
+*112 FILLER_12_34
+*113 FILLER_12_37
+*114 FILLER_12_53
+*115 FILLER_12_6
+*116 FILLER_12_61
+*117 FILLER_12_69
+*118 FILLER_12_72
+*119 FILLER_12_88
+*120 FILLER_12_96
+*121 FILLER_1_100
+*122 FILLER_1_104
+*123 FILLER_1_108
+*124 FILLER_1_110
+*125 FILLER_1_2
+*126 FILLER_1_45
+*127 FILLER_1_49
+*128 FILLER_1_56
+*129 FILLER_1_67
+*130 FILLER_1_73
+*131 FILLER_1_78
+*132 FILLER_1_84
+*133 FILLER_2_100
+*134 FILLER_2_104
+*135 FILLER_2_108
+*136 FILLER_2_110
+*137 FILLER_2_19
+*138 FILLER_2_2
+*139 FILLER_2_25
+*140 FILLER_2_29
+*141 FILLER_2_33
+*142 FILLER_2_37
+*143 FILLER_2_40
+*144 FILLER_2_46
+*145 FILLER_2_54
+*146 FILLER_2_58
+*147 FILLER_2_6
+*148 FILLER_2_8
+*149 FILLER_3_105
+*150 FILLER_3_109
+*151 FILLER_3_12
+*152 FILLER_3_16
+*153 FILLER_3_2
+*154 FILLER_3_22
+*155 FILLER_3_38
+*156 FILLER_3_46
+*157 FILLER_3_49
+*158 FILLER_3_59
+*159 FILLER_3_6
+*160 FILLER_3_67
+*161 FILLER_3_73
+*162 FILLER_3_81
+*163 FILLER_3_89
+*164 FILLER_3_97
+*165 FILLER_4_101
+*166 FILLER_4_105
+*167 FILLER_4_108
+*168 FILLER_4_110
+*169 FILLER_4_2
+*170 FILLER_4_34
+*171 FILLER_4_37
+*172 FILLER_5_105
+*173 FILLER_5_109
+*174 FILLER_5_2
+*175 FILLER_5_34
+*176 FILLER_5_50
+*177 FILLER_5_57
+*178 FILLER_5_65
+*179 FILLER_5_69
+*180 FILLER_5_73
+*181 FILLER_6_105
+*182 FILLER_6_108
+*183 FILLER_6_110
+*184 FILLER_6_2
+*185 FILLER_6_34
+*186 FILLER_6_37
+*187 FILLER_6_43
+*188 FILLER_6_71
+*189 FILLER_6_81
+*190 FILLER_6_97
+*191 FILLER_7_107
+*192 FILLER_7_2
+*193 FILLER_7_34
+*194 FILLER_7_38
+*195 FILLER_7_44
+*196 FILLER_7_50
+*197 FILLER_7_56
+*198 FILLER_7_62
+*199 FILLER_7_68
+*200 FILLER_7_70
+*201 FILLER_7_73
+*202 FILLER_7_79
+*203 FILLER_7_91
+*204 FILLER_8_101
+*205 FILLER_8_105
+*206 FILLER_8_108
+*207 FILLER_8_110
+*208 FILLER_8_12
+*209 FILLER_8_2
+*210 FILLER_8_28
+*211 FILLER_8_32
+*212 FILLER_8_34
+*213 FILLER_8_37
+*214 FILLER_8_45
+*215 FILLER_8_48
+*216 FILLER_8_6
+*217 FILLER_8_65
+*218 FILLER_8_69
+*219 FILLER_8_85
+*220 FILLER_8_93
+*221 FILLER_9_105
+*222 FILLER_9_109
+*223 FILLER_9_2
+*224 FILLER_9_66
+*225 FILLER_9_70
+*226 FILLER_9_73
+*227 PHY_0
+*228 PHY_1
+*229 PHY_10
+*230 PHY_11
+*231 PHY_12
+*232 PHY_13
+*233 PHY_14
+*234 PHY_15
+*235 PHY_16
+*236 PHY_17
+*237 PHY_18
+*238 PHY_19
+*239 PHY_2
+*240 PHY_20
+*241 PHY_21
+*242 PHY_22
+*243 PHY_23
+*244 PHY_24
+*245 PHY_25
+*246 PHY_3
+*247 PHY_4
+*248 PHY_5
+*249 PHY_6
+*250 PHY_7
+*251 PHY_8
+*252 PHY_9
+*253 TAP_26
+*254 TAP_27
+*255 TAP_28
+*256 TAP_29
+*257 TAP_30
+*258 TAP_31
+*259 TAP_32
+*260 TAP_33
+*261 TAP_34
+*262 TAP_35
+*263 TAP_36
+*264 TAP_37
+*265 TAP_38
+*266 TAP_39
+*267 TAP_40
+*268 TAP_41
+*269 TAP_42
+*270 TAP_43
+*271 TAP_44
+*272 TAP_45
+*273 TAP_46
+*274 TAP_47
+*275 spare_logic_biginv
+*276 spare_logic_const_one\[0\]
+*277 spare_logic_const_one\[1\]
+*278 spare_logic_const_one\[2\]
+*279 spare_logic_const_one\[3\]
+*280 spare_logic_const_zero\[0\]
+*281 spare_logic_const_zero\[10\]
+*282 spare_logic_const_zero\[11\]
+*283 spare_logic_const_zero\[12\]
+*284 spare_logic_const_zero\[13\]
+*285 spare_logic_const_zero\[14\]
+*286 spare_logic_const_zero\[15\]
+*287 spare_logic_const_zero\[16\]
+*288 spare_logic_const_zero\[17\]
+*289 spare_logic_const_zero\[18\]
+*290 spare_logic_const_zero\[19\]
+*291 spare_logic_const_zero\[1\]
+*292 spare_logic_const_zero\[20\]
+*293 spare_logic_const_zero\[21\]
+*294 spare_logic_const_zero\[22\]
+*295 spare_logic_const_zero\[23\]
+*296 spare_logic_const_zero\[24\]
+*297 spare_logic_const_zero\[25\]
+*298 spare_logic_const_zero\[26\]
+*299 spare_logic_const_zero\[2\]
+*300 spare_logic_const_zero\[3\]
+*301 spare_logic_const_zero\[4\]
+*302 spare_logic_const_zero\[5\]
+*303 spare_logic_const_zero\[6\]
+*304 spare_logic_const_zero\[7\]
+*305 spare_logic_const_zero\[8\]
+*306 spare_logic_const_zero\[9\]
+*307 spare_logic_flop\[0\]
+*308 spare_logic_flop\[1\]
+*309 spare_logic_inv\[0\]
+*310 spare_logic_inv\[1\]
+*311 spare_logic_inv\[2\]
+*312 spare_logic_inv\[3\]
+*313 spare_logic_mux\[0\]
+*314 spare_logic_mux\[1\]
+*315 spare_logic_nand\[0\]
+*316 spare_logic_nand\[1\]
+*317 spare_logic_nor\[0\]
+*318 spare_logic_nor\[1\]
+
+*PORTS
+spare_xfq[0] O
+spare_xfq[1] O
+spare_xi[0] O
+spare_xi[1] O
+spare_xi[2] O
+spare_xi[3] O
+spare_xib O
+spare_xmx[0] O
+spare_xmx[1] O
+spare_xna[0] O
+spare_xna[1] O
+spare_xno[0] O
+spare_xno[1] O
+spare_xz[0] O
+spare_xz[10] O
+spare_xz[11] O
+spare_xz[12] O
+spare_xz[13] O
+spare_xz[14] O
+spare_xz[15] O
+spare_xz[16] O
+spare_xz[17] O
+spare_xz[18] O
+spare_xz[19] O
+spare_xz[1] O
+spare_xz[20] O
+spare_xz[21] O
+spare_xz[22] O
+spare_xz[23] O
+spare_xz[24] O
+spare_xz[25] O
+spare_xz[26] O
+spare_xz[27] O
+spare_xz[28] O
+spare_xz[29] O
+spare_xz[2] O
+spare_xz[30] O
+spare_xz[3] O
+spare_xz[4] O
+spare_xz[5] O
+spare_xz[6] O
+spare_xz[7] O
+spare_xz[8] O
+spare_xz[9] O
+
+*D_NET *3 0.00431709
+*CONN
+*P spare_xfq[0] O
+*I *307:Q O *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*CAP
+1 spare_xfq[0] 0.00134863
+2 *307:Q 0.00134863
+3 spare_xfq[0] spare_xz[11] 0
+4 spare_xfq[0] spare_xz[16] 0
+5 spare_xfq[0] spare_xz[21] 5.85627e-05
+6 spare_xfq[0] spare_xz[22] 0
+7 spare_xfq[0] spare_xz[26] 0
+8 spare_xfq[0] spare_xz[8] 0.000612418
+9 spare_xfq[0] *48:I 6.35645e-05
+10 spare_xfq[0] *307:SETN 0.000569296
+11 spare_xfq[0] *317:A1 4.15701e-05
+12 spare_xfq[0] *317:A2 0
+13 spare_xfq[0] *18:8 1.85488e-05
+14 spare_xfq[0] *29:8 2.19037e-05
+15 spare_xfq[0] *46:8 0.000162877
+16 spare_xfq[0] *46:11 7.10832e-05
+*RES
+1 *307:Q spare_xfq[0] 27.766 
+*END
+
+*D_NET *4 0.00273166
+*CONN
+*P spare_xfq[1] O
+*I *308:Q O *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*CAP
+1 spare_xfq[1] 0.000753815
+2 *308:Q 0.000753815
+3 spare_xfq[1] spare_xib 0.000100105
+4 spare_xfq[1] spare_xz[25] 0.000791145
+5 spare_xfq[1] *52:I 0.000308005
+6 spare_xfq[1] *54:I 2.47784e-05
+*RES
+1 *308:Q spare_xfq[1] 19.39 
+*END
+
+*D_NET *5 0.00225231
+*CONN
+*P spare_xi[0] O
+*I *309:ZN O *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*CAP
+1 spare_xi[0] 0.000754319
+2 *309:ZN 0.000754319
+3 spare_xi[0] spare_xi[3] 0.000161866
+4 spare_xi[0] spare_xmx[1] 0.000419085
+5 spare_xi[0] spare_xz[1] 0
+6 spare_xi[0] spare_xz[3] 0
+7 spare_xi[0] *55:I 0.00010562
+8 spare_xi[0] *312:I 2.32955e-05
+9 spare_xi[0] *40:9 3.38007e-05
+*RES
+1 *309:ZN spare_xi[0] 19.086 
+*END
+
+*D_NET *6 0.00457789
+*CONN
+*P spare_xi[1] O
+*I *310:ZN O *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*CAP
+1 spare_xi[1] 0.00116556
+2 *310:ZN 0.00116556
+3 spare_xi[1] spare_xz[16] 6.39369e-05
+4 spare_xi[1] spare_xz[22] 3.47822e-05
+5 spare_xi[1] spare_xz[25] 3.1768e-05
+6 spare_xi[1] spare_xz[26] 8.93735e-05
+7 spare_xi[1] *50:I 1.55974e-05
+8 spare_xi[1] *51:I 5.08084e-06
+9 spare_xi[1] *307:RN 0.000333704
+10 spare_xi[1] *30:27 0.000401709
+11 spare_xi[1] *31:5 0.000439379
+12 spare_xi[1] *31:18 0.000317435
+13 spare_xi[1] *33:15 0.000514013
+*RES
+1 *310:ZN spare_xi[1] 22.81 
+*END
+
+*D_NET *7 0.00373843
+*CONN
+*P spare_xi[2] O
+*I *311:ZN O *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*CAP
+1 spare_xi[2] 0.00175063
+2 *311:ZN 0.00175063
+3 spare_xi[2] spare_xz[25] 0
+4 spare_xi[2] spare_xz[6] 0.000113634
+5 spare_xi[2] spare_xz[8] 6.3136e-05
+6 spare_xi[2] *49:I 4.5055e-05
+7 spare_xi[2] *53:I 0
+8 spare_xi[2] *45:9 1.53458e-05
+9 spare_xi[2] *45:17 0
+*RES
+1 *311:ZN spare_xi[2] 19.602 
+*END
+
+*D_NET *8 0.00321232
+*CONN
+*P spare_xi[3] O
+*I *312:ZN O *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*CAP
+1 spare_xi[3] 0.00107097
+2 *312:ZN 0.00107097
+3 spare_xi[3] spare_xmx[1] 9.88736e-06
+4 spare_xi[3] spare_xna[0] 0.000145862
+5 spare_xi[3] spare_xz[28] 0
+6 spare_xi[3] spare_xz[5] 0.000524877
+7 spare_xi[3] spare_xz[7] 7.18322e-05
+8 spare_xi[3] *55:I 3.22357e-05
+9 spare_xi[3] *315:A2 0.00012382
+10 spare_xi[0] spare_xi[3] 0.000161866
+*RES
+1 *312:ZN spare_xi[3] 18.234 
+*END
+
+*D_NET *9 0.00600904
+*CONN
+*P spare_xib O
+*I *275:ZN O *D gf180mcu_fd_sc_mcu7t5v0__inv_12
+*CAP
+1 spare_xib 0.00243059
+2 *275:ZN 0.00243059
+3 spare_xib spare_xz[10] 2.84173e-05
+4 spare_xib spare_xz[14] 8.11874e-05
+5 spare_xib spare_xz[23] 3.21503e-05
+6 spare_xib spare_xz[29] 0.000319713
+7 spare_xib spare_xz[9] 7.26158e-05
+8 spare_xib *54:I 0.00041489
+9 spare_xib *318:A1 4.47068e-05
+10 spare_xib *17:16 5.4087e-05
+11 spare_xfq[1] spare_xib 0.000100105
+*RES
+1 *275:ZN spare_xib 33.846 
+*END
+
+*D_NET *10 0.00457018
+*CONN
+*P spare_xmx[0] O
+*I *313:Z O *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*CAP
+1 spare_xmx[0] 0.00228509
+2 *313:Z 0.00228509
+*RES
+1 *313:Z spare_xmx[0] 29.3394 
+*END
+
+*D_NET *11 0.00616679
+*CONN
+*P spare_xmx[1] O
+*I *314:Z O *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*CAP
+1 spare_xmx[1] 0.00162968
+2 *314:Z 0.00162968
+3 spare_xmx[1] spare_xz[0] 0.00163922
+4 spare_xmx[1] spare_xz[12] 5.00351e-05
+5 spare_xmx[1] spare_xz[13] 0.000714088
+6 spare_xmx[1] spare_xz[1] 7.51135e-05
+7 spare_xmx[1] spare_xz[3] 0
+8 spare_xmx[1] *22:8 0
+9 spare_xi[0] spare_xmx[1] 0.000419085
+10 spare_xi[3] spare_xmx[1] 9.88736e-06
+*RES
+1 *314:Z spare_xmx[1] 22.338 
+*END
+
+*D_NET *12 0.00205322
+*CONN
+*P spare_xna[0] O
+*I *315:ZN O *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*CAP
+1 spare_xna[0] 0.000591511
+2 *315:ZN 0.000591511
+3 spare_xna[0] spare_xz[21] 0.000660628
+4 spare_xna[0] spare_xz[28] 6.37036e-05
+5 spare_xi[3] spare_xna[0] 0.000145862
+*RES
+1 *315:ZN spare_xna[0] 19.542 
+*END
+
+*D_NET *13 0.00119346
+*CONN
+*P spare_xna[1] O
+*I *316:ZN O *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*CAP
+1 spare_xna[1] 0.000292138
+2 *316:ZN 0.000292138
+3 spare_xna[1] *316:A1 0.000146716
+4 spare_xna[1] *45:9 0.000147323
+5 spare_xna[1] *45:17 0.000315144
+*RES
+1 *316:ZN spare_xna[1] 7.122 
+*END
+
+*D_NET *14 0.000683444
+*CONN
+*P spare_xno[0] O
+*I *317:ZN O *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*CAP
+1 spare_xno[0] 0.000238439
+2 *317:ZN 0.000238439
+3 spare_xno[0] spare_xz[21] 3.34078e-05
+4 spare_xno[0] spare_xz[26] 0.000173158
+*RES
+1 *317:ZN spare_xno[0] 11.166 
+*END
+
+*D_NET *15 0.00458199
+*CONN
+*P spare_xno[1] O
+*I *318:ZN O *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*CAP
+1 spare_xno[1] 0.00119951
+2 *318:ZN 0.00119951
+3 spare_xno[1] spare_xz[23] 0
+4 spare_xno[1] spare_xz[24] 0.00138475
+5 spare_xno[1] spare_xz[9] 0
+6 spare_xno[1] *53:I 0.000307985
+7 spare_xno[1] *60:I 0
+8 spare_xno[1] *308:SETN 4.94368e-05
+9 spare_xno[1] *32:11 0.000424424
+10 spare_xno[1] *34:5 1.6376e-05
+*RES
+1 *318:ZN spare_xno[1] 13.81 
+*END
+
+*D_NET *16 0.00560077
+*CONN
+*P spare_xz[0] O
+*I *309:I I *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*I *280:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[0] 0.000907041
+2 *309:I 2.66688e-05
+3 *280:ZN 0.000217654
+4 *16:7 0.00115136
+5 spare_xz[0] spare_xz[12] 1.27969e-05
+6 spare_xz[0] spare_xz[15] 0
+7 spare_xz[0] spare_xz[24] 0.000555146
+8 spare_xz[0] spare_xz[3] 0.000753805
+9 spare_xz[0] *22:8 0.000201098
+10 *309:I spare_xz[1] 1.78475e-05
+11 *16:7 spare_xz[1] 0.000118128
+12 spare_xmx[1] spare_xz[0] 0.00163922
+*RES
+1 *280:ZN *16:7 6.02 
+2 *16:7 spare_xz[0] 23.266 
+3 *16:7 *309:I 4.728 
+*END
+
+*D_NET *17 0.00683442
+*CONN
+*P spare_xz[10] O
+*I *318:A1 I *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*I *60:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *281:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[10] 0.00107749
+2 *318:A1 8.10995e-05
+3 *60:I 0.000132892
+4 *281:ZN 1.95702e-05
+5 *17:16 0.000293214
+6 *17:7 0.00117629
+7 spare_xz[10] spare_xz[14] 0.000258227
+8 spare_xz[10] spare_xz[16] 0.000731229
+9 spare_xz[10] spare_xz[18] 0.000752483
+10 spare_xz[10] spare_xz[4] 0.00134586
+11 spare_xz[10] *57:I 3.37579e-05
+12 spare_xz[10] *314:I0 0.000143708
+13 spare_xz[10] *23:8 0.000145126
+14 spare_xz[10] *25:26 0.0001083
+15 *60:I spare_xz[20] 4.74088e-05
+16 *60:I spare_xz[24] 0
+17 *318:A1 spare_xz[14] 0.0001825
+18 *318:A1 spare_xz[20] 0
+19 *318:A1 spare_xz[24] 4.14924e-06
+20 *318:A1 *318:A2 3.1486e-06
+21 *17:7 spare_xz[20] 8.55369e-05
+22 *17:16 spare_xz[14] 8.52188e-05
+23 spare_xib spare_xz[10] 2.84173e-05
+24 spare_xib *318:A1 4.47068e-05
+25 spare_xib *17:16 5.4087e-05
+26 spare_xno[1] *60:I 0
+*RES
+1 *281:ZN *17:7 9.228 
+2 *17:7 spare_xz[10] 12.198 
+3 *17:7 *17:16 0.912 
+4 *17:16 *60:I 9.836 
+5 *17:16 *318:A1 9.912 
+*END
+
+*D_NET *18 0.00187916
+*CONN
+*P spare_xz[11] O
+*I *317:A2 I *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*I *282:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[11] 0.000573821
+2 *317:A2 8.2264e-05
+3 *282:ZN 0.000110903
+4 *18:8 0.000766988
+5 spare_xz[11] *307:D 8.6165e-05
+6 spare_xz[11] *307:CLK 0
+7 *317:A2 *307:CLK 0
+8 *18:8 spare_xz[26] 1.04899e-05
+9 *18:8 *317:A1 0.00022998
+10 spare_xfq[0] spare_xz[11] 0
+11 spare_xfq[0] *317:A2 0
+12 spare_xfq[0] *18:8 1.85488e-05
+*RES
+1 *282:ZN *18:8 14.792 
+2 *18:8 spare_xz[11] 3.534 
+3 *18:8 *317:A2 5.032 
+*END
+
+*D_NET *19 0.00470981
+*CONN
+*P spare_xz[12] O
+*I *318:A2 I *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*I *283:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[12] 0.00151642
+2 *318:A2 0.00017238
+3 *283:ZN 0
+4 *19:5 0.0016888
+5 spare_xz[12] spare_xz[14] 6.57705e-05
+6 spare_xz[12] spare_xz[17] 0
+7 spare_xz[12] spare_xz[20] 0
+8 spare_xz[12] spare_xz[24] 0
+9 spare_xz[12] spare_xz[3] 0.000168468
+10 spare_xz[12] *313:I0 0.000344379
+11 spare_xz[12] *313:I1 8.61372e-05
+12 spare_xz[12] *313:S 2.50568e-06
+13 spare_xz[12] *20:7 0.0002091
+14 spare_xz[12] *22:8 4.53597e-05
+15 *318:A2 spare_xz[14] 3.41304e-05
+16 *318:A2 spare_xz[20] 0
+17 *318:A2 spare_xz[24] 0.000310377
+18 spare_xmx[1] spare_xz[12] 5.00351e-05
+19 spare_xz[0] spare_xz[12] 1.27969e-05
+20 *318:A1 *318:A2 3.1486e-06
+*RES
+1 *283:ZN *19:5 9 
+2 *19:5 *318:A2 10.368 
+3 *19:5 spare_xz[12] 23.798 
+*END
+
+*D_NET *20 0.00394673
+*CONN
+*P spare_xz[13] O
+*I *313:I0 I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *284:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[13] 0.00115453
+2 *313:I0 9.95975e-05
+3 *284:ZN 8.2573e-05
+4 *20:7 0.0013367
+5 *313:I0 *313:I1 0
+6 *313:I0 *313:S 5.76673e-06
+7 spare_xmx[1] spare_xz[13] 0.000714088
+8 spare_xz[12] *313:I0 0.000344379
+9 spare_xz[12] *20:7 0.0002091
+*RES
+1 *284:ZN *20:7 5.26 
+2 *20:7 spare_xz[13] 17.018 
+3 *20:7 *313:I0 5.488 
+*END
+
+*D_NET *21 0.00346536
+*CONN
+*P spare_xz[14] O
+*I *314:I0 I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *285:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[14] 0.00107364
+2 *314:I0 0.000115367
+3 *285:ZN 0
+4 *21:5 0.00118901
+5 spare_xz[14] spare_xz[20] 0
+6 spare_xz[14] *57:I 3.37692e-05
+7 *314:I0 spare_xz[1] 0.000109326
+8 *314:I0 *57:I 9.35087e-05
+9 spare_xib spare_xz[14] 8.11874e-05
+10 spare_xz[10] spare_xz[14] 0.000258227
+11 spare_xz[10] *314:I0 0.000143708
+12 spare_xz[12] spare_xz[14] 6.57705e-05
+13 *318:A1 spare_xz[14] 0.0001825
+14 *318:A2 spare_xz[14] 3.41304e-05
+15 *17:16 spare_xz[14] 8.52188e-05
+*RES
+1 *285:ZN *21:5 9 
+2 *21:5 *314:I0 10.368 
+3 *21:5 spare_xz[14] 8.246 
+*END
+
+*D_NET *22 0.00295223
+*CONN
+*P spare_xz[15] O
+*I *313:I1 I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *286:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[15] 0.000379378
+2 *313:I1 0.000204271
+3 *286:ZN 0.00014649
+4 *22:8 0.000730139
+5 spare_xz[15] spare_xz[17] 0.00024303
+6 spare_xz[15] spare_xz[24] 0
+7 spare_xz[15] *313:S 6.29719e-06
+8 *313:I1 spare_xz[3] 0.000352296
+9 *313:I1 *313:S 0.00010163
+10 *22:8 spare_xz[3] 0.0004561
+11 spare_xmx[1] *22:8 0
+12 spare_xz[0] spare_xz[15] 0
+13 spare_xz[0] *22:8 0.000201098
+14 spare_xz[12] *313:I1 8.61372e-05
+15 spare_xz[12] *22:8 4.53597e-05
+16 *313:I0 *313:I1 0
+*RES
+1 *286:ZN *22:8 10.672 
+2 *22:8 spare_xz[15] 7.426 
+3 *22:8 *313:I1 10.824 
+*END
+
+*D_NET *23 0.00736701
+*CONN
+*P spare_xz[16] O
+*I *314:I1 I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *56:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *287:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[16] 0.0017906
+2 *314:I1 0.000243165
+3 *56:I 0
+4 *287:ZN 7.34258e-05
+5 *23:23 0.000412485
+6 *23:8 0.00203335
+7 spare_xz[16] spare_xz[19] 0.000280085
+8 spare_xz[16] spare_xz[22] 2.96419e-05
+9 spare_xz[16] spare_xz[8] 0.00103752
+10 spare_xz[16] *48:I 3.89646e-05
+11 spare_xz[16] *275:I 1.47778e-05
+12 spare_xz[16] *307:RN 0.00029846
+13 spare_xz[16] *307:SETN 1.83898e-05
+14 spare_xz[16] *31:18 7.71607e-06
+15 spare_xz[16] *41:5 0
+16 *314:I1 spare_xz[18] 9.35553e-05
+17 *314:I1 *25:26 3.28852e-05
+18 *23:8 *275:I 5.95154e-06
+19 *23:23 *41:5 1.5743e-05
+20 spare_xfq[0] spare_xz[16] 0
+21 spare_xi[1] spare_xz[16] 6.39369e-05
+22 spare_xz[10] spare_xz[16] 0.000731229
+23 spare_xz[10] *23:8 0.000145126
+*RES
+1 *287:ZN *23:8 9.76 
+2 *23:8 spare_xz[16] 23.934 
+3 *23:8 *23:23 5.488 
+4 *23:23 *56:I 4.5 
+5 *23:23 *314:I1 15.324 
+*END
+
+*D_NET *24 0.00198496
+*CONN
+*P spare_xz[17] O
+*I *313:S I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *288:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[17] 0.000651205
+2 *313:S 0.000161663
+3 *288:ZN 0
+4 *24:4 0.000812868
+5 spare_xz[12] spare_xz[17] 0
+6 spare_xz[12] *313:S 2.50568e-06
+7 spare_xz[15] spare_xz[17] 0.00024303
+8 spare_xz[15] *313:S 6.29719e-06
+9 *313:I0 *313:S 5.76673e-06
+10 *313:I1 *313:S 0.00010163
+*RES
+1 *288:ZN *24:4 4.5 
+2 *24:4 spare_xz[17] 9.174 
+3 *24:4 *313:S 5.564 
+*END
+
+*D_NET *25 0.00768482
+*CONN
+*P spare_xz[18] O
+*I *314:S I *D gf180mcu_fd_sc_mcu7t5v0__mux2_2
+*I *57:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *289:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[18] 0.0020604
+2 *314:S 3.84185e-05
+3 *57:I 0.000218722
+4 *289:ZN 0
+5 *25:26 0.000421772
+6 *25:5 0.00222503
+7 spare_xz[18] spare_xz[21] 3.26016e-05
+8 spare_xz[18] spare_xz[30] 4.67765e-05
+9 spare_xz[18] spare_xz[4] 0.00135057
+10 spare_xz[18] *315:A1 5.13295e-05
+11 spare_xz[18] *42:7 4.03671e-05
+12 *314:S spare_xz[1] 1.80131e-05
+13 *25:26 spare_xz[1] 3.25611e-05
+14 spare_xz[10] spare_xz[18] 0.000752483
+15 spare_xz[10] *57:I 3.37579e-05
+16 spare_xz[10] *25:26 0.0001083
+17 spare_xz[14] *57:I 3.37692e-05
+18 *314:I0 *57:I 9.35087e-05
+19 *314:I1 spare_xz[18] 9.35553e-05
+20 *314:I1 *25:26 3.28852e-05
+*RES
+1 *289:ZN *25:5 9 
+2 *25:5 spare_xz[18] 21.486 
+3 *25:5 *25:26 5.716 
+4 *25:26 *57:I 15.096 
+5 *25:26 *314:S 4.728 
+*END
+
+*D_NET *26 0.00185668
+*CONN
+*P spare_xz[19] O
+*I *307:D I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *290:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[19] 0.000527919
+2 *307:D 0.000212166
+3 *290:ZN 0
+4 *26:4 0.000740084
+5 spare_xz[19] spare_xz[22] 0
+6 *307:D spare_xz[26] 0
+7 *307:D *307:CLK 1.02615e-05
+8 spare_xz[11] *307:D 8.6165e-05
+9 spare_xz[16] spare_xz[19] 0.000280085
+*RES
+1 *290:ZN *26:4 4.5 
+2 *26:4 spare_xz[19] 13.37 
+3 *26:4 *307:D 5.944 
+*END
+
+*D_NET *27 0.00398978
+*CONN
+*P spare_xz[1] O
+*I *310:I I *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*I *291:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[1] 0.00124302
+2 *310:I 0.000553692
+3 *291:ZN 0
+4 *27:4 0.00179671
+5 spare_xz[1] *312:I 2.32955e-05
+6 spare_xz[1] *40:9 2.07462e-06
+7 spare_xi[0] spare_xz[1] 0
+8 spare_xmx[1] spare_xz[1] 7.51135e-05
+9 *309:I spare_xz[1] 1.78475e-05
+10 *314:I0 spare_xz[1] 0.000109326
+11 *314:S spare_xz[1] 1.80131e-05
+12 *16:7 spare_xz[1] 0.000118128
+13 *25:26 spare_xz[1] 3.25611e-05
+*RES
+1 *291:ZN *27:4 4.5 
+2 *27:4 *310:I 7.692 
+3 *27:4 spare_xz[1] 8.246 
+*END
+
+*D_NET *28 0.00905151
+*CONN
+*P spare_xz[20] O
+*I *52:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *308:D I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *292:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[20] 0.00227774
+2 *52:I 0.000151598
+3 *308:D 5.17365e-05
+4 *292:ZN 0.000168041
+5 *28:7 0.000203335
+6 *28:5 0.00244578
+7 spare_xz[20] spare_xz[9] 0.000125486
+8 *52:I spare_xz[23] 3.31934e-05
+9 *52:I spare_xz[25] 0.000430419
+10 *52:I spare_xz[26] 0.000462806
+11 *52:I *54:I 0.000775385
+12 *52:I *308:SETN 0.000189275
+13 *52:I *34:10 0.000404402
+14 *308:D spare_xz[25] 0.000618824
+15 *308:D spare_xz[26] 0.000272541
+16 *28:5 *34:5 0
+17 spare_xfq[1] *52:I 0.000308005
+18 spare_xz[12] spare_xz[20] 0
+19 spare_xz[14] spare_xz[20] 0
+20 *60:I spare_xz[20] 4.74088e-05
+21 *318:A1 spare_xz[20] 0
+22 *318:A2 spare_xz[20] 0
+23 *17:7 spare_xz[20] 8.55369e-05
+*RES
+1 *292:ZN *28:5 5.336 
+2 *28:5 *28:7 4.5 
+3 *28:7 *308:D 10.596 
+4 *28:7 *52:I 13.408 
+5 *28:5 spare_xz[20] 18.142 
+*END
+
+*D_NET *29 0.0082502
+*CONN
+*P spare_xz[21] O
+*I *48:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *307:CLK I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *293:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[21] 0.00221069
+2 *48:I 0.00055932
+3 *307:CLK 0.000301106
+4 *293:ZN 8.09453e-05
+5 *29:8 0.00256772
+6 *29:7 0.000696188
+7 spare_xz[21] spare_xz[26] 8.57006e-05
+8 *48:I spare_xz[26] 0.000528139
+9 *48:I spare_xz[9] 0
+10 *48:I *31:18 0.00010163
+11 *48:I *46:8 0
+12 *307:CLK spare_xz[26] 0.000111412
+13 *29:8 spare_xz[26] 8.74577e-05
+14 spare_xfq[0] spare_xz[21] 5.85627e-05
+15 spare_xfq[0] *48:I 6.35645e-05
+16 spare_xfq[0] *29:8 2.19037e-05
+17 spare_xna[0] spare_xz[21] 0.000660628
+18 spare_xno[0] spare_xz[21] 3.34078e-05
+19 spare_xz[11] *307:CLK 0
+20 spare_xz[16] *48:I 3.89646e-05
+21 spare_xz[18] spare_xz[21] 3.26016e-05
+22 *307:D *307:CLK 1.02615e-05
+23 *317:A2 *307:CLK 0
+*RES
+1 *293:ZN *29:7 9.532 
+2 *29:7 *29:8 0.684 
+3 *29:8 spare_xz[21] 22.398 
+4 *29:8 *307:CLK 10.9 
+5 *29:7 *48:I 14.016 
+*END
+
+*D_NET *30 0.00559238
+*CONN
+*P spare_xz[22] O
+*I *51:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *308:CLK I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *294:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[22] 0.00138676
+2 *51:I 0.000270691
+3 *308:CLK 0
+4 *294:ZN 0
+5 *30:27 0.00074925
+6 *30:4 0.00186532
+7 spare_xz[22] spare_xz[27] 3.63521e-05
+8 spare_xz[22] *307:SETN 0
+9 *30:27 spare_xz[25] 0.000211056
+10 *30:27 spare_xz[26] 0.000394796
+11 *30:27 spare_xz[2] 0.000119605
+12 *30:27 *31:5 3.61391e-05
+13 *30:27 *31:18 1.693e-05
+14 *30:27 *38:5 3.42579e-05
+15 spare_xfq[0] spare_xz[22] 0
+16 spare_xi[1] spare_xz[22] 3.47822e-05
+17 spare_xi[1] *51:I 5.08084e-06
+18 spare_xi[1] *30:27 0.000401709
+19 spare_xz[16] spare_xz[22] 2.96419e-05
+20 spare_xz[19] spare_xz[22] 0
+*RES
+1 *294:ZN *30:4 4.5 
+2 *30:4 spare_xz[22] 22.81 
+3 *30:4 *30:27 13.712 
+4 *30:27 *308:CLK 4.5 
+5 *30:27 *51:I 5.944 
+*END
+
+*D_NET *31 0.00765422
+*CONN
+*P spare_xz[23] O
+*I *50:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *307:SETN I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *295:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[23] 0.00183936
+2 *50:I 3.10722e-05
+3 *307:SETN 0.000124467
+4 *295:ZN 0.00010427
+5 *31:18 0.00231584
+6 *31:5 0.000674147
+7 spare_xz[23] spare_xz[26] 0.000631615
+8 spare_xz[23] spare_xz[9] 0
+9 spare_xz[23] *53:I 0
+10 spare_xz[23] *54:I 0.000153239
+11 spare_xz[23] *308:SETN 3.5798e-05
+12 spare_xz[23] *32:8 2.04032e-05
+13 spare_xz[23] *32:11 0
+14 *31:18 spare_xz[26] 0.000136156
+15 *31:18 spare_xz[9] 0
+16 spare_xfq[0] *307:SETN 0.000569296
+17 spare_xi[1] *50:I 1.55974e-05
+18 spare_xi[1] *31:5 0.000439379
+19 spare_xi[1] *31:18 0.000317435
+20 spare_xib spare_xz[23] 3.21503e-05
+21 spare_xno[1] spare_xz[23] 0
+22 spare_xz[16] *307:SETN 1.83898e-05
+23 spare_xz[16] *31:18 7.71607e-06
+24 spare_xz[22] *307:SETN 0
+25 *48:I *31:18 0.00010163
+26 *52:I spare_xz[23] 3.31934e-05
+27 *30:27 *31:5 3.61391e-05
+28 *30:27 *31:18 1.693e-05
+*RES
+1 *295:ZN *31:5 5.792 
+2 *31:5 *307:SETN 14.944 
+3 *31:5 *31:18 7.692 
+4 *31:18 *50:I 9.228 
+5 *31:18 spare_xz[23] 16.926 
+*END
+
+*D_NET *32 0.00902922
+*CONN
+*P spare_xz[24] O
+*I *54:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *308:SETN I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *296:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[24] 0.00168853
+2 *54:I 0.000323581
+3 *308:SETN 0.000121314
+4 *296:ZN 7.55791e-05
+5 *32:11 0.000570033
+6 *32:8 0.00188924
+7 *308:SETN spare_xz[26] 1.5743e-05
+8 *308:SETN *34:5 3.1486e-06
+9 spare_xfq[1] *54:I 2.47784e-05
+10 spare_xib *54:I 0.00041489
+11 spare_xno[1] spare_xz[24] 0.00138475
+12 spare_xno[1] *308:SETN 4.94368e-05
+13 spare_xno[1] *32:11 0.000424424
+14 spare_xz[0] spare_xz[24] 0.000555146
+15 spare_xz[12] spare_xz[24] 0
+16 spare_xz[15] spare_xz[24] 0
+17 spare_xz[23] *54:I 0.000153239
+18 spare_xz[23] *308:SETN 3.5798e-05
+19 spare_xz[23] *32:8 2.04032e-05
+20 spare_xz[23] *32:11 0
+21 *52:I *54:I 0.000775385
+22 *52:I *308:SETN 0.000189275
+23 *60:I spare_xz[24] 0
+24 *318:A1 spare_xz[24] 4.14924e-06
+25 *318:A2 spare_xz[24] 0.000310377
+*RES
+1 *296:ZN *32:8 13.88 
+2 *32:8 *32:11 5.64 
+3 *32:11 *308:SETN 9.912 
+4 *32:11 *54:I 12.572 
+5 *32:8 spare_xz[24] 12.502 
+*END
+
+*D_NET *33 0.00773138
+*CONN
+*P spare_xz[25] O
+*I *49:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *307:RN I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *297:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[25] 0.000930957
+2 *49:I 0.000233818
+3 *307:RN 0.00021377
+4 *297:ZN 0
+5 *33:15 0.00121625
+6 *33:5 0.000265242
+7 spare_xz[25] spare_xz[26] 7.57277e-05
+8 spare_xz[25] spare_xz[8] 0.000122297
+9 spare_xz[25] *53:I 0.000217907
+10 spare_xz[25] *34:10 0.000412216
+11 *49:I spare_xz[2] 0.000167206
+12 *49:I spare_xz[8] 0
+13 *49:I *38:5 0.000255247
+14 *49:I *45:9 0
+15 *49:I *45:17 0
+16 *307:RN spare_xz[26] 5.69651e-05
+17 *307:RN spare_xz[8] 0.000140809
+18 *33:15 spare_xz[8] 0.000148529
+19 spare_xfq[1] spare_xz[25] 0.000791145
+20 spare_xi[1] spare_xz[25] 3.1768e-05
+21 spare_xi[1] *307:RN 0.000333704
+22 spare_xi[1] *33:15 0.000514013
+23 spare_xi[2] spare_xz[25] 0
+24 spare_xi[2] *49:I 4.5055e-05
+25 spare_xz[16] *307:RN 0.00029846
+26 *52:I spare_xz[25] 0.000430419
+27 *308:D spare_xz[25] 0.000618824
+28 *30:27 spare_xz[25] 0.000211056
+*RES
+1 *297:ZN *33:5 9 
+2 *33:5 *307:RN 11.28 
+3 *33:5 *33:15 1.292 
+4 *33:15 *49:I 11.052 
+5 *33:15 spare_xz[25] 10.222 
+*END
+
+*D_NET *34 0.00952713
+*CONN
+*P spare_xz[26] O
+*I *308:RN I *D gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+*I *53:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *298:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[26] 0.00165074
+2 *308:RN 0
+3 *53:I 0.000481071
+4 *298:ZN 0.000167165
+5 *34:10 0.000523324
+6 *34:5 0.00186015
+7 spare_xz[26] spare_xz[8] 0
+8 spare_xz[26] *317:A1 0.000350564
+9 spare_xfq[0] spare_xz[26] 0
+10 spare_xi[1] spare_xz[26] 8.93735e-05
+11 spare_xi[2] *53:I 0
+12 spare_xno[0] spare_xz[26] 0.000173158
+13 spare_xno[1] *53:I 0.000307985
+14 spare_xno[1] *34:5 1.6376e-05
+15 spare_xz[21] spare_xz[26] 8.57006e-05
+16 spare_xz[23] spare_xz[26] 0.000631615
+17 spare_xz[23] *53:I 0
+18 spare_xz[25] spare_xz[26] 7.57277e-05
+19 spare_xz[25] *53:I 0.000217907
+20 spare_xz[25] *34:10 0.000412216
+21 *48:I spare_xz[26] 0.000528139
+22 *52:I spare_xz[26] 0.000462806
+23 *52:I *34:10 0.000404402
+24 *307:D spare_xz[26] 0
+25 *307:RN spare_xz[26] 5.69651e-05
+26 *307:CLK spare_xz[26] 0.000111412
+27 *308:D spare_xz[26] 0.000272541
+28 *308:SETN spare_xz[26] 1.5743e-05
+29 *308:SETN *34:5 3.1486e-06
+30 *18:8 spare_xz[26] 1.04899e-05
+31 *28:5 *34:5 0
+32 *29:8 spare_xz[26] 8.74577e-05
+33 *30:27 spare_xz[26] 0.000394796
+34 *31:18 spare_xz[26] 0.000136156
+*RES
+1 *298:ZN *34:5 5.336 
+2 *34:5 *34:10 10.14 
+3 *34:10 *53:I 16.996 
+4 *34:10 *308:RN 4.5 
+5 *34:5 spare_xz[26] 25.758 
+*END
+
+*D_NET *35 0.000620737
+*CONN
+*P spare_xz[27] O
+*I *276:Z O *D gf180mcu_fd_sc_mcu7t5v0__tieh
+*CAP
+1 spare_xz[27] 0.000292193
+2 *276:Z 0.000292193
+3 spare_xz[22] spare_xz[27] 3.63521e-05
+*RES
+1 *276:Z spare_xz[27] 6.362 
+*END
+
+*D_NET *36 0.000579065
+*CONN
+*P spare_xz[28] O
+*I *277:Z O *D gf180mcu_fd_sc_mcu7t5v0__tieh
+*CAP
+1 spare_xz[28] 0.00025768
+2 *277:Z 0.00025768
+3 spare_xi[3] spare_xz[28] 0
+4 spare_xna[0] spare_xz[28] 6.37036e-05
+*RES
+1 *277:Z spare_xz[28] 11.014 
+*END
+
+*D_NET *37 0.00127765
+*CONN
+*P spare_xz[29] O
+*I *278:Z O *D gf180mcu_fd_sc_mcu7t5v0__tieh
+*CAP
+1 spare_xz[29] 0.00047897
+2 *278:Z 0.00047897
+3 spare_xib spare_xz[29] 0.000319713
+*RES
+1 *278:Z spare_xz[29] 12.002 
+*END
+
+*D_NET *38 0.00149506
+*CONN
+*P spare_xz[2] O
+*I *311:I I *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*I *299:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[2] 0.000371531
+2 *311:I 0
+3 *299:ZN 8.78422e-05
+4 *38:5 0.000459374
+5 *49:I spare_xz[2] 0.000167206
+6 *49:I *38:5 0.000255247
+7 *30:27 spare_xz[2] 0.000119605
+8 *30:27 *38:5 3.42579e-05
+*RES
+1 *299:ZN *38:5 5.336 
+2 *38:5 spare_xz[2] 3.002 
+3 *38:5 *311:I 4.5 
+*END
+
+*D_NET *39 0.000813462
+*CONN
+*P spare_xz[30] O
+*I *279:Z O *D gf180mcu_fd_sc_mcu7t5v0__tieh
+*CAP
+1 spare_xz[30] 0.000383343
+2 *279:Z 0.000383343
+3 spare_xz[18] spare_xz[30] 4.67765e-05
+*RES
+1 *279:Z spare_xz[30] 11.546 
+*END
+
+*D_NET *40 0.00601655
+*CONN
+*P spare_xz[3] O
+*I *55:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *312:I I *D gf180mcu_fd_sc_mcu7t5v0__inv_2
+*I *300:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[3] 0.00161097
+2 *55:I 0.000118423
+3 *312:I 4.32661e-05
+4 *300:ZN 0
+5 *40:9 0.000421813
+6 *40:5 0.00187109
+7 spare_xi[0] spare_xz[3] 0
+8 spare_xi[0] *55:I 0.00010562
+9 spare_xi[0] *312:I 2.32955e-05
+10 spare_xi[0] *40:9 3.38007e-05
+11 spare_xi[3] *55:I 3.22357e-05
+12 spare_xmx[1] spare_xz[3] 0
+13 spare_xz[0] spare_xz[3] 0.000753805
+14 spare_xz[12] spare_xz[3] 0.000168468
+15 spare_xz[1] *312:I 2.32955e-05
+16 spare_xz[1] *40:9 2.07462e-06
+17 *313:I1 spare_xz[3] 0.000352296
+18 *22:8 spare_xz[3] 0.0004561
+*RES
+1 *300:ZN *40:5 9 
+2 *40:5 *40:9 5.868 
+3 *40:9 *312:I 4.88 
+4 *40:9 *55:I 14.64 
+5 *40:5 spare_xz[3] 17.838 
+*END
+
+*D_NET *41 0.00761326
+*CONN
+*P spare_xz[4] O
+*I *47:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *275:I I *D gf180mcu_fd_sc_mcu7t5v0__inv_12
+*I *301:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[4] 0.00121393
+2 *47:I 0
+3 *275:I 0.000146522
+4 *301:ZN 0
+5 *41:5 0.000397544
+6 *41:4 0.00146495
+7 spare_xz[4] spare_xz[7] 0.00165741
+8 spare_xz[4] *315:A1 0
+9 spare_xz[4] *315:A2 0
+10 spare_xz[4] *42:7 0
+11 *41:5 spare_xz[8] 0
+12 spare_xz[10] spare_xz[4] 0.00134586
+13 spare_xz[16] *275:I 1.47778e-05
+14 spare_xz[16] *41:5 0
+15 spare_xz[18] spare_xz[4] 0.00135057
+16 *23:8 *275:I 5.95154e-06
+17 *23:23 *41:5 1.5743e-05
+*RES
+1 *301:ZN *41:4 4.5 
+2 *41:4 *41:5 1.292 
+3 *41:5 *275:I 14.336 
+4 *41:5 *47:I 4.5 
+5 *41:4 spare_xz[4] 22.034 
+*END
+
+*D_NET *42 0.00364619
+*CONN
+*P spare_xz[5] O
+*I *315:A1 I *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*I *302:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[5] 0.00117894
+2 *315:A1 0.000139487
+3 *302:ZN 9.62698e-05
+4 *42:7 0.0014147
+5 spare_xz[5] spare_xz[8] 0.000107544
+6 *315:A1 *315:A2 9.26789e-05
+7 spare_xi[3] spare_xz[5] 0.000524877
+8 spare_xz[18] *315:A1 5.13295e-05
+9 spare_xz[18] *42:7 4.03671e-05
+10 spare_xz[4] *315:A1 0
+11 spare_xz[4] *42:7 0
+*RES
+1 *302:ZN *42:7 5.26 
+2 *42:7 spare_xz[5] 17.626 
+3 *42:7 *315:A1 5.488 
+*END
+
+*D_NET *43 0.00161919
+*CONN
+*P spare_xz[6] O
+*I *316:A1 I *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*I *303:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[6] 0.000407874
+2 *316:A1 0.000258535
+3 *303:ZN 0
+4 *43:4 0.000666408
+5 *316:A1 spare_xz[8] 1.15335e-05
+6 *316:A1 *45:17 1.44896e-05
+7 spare_xi[2] spare_xz[6] 0.000113634
+8 spare_xna[1] *316:A1 0.000146716
+*RES
+1 *303:ZN *43:4 4.5 
+2 *43:4 *316:A1 6.476 
+3 *43:4 spare_xz[6] 11.546 
+*END
+
+*D_NET *44 0.00516958
+*CONN
+*P spare_xz[7] O
+*I *315:A2 I *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*I *304:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[7] 0.00151934
+2 *315:A2 9.25826e-05
+3 *304:ZN 0
+4 *44:5 0.00161192
+5 spare_xi[3] spare_xz[7] 7.18322e-05
+6 spare_xi[3] *315:A2 0.00012382
+7 spare_xz[4] spare_xz[7] 0.00165741
+8 spare_xz[4] *315:A2 0
+9 *315:A1 *315:A2 9.26789e-05
+*RES
+1 *304:ZN *44:5 9 
+2 *44:5 *315:A2 10.064 
+3 *44:5 spare_xz[7] 19.83 
+*END
+
+*D_NET *45 0.0101411
+*CONN
+*P spare_xz[8] O
+*I *316:A2 I *D gf180mcu_fd_sc_mcu7t5v0__nand2_2
+*I *58:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *305:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[8] 0.00334934
+2 *316:A2 0
+3 *58:I 0
+4 *305:ZN 0.000202663
+5 *45:17 0.00347377
+6 *45:9 0.000327091
+7 spare_xz[8] *59:I 1.22563e-05
+8 spare_xz[8] *317:A1 2.50882e-06
+9 spare_xz[8] *46:11 3.73352e-05
+10 spare_xfq[0] spare_xz[8] 0.000612418
+11 spare_xi[2] spare_xz[8] 6.3136e-05
+12 spare_xi[2] *45:9 1.53458e-05
+13 spare_xi[2] *45:17 0
+14 spare_xna[1] *45:9 0.000147323
+15 spare_xna[1] *45:17 0.000315144
+16 spare_xz[16] spare_xz[8] 0.00103752
+17 spare_xz[25] spare_xz[8] 0.000122297
+18 spare_xz[26] spare_xz[8] 0
+19 spare_xz[5] spare_xz[8] 0.000107544
+20 *49:I spare_xz[8] 0
+21 *49:I *45:9 0
+22 *49:I *45:17 0
+23 *307:RN spare_xz[8] 0.000140809
+24 *316:A1 spare_xz[8] 1.15335e-05
+25 *316:A1 *45:17 1.44896e-05
+26 *33:15 spare_xz[8] 0.000148529
+27 *41:5 spare_xz[8] 0
+*RES
+1 *305:ZN *45:9 14.716 
+2 *45:9 *58:I 4.5 
+3 *45:9 *45:17 1.216 
+4 *45:17 *316:A2 4.5 
+5 *45:17 spare_xz[8] 37.174 
+*END
+
+*D_NET *46 0.00804941
+*CONN
+*P spare_xz[9] O
+*I *59:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *317:A1 I *D gf180mcu_fd_sc_mcu7t5v0__nor2_2
+*I *306:ZN O *D gf180mcu_fd_sc_mcu7t5v0__tiel
+*CAP
+1 spare_xz[9] 0.00276625
+2 *59:I 8.67691e-05
+3 *317:A1 0.000101775
+4 *306:ZN 0.000258341
+5 *46:11 0.000446972
+6 *46:8 0.00328302
+7 spare_xfq[0] *317:A1 4.15701e-05
+8 spare_xfq[0] *46:8 0.000162877
+9 spare_xfq[0] *46:11 7.10832e-05
+10 spare_xib spare_xz[9] 7.26158e-05
+11 spare_xno[1] spare_xz[9] 0
+12 spare_xz[20] spare_xz[9] 0.000125486
+13 spare_xz[23] spare_xz[9] 0
+14 spare_xz[26] *317:A1 0.000350564
+15 spare_xz[8] *59:I 1.22563e-05
+16 spare_xz[8] *317:A1 2.50882e-06
+17 spare_xz[8] *46:11 3.73352e-05
+18 *48:I spare_xz[9] 0
+19 *48:I *46:8 0
+20 *18:8 *317:A1 0.00022998
+21 *31:18 spare_xz[9] 0
+*RES
+1 *306:ZN *46:8 10.672 
+2 *46:8 *46:11 6.248 
+3 *46:11 *317:A1 15.628 
+4 *46:11 *59:I 5.108 
+5 *46:8 spare_xz[9] 24.542 
+*END
