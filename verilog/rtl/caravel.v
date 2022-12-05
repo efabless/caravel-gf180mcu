@@ -201,4 +201,6 @@ module caravel (
 	.const_one(const_one)
     );
 
+	caravel_power_routing caravel_power_routing ();
+
     endmodule

@@ -26,7 +26,8 @@ verilog_elaborate
 
 init_floorplan
 add_macro_placement padframe 0 0 N
-add_macro_placement chip_core 710 710 N
+add_macro_placement caravel_power_routing 0 0 N
+add_macro_placement chip_core 355 355 N
 
 manual_macro_placement f
 
