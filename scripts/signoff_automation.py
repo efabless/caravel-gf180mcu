@@ -8,6 +8,7 @@ import subprocess
 from sys import stdout
 import count_lvs
 import glob
+import time
 
 
 def build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, design):
@@ -33,18 +34,13 @@ def build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, de
         )
         subprocess.run(build_cmd, stderr=build_log, stdout=build_log)
 
-def run_drc(design_root, log_dir, signoff_dir, pdk_root, design):
+def run_drc(design_root, timestr, signoff_dir, pdk_path, design):
     klayout_drc_cmd = [
         "python3",
-        "klayout_drc.py",
-        "-g",
-        f"{design_root}/gds/{design}.gds",
-        "-l",
-        f"{log_dir}",
-        "-s",
-        f"{signoff_dir}/{design}/standalone_pvr",
-        "-d",
-        f"{design}",
+        f"/home/marwan/globalfoundries-pdk-libs-gf180mcu_fd_pr/rules/klayout/drc/run_drc.py",
+        "--variant=C",
+        f"--path={design_root}/gds/{design}.gds",
+        f"--run_dir={signoff_dir}/{design}/standalone_pvr/{timestr}",
     ]
     p1 = subprocess.Popen(klayout_drc_cmd)
     return p1
@@ -199,23 +195,16 @@ def run_starxt (design_root, log_dir, signoff_dir, design):
     )
     return p1
 
-def run_antenna(
-    log_dir, design_root, design, pdk_root, pdk_env, caravel_root, mcw_root
-):
-    os.environ["DESIGN_GDS_ROOT"] = design_root
-    os.environ["DESIGN"] = design
-    os.environ["LOG_DIR"] = log_dir
-    os.environ["CARAVEL_ROOT"] = caravel_root
-    os.environ["MCW_ROOT"] = mcw_root
-    antenna_cmd = [
-        "magic",
-        "-noconsole",
-        "-dnull",
-        "-rcfile",
-        f"{pdk_root}/{pdk_env}/libs.tech/magic/{pdk_env}.magicrc",
-        "tech-files/antenna_check.tcl",
+def run_antenna(design_root, timestr, signoff_dir, pdk_path, design):
+    klayout_antenna_cmd = [
+        "python3",
+        f"/home/marwan/globalfoundries-pdk-libs-gf180mcu_fd_pr/rules/klayout/drc/run_drc.py",
+        "--variant=C",
+        "--antenna_only",
+        f"--path={design_root}/gds/{design}.gds",
+        f"--run_dir={signoff_dir}/{design}/standalone_pvr/{timestr}/",
     ]
-    p1 = subprocess.Popen(antenna_cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    p1 = subprocess.Popen(klayout_antenna_cmd)
     return p1
 
 
@@ -224,14 +213,17 @@ def check_errors(
 ):
     f = open(os.path.join(signoff_dir, f"{design}/signoff.rpt"), "w")
     if drc:
-        drc_count_klayout = os.path.join(log_dir, f"{design}_klayout_drc.total")
-        with open(drc_count_klayout) as rep:
-            if rep.readline().strip() != "0":
-                logging.error(f"klayout DRC failed")
-                f.write("Klayout MR DRC:    Failed\n")
-            else:
-                logging.info("Klayout MR DRC:    Passed")
-                f.write("Klayout MR DRC:    Passed\n")
+        drc_output_dir = f"{signoff_dir}/{design}/standalone_pvr/{timestr}"
+        log_drc_file = glob.glob(f"{drc_output_dir}/drc_run_*.log")[0]
+        os.remove(f"{drc_output_dir}/main.drc")
+        with open(log_drc_file) as rep:
+            for lines in rep:
+                if "not clean" in lines:
+                    logging.error(f"klayout DRC failed")
+                    f.write("Klayout MR DRC:    Failed\n")
+                elif "clean" in lines:
+                    logging.info("Klayout MR DRC:    Passed")
+                    f.write("Klayout MR DRC:    Passed\n")
     if lvs:
         lvs_summary_report = open(
             os.path.join(signoff_dir, f"{design}/standalone_pvr/lvs_summary.rpt"), "w"
@@ -306,15 +298,18 @@ def check_errors(
                         f.write(f"{log_name} STA:    Failed (" + lines[-1].split(" failed")[0] + ")\n")
 
     if antenna:
-        antenna_report = os.path.join(signoff_dir, f"{design}/standalone_pvr/antenna-vios.report")
-        with open(antenna_report) as rep:
-            if "Antenna violation detected" in rep.read():
-                logging.error(f"Antenna checks failed find report at {antenna_report}")
-                f.write("Antenna checks:    Failed\n")
-            else:
-                logging.info("Antenna checks:    Passed")
-                f.write("Antenna checks:    Passed\n")
-
+        antenna_report = os.path.join(signoff_dir, f"{design}/standalone_pvr/{timestr}/antenna-vios.report")
+        xml_report = open(os.path.join(signoff_dir, f"{design}/standalone_pvr/{timestr}/{design}_antenna.lyrdb"))
+        antenna_count = xml_report.read().count('<item>')
+        antenna_count_log = open(os.path.join(signoff_dir, f"{design}/standalone_pvr/{timestr}/antenna_count.log"), "w")
+        antenna_count_log.write(str(antenna_count))
+        antenna_count_log.close()
+        if antenna_count == 0:
+            logging.info("Antenna checks:    Passed")
+            f.write("Antenna checks:    Passed\n")
+        else:
+            logging.error(f"Antenna checks failed find report at {antenna_report}")
+            f.write("Antenna checks:    Failed\n")
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -445,11 +440,15 @@ if __name__ == "__main__":
     if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
         signoff_dir = os.path.join(mcw_root, "signoff")
         log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
+    
+    timestr = time.strftime("%Y_%m_%d_%H_%M_%S")
 
     if not os.path.exists(f"{signoff_dir}/{design}"):
         os.makedirs(f"{signoff_dir}/{design}")
     if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr"):
         os.makedirs(f"{signoff_dir}/{design}/standalone_pvr")
+    if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr/{timestr}"):
+        os.makedirs(f"{signoff_dir}/{design}/standalone_pvr/{timestr}")
     if not os.path.exists(f"{log_dir}"):
         os.makedirs(f"{log_dir}")
 
@@ -481,14 +480,17 @@ if __name__ == "__main__":
     if args.all:
         drc = True
         lvs = True
-        verification = True
         sta = True
+        spef = True
+        antenna = True
+    
+    pdk_path = pdk_root + "/" + pdk_env
 
     if drc:
         if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
-            drc_p1 = run_drc(mcw_root, log_dir, signoff_dir, pdk_root, design)
+            drc_p1 = run_drc(mcw_root, timestr, signoff_dir, pdk_path, design)
         else:
-            drc_p1 = run_drc(caravel_root, log_dir, signoff_dir, pdk_root, design)
+            drc_p1 = run_drc(caravel_root, timestr, signoff_dir, pdk_path, design)
         logging.info(f"Running klayout DRC on {design}")
     if lvs:
         lvs_p1 = run_lvs(
@@ -545,9 +547,10 @@ if __name__ == "__main__":
 
     if antenna:
         logging.info(f"Running antenna checks on {design}")
-        ant = run_antenna(
-            log_dir, design_root, design, pdk_root, pdk_env, caravel_root, mcw_root
-        )
+        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
+            ant = run_antenna(mcw_root, timestr, signoff_dir, pdk_path, design)
+        else:
+            ant = run_antenna(caravel_root, timestr, signoff_dir, pdk_path, design)
 
     if verification or iverilog:
         verify_p = []
@@ -578,16 +581,17 @@ if __name__ == "__main__":
             if out:
                 ver_log.write(out)
 
-    # if lvs and drc and sta:
-    #     out, err = sta_p.communicate()
-    #     sta_log = open(f"{log_dir}/PT_STA_{design}.log", "w")
-    #     if err:
-    #         logging.error(err)
-    #         sta_log.write(err)
-
-    #     drc_p1.wait()
-    #     lvs_p1.wait()
+    if spef:
+        out, err = spef_p.communicate()
+        if err:
+            if "ERROR" in err:
+                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+            else:
+                logging.info(f"StarRC spef extraction done")
+    
     if sta:
+        if spef:
+            spef_p.wait()
         out, err = sta_p.communicate()
         sta_log = open(f"{sta_log_dir}/PT_STA_{design}.log", "w")
         if err:
@@ -596,28 +600,13 @@ if __name__ == "__main__":
             sta_log.close()
         else:
             os.remove(f"{sta_log_dir}/PT_STA_{design}.log")
-    if spef:
-        out, err = spef_p.communicate()
-        if err:
-            if "ERROR" in err:
-                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
-            else:
-                logging.info(f"StarRC spef extraction done")
 
     if lvs:
         lvs_p1.wait()
     if drc:
         drc_p1.wait()
-    
     if antenna:
-        out, err = ant.communicate()
-        ant_rep = open(f"{signoff_dir}/{design}/standalone_pvr/antenna-vios.report", "w")
-        if err:
-            logging.error(err.decode())
-            ant_rep.write(err.decode())
-        if out:
-            ant_rep.write(out.decode())
-        ant_rep.close()
+        ant.wait()
 
     check_errors(
         caravel_root, log_dir, signoff_dir, drc, lvs, verification, sta, design, antenna
