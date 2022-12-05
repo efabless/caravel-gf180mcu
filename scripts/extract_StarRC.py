@@ -7,36 +7,38 @@ import argparse
 import os
 import glob
 
-def extract_all (
-    design: str,
-    root_dir: str,
-    output_dir: str,
-    log_dir: str
-):
-    rc_corners = ["nom", "max", "min"]
-    for rc in rc_corners:
-        extract (design, rc, root_dir, output_dir, log_dir)
-
-def extract (
+def run_stxt (
     design: str,
     rc_corner: str,
     root_dir: str,
     output_dir: str,
-    log_dir: str
+    log_dir: str,
 ):
-    # Create log file for the run
-    star_log_path = os.path.join(log_dir, f"{design}-{rc_corner}.log")
-    star_log = open(star_log_path, "w")
-    star_log.write(f"StarRC extraction run for design: {design} at RC corner {rc_corner}\n\n")
-    print (f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
-    star_log.write(f"StarRC command file created:\tstar_cmd.xtcmd\n\n")
-    star_log.close()
+    star_sum, stxt_cmd_file_path = gen_stxt_cmd_file (design, rc_corner, root_dir, output_dir)
+    extract (stxt_cmd_file_path)
+    create_log (design, rc_corner, log_dir, stxt_cmd_file_path, star_sum)
 
+def extract (
+    stxt_cmd_file_path: str,
+):
+    # StarRC command
+    stxt_command = f"source /tools/bashrc_snps; StarXtract {stxt_cmd_file_path}"
+    os.system(stxt_command)
+
+def gen_stxt_cmd_file (
+    design: str,
+    rc_corner: str,
+    root_dir: str,
+    output_dir: str,
+):
     # Enviornment Variables
     check_env_vars()
     PDK_ROOT= os.getenv('PDK_ROOT')
     PDK = os.getenv('PDK')
     SCL = os.getenv('STD_CELL_LIBRARY')
+    CARAVEL_ROOT = os.getenv('CARAVEL_ROOT')
+    UPRJ_ROOT = os.getenv('UPRJ_ROOT')
+    MCW_ROOT = os.getenv('MCW_ROOT')
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     
     #Temporary directory to store star directory (must be relative path to run dir)
@@ -74,14 +76,16 @@ def extract (
     stxt_cmd_file.write(f"SUMMARY_FILE: {star_sum}\n")
 
     #lef files required: techlef must be the 1st lef_file then SCL then macros lef
-    lef_files = glob.glob(f"{root_dir}/lef/*.lef")
-
-    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/{SCL}/techlef/{SCL}.tlef\n")
+    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/{SCL}/techlef/{SCL}__{rc_corner}.tlef\n")
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/{SCL}/lef/{SCL}.lef\n")
+    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef\n")
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef\n")
-    stxt_cmd_file.write(f"LEF_FILE: {root_dir}/macros/simple_por/lef/simple_por.lef\n")
-    for lef in lef_files:
-        stxt_cmd_file.write(f"LEF_FILE: {lef}\n")
+    stxt_cmd_file.write(f"LEF_FILE: {CARAVEL_ROOT}/macros/simple_por/lef/simple_por.lef\n")
+    root_dirs = [f'{CARAVEL_ROOT}',f'{MCW_ROOT}', f'{UPRJ_ROOT}']
+    for dir in root_dirs:
+        lef_files = glob.glob(f"{dir}/lef/*.lef")
+        for lef in lef_files:
+            stxt_cmd_file.write(f"LEF_FILE: {lef}\n")
     
     stxt_cmd_file.write(f"TOP_DEF_FILE: {root_dir}/def/{design}.def\n")
     stxt_cmd_file.write(f"STAR_DIRECTORY: {star_dir}\n")
@@ -99,13 +103,21 @@ def extract (
     stxt_cmd_file.write(f"REDUCTION: NO_EXTRA_LOOPS\n")
     
     stxt_cmd_file.close()
+    return star_sum, stxt_cmd_file_path
 
-    # StarRC command
-    stxt_command = f"source /tools/bashrc_snps; StarXtract {stxt_cmd_file_path}"
-    os.system(stxt_command)
-
-    # append command file created to the log + star summary file 
-    star_log = open(star_log_path, "a+")
+def create_log (
+    design: str,
+    rc_corner: str,
+    log_dir: str,
+    stxt_cmd_file_path: str,
+    star_sum: str,
+):
+    # Create log file for the run
+    star_log_path = os.path.join(log_dir, f"{design}-{rc_corner}.log")
+    star_log = open(star_log_path, "w")
+    star_log.write(f"StarRC extraction run for design: {design} at RC corner {rc_corner}\n\n")
+    print (f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
+    star_log.write(f"StarRC command file created:\tstar_cmd.xtcmd\n\n")
     with open(stxt_cmd_file_path,"r") as f:
         star_log.write(f.read())
     with open(star_sum,"r") as f:
@@ -128,6 +140,21 @@ def check_env_vars():
     if scl is None:
         raise FileNotFoundError(
         "Please export STD_CELL_LIBRARY"
+        )
+    caravel_root = os.getenv('CARAVEL_ROOT')
+    uprj_root = os.getenv('UPRJ_ROOT')
+    mcw_root = os.getenv('MCW_ROOT')
+    if caravel_root is None:
+        raise FileNotFoundError(
+        "Please export CARAVEL_ROOT to the Caravel repo path"
+        )
+    if mcw_root is None:
+        raise FileNotFoundError(
+        "Please export MCW_ROOT to the Caravel Management SoC Litex repo path"
+        )
+    if uprj_root is None:
+        raise FileNotFoundError(
+        "Please export UPRJ_ROOT to the Caravel User Project Wrapper repo path"
         )
 
 if __name__ == "__main__":
@@ -189,6 +216,8 @@ if __name__ == "__main__":
         pass
 
     if args.all:
-        extract_all (args.design, root, output, log) 
+        rc_corners = ["nom", "max", "min"]
+        for rc_corner in rc_corners: 
+            run_stxt(args.design, rc_corner, root, output, log)
     else:
-        extract (args.design, args.rc_corner, root, output, log)
+        run_stxt(args.design, args.rc_corner, root, output, log)

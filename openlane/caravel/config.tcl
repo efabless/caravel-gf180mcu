@@ -14,31 +14,35 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # User config
-set script_dir [file dirname [file normalize [info script]]]
-set ::env(DESIGN_DIR) $script_dir/../..
+set verilog_root $::env(CARAVEL_ROOT)/verilog/
+set lef_root $::env(CARAVEL_ROOT)/lef/
+set gds_root $::env(CARAVEL_ROOT)/gds/
 
 set ::env(DESIGN_NAME) caravel
 set ::env(ROUTING_CORES) 2
 
 # Change if needed
 set ::env(VERILOG_FILES) "\
-    $::env(DESIGN_DIR)/../../verilog/rtl/user_defines.v \
-    $::env(DESIGN_DIR)/../../verilog/rtl/caravel.v"
+    $verilog_root/rtl/user_defines.v \
+    $verilog_root/rtl/caravel.v"
 
 set ::env(SYNTH_READ_BLACKBOX_LIB) 0
 
 set ::env(VERILOG_FILES_BLACKBOX) "\
-    $::env(DESIGN_DIR)/../../verilog/rtl/defines.v \
-    $::env(DESIGN_DIR)/../../verilog/rtl/chip_io.v \
-    $::env(DESIGN_DIR)/../../verilog/gl/caravel_core.v"
+    $verilog_root/rtl/defines.v \
+    $verilog_root/rtl/chip_io.v \
+    $verilog_root/rtl/caravel_power_routing.v \
+    $verilog_root/gl/caravel_core.v"
 
 set ::env(EXTRA_LEFS) "\
-    $::env(DESIGN_DIR)/../../lef/chip_io.lef \
-    $::env(DESIGN_DIR)/../../lef/caravel_core.lef"
+    $lef_root/chip_io.lef \
+    $lef_root/caravel_power_routing.lef \
+    $lef_root/caravel_core.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-    $::env(DESIGN_DIR)/../../gds/caravel_core.gds \
-    $::env(DESIGN_DIR)/../../gds/chip_io.gds"
+    $gds_root/caravel_power_routing.gds \
+    $gds_root/chip_io.gds \
+    $gds_root/caravel_core.gds"
 
 set ::env(SYNTH_ELABORATE_ONLY) 1
 set ::env(LEC_ENABLE) 0
