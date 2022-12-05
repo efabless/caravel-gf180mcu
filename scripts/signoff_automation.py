@@ -9,6 +9,7 @@ from sys import stdout
 import count_lvs
 import glob
 import time
+import shutil
 
 
 def build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, design):
@@ -133,7 +134,7 @@ def run_verification(caravel_root, pdk_root, pdk_env, sim, simulator="vcs"):
     return p1
 
 
-def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design):
+def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design, timestr):
     myenv = os.environ.copy()
     myenv["CARAVEL_ROOT"] = caravel_root
     myenv["MCW_ROOT"] = mcw_root
@@ -156,7 +157,7 @@ def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design):
         "-d",
         f"{design}",
         "-o",
-        f"{signoff_dir}/{design}/primetime-signoff",
+        f"{signoff_dir}/{design}/primetime/{timestr}/",
         "-l",
         f"{log_dir}",
     ]
@@ -170,7 +171,7 @@ def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design):
     )
     return p1
 
-def run_starxt (design_root, log_dir, signoff_dir, design):
+def run_starxt (design_root, log_dir, signoff_dir, design, timestr):
     myenv = os.environ.copy()
     starxt_cmd = [
         "python3",
@@ -179,7 +180,7 @@ def run_starxt (design_root, log_dir, signoff_dir, design):
         "-d",
         f"{design}",
         "-o",
-        f"{signoff_dir}/{design}/StarRC",
+        f"{signoff_dir}/{design}/StarRC/{timestr}",
         "-r",
         f"{design_root}",
         "-l",
@@ -437,7 +438,7 @@ if __name__ == "__main__":
     antenna = args.antenna
     log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
 
-    if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
+    if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
         signoff_dir = os.path.join(mcw_root, "signoff")
         log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
     
@@ -445,14 +446,14 @@ if __name__ == "__main__":
 
     if not os.path.exists(f"{signoff_dir}/{design}"):
         os.makedirs(f"{signoff_dir}/{design}")
-    if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr"):
-        os.makedirs(f"{signoff_dir}/{design}/standalone_pvr")
-    if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr/{timestr}"):
-        os.makedirs(f"{signoff_dir}/{design}/standalone_pvr/{timestr}")
-    if not os.path.exists(f"{log_dir}"):
-        os.makedirs(f"{log_dir}")
 
     if lvs or drc or antenna:
+        if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr"):
+            os.makedirs(f"{signoff_dir}/{design}/standalone_pvr")
+        if not os.path.exists(f"{signoff_dir}/{design}/standalone_pvr/{timestr}"):
+            os.makedirs(f"{signoff_dir}/{design}/standalone_pvr/{timestr}")
+        if not os.path.exists(f"{log_dir}"):
+            os.makedirs(f"{log_dir}")
         if glob.glob(f"{caravel_root}/gds/*.gz"):
             logging.error(
                 f"Compressed gds files in {caravel_root}. Please uncompress first."
@@ -473,7 +474,7 @@ if __name__ == "__main__":
 
     if design == "caravel" or design == "caravan":
         logging.info(f"Building {design} ...")
-        build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, design)
+        # build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, design)
     else:
         logging.info(f"running checks on {design}")
 
@@ -487,7 +488,7 @@ if __name__ == "__main__":
     pdk_path = pdk_root + "/" + pdk_env
 
     if drc:
-        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
+        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
             drc_p1 = run_drc(mcw_root, timestr, signoff_dir, pdk_path, design)
         else:
             drc_p1 = run_drc(caravel_root, timestr, signoff_dir, pdk_path, design)
@@ -505,10 +506,45 @@ if __name__ == "__main__":
         )
         logging.info(f"Running LVS on {design}")
 
+    if spef:
+        if not os.path.exists(f"{signoff_dir}/{design}/StarRC"):
+            os.makedirs(f"{signoff_dir}/{design}/StarRC")
+        if not os.path.exists(f"{signoff_dir}/{design}/StarRC/{timestr}"):
+            os.makedirs(f"{signoff_dir}/{design}/StarRC/{timestr}")
+        spef_log_dir = os.path.join(signoff_dir, f"{design}/StarRC/{timestr}/logs")
+        if not os.path.exists(f"{spef_log_dir}"):
+            os.makedirs(f"{spef_log_dir}")
+
+        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
+            spef_p = run_starxt(
+                mcw_root,
+                spef_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+            )          
+        else:
+            spef_p = run_starxt(
+                caravel_root,
+                spef_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+            ) 
+        logging.info(f"Running StarRC all corners extraction on {design}")
+
     if sta:
-        if not os.path.exists(f"{signoff_dir}/{design}/primetime-signoff"):
-            os.makedirs(f"{signoff_dir}/{design}/primetime-signoff")
-        sta_log_dir = os.path.join(signoff_dir, f"{design}/primetime-signoff/logs")
+        if spef:
+            spef_p.wait()
+            spef_files = glob.glob(f"{signoff_dir}/{design}/StarRC/{timestr}/*.spef")
+            for spef_f in spef_files:
+                spef_name =spef_f.split("/")[-1]
+                shutil.copyfile(spef_f,f"{signoff_dir}/{design}/StarRC/{spef_name}")
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime")
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime/{timestr}"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime/{timestr}")
+        sta_log_dir = os.path.join(signoff_dir, f"{design}/primetime/{timestr}/logs")
         if not os.path.exists(f"{sta_log_dir}"):
             os.makedirs(f"{sta_log_dir}")
 
@@ -520,31 +556,9 @@ if __name__ == "__main__":
             sta_log_dir,
             signoff_dir,
             design,
+            timestr
         )
     
-    if spef:
-        if not os.path.exists(f"{signoff_dir}/{design}/StarRC"):
-            os.makedirs(f"{signoff_dir}/{design}/StarRC")
-        spef_log_dir = os.path.join(signoff_dir, f"{design}/StarRC/logs")
-        if not os.path.exists(f"{spef_log_dir}"):
-            os.makedirs(f"{spef_log_dir}")
-
-        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
-            spef_p = run_starxt(
-                mcw_root,
-                spef_log_dir,
-                signoff_dir,
-                design,
-            )          
-        else:
-            spef_p = run_starxt(
-                caravel_root,
-                spef_log_dir,
-                signoff_dir,
-                design,
-            ) 
-        logging.info(f"Running StarRC all corners extraction on {design}")
-
     if antenna:
         logging.info(f"Running antenna checks on {design}")
         if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256"):
@@ -583,15 +597,17 @@ if __name__ == "__main__":
 
     if spef:
         out, err = spef_p.communicate()
+        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
         if err:
             if "ERROR" in err:
                 logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.close()
             else:
                 logging.info(f"StarRC spef extraction done")
+                os.remove(f"{spef_log_dir}/{design}-error.log")
     
     if sta:
-        if spef:
-            spef_p.wait()
         out, err = sta_p.communicate()
         sta_log = open(f"{sta_log_dir}/PT_STA_{design}.log", "w")
         if err:
