@@ -33,8 +33,6 @@ manual_macro_placement f
 
 run_magic
 
-set ::env(SYNTH_STRATEGY) "AREA 2"
-
 ##saves to <RUN_DIR>/results/final
     save_final_views
 ## 
