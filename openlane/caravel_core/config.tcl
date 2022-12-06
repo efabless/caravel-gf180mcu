@@ -250,4 +250,4 @@ set ::env(QUIT_ON_MAGIC_DRC) 0
 set ::env(MAGIC_DEF_LABELS) 0
 set ::env(MAGIC_EXT_USE_GDS) 1
 
-set ::env(RSZ_DONT_TOUCH_RX) "serial_clock_out|serial_load_out"
+set ::env(RSZ_DONT_TOUCH_RX) "serial_clock_out|serial_load_out|ringosc"
