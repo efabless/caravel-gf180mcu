@@ -39,8 +39,6 @@ set ::env(EXTRA_LEFS) "\
 	$lef_root/user_id_textblock-stub.lef \
     $lef_root/chip_io.lef \
     $lef_root/caravel_power_routing.lef \
-    $lef_root/gpio_defaults_block.lef \
-	$lef_root/user_id_programming.lef \
     $lef_root/caravel_core.lef"
 
 set ::env(EXTRA_GDS_FILES) "\

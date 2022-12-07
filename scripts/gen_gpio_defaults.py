@@ -325,7 +325,7 @@ if __name__ == '__main__':
 
     if testmode:
         print('Test only:  Caravel layout:')
-    with open(caravel_path + '/mag/caravel.mag', 'r') as ifile:
+    with open(caravel_path + '/mag/caravel_core.mag', 'r') as ifile:
         maglines = ifile.read().splitlines()
         outlines = []
         for magline in maglines:
@@ -355,7 +355,7 @@ if __name__ == '__main__':
                 outlines.append(magline)
 
     if not testmode:
-        with open(magpath + '/caravel.mag', 'w') as ofile:
+        with open(magpath + '/caravel_core.mag', 'w') as ofile:
             for outline in outlines:
                 print(outline, file=ofile)
 
@@ -366,7 +366,7 @@ if __name__ == '__main__':
 
     if testmode:
         print('Test only:  Caravel top gate-level verilog:')
-    with open(caravel_path + '/verilog/gl/caravel.v', 'r') as ifile:
+    with open(caravel_path + '/verilog/gl/caravel_core.v', 'r') as ifile:
         vlines = ifile.read().splitlines()
         outlines = []
         for vline in vlines:
@@ -391,7 +391,7 @@ if __name__ == '__main__':
                 outlines.append(vline)
 
     if not testmode:
-        with open(glpath + '/caravel.v', 'w') as ofile:
+        with open(glpath + '/caravel_core.v', 'w') as ofile:
             for outline in outlines:
                 print(outline, file=ofile)
 
