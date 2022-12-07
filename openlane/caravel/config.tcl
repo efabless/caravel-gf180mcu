@@ -40,11 +40,11 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $verilog_root/gl/caravel_core.v"
 
 set ::env(EXTRA_LEFS) "\
-	$lef_root/caravel_logo-stub.lef \
-	$lef_root/caravel_motto-stub.lef \
+	$lef_root/caravel_logo.lef \
+	$lef_root/caravel_motto.lef \
 	$lef_root/copyright_block-stub.lef \
 	$lef_root/open_source-stub.lef \
-	$lef_root/user_id_textblock-stub.lef \
+	$lef_root/user_id_textblock.lef \
     $lef_root/chip_io.lef \
     $lef_root/caravel_power_routing.lef \
     $lef_root/caravel_core.lef"
