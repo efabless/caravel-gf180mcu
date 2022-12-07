@@ -203,4 +203,10 @@ module caravel (
 
 	caravel_power_routing caravel_power_routing ();
 
+    copyright_block copyright_block();
+    caravel_logo caravel_logo();
+    caravel_motto caravel_motto();
+    open_source open_source();
+    user_id_textblock user_id_textblock();
+
     endmodule

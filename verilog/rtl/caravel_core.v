@@ -1327,11 +1327,11 @@ module caravel_core (
 
 `ifdef TOP_ROUTING
     caravel_gf180_pdn caravel_gf180_pdn();
-    copyright_block copyright_block();
-    caravel_logo caravel_logo();
-    caravel_motto caravel_motto();
-    open_source open_source();
-    user_id_textblock user_id_textblock();
+    // copyright_block copyright_block();
+    // caravel_logo caravel_logo();
+    // caravel_motto caravel_motto();
+    // open_source open_source();
+    // user_id_textblock user_id_textblock();
 `endif
 endmodule
 // `default_nettype wire
