@@ -112,6 +112,7 @@ __ship:
 		addpath hexdigits; \
 		addpath alpha; \
 		addpath $(CARAVEL_ROOT)/mag; \
+		addpath $(MCW_ROOT)/mag; \
 		addpath $(UPRJ_ROOT)/mag; \
 		load user_project_wrapper; \
 		property LEFview true; \
