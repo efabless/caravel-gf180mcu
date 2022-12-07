@@ -95,7 +95,7 @@ if { ! [ info exists ::env(DRC_CURRENT_DEF) ] } {
 ##saves to <RUN_DIR>/results/final
     save_final_views
     ##saving views
-    save_views -save_path $save_path
+    save_views -save_path $save_path -tag caravel_core
 ## 
     calc_total_runtime
     save_state

@@ -38,7 +38,7 @@ def build_caravel_caravan(caravel_root, mcw_root, pdk_root, log_dir, pdk_env, de
 def run_drc(design_root, timestr, signoff_dir, pdk_path, design):
     klayout_drc_cmd = [
         "python3",
-        f"/home/marwan/globalfoundries-pdk-libs-gf180mcu_fd_pr/rules/klayout/drc/run_drc.py",
+        f"{pdk_path}/libs.tech/klayout/drc/run_drc.py",
         "--variant=C",
         f"--path={design_root}/gds/{design}.gds",
         f"--run_dir={signoff_dir}/{design}/standalone_pvr/{timestr}",
@@ -199,7 +199,7 @@ def run_starxt (design_root, log_dir, signoff_dir, design, timestr):
 def run_antenna(design_root, timestr, signoff_dir, pdk_path, design):
     klayout_antenna_cmd = [
         "python3",
-        f"/home/marwan/globalfoundries-pdk-libs-gf180mcu_fd_pr/rules/klayout/drc/run_drc.py",
+        f"{pdk_path}/libs.tech/klayout/drc/run_drc.py",
         "--variant=C",
         "--antenna_only",
         f"--path={design_root}/gds/{design}.gds",

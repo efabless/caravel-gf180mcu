@@ -62,5 +62,5 @@ set_timing_derate -early [expr 1-$derate]
 set_timing_derate -late [expr 1+$derate]
 
 ## MAX transition/cap
-set_max_trans 2 [current_design]
-set_max_cap 0.5 [current_design]
+set_max_trans 1.5 [current_design]
+# set_max_cap 0.5 [current_design]
