@@ -18,7 +18,7 @@ export STD_CELL_LIBRARY ?= gf180mcu_fd_sc_mcu7t5v0
 MAKEFLAGS+=--warn-undefined-variables
 
 export OPENLANE_RUN_TAG ?= $(shell date '+%y_%m_%d_%H_%M')
-OPENLANE_TAG ?= 2022.11.29
+OPENLANE_TAG ?= 2022.12.06
 OPENLANE_IMAGE_NAME ?= efabless/openlane:$(OPENLANE_TAG)
 IT_SCRIPT ?= ./interactive.tcl
 designs = $(shell find * -maxdepth 0 -type d)

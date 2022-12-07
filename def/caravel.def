@@ -1307,10 +1307,15 @@ TRACKS X 560 DO 6946 STEP 1120 LAYER Metal4 ;
 TRACKS Y 560 DO 9107 STEP 1120 LAYER Metal4 ;
 TRACKS X 560 DO 6946 STEP 1120 LAYER Metal5 ;
 TRACKS Y 560 DO 9107 STEP 1120 LAYER Metal5 ;
-COMPONENTS 3 ;
+COMPONENTS 8 ;
+    - caravel_logo caravel_logo + PLACED ( 2438000 8000 ) N ;
+    - caravel_motto caravel_motto + PLACED ( 2948000 34000 ) N ;
     - caravel_power_routing caravel_power_routing + PLACED ( 0 0 ) N ;
     - chip_core caravel_core + PLACED ( 710000 710000 ) N ;
+    - copyright_block copyright_block + PLACED ( 1300000 16000 ) N ;
+    - open_source open_source + PLACED ( 1878000 24000 ) N ;
     - padframe chip_io + PLACED ( 0 0 ) N ;
+    - user_id_textblock user_id_textblock + PLACED ( 520000 8000 ) N ;
 END COMPONENTS
 PINS 45 ;
     - clock + NET clock + DIRECTION INPUT + USE SIGNAL ;
