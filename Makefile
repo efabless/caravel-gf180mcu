@@ -110,6 +110,7 @@ __ship:
 		drc off; \
 		crashbackups stop; \
 		addpath hexdigits; \
+		addpath alpha; \
 		addpath $(CARAVEL_ROOT)/mag; \
 		addpath $(UPRJ_ROOT)/mag; \
 		load user_project_wrapper; \
