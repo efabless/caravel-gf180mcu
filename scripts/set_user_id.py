@@ -310,7 +310,7 @@ if __name__ == '__main__':
     print('Step 2:  Add user project ID parameter to source verilog.')
 
     changed = False
-    with open(vpath + '/rtl/caravel.v', 'r') as ifile:
+    with open(vpath + '/rtl/caravel_core.v', 'r') as ifile:
         vlines = ifile.read().splitlines()
         outlines = []
         for line in vlines:
@@ -322,7 +322,7 @@ if __name__ == '__main__':
             outlines.append(oline)
 
     if changed:
-        with open(vpath + '/rtl/caravel.v', 'w') as ofile:
+        with open(vpath + '/rtl/caravel_core.v', 'w') as ofile:
             for line in outlines:
                 print(line, file=ofile)
             print('Done!')
@@ -342,12 +342,9 @@ if __name__ == '__main__':
         if user_id_bits[i] == '0':
             continue
 
-        vdata = vdata.replace('high[' + str(i) + ']', 'XXXX')
-        vdata = vdata.replace('low[' + str(i) + ']', 'high[' + str(i) + ']')
-        vdata = vdata.replace('XXXX', 'low[' + str(i) + ']')
-        vdata = vdata.replace('LO(mask_rev[' + str(i) + ']',
-				  'HI(mask_rev[' + str(i) + ']')
-        vdata = vdata.replace('HI(\\user_proj_id_low', 'LO(\\user_proj_id_low')
+        vdata = vdata.replace('ZN(mask_rev[' + str(i) + ']', 'ZN(\\user_proj_id_nc[' + str(i) + ']')
+        vdata = vdata.replace('Z(\\user_proj_id_nc[' + str(i) + ']', 'Z(mask_rev[' + str(i) + ']')
+
         changed = True
 
     if changed:

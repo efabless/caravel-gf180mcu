@@ -17,9 +17,7 @@ set script_dir [file dirname [file normalize [info script]]]
 
 set ::env(DESIGN_NAME) chip_io
 
-set ::env(ROUTING_CORES) 128
-
-set verilog_root $::env(PROJECT_ROOT)/verilog/
+set verilog_root $::env(CARAVEL_ROOT)/verilog/
 
 
 # Change if needed
@@ -31,4 +29,4 @@ set ::env(VERILOG_FILES) "\
 
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 # specific to gf180
-set ::env(EXTRA_LIBS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io_TT_3P30V_25C_3P30V.lib"
+set ::env(EXTRA_LIBS) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__tt_025C_3v30.lib"

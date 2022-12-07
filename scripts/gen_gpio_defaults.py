@@ -325,7 +325,7 @@ if __name__ == '__main__':
 
     if testmode:
         print('Test only:  Caravel layout:')
-    with open(caravel_path + '/mag/caravel.mag', 'r') as ifile:
+    with open(caravel_path + '/mag/caravel_core.mag', 'r') as ifile:
         maglines = ifile.read().splitlines()
         outlines = []
         for magline in maglines:
@@ -355,7 +355,7 @@ if __name__ == '__main__':
                 outlines.append(magline)
 
     if not testmode:
-        with open(magpath + '/caravel.mag', 'w') as ofile:
+        with open(magpath + '/caravel_core.mag', 'w') as ofile:
             for outline in outlines:
                 print(outline, file=ofile)
 
@@ -392,75 +392,6 @@ if __name__ == '__main__':
 
     if not testmode:
         with open(glpath + '/caravel_core.v', 'w') as ofile:
-            for outline in outlines:
-                print(outline, file=ofile)
-
-    if testmode:
-        print('Test only:  Caravan layout:')
-    with open(caravel_path + '/mag/caravan.mag', 'r') as ifile:
-        maglines = ifile.read().splitlines()
-        outlines = []
-        for magline in maglines:
-            if magline.startswith('use '):
-                tokens = magline.split()
-                instname = tokens[2]
-                if instname.startswith('gpio_defaults_block_'):
-                    imatch = idx1rex.match(instname)
-                    if imatch:
-                        gpioidx = int(imatch.group(1)) + int(imatch.group(2))
-                    else:
-                        imatch = idx2rex.match(instname)
-                        if imatch:
-                            gpioidx = int(imatch.group(1))
-                        else:
-                            print('Error: instance ' + instname + ' not a defaults block?')
-                    cellname = cellsused[gpioidx]
-                    if cellname:
-                        tokens[1] = cellname
-                    outlines.append(' '.join(tokens))
-                    if testmode:
-                        print('Replacing line: ' + magline)
-                        print('With: ' + ' '.join(tokens))
-                else:
-                    outlines.append(magline)
-            else:
-                outlines.append(magline)
-
-    if not testmode:
-        with open(magpath + '/caravan.mag', 'w') as ofile:
-            for outline in outlines:
-                print(outline, file=ofile)
-
-    # Do the same to the top gate-level verilog
-
-    if testmode:
-        print('Test only:  Caravan top gate-level verilog:')
-    with open(caravel_path + '/verilog/gl/caravan.v', 'r') as ifile:
-        vlines = ifile.read().splitlines()
-        outlines = []
-        for vline in vlines:
-            imatch = inst1rex.match(vline)
-            if imatch:
-                gpioidx = int(imatch.group(2)) + int(imatch.group(3))
-            else:
-                imatch = inst2rex.match(vline)
-                if imatch:
-                    gpioidx = int(imatch.group(2))
-            if imatch:
-                gpioname = imatch.group(1)
-                cellname = cellsused[gpioidx]
-                if cellname:
-                    outlines.append(re.sub(gpioname, cellname, vline, 1))
-                    if testmode:
-                        print('Replacing line: ' + vline)
-                        print('With: ' + outlines[-1])
-                else:
-                    outlines.append(vline)
-            else:
-                outlines.append(vline)
-
-    if not testmode:
-        with open(glpath + '/caravan.v', 'w') as ofile:
             for outline in outlines:
                 print(outline, file=ofile)
 

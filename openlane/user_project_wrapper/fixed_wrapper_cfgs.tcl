@@ -21,8 +21,8 @@ set ::env(MAGIC_ZEROIZE_ORIGIN) 0
 
 # Area Configurations. DON'T TOUCH.
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 3000 3000"
-set ::env(CORE_AREA) "21.5 21.5 2978.5 2978.5"
+set ::env(DIE_AREA) "0 0 2980.2 2980.2"
+set ::env(CORE_AREA) "12 12 2968.2 2968.2"
 
 set ::env(RUN_CVC) 0
 
@@ -43,7 +43,7 @@ set ::env(FP_PDN_CORE_RING) 1
 set ::env(FP_PDN_CORE_RING_VWIDTH) 3.1
 set ::env(FP_PDN_CORE_RING_HWIDTH) 3.1
 set ::env(FP_PDN_CORE_RING_VOFFSET) 14
-set ::env(FP_PDN_CORE_RING_HOFFSET) $::env(FP_PDN_CORE_RING_VOFFSET)
+set ::env(FP_PDN_CORE_RING_HOFFSET) 16
 set ::env(FP_PDN_CORE_RING_VSPACING) 1.7
 set ::env(FP_PDN_CORE_RING_HSPACING) $::env(FP_PDN_CORE_RING_VSPACING)
 set ::env(FP_PDN_HOFFSET) 5
