@@ -116,10 +116,6 @@ __ship:
 		property LEFview true; \
 		property GDS_FILE $(UPRJ_ROOT)/gds/user_project_wrapper.gds; \
 		property GDS_START 0; \
-		load mgmt_core_wrapper; \
-		property LEFview true; \
-		property GDS_FILE $(MCW_ROOT)/gds/mgmt_core_wrapper.gds; \
-		property GDS_START 0; \
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
 		load ../maglef/simple_por; \
@@ -168,10 +164,6 @@ __truck:
 		property LEFview true; \
 		property GDS_FILE $(UPRJ_ROOT)/gds/user_analog_project_wrapper.gds; \
 		property GDS_START 0; \
-		load mgmt_core_wrapper; \
-		property LEFview true; \
-		property GDS_FILE $(MCW_ROOT)/gds/mgmt_core_wrapper.gds; \
-		property GDS_START 0; \
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
 		load ../maglef/simple_por; \
@@ -199,6 +191,12 @@ clean:
 .PHONY: simenv
 simenv:
 	docker pull efabless/dv:latest
+
+# Openlane
+blocks=$(shell cd openlane && find * -maxdepth 0 -type d)
+.PHONY: $(blocks)
+$(blocks): % :
+	$(MAKE) -C openlane $*
 
 dv_patterns=$(shell cd $(CARAVEL_ROOT)/verilog/dv/caravel/mgmt_soc/ && find * -maxdepth 0 -type d)
 dv-targets-rtl=$(dv_patterns:%=verify-%-rtl)
