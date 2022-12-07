@@ -28,6 +28,11 @@ init_floorplan
 add_macro_placement padframe 0 0 N
 add_macro_placement caravel_power_routing 0 0 N
 add_macro_placement chip_core 355 355 N
+add_macro_placement copyright_block 747.91000 81.49000 N
+add_macro_placement open_source 1030.49000 10.27000 N
+add_macro_placement user_id_textblock 481.36000 34.45000 N
+add_macro_placement caravel_logo 1346.85000 25.50000 N
+add_macro_placement caravel_motto -271.86000 -22.23000 N
 
 manual_macro_placement f
 
