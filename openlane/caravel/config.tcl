@@ -32,18 +32,10 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $verilog_root/rtl/defines.v \
     $verilog_root/rtl/chip_io.v \
     $verilog_root/rtl/caravel_power_routing.v \
-    #$verilog_root/rtl/caravel_logo.v \
-	#$verilog_root/rtl/caravel_motto.v \
-	#$verilog_root/rtl/copyright_block.v \
-	#$verilog_root/rtl/open_source.v \
 	$verilog_root/rtl/user_id_textblock.v \
     $verilog_root/gl/caravel_core.v"
 
 set ::env(EXTRA_LEFS) "\
-	#$lef_root/caravel_logo-stub.lef \
-	#$lef_root/caravel_motto-stub.lef \
-	#$lef_root/copyright_block-stub.lef \
-	#$lef_root/open_source-stub.lef \
 	$lef_root/user_id_textblock-stub.lef \
     $lef_root/chip_io.lef \
     $lef_root/caravel_power_routing.lef \
@@ -52,11 +44,7 @@ set ::env(EXTRA_LEFS) "\
     $lef_root/caravel_core.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-    #$gds_root/copyright_block.gds \
-    #$gds_root/open_source.gds \
     $gds_root/user_id_textblock.gds \
-    #$gds_root/caravel_logo.gds \
-    #$gds_root/caravel_motto.gds \
     $gds_root/caravel_power_routing.gds \
     $gds_root/chip_io.gds \
     $gds_root/caravel_core.gds"
