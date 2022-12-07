@@ -120,7 +120,8 @@ __ship:
 		property GDS_START 0; \
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
-		load ../macros/simple_por/maglef/simple_por; \
+		load $(CARAVEL_ROOT)/macros/simple_por/maglef/simple_por; \
+		load $(UPRJ_ROOT)/mag/caravel_core; \
 		load $(CARAVEL_ROOT)/mag/caravel -dereference; \
 		select top cell; \
 		expand; \
