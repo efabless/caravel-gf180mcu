@@ -218,7 +218,7 @@ if __name__ == '__main__':
             default_str = config_value[-3:]
             binval = '{:010b}'.format(int(default_str, 16))
         except:
-            print('Error:  Default value ' + config_value + ' is not a 4-digit hex number; skipping')
+            print('Error:  Default value ' + config_value + ' is not a 3-digit hex number; skipping')
             continue
 
         cell_name = 'gpio_defaults_block_' + default_str
