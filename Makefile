@@ -121,7 +121,7 @@ __ship:
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
 		load ../macros/simple_por/maglef/simple_por; \
-		load $(UPRJ_ROOT)/mag/caravel -dereference; \
+		load $(CARAVEL_ROOT)/mag/caravel -dereference; \
 		select top cell; \
 		expand; \
 		cif *hier write disable; \
