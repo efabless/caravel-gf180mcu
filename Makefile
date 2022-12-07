@@ -200,6 +200,12 @@ clean:
 simenv:
 	docker pull efabless/dv:latest
 
+# Openlane
+blocks=$(shell cd openlane && find * -maxdepth 0 -type d)
+.PHONY: $(blocks)
+$(blocks): % :
+	$(MAKE) -C openlane $*
+
 dv_patterns=$(shell cd $(CARAVEL_ROOT)/verilog/dv/caravel/mgmt_soc/ && find * -maxdepth 0 -type d)
 dv-targets-rtl=$(dv_patterns:%=verify-%-rtl)
 dv-targets-gl=$(dv_patterns:%=verify-%-gl)
