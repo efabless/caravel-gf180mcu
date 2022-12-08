@@ -45,7 +45,7 @@ module simple_por(
 
     // always @(posedge VDD) begin
     initial begin
-	#500 inode <= 1'b1;
+	#1000 inode <= 1'b1;
     end
     // always @(negedge VDD) begin
     //	#500 inode <= 1'b0;
