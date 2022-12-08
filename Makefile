@@ -127,7 +127,7 @@ __ship:
 		expand; \
 		cif *hier write disable; \
 		cif *array write disable; \
-		cellname rename caravel caravel_$(USER_ID);
+		cellname rename caravel caravel_$(USER_ID); \
 		gds write $(UPRJ_ROOT)/gds/caravel_$(USER_ID).gds; \
 		quit -noprompt;" > $(UPRJ_ROOT)/mag/mag2gds_caravel.tcl
 ### Runs from CARAVEL_ROOT
