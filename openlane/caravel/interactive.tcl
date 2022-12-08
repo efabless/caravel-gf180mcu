@@ -40,6 +40,7 @@ run_magic
 
 ##saves to <RUN_DIR>/results/final
     save_final_views
+    save_final_views -save_path .. -tag $::env(RUN_TAG)
 ## 
     calc_total_runtime
     save_state
