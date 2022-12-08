@@ -59,16 +59,12 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
   wire gpio_out_core;
   input gpio_outen_core;
   wire gpio_outen_core;
-  wire gpio_pd_select;
   input gpio_pd_select_core;
   wire gpio_pd_select_core;
-  wire gpio_pu_select;
   input gpio_pu_select_core;
   wire gpio_pu_select_core;
-  wire gpio_schmitt_select;
   input gpio_schmitt_select_core;
   wire gpio_schmitt_select_core;
-  wire gpio_slew_select;
   input gpio_slew_select_core;
   wire gpio_slew_select_core;
   inout [37:0] mprj_io;
@@ -89,10 +85,8 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
   wire [37:0] mprj_io_pullup_sel;
   input [37:0] mprj_io_schmitt_sel;
   wire [37:0] mprj_io_schmitt_sel;
-  wire mprj_io_schmitt_select;
   input [37:0] mprj_io_slew_sel;
   wire [37:0] mprj_io_slew_sel;
-  wire mprj_io_slew_select;
   input resetb;
   wire resetb;
   output resetb_core;
@@ -187,17 +181,17 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
   );
   gf180mcu_fd_io__bi_t mgmt_gpio_pad (
     .A(gpio_out_core),
-    .CS(gpio_schmitt_select),
+    .CS(gpio_schmitt_select_core),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(gpio_inen_core),
     .OE(gpio_outen_core),
     .PAD(gpio),
-    .PD(gpio_pd_select),
+    .PD(gpio_pd_select_core),
     .PDRV0(gpio_drive_select_core[0]),
     .PDRV1(gpio_drive_select_core[1]),
-    .PU(gpio_pu_select),
-    .SL(gpio_slew_select),
+    .PU(gpio_pu_select_core),
+    .SL(gpio_slew_select_core),
     .VDD(VDD),
     .VSS(VSS),
     .Y(gpio_in_core)
@@ -244,7 +238,7 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
   );
   gf180mcu_fd_io__bi_t \mprj_pads[0]  (
     .A(mprj_io_out[0]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[0]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[0]),
@@ -254,14 +248,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[0]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[0]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[0])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[10]  (
     .A(mprj_io_out[10]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[10]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[10]),
@@ -271,14 +265,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[10]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[10]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[10])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[11]  (
     .A(mprj_io_out[11]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[11]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[11]),
@@ -288,14 +282,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[11]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[11]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[11])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[12]  (
     .A(mprj_io_out[12]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[12]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[12]),
@@ -305,14 +299,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[12]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[12]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[12])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[13]  (
     .A(mprj_io_out[13]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[13]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[13]),
@@ -322,14 +316,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[13]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[13]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[13])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[14]  (
     .A(mprj_io_out[14]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[14]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[14]),
@@ -339,14 +333,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[14]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[14]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[14])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[15]  (
     .A(mprj_io_out[15]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[15]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[15]),
@@ -356,14 +350,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[15]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[15]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[15])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[16]  (
     .A(mprj_io_out[16]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[16]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[16]),
@@ -373,14 +367,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[16]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[16]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[16])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[17]  (
     .A(mprj_io_out[17]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[17]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[17]),
@@ -390,14 +384,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[17]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[17]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[17])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[18]  (
     .A(mprj_io_out[18]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[18]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[18]),
@@ -407,14 +401,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[18]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[18]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[18])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[19]  (
     .A(mprj_io_out[19]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[19]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[19]),
@@ -424,14 +418,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[19]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[19]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[19])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[1]  (
     .A(mprj_io_out[1]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[1]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[1]),
@@ -441,14 +435,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[1]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[1]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[1])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[20]  (
     .A(mprj_io_out[20]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[20]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[20]),
@@ -458,14 +452,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[20]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[20]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[20])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[21]  (
     .A(mprj_io_out[21]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[21]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[21]),
@@ -475,14 +469,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[21]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[21]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[21])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[22]  (
     .A(mprj_io_out[22]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[22]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[22]),
@@ -492,14 +486,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[22]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[22]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[22])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[23]  (
     .A(mprj_io_out[23]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[23]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[23]),
@@ -509,14 +503,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[23]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[23]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[23])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[24]  (
     .A(mprj_io_out[24]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[24]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[24]),
@@ -526,14 +520,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[24]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[24]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[24])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[25]  (
     .A(mprj_io_out[25]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[25]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[25]),
@@ -543,14 +537,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[25]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[25]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[25])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[26]  (
     .A(mprj_io_out[26]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[26]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[26]),
@@ -560,14 +554,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[26]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[26]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[26])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[27]  (
     .A(mprj_io_out[27]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[27]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[27]),
@@ -577,14 +571,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[27]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[27]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[27])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[28]  (
     .A(mprj_io_out[28]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[28]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[28]),
@@ -594,14 +588,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[28]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[28]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[28])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[29]  (
     .A(mprj_io_out[29]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[29]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[29]),
@@ -611,14 +605,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[29]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[29]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[29])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[2]  (
     .A(mprj_io_out[2]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[2]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[2]),
@@ -628,14 +622,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[2]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[2]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[2])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[30]  (
     .A(mprj_io_out[30]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[30]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[30]),
@@ -645,14 +639,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[30]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[30]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[30])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[31]  (
     .A(mprj_io_out[31]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[31]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[31]),
@@ -662,14 +656,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[31]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[31]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[31])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[32]  (
     .A(mprj_io_out[32]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[32]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[32]),
@@ -679,14 +673,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[32]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[32]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[32])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[33]  (
     .A(mprj_io_out[33]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[33]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[33]),
@@ -696,14 +690,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[33]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[33]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[33])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[34]  (
     .A(mprj_io_out[34]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[34]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[34]),
@@ -713,14 +707,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[34]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[34]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[34])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[35]  (
     .A(mprj_io_out[35]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[35]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[35]),
@@ -730,14 +724,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[35]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[35]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[35])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[36]  (
     .A(mprj_io_out[36]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[36]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[36]),
@@ -747,14 +741,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[36]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[36]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[36])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[37]  (
     .A(mprj_io_out[37]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[37]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[37]),
@@ -764,14 +758,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[37]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[37]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[37])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[3]  (
     .A(mprj_io_out[3]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[3]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[3]),
@@ -781,14 +775,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[3]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[3]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[3])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[4]  (
     .A(mprj_io_out[4]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[4]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[4]),
@@ -798,14 +792,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[4]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[4]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[4])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[5]  (
     .A(mprj_io_out[5]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[5]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[5]),
@@ -815,14 +809,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[5]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[5]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[5])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[6]  (
     .A(mprj_io_out[6]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[6]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[6]),
@@ -832,14 +826,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[6]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[6]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[6])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[7]  (
     .A(mprj_io_out[7]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[7]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[7]),
@@ -849,14 +843,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[7]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[7]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[7])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[8]  (
     .A(mprj_io_out[8]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[8]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[8]),
@@ -866,14 +860,14 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[8]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[8]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[8])
   );
   gf180mcu_fd_io__bi_t \mprj_pads[9]  (
     .A(mprj_io_out[9]),
-    .CS(mprj_io_schmitt_select),
+    .CS(mprj_io_schmitt_sel[9]),
     .DVDD(VDD),
     .DVSS(VSS),
     .IE(mprj_io_ie[9]),
@@ -883,7 +877,7 @@ module chip_io(VSS, VDD, gpio, clock, resetb, flash_csb, flash_clk, flash_io0, f
     .PDRV0(mprj_io_drive_sel[0]),
     .PDRV1(mprj_io_drive_sel[1]),
     .PU(mprj_io_pullup_sel[9]),
-    .SL(mprj_io_slew_select),
+    .SL(mprj_io_slew_sel[9]),
     .VDD(VDD),
     .VSS(VSS),
     .Y(mprj_io_in[9])
