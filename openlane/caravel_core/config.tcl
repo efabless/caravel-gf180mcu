@@ -50,7 +50,7 @@ set ::env(SYNTH_MAX_FANOUT) 22
 # set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
-set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_control_block/yosys_mapping.v"
+set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/yosys_mapping.v"
 
 ## Floorplan
 set ::env(FP_SIZING) absolute
