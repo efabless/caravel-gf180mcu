@@ -216,7 +216,7 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $::env(MCW_ROOT)/verilog/gl/gf180_ram_512x8_wrapper.v"
 
 set ::env(EXTRA_LEFS) "\
-    $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
+    $::env(DESIGN_DIR)/../../lef/user_project_wrapper_PnR.lef \
     $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
     $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
     $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
