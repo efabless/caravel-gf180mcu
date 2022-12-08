@@ -1,7 +1,7 @@
 magic
 tech gf180mcuC
 magscale 1 5
-timestamp 1670026412
+timestamp 1670501001
 << metal2 >>
 rect 5516 297780 5628 298500
 rect 16548 297780 16660 298500
@@ -364,6 +364,7 @@ rect -480 201852 240 201964
 rect 297780 201796 298500 201908
 rect 297780 195188 298500 195300
 rect -480 194796 240 194908
+rect -480 190820 240 190932
 rect 297780 188580 298500 188692
 rect -480 187740 240 187852
 rect 297780 181972 298500 182084
@@ -378,6 +379,7 @@ rect 297780 155540 298500 155652
 rect -480 152460 240 152572
 rect 297780 148932 298500 149044
 rect -480 145404 240 145516
+rect -480 145124 240 145236
 rect 297780 142324 298500 142436
 rect -480 138348 240 138460
 rect 297780 135716 298500 135828
@@ -1183,286 +1185,290 @@ rlabel metal2 s 291284 -480 291396 240 8 user_irq[1]
 port 309 nsew signal output
 rlabel metal2 s 292236 -480 292348 240 8 user_irq[2]
 port 310 nsew signal output
+rlabel metal3 s -480 145124 240 145236 4 vdd
+port 311 nsew signal input
 rlabel metal4 s -478 -342 -168 298654 4 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -478 -342 298510 -32 8 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -478 298344 298510 298654 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 298200 -342 298510 298654 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 1577 -822 1887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 10577 -822 10887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 19577 -822 19887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 28577 -822 28887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 37577 -822 37887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 46577 -822 46887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 55577 -822 55887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 64577 -822 64887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 73577 -822 73887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 82577 -822 82887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 91577 -822 91887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 100577 -822 100887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 109577 -822 109887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 118577 -822 118887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 127577 -822 127887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 136577 -822 136887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 145577 -822 145887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 154577 -822 154887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 163577 -822 163887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 172577 -822 172887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 181577 -822 181887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 190577 -822 190887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 199577 -822 199887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 208577 -822 208887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 217577 -822 217887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 226577 -822 226887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 235577 -822 235887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 244577 -822 244887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 253577 -822 253887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 262577 -822 262887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 271577 -822 271887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 280577 -822 280887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal4 s 289577 -822 289887 299134 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 1913 298990 2223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 10913 298990 11223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 19913 298990 20223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 28913 298990 29223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 37913 298990 38223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 46913 298990 47223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 55913 298990 56223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 64913 298990 65223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 73913 298990 74223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 82913 298990 83223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 91913 298990 92223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 100913 298990 101223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 109913 298990 110223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 118913 298990 119223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 127913 298990 128223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 136913 298990 137223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 145913 298990 146223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 154913 298990 155223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 163913 298990 164223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 172913 298990 173223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 181913 298990 182223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 190913 298990 191223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 199913 298990 200223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 208913 298990 209223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 217913 298990 218223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 226913 298990 227223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 235913 298990 236223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 244913 298990 245223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 253913 298990 254223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 262913 298990 263223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 271913 298990 272223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 280913 298990 281223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
 rlabel metal5 s -958 289913 298990 290223 6 vdd
-port 311 nsew power bidirectional
+port 311 nsew signal input
+rlabel metal3 s -480 190820 240 190932 4 vss
+port 312 nsew signal input
 rlabel metal4 s -958 -822 -648 299134 4 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 -822 298990 -512 8 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 298824 298990 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 298680 -822 298990 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 3437 -822 3747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 12437 -822 12747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 21437 -822 21747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 30437 -822 30747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 39437 -822 39747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 48437 -822 48747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 57437 -822 57747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 66437 -822 66747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 75437 -822 75747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 84437 -822 84747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 93437 -822 93747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 102437 -822 102747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 111437 -822 111747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 120437 -822 120747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 129437 -822 129747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 138437 -822 138747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 147437 -822 147747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 156437 -822 156747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 165437 -822 165747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 174437 -822 174747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 183437 -822 183747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 192437 -822 192747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 201437 -822 201747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 210437 -822 210747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 219437 -822 219747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 228437 -822 228747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 237437 -822 237747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 246437 -822 246747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 255437 -822 255747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 264437 -822 264747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 273437 -822 273747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 282437 -822 282747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal4 s 291437 -822 291747 299134 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 4913 298990 5223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 13913 298990 14223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 22913 298990 23223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 31913 298990 32223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 40913 298990 41223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 49913 298990 50223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 58913 298990 59223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 67913 298990 68223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 76913 298990 77223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 85913 298990 86223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 94913 298990 95223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 103913 298990 104223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 112913 298990 113223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 121913 298990 122223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 130913 298990 131223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 139913 298990 140223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 148913 298990 149223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 157913 298990 158223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 166913 298990 167223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 175913 298990 176223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 184913 298990 185223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 193913 298990 194223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 202913 298990 203223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 211913 298990 212223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 220913 298990 221223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 229913 298990 230223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 238913 298990 239223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 247913 298990 248223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 256913 298990 257223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 265913 298990 266223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 274913 298990 275223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 283913 298990 284223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal5 s -958 292913 298990 293223 6 vss
-port 312 nsew ground bidirectional
+port 312 nsew signal input
 rlabel metal2 s 5684 -480 5796 240 8 wb_clk_i
 port 313 nsew signal input
 rlabel metal2 s 6636 -480 6748 240 8 wb_rst_i
@@ -1679,8 +1685,8 @@ port 418 nsew signal input
 string FIXED_BBOX 0 0 298020 298020
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2624156
-string GDS_FILE ../gds/user_project_wrapper.gds
+string GDS_END 2624540
+string GDS_FILE /home/hosni/GF180/physical_verification/caravel-gf180mcu/openlane/user_project_wrapper/runs/user_project_wrapper_pdn/results/signoff/user_project_wrapper.magic.gds
 string GDS_START 130
 << end >>
 

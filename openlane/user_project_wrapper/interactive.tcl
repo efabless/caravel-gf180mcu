@@ -6,13 +6,10 @@ set save_path $script_dir/../..
 
 # ACTUAL CHIP INTEGRATION
 
-prep -design $script_dir -tag user_project_wrapper_pdn -overwrite --verbose 1
-run_synthesis
+prep -design $script_dir -tag user_project_wrapper_pdn -overwrite -ignore_mismatches --verbose 1
+set_netlist $::env(DESIGN_DIR)/../../verilog/gl/__user_project_wrapper.v
 set ::env(FP_PDN_SKIPTRIM) 1
 init_floorplan
-set save_odb $::env(DESIGN_DIR)/out.odb
-remove_components -input $::env(CURRENT_ODB) -output $save_odb
-set ::env(CURRENT_ODB) $save_odb
 place_io
 apply_def_template
 run_power_grid_generation
