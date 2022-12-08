@@ -51,21 +51,36 @@ LEF read, Line 310 (Message): Unknown keyword "ANTENNAGATEPLUSDIFF" in LEF file;
 LEF read, Line 315 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
 LEF read, Line 316 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
 LEF read: Processed 1380 lines.
+Reading LEF data from file /home/passant/caravel-gf180mcu/lef//caravel_logo.lef.
+This action cannot be undone.
+LEF read: Processed 273 lines.
+Reading LEF data from file /home/passant/caravel-gf180mcu/lef//caravel_motto.lef.
+This action cannot be undone.
+LEF read: Processed 103 lines.
+Reading LEF data from file /home/passant/caravel-gf180mcu/lef//copyright_block.lef.
+This action cannot be undone.
+LEF read: Processed 400 lines.
+Reading LEF data from file /home/passant/caravel-gf180mcu/lef//open_source.lef.
+This action cannot be undone.
+LEF read: Processed 284 lines.
+Reading LEF data from file /home/passant/caravel-gf180mcu/lef//user_id_textblock.lef.
+This action cannot be undone.
+LEF read: Processed 15 lines.
 Reading LEF data from file /home/passant/caravel-gf180mcu/lef//chip_io.lef.
 This action cannot be undone.
 LEF read: Processed 346691 lines.
 Reading LEF data from file /home/passant/caravel-gf180mcu/lef//caravel_power_routing.lef.
 This action cannot be undone.
-LEF read: Processed 11 lines.
+LEF read: Processed 55597 lines.
 Reading LEF data from file /home/passant/caravel-gf180mcu/lef//caravel_core.lef.
 This action cannot be undone.
-LEF read: Processed 6524 lines.
-Reading DEF data from file /home/passant/caravel-gf180mcu/openlane/caravel/runs/22_12_05_07_50/tmp/floorplan/1-initial_fp.macro_placement.def.
+LEF read: Processed 6557 lines.
+Reading DEF data from file /home/passant/caravel-gf180mcu/openlane/caravel/runs/22_12_08_06_23/tmp/floorplan/1-initial_fp.macro_placement.def.
 This action cannot be undone.
-  Processed 3 subcell instances total.
+  Processed 8 subcell instances total.
   Processed 45 pins total.
   Processed 457 nets total.
-DEF read: Processed 1821 lines.
+DEF read: Processed 1826 lines.
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
 
@@ -73,8 +88,84 @@ microns:  3890.000 x 5100.000  ( 0.000,  0.000), ( 3890.000,  5100.000)  1983900
 lambda:   77800.00 x 102000.00  (  0.00,  0.00 ), ( 77800.00,  102000.00)  7935600128.00
 internal: 778000 x 1020000  (     0,  0    ), ( 778000,  1020000)  793560000000
 Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: copyright_block
+Reading "font_4A".
+Reading "font_75".
+Reading "font_6E".
+Reading "font_65".
+Reading "font_32".
+Reading "font_30".
+Reading "font_6F".
+Reading "font_70".
+Reading "font_50".
+Reading "font_4B".
+Reading "font_44".
+Reading "font_47".
+Reading "font_67".
+Reading "font_6C".
+Reading "font_61".
+Reading "font_62".
+Reading "font_46".
+Reading "font_64".
+Reading "font_69".
+Reading "font_72".
+Reading "font_73".
+Reading "font_2D".
+Reading "font_43".
+Reading "font_76".
+Reading "font_28".
+Reading "font_63".
+Reading "font_29".
+Reading "font_45".
+Reading "font_66".
+Reading "copyright_block".
+Warning:  cell copyright_block already existed before reading GDS!
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: open_source
+Reading "open_source".
+Warning:  cell open_source already existed before reading GDS!
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: user_id_textblock
+Reading "alpha_0".
+Reading "user_id_textblock".
+Warning:  cell user_id_textblock already existed before reading GDS!
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: caravel_logo
+Reading "caravel_logo".
+Warning:  cell caravel_logo already existed before reading GDS!
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: caravel_motto
+Reading "font_22".
+Reading "font_53".
+Reading "font_61".
+Warning:  cell font_61 already existed before reading GDS!
+Reading "font_69".
+Warning:  cell font_69 already existed before reading GDS!
+Reading "font_6C".
+Warning:  cell font_6C already existed before reading GDS!
+Reading "font_6E".
+Warning:  cell font_6E already existed before reading GDS!
+Reading "font_67".
+Warning:  cell font_67 already existed before reading GDS!
+Reading "font_54".
+Reading "font_68".
+Reading "font_65".
+Warning:  cell font_65 already existed before reading GDS!
+Reading "font_49".
+Reading "font_43".
+Warning:  cell font_43 already existed before reading GDS!
+Reading "font_73".
+Warning:  cell font_73 already existed before reading GDS!
+Reading "caravel_motto".
+Warning:  cell caravel_motto already existed before reading GDS!
+Warning: Calma reading is not undoable!  I hope that's OK.
 Library written using GDS-II Release 6.0
-Library name: LIB
+Library name: caravel
 Reading "caravel_power_routing".
 Warning:  cell caravel_power_routing already existed before reading GDS!
 Warning: Calma reading is not undoable!  I hope that's OK.
@@ -928,38 +1019,34 @@ Reading "gf180mcu_fd_sc_mcu7t5v0__fillcap_8".
 Reading "gf180mcu_fd_sc_mcu7t5v0__tieh".
 Reading "gf180mcu_fd_sc_mcu7t5v0__fill_2".
 Reading "gf180mcu_fd_sc_mcu7t5v0__tiel".
-Reading "gf180mcu_fd_sc_mcu7t5v0__buf_16".
+Reading "gf180mcu_fd_sc_mcu7t5v0__buf_8".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dlyb_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__nor2_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__nand2_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_1".
+Reading "gf180mcu_fd_sc_mcu7t5v0__nor2_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__buf_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__buf_20".
-Reading "gf180mcu_fd_sc_mcu7t5v0__buf_12".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_16".
-Reading "gf180mcu_fd_sc_mcu7t5v0__buf_8".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_12".
 Reading "gf180mcu_fd_sc_mcu7t5v0__mux2_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_16".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__antenna".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_8".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__oai21_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_8".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_20".
 Reading "gf180mcu_fd_sc_mcu7t5v0__oai221_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__buf_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_12".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__oai211_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_8".
-Reading "gf180mcu_fd_sc_mcu7t5v0__antenna".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__inv_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__buf_16".
 Reading "gf180mcu_fd_sc_mcu7t5v0__nor2_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__or2_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__buf_12".
 Reading "gpio_defaults_block".
 Reading "M2_M1431059130200_512x8m81".
 Reading "M3_M2$$201415724_512x8m81".
@@ -1552,52 +1639,55 @@ Reading "ldummy_512x4_512x8m81".
 Reading "018SRAM_strap1_2x_bndry_512x8m81".
 Reading "Cell_array8x8_512x8m81".
 Reading "col_512a_512x8m81".
-Error while reading cell "col_512a_512x8m81" (byte position 3160722): Warning:  Cell col_512a_512x8m81 boundary was redefined.
-Error while reading cell "col_512a_512x8m81" (byte position 3160722): Warning:  Cell col_512a_512x8m81 boundary was redefined.
-Error while reading cell "col_512a_512x8m81" (byte position 3160722): Warning:  Cell col_512a_512x8m81 boundary was redefined.
+Error while reading cell "col_512a_512x8m81" (byte position 3138290): Warning:  Cell col_512a_512x8m81 boundary was redefined.
+Error while reading cell "col_512a_512x8m81" (byte position 3138290): Warning:  Cell col_512a_512x8m81 boundary was redefined.
+Error while reading cell "col_512a_512x8m81" (byte position 3138290): Warning:  Cell col_512a_512x8m81 boundary was redefined.
 Reading "lcol4_512_512x8m81".
 Reading "gf180mcu_fd_ip_sram__sram512x8m8wm1".
 Reading "gf180_ram_512x8_wrapper".
 Reading "gf180mcu_fd_sc_mcu7t5v0__inv_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__nand3_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__nand2_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__inv_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__inv_3".
-Reading "gf180mcu_fd_sc_mcu7t5v0__aoi221_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__aoi211_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__oai32_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__xor2_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__oai222_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__and3_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_3".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_8".
+Reading "gf180mcu_fd_sc_mcu7t5v0__nand2_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__aoi221_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__and2_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__or2_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_2".
 Reading "gf180mcu_fd_sc_mcu7t5v0__aoi222_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__nand3_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__xor2_1".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_3".
+Reading "gf180mcu_fd_sc_mcu7t5v0__oai32_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__oai22_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xnor2_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__aoi22_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__oai33_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_3".
-Reading "gf180mcu_fd_sc_mcu7t5v0__oai31_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__aoi21_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_12".
-Reading "gf180mcu_fd_sc_mcu7t5v0__and2_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_8".
+Reading "gf180mcu_fd_sc_mcu7t5v0__oai222_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__oai31_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__aoi22_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xnor3_1".
+Reading "gf180mcu_fd_sc_mcu7t5v0__oai33_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_12".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xor2_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__xor3_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xor2_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__xor3_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__inv_8".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
-Reading "gf180mcu_fd_sc_mcu7t5v0__inv_12".
+Reading "gf180mcu_fd_sc_mcu7t5v0__xor3_1".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xnor2_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__xnor2_4".
 Reading "user_id_programming".
+Reading "gf180mcu_fd_sc_mcu7t5v0__mux2_2".
 Reading "gf180mcu_fd_sc_mcu7t5v0__or4_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__nor3_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__and4_4".
@@ -1605,9 +1695,6 @@ Reading "gf180mcu_fd_sc_mcu7t5v0__nand4_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__nor4_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__or3_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__mux2_2".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_16".
 Reading "gf180mcu_fd_sc_mcu7t5v0__clkbuf_3".
 Reading "housekeeping".
@@ -1616,8 +1703,12 @@ Reading "housekeeping".
     15000 uses
     20000 uses
 Reading "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+Reading "gf180mcu_fd_sc_mcu7t5v0__invz_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+Reading "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+Reading "gf180mcu_fd_sc_mcu7t5v0__xor3_2".
 Reading "gf180mcu_fd_sc_mcu7t5v0__xnor3_2".
 Reading "ppolyf_u_1k_6p0_TRTT7C".
 Reading "via_cont_0p6um".
@@ -1643,26 +1734,12 @@ Reading "pmos_6p0_GUW2N9".
 Reading "nmos_6p0_BUMBUS".
 Reading "std_buffer".
 Reading "simple_por".
-Reading "FILLTIE_7T5P0".
-Reading "FILL_X1_7T5P0".
-Reading "FILLCAP_X4_7T5P0".
-Reading "ENDCAP_7T5P0".
-Reading "FILLCAP_X16_7T5P0".
-Reading "MUX2_X2_7T5P0".
-Reading "TIEL_7T5P0".
-Reading "FILLCAP_X8_7T5P0".
-Reading "INV_X2_7T5P0".
-Reading "FILLCAP_X32_7T5P0".
-Reading "NAND2_X2_7T5P0".
-Reading "TIEH_7T5P0".
-Reading "NOR2_X2_7T5P0".
-Reading "INV_X12_7T5P0".
-Reading "FILLCAP_X64_7T5P0".
-Reading "DFFRSNQ_X2_7T5P0".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_12".
 Reading "spare_logic_block".
 Reading "mprj_io_buffer".
+Reading "gf180mcu_fd_sc_mcu7t5v0__inv_16".
+Reading "gf180mcu_fd_sc_mcu7t5v0__xnor2_4".
 Reading "gf180mcu_fd_sc_mcu7t5v0__clkinv_20".
-Reading "gf180mcu_fd_sc_mcu7t5v0__dlyb_1".
 Reading "user_project_wrapper".
 Reading "caravel_core".
 Warning:  cell caravel_core already existed before reading GDS!
@@ -1693,13 +1770,10 @@ Warning:  cell caravel_core already existed before reading GDS!
     125000 uses
     130000 uses
     135000 uses
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__tiel
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_3
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dlyb_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
    Generating output for cell user_project_wrapper
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__fillcap_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__endcap
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__tiel
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__tieh
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__filltie
    Generating output for cell gpio_defaults_block
@@ -1710,87 +1784,77 @@ Warning:  cell caravel_core already existed before reading GDS!
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__fillcap_16
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__fillcap_64
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_20
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dlyb_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_8
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand2_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nor2_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_16
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_12
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dlyb_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_8
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand2_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_12
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nor2_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__mux2_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__antenna
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__buf_16
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__antenna
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffq_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai211_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffq_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi22_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi211_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffq_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi211_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffq_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai211_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi22_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__and3_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi21_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi222_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi21_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__aoi221_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor2_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nor2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_1
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__or2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor2_1
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor2_1
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai31_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai21_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nor2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_3
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_2
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_3
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai221_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_12
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_16
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai221_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai22_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor2_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand3_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_2
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__and2_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor3_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_8
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_16
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai32_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor2_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_8
-   Generating output for cell FILLTIE_7T5P0
-   Generating output for cell FILL_X1_7T5P0
-   Generating output for cell FILLCAP_X4_7T5P0
-   Generating output for cell ENDCAP_7T5P0
-   Generating output for cell FILLCAP_X16_7T5P0
-   Generating output for cell MUX2_X2_7T5P0
-   Generating output for cell TIEL_7T5P0
-   Generating output for cell FILLCAP_X8_7T5P0
-   Generating output for cell INV_X2_7T5P0
-   Generating output for cell FILLCAP_X32_7T5P0
-   Generating output for cell NAND2_X2_7T5P0
-   Generating output for cell TIEH_7T5P0
-   Generating output for cell NOR2_X2_7T5P0
-   Generating output for cell INV_X12_7T5P0
-   Generating output for cell FILLCAP_X64_7T5P0
-   Generating output for cell DFFRSNQ_X2_7T5P0
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__mux2_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_12
    Generating output for cell spare_logic_block
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_12
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_3
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor3_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand3_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor2_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_8
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai222_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkinv_20
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xor3_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai222_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor2_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai33_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_8
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor2_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_16
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_3
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
    Generating output for cell mprj_io_buffer
    Generating output for cell ppolyf_u_1k_6p0_TRTT7C
    Generating output for cell via_cont_0p6um
@@ -1816,15 +1880,16 @@ Warning:  cell caravel_core already existed before reading GDS!
    Generating output for cell nmos_6p0_BUMBUS
    Generating output for cell std_buffer
    Generating output for cell simple_por
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__invz_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__invz_8
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__invz_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__invz_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_2
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor3_2
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor3_1
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_2
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__invz_1
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__or4_4
@@ -1833,11 +1898,10 @@ Warning:  cell caravel_core already existed before reading GDS!
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nand4_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__nor4_4
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__or3_4
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__mux2_2
    Generating output for cell gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
    Generating output for cell housekeeping
+   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__xnor3_1
    Generating output for cell user_id_programming
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__inv_12
    Generating output for cell M2_M1431059130200_512x8m81
    Generating output for cell M3_M2$$201415724_512x8m81
    Generating output for cell M3_M24310591302013_512x8m81
@@ -2432,7 +2496,6 @@ Warning:  cell caravel_core already existed before reading GDS!
    Generating output for cell lcol4_512_512x8m81
    Generating output for cell gf180mcu_fd_ip_sram__sram512x8m8wm1
    Generating output for cell gf180_ram_512x8_wrapper
-   Generating output for cell gf180mcu_fd_sc_mcu7t5v0__oai33_4
    Generating output for cell caravel_core
    Generating output for cell M1_PSUB_CDNS_40661953145126
    Generating output for cell nmoscap_6p0_CDNS_406619531454
@@ -3266,5 +3329,45 @@ Warning:  cell caravel_core already existed before reading GDS!
    Generating output for cell gf180mcu_fd_io__fill5
    Generating output for cell chip_io
    Generating output for cell caravel_power_routing
+   Generating output for cell font_22
+   Generating output for cell font_73
+   Generating output for cell font_43
+   Generating output for cell font_49
+   Generating output for cell font_65
+   Generating output for cell font_68
+   Generating output for cell font_54
+   Generating output for cell font_67
+   Generating output for cell font_69
+   Generating output for cell font_6E
+   Generating output for cell font_6C
+   Generating output for cell font_61
+   Generating output for cell font_53
+   Generating output for cell caravel_motto
+   Generating output for cell caravel_logo
+   Generating output for cell alpha_0
+   Generating output for cell user_id_textblock
+   Generating output for cell open_source
+   Generating output for cell font_62
+   Generating output for cell font_66
+   Generating output for cell font_45
+   Generating output for cell font_29
+   Generating output for cell font_63
+   Generating output for cell font_28
+   Generating output for cell font_46
+   Generating output for cell font_47
+   Generating output for cell font_76
+   Generating output for cell font_72
+   Generating output for cell font_2D
+   Generating output for cell font_64
+   Generating output for cell font_75
+   Generating output for cell font_6F
+   Generating output for cell font_44
+   Generating output for cell font_4B
+   Generating output for cell font_50
+   Generating output for cell font_70
+   Generating output for cell font_32
+   Generating output for cell font_30
+   Generating output for cell font_4A
+   Generating output for cell copyright_block
    Generating output for cell caravel
 [INFO]: GDS Write Complete

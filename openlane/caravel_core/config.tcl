@@ -50,7 +50,7 @@ set ::env(SYNTH_MAX_FANOUT) 22
 # set ::env(SYNTH_USE_PG_PINS_DEFINES) ""
 set ::env(SYNTH_BUFFERING) 0
 set ::env(CLOCK_TREE_SYNTH) 1
-set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/../../openlane/gpio_control_block/yosys_mapping.v"
+set ::env(SYNTH_EXTRA_MAPPING_FILE) "$::env(DESIGN_DIR)/yosys_mapping.v"
 
 ## Floorplan
 set ::env(FP_SIZING) absolute
@@ -216,7 +216,7 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
     $::env(MCW_ROOT)/verilog/gl/gf180_ram_512x8_wrapper.v"
 
 set ::env(EXTRA_LEFS) "\
-    $::env(DESIGN_DIR)/../../lef/user_project_wrapper.lef \
+    $::env(DESIGN_DIR)/../../lef/user_project_wrapper_PnR.lef \
     $::env(DESIGN_DIR)/../../lef/housekeeping.lef \
     $::env(DESIGN_DIR)/../../macros/simple_por/lef/simple_por.lef \
     $::env(DESIGN_DIR)/../../lef/user_id_programming.lef \
