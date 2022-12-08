@@ -202,5 +202,7 @@ module caravel (
     );
 
 	caravel_power_routing caravel_power_routing ();
+	copyright_block copyright_block ();
+	caravel_logo caravel_logo ();
 
     endmodule
