@@ -1,0 +1,20 @@
+****************************************
+Report : exceptions
+Design : caravel
+Version: T-2022.03-SP3
+Date   : Fri Dec  9 09:09:48 2022
+****************************************
+
+Reasons :   f  invalid start points
+            t  invalid end points
+            p  non-existent paths
+            o  overridden paths
+
+Legend :    i  ignore clock latency in path delay
+From            Through          To               Setup      Hold       Ignored
+--------------------------------------------------------------------------------
+
+resetb          *                *                FALSE      FALSE      
+{ mprj_io[37] mprj_io[36] mprj_io[35] mprj_io[34] mprj_io[33] mprj_io[32] mprj_io[31] mprj_io[30] mprj_io[29] mprj_io[28] mprj_io[27] mprj_io[26] mprj_io[25] mprj_io[24] mprj_io[23] mprj_io[22] mprj_io[21] mprj_io[20] mprj_io[19] mprj_io[18] mprj_io[17] mprj_io[16] mprj_io[15] mprj_io[14] mprj_io[13] mprj_io[12] mprj_io[11] mprj_io[10] mprj_io[9] mprj_io[8] mprj_io[7] mprj_io[6] mprj_io[5] mprj_io[4] mprj_io[3] mprj_io[2] mprj_io[1] mprj_io[0] } { chip_core/housekeeping/mgmt_gpio_out[37] chip_core/housekeeping/mgmt_gpio_out[36] chip_core/housekeeping/mgmt_gpio_out[35] chip_core/housekeeping/mgmt_gpio_out[34] chip_core/housekeeping/mgmt_gpio_out[33] chip_core/housekeeping/mgmt_gpio_out[32] chip_core/housekeeping/mgmt_gpio_out[31] chip_core/housekeeping/mgmt_gpio_out[30] chip_core/housekeeping/mgmt_gpio_out[29] chip_core/housekeeping/mgmt_gpio_out[28] chip_core/housekeeping/mgmt_gpio_out[27] chip_core/housekeeping/mgmt_gpio_out[26] chip_core/housekeeping/mgmt_gpio_out[25] chip_core/housekeeping/mgmt_gpio_out[24] chip_core/housekeeping/mgmt_gpio_out[23] chip_core/housekeeping/mgmt_gpio_out[22] chip_core/housekeeping/mgmt_gpio_out[21] chip_core/housekeeping/mgmt_gpio_out[20] chip_core/housekeeping/mgmt_gpio_out[19] chip_core/housekeeping/mgmt_gpio_out[18] chip_core/housekeeping/mgmt_gpio_out[17] chip_core/housekeeping/mgmt_gpio_out[16] chip_core/housekeeping/mgmt_gpio_out[15] chip_core/housekeeping/mgmt_gpio_out[14] chip_core/housekeeping/mgmt_gpio_out[13] chip_core/housekeeping/mgmt_gpio_out[12] chip_core/housekeeping/mgmt_gpio_out[11] chip_core/housekeeping/mgmt_gpio_out[10] chip_core/housekeeping/mgmt_gpio_out[9] chip_core/housekeeping/mgmt_gpio_out[8] chip_core/housekeeping/mgmt_gpio_out[7] chip_core/housekeeping/mgmt_gpio_out[6] chip_core/housekeeping/mgmt_gpio_out[5] chip_core/housekeeping/mgmt_gpio_out[4] chip_core/housekeeping/mgmt_gpio_out[3] chip_core/housekeeping/mgmt_gpio_out[2] chip_core/housekeeping/mgmt_gpio_out[1] chip_core/housekeeping/mgmt_gpio_out[0] }  * FALSE FALSE p
+
+1

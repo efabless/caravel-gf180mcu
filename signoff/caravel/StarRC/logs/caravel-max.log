@@ -1,0 +1,465 @@
+StarRC extraction run for design: caravel at RC corner max
+
+StarRC command file created:	star_cmd-max.xtcmd
+
+BLOCK: caravel
+TCAD_GRD_FILE: /home/passant/gf180_timing/caravel-gf180mcu/scripts/gf180-tech/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_wst.nxtgrd
+MAPPING_FILE: /home/passant/gf180_timing/caravel-gf180mcu/scripts/gf180-tech/gf180mcu.starxt_map
+OPERATING_TEMPERATURE: 125
+NETLIST_FORMAT: SPEF
+NETLIST_FILE: /home/passant/gf180_timing/caravel-gf180mcu/signoff/caravel/StarRC/2022_12_09_09_01_30/caravel.max.spef
+SUMMARY_FILE: ./star_dir_temp/caravel.max.star_sum
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_motto.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_programming.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/housekeeping.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_logo.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_power_routing.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/spare_logic_block.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/copyright_block.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_core.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/open_source.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/mprj_io_buffer.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_textblock.lef
+LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/chip_io.lef
+LEF_FILE: /home/passant/caravel_mgmt_soc_gf180mcu/lef/gf180_ram_512x8_wrapper.lef
+LEF_FILE: /home/passant/caravel_user_project-gf180mcu/lef/user_proj_example.lef
+LEF_FILE: /home/passant/caravel_user_project-gf180mcu/lef/user_project_wrapper.lef
+TOP_DEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/def/caravel.def
+STAR_DIRECTORY: ./star_dir_temp/caravel.max/
+GPD: /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_dir_temp/caravel.max.gpd
+TRANSLATE_RETAIN_BULK_LAYERS: YES
+IGNORE_CAPACITANCE: NONE
+TRANSLATE_RETAIN_BULK_LAYERS: YES
+NETLIST_PASSIVE_PARAMS: YES
+EXTRACTION: RC
+EXTRACT_VIA_CAPS: YES
+COUPLE_TO_GROUND: NO
+COUPLING_ABS_THRESHOLD: 1e-19
+REDUCTION: NO_EXTRA_LOOPS
+
+                                  StarRC (TM)
+
+               Version T-2022.03-SP3 for linux64 - Jul 12, 2022 
+
+                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+ExecName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/StarXtract
+Version: T-2022.03-SP3
+Built on: Jul 12 2022 19:20:26
+Start Time: Fri Dec  9 09:02:26 2022
+
+Host ............ license-server-00
+
+xTractorName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/xTractor
+Version: T-2022.03-SP3
+Built on: Jul 12 2022 19:20:14
+
+Called as: StarXtract /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_cmd-max.xtcmd 
+Run Directory: /home/passant/gf180_timing/caravel-gf180mcu/scripts
+Read unit 2000 from tech LEF file
+/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef.
+Using Units:2000 to translate LEF. (SX-2158)
+Read unit 2000 from top DEF file /home/passant/gf180_timing/caravel-gf180mcu/def/caravel.def. Using
+Units:2000 to translate top DEF. (SX-2158)
+WARNING: DEF_MASKSHIFT_CONSISTENCY_CHECK may incur performance penalty in preXtraction. (SX-2105)
+WARNING: INPUT_NAMES_ESCAPE_REMOVAL is enabled, please make sure that the net select commands remove
+         the escape at the same time. (SX-3860)
+
+Block ........... caravel
+Star Directory .. /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_dir_temp/caravel.max
+WARNING: Running StarRC in single corner mode will result in degraded runtime for design flows where
+         multiple corners are used.  For optimal runtime, add the necessary commands to configure
+         the Simultaneous Multicorner flow (CORNERS_FILE and SELECTED_CORNERS). (SX-3552)
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_motto.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_programming.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/housekeeping.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_logo.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_power_routing.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/spare_logic_block.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/copyright_block.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_core.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/open_source.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/mprj_io_buffer.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_textblock.lef
+LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/chip_io.lef
+LEF file ........ /home/passant/caravel_mgmt_soc_gf180mcu/lef/gf180_ram_512x8_wrapper.lef
+LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_proj_example.lef
+LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_project_wrapper.lef
+Top DEF File .... /home/passant/gf180_timing/caravel-gf180mcu/def/caravel.def
+  Setup         Elp=00:00:01 Cpu=00:00:01 Usr=1.0    Sys=0.0    Mem=378.1 
+Done
+
+Map Layers:  Fri Dec  9 09:02:27 2022
+    Parsing LEF file
+WARNING: LEF LAYER 'Nwell' is not defined in mapping file (SX-2086)
+WARNING: LEF LAYER 'CON' is not defined in mapping file (SX-2086)
+WARNING: LEF LAYER 'PR_bndry' is not defined in mapping file (SX-2086)
+WARNING: LAYER 'CON' has no VIA connection (SX-2076)
+WARNING: Layer "Poly2" has no connections. (SX-1851)
+  Warnings: 6    Errors: 0    (See file summary/layers.sum)
+  Layers        Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=408.5 
+Done
+
+Build HN:  Fri Dec  9 09:02:30 2022
+    Parsing LEF file
+    
+  Warnings: 0    Errors: 0
+  HN            Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=412.0 
+Done
+
+Process Cells:  Fri Dec  9 09:02:31 2022
+WARNING: Pin 'clock' does not have top-level routing shapes. Pin geometries are derived from the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'flash_clk' does not have top-level routing shapes. Pin geometries are derived from
+ the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'flash_csb' does not have top-level routing shapes. Pin geometries are derived from
+ the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'flash_io0' does not have top-level routing shapes. Pin geometries are derived from
+ the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'flash_io1' does not have top-level routing shapes. Pin geometries are derived from
+ the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'gpio' does not have top-level routing shapes. Pin geometries are derived from the
+         overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[0]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[10]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[11]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[12]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[13]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[14]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[15]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[16]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[17]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[18]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[19]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[1]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[20]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[21]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[22]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[23]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[24]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[25]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[26]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[27]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[28]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[29]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[2]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[30]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[31]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[32]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[33]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[34]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[35]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[36]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[37]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[3]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[4]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[5]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[6]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[7]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[8]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'mprj_io[9]' does not have top-level routing shapes. Pin geometries are derived from
+         the overlapping instance port shapes. (SX-2399)
+WARNING: Pin 'resetb' does not have top-level routing shapes. Pin geometries are derived from the
+         overlapping instance port shapes. (SX-2399)
+  Warnings: 45    Errors: 0    (See file summary/cells.sum)
+  Cells         Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=396.2 
+Done
+
+Translate_part1 DB:  Fri Dec  9 09:02:33 2022
+  Warnings: 0    Errors: 0
+  Translate_part1 Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=378.2 
+Done
+
+XinCombine:  Fri Dec  9 09:02:35 2022
+  Warnings: 0    Errors: 0
+  XinCombine    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+Done
+
+PartitionPP:  Fri Dec  9 09:02:37 2022
+  Warnings: 0    Errors: 0
+  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+Done
+
+Merge Index Pins:  Fri Dec  9 09:02:39 2022
+  Warnings: 0    Errors: 0
+  MergeIndexPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+Done
+
+Merge Index:  Fri Dec  9 09:02:41 2022
+  Warnings: 0    Errors: 0
+  MergeIndex    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+Done
+
+Merge GPD Instance Pins:  Fri Dec  9 09:02:43 2022
+  Warnings: 0    Errors: 0
+  MergeGpdInstPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+Done
+
+GPD XtractSetup:  Fri Dec  9 09:02:45 2022
+  Warnings: 0    Errors: 0
+  GPD_XtractSetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+Done
+
+Netlist Setup:  Fri Dec  9 09:02:47 2022
+  Warnings: 0    Errors: 0
+  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
+Done
+
+Netlist Assembly Setup:  Fri Dec  9 09:02:49 2022
+  Warnings: 0    Errors: 0
+  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+Done
+
+Clean Directory:  Fri Dec  9 09:02:51 2022
+  Warnings: 0    Errors: 0
+  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+Done
+
+GPD NameMap:  Fri Dec  9 09:02:53 2022
+  Warnings: 0    Errors: 0
+  GPD_NameMap   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
+Done
+
+xTract_part1 DB:  Fri Dec  9 09:02:56 2022
+Extracting partition 1
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed  96%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=1001.52
+Extracted 49 capacitors, 1643 resistors, 2156 nodes
+Reduced to 947 nodes,  (56.0761%)
+Reduced to 490 resistors,  (70.1765%)
+  Warnings: 0    Errors: 0
+  xTract_part1  Elp=00:00:00 Cpu=00:00:00 Usr=0.5    Sys=0.3    Mem=1002.0
+Done
+
+xTract Post Process DB:  Fri Dec  9 09:03:00 2022
+  Warnings: 0    Errors: 0
+  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
+Done
+
+Report Violations:  Fri Dec  9 09:03:03 2022
+  Warnings: 0    Errors: 0
+  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+Done
+
+Report Opens:  Fri Dec  9 09:03:05 2022
+WARNING: found open net(s) in the design. Check opens.sum file. (EX-414)
+  Warnings: 1    Errors: 0    (See file summary/report_open.sum)
+  ReportOpens   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+Done
+
+GPD Post Process:  Fri Dec  9 09:03:07 2022
+  Warnings: 0    Errors: 0
+  GPD_PostProcess Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
+Done
+
+GPD Converter Part 1:  Fri Dec  9 09:03:10 2022
+  Warnings: 0    Errors: 0
+  GPD_Converter1 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
+Done
+
+GPD Converter Part 2:  Fri Dec  9 09:03:12 2022
+  Warnings: 0    Errors: 0
+  GPD_Converter2 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
+Done
+
+GPD Converter Merge:  Fri Dec  9 09:03:14 2022
+  Warnings: 0    Errors: 0
+  GPD_Converter_merge Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+Done
+  
+Setup                Elp=00:00:01 Cpu=00:00:01 Usr=1.0    Sys=0.0    Mem=378.1 
+Layers               Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=408.5 
+HN                   Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=412.0 
+Cells                Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=396.2 
+Translate_part1      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=378.2 
+XinCombine           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+MergeIndexPins       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+MergeIndex           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+MergeGpdInstPins     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+GPD_XtractSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
+NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+GPD_NameMap          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
+xTract_part1         Elp=00:00:00 Cpu=00:00:00 Usr=0.5    Sys=0.3    Mem=1002.0
+xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
+ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+ReportOpens          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+GPD_PostProcess      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
+GPD_Converter1       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
+GPD_Converter2       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
+GPD_Converter_merge  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+  
+Done          Elp=00:00:02 Cpu=00:00:02 Usr=2.3    Sys=0.3    Mem=1002.0
+
+End Time: Fri Dec  9 09:03:18 2022
+
+
+
+RUN-TIME SUMMARY:
+----------------------------------------------------------------------------------------------
+CPU#   | STAGE SUMMARY                                            |END TIME             |HOST NAME
+----------------------------------------------------------------------------------------------
+CPU_01 |*Setup                     Elp=00:00:01 Cpu=00:00:01 Mem=378.1  |Dec  9 09:02:27 |license-server-00
+CPU_01 |*Layers                    Elp=00:00:01 Cpu=00:00:00 Mem=408.5  |Dec  9 09:02:28 |license-server-00
+CPU_01 |*HN                        Elp=00:00:01 Cpu=00:00:00 Mem=412    |Dec  9 09:02:31 |license-server-00
+CPU_01 |*Cells                     Elp=00:00:00 Cpu=00:00:00 Mem=396.2  |Dec  9 09:02:31 |license-server-00
+CPU_01 |*Translate_DP              Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:33 |license-server-00
+CPU_01 |*XinCombine                Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec  9 09:02:35 |license-server-00
+CPU_01 |*PartitionPP               Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:37 |license-server-00
+CPU_01 |*MergeIndexPins            Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:39 |license-server-00
+CPU_01 |*MergeIndex                Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:41 |license-server-00
+CPU_01 |*MergeGpdInstPins          Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:43 |license-server-00
+CPU_01 |*GPD_XtractSetup           Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec  9 09:02:45 |license-server-00
+CPU_01 |*NetlistSetup              Elp=00:00:00 Cpu=00:00:00 Mem=360.7  |Dec  9 09:02:47 |license-server-00
+CPU_01 |*NetlistAssemblySetup      Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec  9 09:02:49 |license-server-00
+CPU_01 |*CleanDirectory            Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec  9 09:02:51 |license-server-00
+CPU_01 |*GPD_NameMap               Elp=00:00:01 Cpu=00:00:00 Mem=361.4  |Dec  9 09:02:54 |license-server-00
+CPU_01 |*xTract_DP                 Elp=00:00:00 Cpu=00:00:00 Mem=1002   |Dec  9 09:02:56 |license-server-00
+CPU_01 |*xTractPP                  Elp=00:00:01 Cpu=00:00:00 Mem=258.7  |Dec  9 09:03:01 |license-server-00
+CPU_01 |*ReportViolations          Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec  9 09:03:03 |license-server-00
+CPU_01 |*ReportOpens               Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec  9 09:03:05 |license-server-00
+CPU_01 |*GPD_PostProcess           Elp=00:00:01 Cpu=00:00:00 Mem=361    |Dec  9 09:03:08 |license-server-00
+CPU_01 |*GPD_Converter_DP          Elp=00:00:02 Cpu=00:00:00 Mem=254.3  |Dec  9 09:03:12 |license-server-00
+CPU_01 |*GPD_Converter_merge       Elp=00:00:00 Cpu=00:00:00 Mem=252.9  |Dec  9 09:03:14 |license-server-00
+----------------------------------------------------------------------------------------------
+Start Time: Fri Dec  9 09:02:26 2022
+End Time: Fri Dec  9 09:03:08 2022
+----------------------------------------------------------------------------------------------
+Overall:         Elp=00:00:38 Cpu= 00:00:02 Peak_Mem(MB)=1002
+PreXtraction:    Elp=00:00:30 Cpu= 00:00:02 Peak_Mem(MB)=1002
+Xtraction:       Elp=00:00:00 Cpu= 00:00:00 Peak_Mem(MB)=0
+PostXtraction:   Elp=00:00:08 Cpu= 00:00:00 Peak_Mem(MB)=361
+----------------------------------------------------------------------------------------------
+Spef Output:     Elp= 00:00:04 Cpu= 00:00:00 Peak_Mem(MB)=254.3
+----------------------------------------------------------------------------------------------
+
+
+NOTE: Simultaneous Multicorner (SMC) is now the default mode for StarRC gate-level extraction.
+By running SMC, the overall runtime can be reduced by up to 2x with the same level of accuracy
+as single corner extraction. For more information, consult the Simultaneous Multicorner Section
+in the StarRC User Guide.
+
+Message Summary:
+----------------------------------------------------------------------------------------------
+EX-414  (x   1)|Warning      |FOUND OPEN NET(S) IN THE DESIGN. CHECK OPENS.SUM FILE.
+SX-1851 (x   1)|Warning      |LAYER "()" HAS NO CONNECTIONS.
+SX-2076 (x   1)|Warning      |LAYER '()' HAS NO VIA CONNECTION
+SX-2086 (x   3)|Warning      |LEF LAYER '()' IS NOT DEFINED IN MAPPING FILE
+SX-2105 (x   1)|Warning      |DEF_MASKSHIFT_CONSISTENCY_CHECK MAY INCUR PERFORMANCE PENALTY IN PREXTRACTION.
+SX-2158 (x   2)|Information  |READ UNIT () FROM () FILE (). USING UNITS:() TO TRANSLATE ().
+SX-2399 (x  45)|Warning      |PIN '()' DOES NOT HAVE TOP-LEVEL ROUTING SHAPES. PIN GEOMETRIES ARE DERIVED FROM THE OVERLAPPING INSTANCE PORT SHAPES.
+SX-3552 (x   1)|Warning      |RUNNING STARRC IN SINGLE CORNER MODE WILL RESULT IN DEGRADED RUNTIME FOR DESIGN FLOWS WHERE MULTIPLE CORNERS ARE USED.  FOR OPTIMAL RUNTIME, ADD THE NECESSARY COMMANDS TO CONFIGURE THE SIMULTANEOUS MULTICORNER FLOW (CORNERS_FILE AND SELECTED_CORNERS).
+SX-3860 (x   1)|Warning      |INPUT_NAMES_ESCAPE_REMOVAL IS ENABLED, PLEASE MAKE SURE THAT THE NET SELECT COMMANDS REMOVE THE ESCAPE AT THE SAME TIME.
+

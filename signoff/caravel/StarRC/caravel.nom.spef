@@ -1,0 +1,5855 @@
+*SPEF "IEEE 1481-1999"
+*DESIGN "caravel"
+*DATE "Fri Dec  9 09:02:16 2022"
+*VENDOR "Synopsys Inc."
+*PROGRAM "StarRC"
+*VERSION "T-2022.03-SP3"
+*DESIGN_FLOW "PIN_CAP NONE" "NAME_SCOPE LOCAL"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1.0 NS
+*C_UNIT 1.0 FF
+*R_UNIT 1.0 OHM
+*L_UNIT 1.0 HENRY
+
+// COMMENTS
+
+// CORNER_NAME 
+// OPERATING_TEMPERATURE 25
+// GLOBAL_TEMPERATURE 25
+// TCAD_GRD_FILE /home/passant/gf180_timing/caravel-gf180mcu/scripts/gf180-tech/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_typ.nxtgrd
+//   TCAD_TIME_STAMP Tue Dec 26 17:52:29 2017
+//   TCADGRD_VERSION 75
+// galaxy_comments_begin
+//   local_nodeid
+// galaxy_comments_end
+
+*NAME_MAP
+*459 clock
+*460 flash_clk
+*461 flash_csb
+*462 flash_io0
+*463 flash_io1
+*464 gpio
+*465 mprj_io[0]
+*466 mprj_io[10]
+*467 mprj_io[11]
+*468 mprj_io[12]
+*469 mprj_io[13]
+*470 mprj_io[14]
+*471 mprj_io[15]
+*472 mprj_io[16]
+*473 mprj_io[17]
+*474 mprj_io[18]
+*475 mprj_io[19]
+*476 mprj_io[1]
+*477 mprj_io[20]
+*478 mprj_io[21]
+*479 mprj_io[22]
+*480 mprj_io[23]
+*481 mprj_io[24]
+*482 mprj_io[25]
+*483 mprj_io[26]
+*484 mprj_io[27]
+*485 mprj_io[28]
+*486 mprj_io[29]
+*487 mprj_io[2]
+*488 mprj_io[30]
+*489 mprj_io[31]
+*490 mprj_io[32]
+*491 mprj_io[33]
+*492 mprj_io[34]
+*493 mprj_io[35]
+*494 mprj_io[36]
+*495 mprj_io[37]
+*496 mprj_io[3]
+*497 mprj_io[4]
+*498 mprj_io[5]
+*499 mprj_io[6]
+*500 mprj_io[7]
+*501 mprj_io[8]
+*502 mprj_io[9]
+*503 resetb
+*504 chip_core
+*505 padframe
+*1 clock
+*2 flash_clk
+*3 flash_csb
+*4 flash_io0
+*5 flash_io1
+*6 gpio
+*7 mprj_io[0]
+*8 mprj_io[10]
+*9 mprj_io[11]
+*10 mprj_io[12]
+*11 mprj_io[13]
+*12 mprj_io[14]
+*13 mprj_io[15]
+*14 mprj_io[16]
+*15 mprj_io[17]
+*16 mprj_io[18]
+*17 mprj_io[19]
+*18 mprj_io[1]
+*19 mprj_io[20]
+*20 mprj_io[21]
+*21 mprj_io[22]
+*22 mprj_io[23]
+*23 mprj_io[24]
+*24 mprj_io[25]
+*25 mprj_io[26]
+*26 mprj_io[27]
+*27 mprj_io[28]
+*28 mprj_io[29]
+*29 mprj_io[2]
+*30 mprj_io[30]
+*31 mprj_io[31]
+*32 mprj_io[32]
+*33 mprj_io[33]
+*34 mprj_io[34]
+*35 mprj_io[35]
+*36 mprj_io[36]
+*37 mprj_io[37]
+*38 mprj_io[3]
+*39 mprj_io[4]
+*40 mprj_io[5]
+*41 mprj_io[6]
+*42 mprj_io[7]
+*43 mprj_io[8]
+*44 mprj_io[9]
+*45 resetb
+*47 clock_core
+*48 const_one[0]
+*49 const_one[1]
+*50 const_zero[0]
+*51 const_zero[1]
+*52 const_zero[2]
+*53 const_zero[3]
+*54 const_zero[4]
+*55 const_zero[5]
+*56 const_zero[6]
+*57 const_zero[7]
+*58 const_zero[8]
+*59 const_zero[9]
+*60 flash_clk_frame
+*61 flash_clk_oe
+*62 flash_csb_frame
+*63 flash_csb_oe
+*64 flash_io0_di
+*65 flash_io0_do
+*66 flash_io0_ie
+*67 flash_io0_oe
+*68 flash_io1_di
+*69 flash_io1_do
+*70 flash_io1_ie
+*71 flash_io1_oe
+*72 gpio_drive_select_core[0]
+*73 gpio_drive_select_core[1]
+*74 gpio_in_core
+*75 gpio_inenb_core
+*76 gpio_out_core
+*77 gpio_outenb_core
+*78 mprj_io_drive_sel[0]
+*79 mprj_io_drive_sel[10]
+*80 mprj_io_drive_sel[11]
+*81 mprj_io_drive_sel[12]
+*82 mprj_io_drive_sel[13]
+*83 mprj_io_drive_sel[14]
+*84 mprj_io_drive_sel[15]
+*85 mprj_io_drive_sel[16]
+*86 mprj_io_drive_sel[17]
+*87 mprj_io_drive_sel[18]
+*88 mprj_io_drive_sel[19]
+*89 mprj_io_drive_sel[1]
+*90 mprj_io_drive_sel[20]
+*91 mprj_io_drive_sel[21]
+*92 mprj_io_drive_sel[22]
+*93 mprj_io_drive_sel[23]
+*94 mprj_io_drive_sel[24]
+*95 mprj_io_drive_sel[25]
+*96 mprj_io_drive_sel[26]
+*97 mprj_io_drive_sel[27]
+*98 mprj_io_drive_sel[28]
+*99 mprj_io_drive_sel[29]
+*100 mprj_io_drive_sel[2]
+*101 mprj_io_drive_sel[30]
+*102 mprj_io_drive_sel[31]
+*103 mprj_io_drive_sel[32]
+*104 mprj_io_drive_sel[33]
+*105 mprj_io_drive_sel[34]
+*106 mprj_io_drive_sel[35]
+*107 mprj_io_drive_sel[36]
+*108 mprj_io_drive_sel[37]
+*109 mprj_io_drive_sel[38]
+*110 mprj_io_drive_sel[39]
+*111 mprj_io_drive_sel[3]
+*112 mprj_io_drive_sel[40]
+*113 mprj_io_drive_sel[41]
+*114 mprj_io_drive_sel[42]
+*115 mprj_io_drive_sel[43]
+*116 mprj_io_drive_sel[44]
+*117 mprj_io_drive_sel[45]
+*118 mprj_io_drive_sel[46]
+*119 mprj_io_drive_sel[47]
+*120 mprj_io_drive_sel[48]
+*121 mprj_io_drive_sel[49]
+*122 mprj_io_drive_sel[4]
+*123 mprj_io_drive_sel[50]
+*124 mprj_io_drive_sel[51]
+*125 mprj_io_drive_sel[52]
+*126 mprj_io_drive_sel[53]
+*127 mprj_io_drive_sel[54]
+*128 mprj_io_drive_sel[55]
+*129 mprj_io_drive_sel[56]
+*130 mprj_io_drive_sel[57]
+*131 mprj_io_drive_sel[58]
+*132 mprj_io_drive_sel[59]
+*133 mprj_io_drive_sel[5]
+*134 mprj_io_drive_sel[60]
+*135 mprj_io_drive_sel[61]
+*136 mprj_io_drive_sel[62]
+*137 mprj_io_drive_sel[63]
+*138 mprj_io_drive_sel[64]
+*139 mprj_io_drive_sel[65]
+*140 mprj_io_drive_sel[66]
+*141 mprj_io_drive_sel[67]
+*142 mprj_io_drive_sel[68]
+*143 mprj_io_drive_sel[69]
+*144 mprj_io_drive_sel[6]
+*145 mprj_io_drive_sel[70]
+*146 mprj_io_drive_sel[71]
+*147 mprj_io_drive_sel[72]
+*148 mprj_io_drive_sel[73]
+*149 mprj_io_drive_sel[74]
+*150 mprj_io_drive_sel[75]
+*151 mprj_io_drive_sel[7]
+*152 mprj_io_drive_sel[8]
+*153 mprj_io_drive_sel[9]
+*154 mprj_io_ie[0]
+*155 mprj_io_ie[10]
+*156 mprj_io_ie[11]
+*157 mprj_io_ie[12]
+*158 mprj_io_ie[13]
+*159 mprj_io_ie[14]
+*160 mprj_io_ie[15]
+*161 mprj_io_ie[16]
+*162 mprj_io_ie[17]
+*163 mprj_io_ie[18]
+*164 mprj_io_ie[19]
+*165 mprj_io_ie[1]
+*166 mprj_io_ie[20]
+*167 mprj_io_ie[21]
+*168 mprj_io_ie[22]
+*169 mprj_io_ie[23]
+*170 mprj_io_ie[24]
+*171 mprj_io_ie[25]
+*172 mprj_io_ie[26]
+*173 mprj_io_ie[27]
+*174 mprj_io_ie[28]
+*175 mprj_io_ie[29]
+*176 mprj_io_ie[2]
+*177 mprj_io_ie[30]
+*178 mprj_io_ie[31]
+*179 mprj_io_ie[32]
+*180 mprj_io_ie[33]
+*181 mprj_io_ie[34]
+*182 mprj_io_ie[35]
+*183 mprj_io_ie[36]
+*184 mprj_io_ie[37]
+*185 mprj_io_ie[3]
+*186 mprj_io_ie[4]
+*187 mprj_io_ie[5]
+*188 mprj_io_ie[6]
+*189 mprj_io_ie[7]
+*190 mprj_io_ie[8]
+*191 mprj_io_ie[9]
+*192 mprj_io_in[0]
+*193 mprj_io_in[10]
+*194 mprj_io_in[11]
+*195 mprj_io_in[12]
+*196 mprj_io_in[13]
+*197 mprj_io_in[14]
+*198 mprj_io_in[15]
+*199 mprj_io_in[16]
+*200 mprj_io_in[17]
+*201 mprj_io_in[18]
+*202 mprj_io_in[19]
+*203 mprj_io_in[1]
+*204 mprj_io_in[20]
+*205 mprj_io_in[21]
+*206 mprj_io_in[22]
+*207 mprj_io_in[23]
+*208 mprj_io_in[24]
+*209 mprj_io_in[25]
+*210 mprj_io_in[26]
+*211 mprj_io_in[27]
+*212 mprj_io_in[28]
+*213 mprj_io_in[29]
+*214 mprj_io_in[2]
+*215 mprj_io_in[30]
+*216 mprj_io_in[31]
+*217 mprj_io_in[32]
+*218 mprj_io_in[33]
+*219 mprj_io_in[34]
+*220 mprj_io_in[35]
+*221 mprj_io_in[36]
+*222 mprj_io_in[37]
+*223 mprj_io_in[3]
+*224 mprj_io_in[4]
+*225 mprj_io_in[5]
+*226 mprj_io_in[6]
+*227 mprj_io_in[7]
+*228 mprj_io_in[8]
+*229 mprj_io_in[9]
+*230 mprj_io_oe[0]
+*231 mprj_io_oe[10]
+*232 mprj_io_oe[11]
+*233 mprj_io_oe[12]
+*234 mprj_io_oe[13]
+*235 mprj_io_oe[14]
+*236 mprj_io_oe[15]
+*237 mprj_io_oe[16]
+*238 mprj_io_oe[17]
+*239 mprj_io_oe[18]
+*240 mprj_io_oe[19]
+*241 mprj_io_oe[1]
+*242 mprj_io_oe[20]
+*243 mprj_io_oe[21]
+*244 mprj_io_oe[22]
+*245 mprj_io_oe[23]
+*246 mprj_io_oe[24]
+*247 mprj_io_oe[25]
+*248 mprj_io_oe[26]
+*249 mprj_io_oe[27]
+*250 mprj_io_oe[28]
+*251 mprj_io_oe[29]
+*252 mprj_io_oe[2]
+*253 mprj_io_oe[30]
+*254 mprj_io_oe[31]
+*255 mprj_io_oe[32]
+*256 mprj_io_oe[33]
+*257 mprj_io_oe[34]
+*258 mprj_io_oe[35]
+*259 mprj_io_oe[36]
+*260 mprj_io_oe[37]
+*261 mprj_io_oe[3]
+*262 mprj_io_oe[4]
+*263 mprj_io_oe[5]
+*264 mprj_io_oe[6]
+*265 mprj_io_oe[7]
+*266 mprj_io_oe[8]
+*267 mprj_io_oe[9]
+*268 mprj_io_out[0]
+*269 mprj_io_out[10]
+*270 mprj_io_out[11]
+*271 mprj_io_out[12]
+*272 mprj_io_out[13]
+*273 mprj_io_out[14]
+*274 mprj_io_out[15]
+*275 mprj_io_out[16]
+*276 mprj_io_out[17]
+*277 mprj_io_out[18]
+*278 mprj_io_out[19]
+*279 mprj_io_out[1]
+*280 mprj_io_out[20]
+*281 mprj_io_out[21]
+*282 mprj_io_out[22]
+*283 mprj_io_out[23]
+*284 mprj_io_out[24]
+*285 mprj_io_out[25]
+*286 mprj_io_out[26]
+*287 mprj_io_out[27]
+*288 mprj_io_out[28]
+*289 mprj_io_out[29]
+*290 mprj_io_out[2]
+*291 mprj_io_out[30]
+*292 mprj_io_out[31]
+*293 mprj_io_out[32]
+*294 mprj_io_out[33]
+*295 mprj_io_out[34]
+*296 mprj_io_out[35]
+*297 mprj_io_out[36]
+*298 mprj_io_out[37]
+*299 mprj_io_out[3]
+*300 mprj_io_out[4]
+*301 mprj_io_out[5]
+*302 mprj_io_out[6]
+*303 mprj_io_out[7]
+*304 mprj_io_out[8]
+*305 mprj_io_out[9]
+*306 mprj_io_pulldown_sel[0]
+*307 mprj_io_pulldown_sel[10]
+*308 mprj_io_pulldown_sel[11]
+*309 mprj_io_pulldown_sel[12]
+*310 mprj_io_pulldown_sel[13]
+*311 mprj_io_pulldown_sel[14]
+*312 mprj_io_pulldown_sel[15]
+*313 mprj_io_pulldown_sel[16]
+*314 mprj_io_pulldown_sel[17]
+*315 mprj_io_pulldown_sel[18]
+*316 mprj_io_pulldown_sel[19]
+*317 mprj_io_pulldown_sel[1]
+*318 mprj_io_pulldown_sel[20]
+*319 mprj_io_pulldown_sel[21]
+*320 mprj_io_pulldown_sel[22]
+*321 mprj_io_pulldown_sel[23]
+*322 mprj_io_pulldown_sel[24]
+*323 mprj_io_pulldown_sel[25]
+*324 mprj_io_pulldown_sel[26]
+*325 mprj_io_pulldown_sel[27]
+*326 mprj_io_pulldown_sel[28]
+*327 mprj_io_pulldown_sel[29]
+*328 mprj_io_pulldown_sel[2]
+*329 mprj_io_pulldown_sel[30]
+*330 mprj_io_pulldown_sel[31]
+*331 mprj_io_pulldown_sel[32]
+*332 mprj_io_pulldown_sel[33]
+*333 mprj_io_pulldown_sel[34]
+*334 mprj_io_pulldown_sel[35]
+*335 mprj_io_pulldown_sel[36]
+*336 mprj_io_pulldown_sel[37]
+*337 mprj_io_pulldown_sel[3]
+*338 mprj_io_pulldown_sel[4]
+*339 mprj_io_pulldown_sel[5]
+*340 mprj_io_pulldown_sel[6]
+*341 mprj_io_pulldown_sel[7]
+*342 mprj_io_pulldown_sel[8]
+*343 mprj_io_pulldown_sel[9]
+*344 mprj_io_pullup_sel[0]
+*345 mprj_io_pullup_sel[10]
+*346 mprj_io_pullup_sel[11]
+*347 mprj_io_pullup_sel[12]
+*348 mprj_io_pullup_sel[13]
+*349 mprj_io_pullup_sel[14]
+*350 mprj_io_pullup_sel[15]
+*351 mprj_io_pullup_sel[16]
+*352 mprj_io_pullup_sel[17]
+*353 mprj_io_pullup_sel[18]
+*354 mprj_io_pullup_sel[19]
+*355 mprj_io_pullup_sel[1]
+*356 mprj_io_pullup_sel[20]
+*357 mprj_io_pullup_sel[21]
+*358 mprj_io_pullup_sel[22]
+*359 mprj_io_pullup_sel[23]
+*360 mprj_io_pullup_sel[24]
+*361 mprj_io_pullup_sel[25]
+*362 mprj_io_pullup_sel[26]
+*363 mprj_io_pullup_sel[27]
+*364 mprj_io_pullup_sel[28]
+*365 mprj_io_pullup_sel[29]
+*366 mprj_io_pullup_sel[2]
+*367 mprj_io_pullup_sel[30]
+*368 mprj_io_pullup_sel[31]
+*369 mprj_io_pullup_sel[32]
+*370 mprj_io_pullup_sel[33]
+*371 mprj_io_pullup_sel[34]
+*372 mprj_io_pullup_sel[35]
+*373 mprj_io_pullup_sel[36]
+*374 mprj_io_pullup_sel[37]
+*375 mprj_io_pullup_sel[3]
+*376 mprj_io_pullup_sel[4]
+*377 mprj_io_pullup_sel[5]
+*378 mprj_io_pullup_sel[6]
+*379 mprj_io_pullup_sel[7]
+*380 mprj_io_pullup_sel[8]
+*381 mprj_io_pullup_sel[9]
+*382 mprj_io_schmitt_sel[0]
+*383 mprj_io_schmitt_sel[10]
+*384 mprj_io_schmitt_sel[11]
+*385 mprj_io_schmitt_sel[12]
+*386 mprj_io_schmitt_sel[13]
+*387 mprj_io_schmitt_sel[14]
+*388 mprj_io_schmitt_sel[15]
+*389 mprj_io_schmitt_sel[16]
+*390 mprj_io_schmitt_sel[17]
+*391 mprj_io_schmitt_sel[18]
+*392 mprj_io_schmitt_sel[19]
+*393 mprj_io_schmitt_sel[1]
+*394 mprj_io_schmitt_sel[20]
+*395 mprj_io_schmitt_sel[21]
+*396 mprj_io_schmitt_sel[22]
+*397 mprj_io_schmitt_sel[23]
+*398 mprj_io_schmitt_sel[24]
+*399 mprj_io_schmitt_sel[25]
+*400 mprj_io_schmitt_sel[26]
+*401 mprj_io_schmitt_sel[27]
+*402 mprj_io_schmitt_sel[28]
+*403 mprj_io_schmitt_sel[29]
+*404 mprj_io_schmitt_sel[2]
+*405 mprj_io_schmitt_sel[30]
+*406 mprj_io_schmitt_sel[31]
+*407 mprj_io_schmitt_sel[32]
+*408 mprj_io_schmitt_sel[33]
+*409 mprj_io_schmitt_sel[34]
+*410 mprj_io_schmitt_sel[35]
+*411 mprj_io_schmitt_sel[36]
+*412 mprj_io_schmitt_sel[37]
+*413 mprj_io_schmitt_sel[3]
+*414 mprj_io_schmitt_sel[4]
+*415 mprj_io_schmitt_sel[5]
+*416 mprj_io_schmitt_sel[6]
+*417 mprj_io_schmitt_sel[7]
+*418 mprj_io_schmitt_sel[8]
+*419 mprj_io_schmitt_sel[9]
+*420 mprj_io_slew_sel[0]
+*421 mprj_io_slew_sel[10]
+*422 mprj_io_slew_sel[11]
+*423 mprj_io_slew_sel[12]
+*424 mprj_io_slew_sel[13]
+*425 mprj_io_slew_sel[14]
+*426 mprj_io_slew_sel[15]
+*427 mprj_io_slew_sel[16]
+*428 mprj_io_slew_sel[17]
+*429 mprj_io_slew_sel[18]
+*430 mprj_io_slew_sel[19]
+*431 mprj_io_slew_sel[1]
+*432 mprj_io_slew_sel[20]
+*433 mprj_io_slew_sel[21]
+*434 mprj_io_slew_sel[22]
+*435 mprj_io_slew_sel[23]
+*436 mprj_io_slew_sel[24]
+*437 mprj_io_slew_sel[25]
+*438 mprj_io_slew_sel[26]
+*439 mprj_io_slew_sel[27]
+*440 mprj_io_slew_sel[28]
+*441 mprj_io_slew_sel[29]
+*442 mprj_io_slew_sel[2]
+*443 mprj_io_slew_sel[30]
+*444 mprj_io_slew_sel[31]
+*445 mprj_io_slew_sel[32]
+*446 mprj_io_slew_sel[33]
+*447 mprj_io_slew_sel[34]
+*448 mprj_io_slew_sel[35]
+*449 mprj_io_slew_sel[36]
+*450 mprj_io_slew_sel[37]
+*451 mprj_io_slew_sel[3]
+*452 mprj_io_slew_sel[4]
+*453 mprj_io_slew_sel[5]
+*454 mprj_io_slew_sel[6]
+*455 mprj_io_slew_sel[7]
+*456 mprj_io_slew_sel[8]
+*457 mprj_io_slew_sel[9]
+*458 rstb
+
+*PORTS
+
+*459 I
+*460 B
+*461 B
+*462 B
+*463 B
+*464 B
+*465 B
+*466 B
+*467 B
+*468 B
+*469 B
+*470 B
+*471 B
+*472 B
+*473 B
+*474 B
+*475 B
+*476 B
+*477 B
+*478 B
+*479 B
+*480 B
+*481 B
+*482 B
+*483 B
+*484 B
+*485 B
+*486 B
+*487 B
+*488 B
+*489 B
+*490 B
+*491 B
+*492 B
+*493 B
+*494 B
+*495 B
+*496 B
+*497 B
+*498 B
+*499 B
+*500 B
+*501 B
+*502 B
+*503 I
+
+*D_NET *1 0
+
+*CONN
+*P *459 I *C 1112.5000 32.0000
+*I *505:clock B *C 1097.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:clock 0.0
+
+*RES
+1 *459 *505:clock 0.001
+*END
+
+*D_NET *2 0
+
+*CONN
+*P *460 B *C 1937.5000 32.0000
+*I *505:flash_clk B *C 1922.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:flash_clk 0.0
+
+*RES
+1 *460 *505:flash_clk 0.001
+*END
+
+*D_NET *3 0
+
+*CONN
+*P *461 B *C 1662.5000 32.0000
+*I *505:flash_csb B *C 1647.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:flash_csb 0.0
+
+*RES
+1 *461 *505:flash_csb 0.001
+*END
+
+*D_NET *4 0
+
+*CONN
+*P *462 B *C 2212.5000 32.0000
+*I *505:flash_io0 B *C 2197.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:flash_io0 0.0
+
+*RES
+1 *462 *505:flash_io0 0.001
+*END
+
+*D_NET *5 0
+
+*CONN
+*P *463 B *C 2487.5000 32.0000
+*I *505:flash_io1 B *C 2472.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:flash_io1 0.0
+
+*RES
+1 *463 *505:flash_io1 0.001
+*END
+
+*D_NET *6 0
+
+*CONN
+*P *464 B *C 2762.5000 32.0000
+*I *505:gpio B *C 2747.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:gpio 0.0
+
+*RES
+1 *464 *505:gpio 0.001
+*END
+
+*D_NET *7 0
+
+*CONN
+*P *465 B *C 3848.0000 482.5000
+*I *505:mprj_io[0] B *C 3833.0000 482.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[0] 0.0
+
+*RES
+1 *465 *505:mprj_io[0] 0.001
+*END
+
+*D_NET *8 0
+
+*CONN
+*P *466 B *C 3848.0000 3277.5000
+*I *505:mprj_io[10] B *C 3833.0000 3277.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[10] 0.0
+
+*RES
+1 *466 *505:mprj_io[10] 0.001
+*END
+
+*D_NET *9 0
+
+*CONN
+*P *467 B *C 3848.0000 3492.5000
+*I *505:mprj_io[11] B *C 3833.0000 3492.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[11] 0.0
+
+*RES
+1 *467 *505:mprj_io[11] 0.001
+*END
+
+*D_NET *10 0
+
+*CONN
+*P *468 B *C 3848.0000 3707.5000
+*I *505:mprj_io[12] B *C 3833.0000 3707.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[12] 0.0
+
+*RES
+1 *468 *505:mprj_io[12] 0.001
+*END
+
+*D_NET *11 0
+
+*CONN
+*P *469 B *C 3848.0000 4137.5000
+*I *505:mprj_io[13] B *C 3833.0000 4137.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[13] 0.0
+
+*RES
+1 *469 *505:mprj_io[13] 0.001
+*END
+
+*D_NET *12 0
+
+*CONN
+*P *470 B *C 3848.0000 4567.5000
+*I *505:mprj_io[14] B *C 3833.0000 4567.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[14] 0.0
+
+*RES
+1 *470 *505:mprj_io[14] 0.001
+*END
+
+*D_NET *13 0
+
+*CONN
+*P *471 B *C 3307.5000 5038.0000
+*I *505:mprj_io[15] B *C 3292.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[15] 0.0
+
+*RES
+1 *471 *505:mprj_io[15] 0.001
+*END
+
+*D_NET *14 0
+
+*CONN
+*P *472 B *C 2757.5000 5038.0000
+*I *505:mprj_io[16] B *C 2742.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[16] 0.0
+
+*RES
+1 *472 *505:mprj_io[16] 0.001
+*END
+
+*D_NET *15 0
+
+*CONN
+*P *473 B *C 2482.5000 5038.0000
+*I *505:mprj_io[17] B *C 2467.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[17] 0.0
+
+*RES
+1 *473 *505:mprj_io[17] 0.001
+*END
+
+*D_NET *16 0
+
+*CONN
+*P *474 B *C 2207.5000 5038.0000
+*I *505:mprj_io[18] B *C 2192.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[18] 0.0
+
+*RES
+1 *474 *505:mprj_io[18] 0.001
+*END
+
+*D_NET *17 0
+
+*CONN
+*P *475 B *C 1657.5000 5038.0000
+*I *505:mprj_io[19] B *C 1642.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[19] 0.0
+
+*RES
+1 *475 *505:mprj_io[19] 0.001
+*END
+
+*D_NET *18 0
+
+*CONN
+*P *476 B *C 3848.0000 697.5000
+*I *505:mprj_io[1] B *C 3833.0000 697.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[1] 0.0
+
+*RES
+1 *476 *505:mprj_io[1] 0.001
+*END
+
+*D_NET *19 0
+
+*CONN
+*P *477 B *C 1382.5000 5038.0000
+*I *505:mprj_io[20] B *C 1367.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[20] 0.0
+
+*RES
+1 *477 *505:mprj_io[20] 0.001
+*END
+
+*D_NET *20 0
+
+*CONN
+*P *478 B *C 1107.5000 5038.0000
+*I *505:mprj_io[21] B *C 1092.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[21] 0.0
+
+*RES
+1 *478 *505:mprj_io[21] 0.001
+*END
+
+*D_NET *21 0
+
+*CONN
+*P *479 B *C 832.5000 5038.0000
+*I *505:mprj_io[22] B *C 817.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[22] 0.0
+
+*RES
+1 *479 *505:mprj_io[22] 0.001
+*END
+
+*D_NET *22 0
+
+*CONN
+*P *480 B *C 557.5000 5038.0000
+*I *505:mprj_io[23] B *C 542.5000 5038.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io[23] 0.0
+
+*RES
+1 *480 *505:mprj_io[23] 0.001
+*END
+
+*D_NET *23 0
+
+*CONN
+*P *481 B *C 32.0000 4562.5000
+*I *505:mprj_io[24] B *C 17.0000 4562.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[24] 0.0
+
+*RES
+1 *481 *505:mprj_io[24] 0.001
+*END
+
+*D_NET *24 0
+
+*CONN
+*P *482 B *C 32.0000 3742.5000
+*I *505:mprj_io[25] B *C 17.0000 3742.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[25] 0.0
+
+*RES
+1 *482 *505:mprj_io[25] 0.001
+*END
+
+*D_NET *25 0
+
+*CONN
+*P *483 B *C 32.0000 3537.5000
+*I *505:mprj_io[26] B *C 17.0000 3537.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[26] 0.0
+
+*RES
+1 *483 *505:mprj_io[26] 0.001
+*END
+
+*D_NET *26 0
+
+*CONN
+*P *484 B *C 32.0000 3332.5000
+*I *505:mprj_io[27] B *C 17.0000 3332.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[27] 0.0
+
+*RES
+1 *484 *505:mprj_io[27] 0.001
+*END
+
+*D_NET *27 0
+
+*CONN
+*P *485 B *C 32.0000 3123.7500
+*I *505:mprj_io[28] B *C 32.0000 3123.7500 *D chip_io
+
+*CAP
+1 *27:8 0.0
+
+*RES
+1 *485 *505:mprj_io[28] 0.001
+2 *505:mprj_io[28] *27:3 0.0175
+3 *27:2 *27:3 0.001
+4 *27:3 *27:7 0.0025
+5 *27:3 *27:4 0.001
+6 *27:3 *27:5 0.001
+7 *27:6 *27:7 0.001
+8 *27:7 *27:8 0.0025
+*END
+
+*D_NET *28 0
+
+*CONN
+*P *486 B *C 32.0000 2922.5000
+*I *505:mprj_io[29] B *C 17.0000 2922.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[29] 0.0
+
+*RES
+1 *486 *505:mprj_io[29] 0.001
+*END
+
+*D_NET *29 0
+
+*CONN
+*P *487 B *C 3848.0000 912.5000
+*I *505:mprj_io[2] B *C 3833.0000 912.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[2] 0.0
+
+*RES
+1 *487 *505:mprj_io[2] 0.001
+*END
+
+*D_NET *30 0
+
+*CONN
+*P *488 B *C 32.0000 2717.5000
+*I *505:mprj_io[30] B *C 17.0000 2717.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[30] 0.0
+
+*RES
+1 *488 *505:mprj_io[30] 0.001
+*END
+
+*D_NET *31 0
+
+*CONN
+*P *489 B *C 32.0000 2512.5000
+*I *505:mprj_io[31] B *C 17.0000 2512.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[31] 0.0
+
+*RES
+1 *489 *505:mprj_io[31] 0.001
+*END
+
+*D_NET *32 0
+
+*CONN
+*P *490 B *C 32.0000 1897.5000
+*I *505:mprj_io[32] B *C 17.0000 1897.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[32] 0.0
+
+*RES
+1 *490 *505:mprj_io[32] 0.001
+*END
+
+*D_NET *33 0
+
+*CONN
+*P *491 B *C 32.0000 1692.5000
+*I *505:mprj_io[33] B *C 17.0000 1692.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[33] 0.0
+
+*RES
+1 *491 *505:mprj_io[33] 0.001
+*END
+
+*D_NET *34 0
+
+*CONN
+*P *492 B *C 32.0000 1487.5000
+*I *505:mprj_io[34] B *C 17.0000 1487.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[34] 0.0
+
+*RES
+1 *492 *505:mprj_io[34] 0.001
+*END
+
+*D_NET *35 0
+
+*CONN
+*P *493 B *C 32.0000 1282.5000
+*I *505:mprj_io[35] B *C 17.0000 1282.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[35] 0.0
+
+*RES
+1 *493 *505:mprj_io[35] 0.001
+*END
+
+*D_NET *36 0
+
+*CONN
+*P *494 B *C 32.0000 1048.7500
+*I *505:mprj_io[36] B *C 32.0000 1048.7500 *D chip_io
+
+*CAP
+1 *36:8 0.0
+
+*RES
+1 *494 *505:mprj_io[36] 0.001
+2 *505:mprj_io[36] *36:3 0.000833333
+3 *36:2 *36:3 0.001
+4 *36:3 *36:7 0.0191667
+5 *36:3 *36:4 0.001
+6 *36:3 *36:5 0.001
+7 *36:6 *36:7 0.001
+8 *36:7 *36:8 0.0191667
+*END
+
+*D_NET *37 0
+
+*CONN
+*P *495 B *C 32.0000 872.5000
+*I *505:mprj_io[37] B *C 17.0000 872.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[37] 0.0
+
+*RES
+1 *495 *505:mprj_io[37] 0.001
+*END
+
+*D_NET *38 0
+
+*CONN
+*P *496 B *C 3848.0000 1127.5000
+*I *505:mprj_io[3] B *C 3833.0000 1127.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[3] 0.0
+
+*RES
+1 *496 *505:mprj_io[3] 0.001
+*END
+
+*D_NET *39 0
+
+*CONN
+*P *497 B *C 3848.0000 1342.5000
+*I *505:mprj_io[4] B *C 3833.0000 1342.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[4] 0.0
+
+*RES
+1 *497 *505:mprj_io[4] 0.001
+*END
+
+*D_NET *40 0
+
+*CONN
+*P *498 B *C 3848.0000 1551.2500
+*I *505:mprj_io[5] B *C 3848.0000 1551.2500 *D chip_io
+
+*CAP
+1 *40:8 0.0
+
+*RES
+1 *498 *505:mprj_io[5] 0.001
+2 *505:mprj_io[5] *40:3 0.0158333
+3 *40:2 *40:3 0.001
+4 *40:3 *40:7 0.00416667
+5 *40:3 *40:4 0.001
+6 *40:3 *40:5 0.001
+7 *40:6 *40:7 0.001
+8 *40:7 *40:8 0.00416667
+*END
+
+*D_NET *41 0
+
+*CONN
+*P *499 B *C 3848.0000 1772.5000
+*I *505:mprj_io[6] B *C 3833.0000 1772.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[6] 0.0
+
+*RES
+1 *499 *505:mprj_io[6] 0.001
+*END
+
+*D_NET *42 0
+
+*CONN
+*P *500 B *C 3848.0000 2613.7500
+*I *505:mprj_io[7] B *C 3848.0000 2613.7500 *D chip_io
+
+*CAP
+1 *42:8 0.0
+
+*RES
+1 *500 *505:mprj_io[7] 0.001
+2 *505:mprj_io[7] *42:3 0.0075
+3 *42:2 *42:3 0.001
+4 *42:3 *42:7 0.0125
+5 *42:3 *42:4 0.001
+6 *42:3 *42:5 0.001
+7 *42:6 *42:7 0.001
+8 *42:7 *42:8 0.0125
+*END
+
+*D_NET *43 0
+
+*CONN
+*P *501 B *C 3848.0000 2847.5000
+*I *505:mprj_io[8] B *C 3833.0000 2847.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[8] 0.0
+
+*RES
+1 *501 *505:mprj_io[8] 0.001
+*END
+
+*D_NET *44 0
+
+*CONN
+*P *502 B *C 3848.0000 3062.5000
+*I *505:mprj_io[9] B *C 3833.0000 3062.5000 *D chip_io
+
+*CAP
+1 *505:mprj_io[9] 0.0
+
+*RES
+1 *502 *505:mprj_io[9] 0.001
+*END
+
+*D_NET *45 0
+
+*CONN
+*P *503 I *C 837.5000 32.0000
+*I *505:resetb B *C 822.5000 32.0000 *D chip_io
+
+*CAP
+1 *505:resetb 0.0
+
+*RES
+1 *503 *505:resetb 0.001
+*END
+
+*D_NET *47 0
+
+*CONN
+*I *504:clock_core I *C 1146.0500 351.0000
+*I *505:clock_core B *C 1146.0500 351.0000 *D chip_io
+
+*CAP
+1 *47:3 0.0
+
+*RES
+1 *504:clock_core *505:clock_core 0.001
+2 *505:clock_core *47:2 7.40132
+3 *505:clock_core *47:3 1.89474
+*END
+
+*D_NET *48 0
+
+*CONN
+*I *504:const_one[0] O *C 806.1550 351.0625 *D caravel_core
+*I *505:const_one[0] B *C 806.1550 351.0625 *D chip_io
+
+*CAP
+1 *48:3 0.0
+
+*RES
+1 *504:const_one[0] *505:const_one[0] 0.001
+2 *505:const_one[0] *48:2 4.92454
+3 *505:const_one[0] *48:3 1.87994
+*END
+
+*D_NET *49 0
+
+*CONN
+*I *504:const_one[1] O *C 1631.1550 350.7800 *D caravel_core
+*I *505:const_one[1] B *C 1631.1550 350.7800 *D chip_io
+
+*CAP
+1 *49:3 0.0
+
+*RES
+1 *504:const_one[1] *505:const_one[1] 0.001
+2 *505:const_one[1] *49:2 4.82211
+3 *505:const_one[1] *49:3 1.94684
+*END
+
+*D_NET *50 0
+
+*CONN
+*I *504:const_zero[0] O *C 2518.8600 350.9900 *D caravel_core
+*I *505:const_zero[0] B *C 2518.8600 350.9900 *D chip_io
+
+*CAP
+1 *50:3 0.0
+
+*RES
+1 *504:const_zero[0] *505:const_zero[0] 0.001
+2 *505:const_zero[0] *50:2 24.1776
+3 *505:const_zero[0] *50:3 1.89711
+*END
+
+*D_NET *51 0
+
+*CONN
+*I *504:const_zero[1] O *C 2243.8600 350.9900 *D caravel_core
+*I *505:const_zero[1] B *C 2243.8600 350.9900 *D chip_io
+
+*CAP
+1 *51:3 0.0
+
+*RES
+1 *504:const_zero[1] *505:const_zero[1] 0.001
+2 *505:const_zero[1] *51:2 24.2154
+3 *505:const_zero[1] *51:3 1.89711
+*END
+
+*D_NET *52 0
+
+*CONN
+*I *504:const_zero[2] O *C 1968.8600 350.9900 *D caravel_core
+*I *505:const_zero[2] B *C 1968.8600 350.9900 *D chip_io
+
+*CAP
+1 *52:3 0.0
+
+*RES
+1 *504:const_zero[2] *505:const_zero[2] 0.001
+2 *505:const_zero[2] *52:2 24.2162
+3 *505:const_zero[2] *52:3 1.89711
+*END
+
+*D_NET *53 0
+
+*CONN
+*I *504:const_zero[3] O *C 1693.8600 351.0050 *D caravel_core
+*I *505:const_zero[3] B *C 1693.8575 351.0050 *D chip_io
+
+*CAP
+1 *53:3 0.0
+
+*RES
+1 *504:const_zero[3] *505:const_zero[3] 0.001
+2 *505:const_zero[3] *53:2 23.8505
+3 *505:const_zero[3] *53:3 1.845
+*END
+
+*D_NET *54 0
+
+*CONN
+*I *504:const_zero[4] O *C 1081.1550 350.9725 *D caravel_core
+*I *505:const_zero[4] B *C 1081.1550 350.9725 *D chip_io
+
+*CAP
+1 *54:3 0.0
+
+*RES
+1 *504:const_zero[4] *505:const_zero[4] 0.001
+2 *505:const_zero[4] *54:2 0.182961
+3 *505:const_zero[4] *54:3 1.90125
+*END
+
+*D_NET *55 0
+
+*CONN
+*I *504:const_zero[5] O *C 810.5200 351.0625 *D caravel_core
+*I *505:const_zero[5] B *C 810.5200 351.0625 *D chip_io
+
+*CAP
+1 *55:3 0.0
+
+*RES
+1 *504:const_zero[5] *505:const_zero[5] 0.001
+2 *505:const_zero[5] *55:2 5.00033
+3 *505:const_zero[5] *55:3 1.87994
+*END
+
+*D_NET *56 0
+
+*CONN
+*I *504:const_zero[6] O *C 2728.5500 350.9900 *D caravel_core
+
+*CAP
+1 *504:const_zero[6] 0.0
+*END
+
+*D_NET *57 0
+
+*CONN
+*I *504:const_zero[7] O *C 2731.1550 350.9900 *D caravel_core
+
+*CAP
+1 *504:const_zero[7] 0.0
+*END
+
+*D_NET *58 0
+
+*CONN
+*I *504:const_zero[8] O *C 2735.5200 350.9900 *D caravel_core
+
+*CAP
+1 *504:const_zero[8] 0.0
+*END
+
+*D_NET *59 0
+
+*CONN
+*I *504:const_zero[9] O *C 2793.8600 350.9900 *D caravel_core
+
+*CAP
+1 *504:const_zero[9] 0.0
+*END
+
+*D_NET *60 0
+
+*CONN
+*I *504:flash_clk_frame O *C 1969.5900 351.0000 *D caravel_core
+*I *505:flash_clk_core B *C 1969.5900 351.0000 *D chip_io
+
+*CAP
+1 *60:3 0.0
+
+*RES
+1 *504:flash_clk_frame *505:flash_clk_core 0.001
+2 *505:flash_clk_core *60:2 20.4963
+3 *505:flash_clk_core *60:3 1.89474
+*END
+
+*D_NET *61 0
+
+*CONN
+*I *504:flash_clk_oe O *C 1970.3200 351.0000 *D caravel_core
+*I *505:flash_clk_oe_core B *C 1970.3200 351.0000 *D chip_io
+
+*CAP
+1 *61:3 0.0
+
+*RES
+1 *504:flash_clk_oe *505:flash_clk_oe_core 0.001
+2 *505:flash_clk_oe_core *61:2 20.0511
+3 *505:flash_clk_oe_core *61:3 1.89474
+*END
+
+*D_NET *62 0
+
+*CONN
+*I *504:flash_csb_frame O *C 1694.5900 351.0000 *D caravel_core
+*I *505:flash_csb_core B *C 1694.5900 351.0000 *D chip_io
+
+*CAP
+1 *62:3 0.0
+
+*RES
+1 *504:flash_csb_frame *505:flash_csb_core 0.001
+2 *505:flash_csb_core *62:2 20.4963
+3 *505:flash_csb_core *62:3 1.89474
+*END
+
+*D_NET *63 0
+
+*CONN
+*I *504:flash_csb_oe O *C 1695.3200 351.0000 *D caravel_core
+*I *505:flash_csb_oe_core B *C 1695.3200 351.0000 *D chip_io
+
+*CAP
+1 *63:3 0.0
+
+*RES
+1 *504:flash_csb_oe *505:flash_csb_oe_core 0.001
+2 *505:flash_csb_oe_core *63:2 20.0511
+3 *505:flash_csb_oe_core *63:3 1.89474
+*END
+
+*D_NET *64 0
+
+*CONN
+*I *504:flash_io0_di I *C 2246.0450 351.0000
+*I *505:flash_io0_di_core B *C 2246.0450 351.0000 *D chip_io
+
+*CAP
+1 *64:3 0.0
+
+*RES
+1 *504:flash_io0_di *505:flash_io0_di_core 0.001
+2 *505:flash_io0_di_core *64:3 1.89474
+3 *505:flash_io0_di_core *64:2 0.323967
+*END
+
+*D_NET *65 0
+
+*CONN
+*I *504:flash_io0_do O *C 2244.5900 351.0000 *D caravel_core
+*I *505:flash_io0_do_core B *C 2244.5900 351.0000 *D chip_io
+
+*CAP
+1 *65:3 0.0
+
+*RES
+1 *504:flash_io0_do *505:flash_io0_do_core 0.001
+2 *505:flash_io0_do_core *65:2 20.4963
+3 *505:flash_io0_do_core *65:3 1.89474
+*END
+
+*D_NET *66 0
+
+*CONN
+*I *504:flash_io0_ie O *C 2186.5750 351.0000 *D caravel_core
+*I *505:flash_io0_ie_core B *C 2186.5750 351.0000 *D chip_io
+
+*CAP
+1 *66:3 0.0
+
+*RES
+1 *504:flash_io0_ie *505:flash_io0_ie_core 0.001
+2 *505:flash_io0_ie_core *66:2 3.80842
+3 *505:flash_io0_ie_core *66:3 1.89474
+*END
+
+*D_NET *67 0
+
+*CONN
+*I *504:flash_io0_oe O *C 2245.3200 351.0000 *D caravel_core
+*I *505:flash_io0_oe_core B *C 2245.3200 351.0000 *D chip_io
+
+*CAP
+1 *67:3 0.0
+
+*RES
+1 *504:flash_io0_oe *505:flash_io0_oe_core 0.001
+2 *505:flash_io0_oe_core *67:2 20.0511
+3 *505:flash_io0_oe_core *67:3 1.89474
+*END
+
+*D_NET *68 0
+
+*CONN
+*I *504:flash_io1_di I *C 2521.0500 351.0000
+*I *505:flash_io1_di_core B *C 2521.0500 351.0000 *D chip_io
+
+*CAP
+1 *68:3 0.0
+
+*RES
+1 *504:flash_io1_di *505:flash_io1_di_core 0.001
+2 *505:flash_io1_di_core *68:2 7.3658
+3 *505:flash_io1_di_core *68:3 1.89474
+*END
+
+*D_NET *69 0
+
+*CONN
+*I *504:flash_io1_do O *C 2519.5900 351.0000 *D caravel_core
+*I *505:flash_io1_do_core B *C 2519.5900 351.0000 *D chip_io
+
+*CAP
+1 *69:3 0.0
+
+*RES
+1 *504:flash_io1_do *505:flash_io1_do_core 0.001
+2 *505:flash_io1_do_core *69:2 20.4963
+3 *505:flash_io1_do_core *69:3 1.89474
+*END
+
+*D_NET *70 0
+
+*CONN
+*I *504:flash_io1_ie O *C 2461.5750 351.0000 *D caravel_core
+*I *505:flash_io1_ie_core B *C 2461.5750 351.0000 *D chip_io
+
+*CAP
+1 *70:3 0.0
+
+*RES
+1 *504:flash_io1_ie *505:flash_io1_ie_core 0.001
+2 *505:flash_io1_ie_core *70:2 3.80842
+3 *505:flash_io1_ie_core *70:3 1.89474
+*END
+
+*D_NET *71 0
+
+*CONN
+*I *504:flash_io1_oe O *C 2520.3200 351.0000 *D caravel_core
+*I *505:flash_io1_oe_core B *C 2520.3200 351.0000 *D chip_io
+
+*CAP
+1 *71:3 0.0
+
+*RES
+1 *504:flash_io1_oe *505:flash_io1_oe_core 0.001
+2 *505:flash_io1_oe_core *71:2 20.0511
+3 *505:flash_io1_oe_core *71:3 1.89474
+*END
+
+*D_NET *72 0
+
+*CONN
+*I *504:gpio_drive_select_core[0] O *C 2732.3000 351.0000 *D caravel_core
+*I *505:gpio_drive_select_core[0] B *C 2732.3000 351.0000 *D chip_io
+
+*CAP
+1 *72:3 0.0
+
+*RES
+1 *504:gpio_drive_select_core[0] *505:gpio_drive_select_core[0] 0.001
+2 *505:gpio_drive_select_core[0] *72:2 20.4478
+3 *505:gpio_drive_select_core[0] *72:3 1.89474
+*END
+
+*D_NET *73 0
+
+*CONN
+*I *504:gpio_drive_select_core[1] O *C 2733.0100 350.6237 *D caravel_core
+*I *505:gpio_drive_select_core[1] B *C 2733.0100 350.7475 *D chip_io
+
+*CAP
+1 *73:3 0.0
+
+*RES
+1 *504:gpio_drive_select_core[1] *505:gpio_drive_select_core[1] 0.001
+2 *505:gpio_drive_select_core[1] *73:2 20.2817
+3 *505:gpio_drive_select_core[1] *73:3 1.98385
+*END
+
+*D_NET *74 0
+
+*CONN
+*I *504:gpio_in_core I *C 2796.0500 351.0000
+*I *505:gpio_in_core B *C 2796.0500 351.0000 *D chip_io
+
+*CAP
+1 *74:3 0.0
+
+*RES
+1 *504:gpio_in_core *505:gpio_in_core 0.001
+2 *505:gpio_in_core *74:2 7.3658
+3 *505:gpio_in_core *74:3 1.89474
+*END
+
+*D_NET *75 0
+
+*CONN
+*I *504:gpio_inenb_core O *C 2736.5750 351.0000 *D caravel_core
+*I *505:gpio_inen_core B *C 2736.5750 351.0000 *D chip_io
+
+*CAP
+1 *75:3 0.0
+
+*RES
+1 *504:gpio_inenb_core *505:gpio_inen_core 0.001
+2 *505:gpio_inen_core *75:2 3.80842
+3 *505:gpio_inen_core *75:3 1.89474
+*END
+
+*D_NET *76 0
+
+*CONN
+*I *504:gpio_out_core O *C 2794.5900 351.0000 *D caravel_core
+*I *505:gpio_out_core B *C 2794.5900 351.0000 *D chip_io
+
+*CAP
+1 *76:3 0.0
+
+*RES
+1 *504:gpio_out_core *505:gpio_out_core 0.001
+2 *505:gpio_out_core *76:2 20.4963
+3 *505:gpio_out_core *76:3 1.89474
+*END
+
+*D_NET *77 0
+
+*CONN
+*I *504:gpio_outenb_core O *C 2795.3200 351.0000 *D caravel_core
+*I *505:gpio_outen_core B *C 2795.3200 351.0000 *D chip_io
+
+*CAP
+1 *77:3 0.0
+
+*RES
+1 *504:gpio_outenb_core *505:gpio_outen_core 0.001
+2 *505:gpio_outen_core *77:2 20.0511
+3 *505:gpio_outen_core *77:3 1.89474
+*END
+
+*D_NET *78 0
+
+*CONN
+*I *504:mprj_io_drive_sel[0] O *C 3518.5000 452.3000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_drive_sel[0] 0.0
+*END
+
+*D_NET *79 0
+
+*CONN
+*I *504:mprj_io_drive_sel[10] O *C 3518.5000 1527.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[9] B *C 3529.0000 1313.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[9] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[9] *504:mprj_io_drive_sel[10] 0.01
+*END
+
+*D_NET *80 0
+
+*CONN
+*I *504:mprj_io_drive_sel[11] O *C 3516.0000 1528.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[10] B *C 3529.0000 1527.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[10] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[10] *504:mprj_io_drive_sel[11] 0.01
+*END
+
+*D_NET *81 0
+
+*CONN
+*I *504:mprj_io_drive_sel[12] O *C 3518.5000 1742.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[11] B *C 3529.0000 1528.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[11] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[11] *504:mprj_io_drive_sel[12] 0.01
+*END
+
+*D_NET *82 0
+
+*CONN
+*I *504:mprj_io_drive_sel[13] O *C 3516.0000 1743.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[12] B *C 3529.0000 1742.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[12] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[12] *504:mprj_io_drive_sel[13] 0.01
+*END
+
+*D_NET *83 0
+
+*CONN
+*I *504:mprj_io_drive_sel[14] O *C 3518.5000 2602.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[13] B *C 3529.0000 1743.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[13] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[13] *504:mprj_io_drive_sel[14] 0.01
+*END
+
+*D_NET *84 0
+
+*CONN
+*I *504:mprj_io_drive_sel[15] O *C 3516.0000 2603.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[14] B *C 3529.0000 2602.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[14] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[14] *504:mprj_io_drive_sel[15] 0.01
+*END
+
+*D_NET *85 0
+
+*CONN
+*I *504:mprj_io_drive_sel[16] O *C 3518.5000 2817.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[15] B *C 3529.0000 2603.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[15] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[15] *504:mprj_io_drive_sel[16] 0.01
+*END
+
+*D_NET *86 0
+
+*CONN
+*I *504:mprj_io_drive_sel[17] O *C 3516.0000 2818.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[16] B *C 3529.0000 2817.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[16] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[16] *504:mprj_io_drive_sel[17] 0.01
+*END
+
+*D_NET *87 0
+
+*CONN
+*I *504:mprj_io_drive_sel[18] O *C 3518.5000 3032.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[17] B *C 3529.0000 2818.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[17] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[17] *504:mprj_io_drive_sel[18] 0.01
+*END
+
+*D_NET *88 0
+
+*CONN
+*I *504:mprj_io_drive_sel[19] O *C 3516.0000 3033.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[18] B *C 3529.0000 3032.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[18] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[18] *504:mprj_io_drive_sel[19] 0.01
+*END
+
+*D_NET *89 0
+
+*CONN
+*I *504:mprj_io_drive_sel[1] O *C 3516.0000 453.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[0] B *C 3529.0000 452.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[0] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[0] *504:mprj_io_drive_sel[1] 0.01
+*END
+
+*D_NET *90 0
+
+*CONN
+*I *504:mprj_io_drive_sel[20] O *C 3518.5000 3247.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[19] B *C 3529.0000 3033.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[19] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[19] *504:mprj_io_drive_sel[20] 0.01
+*END
+
+*D_NET *91 0
+
+*CONN
+*I *504:mprj_io_drive_sel[21] O *C 3516.0000 3248.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[20] B *C 3529.0000 3247.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[20] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[20] *504:mprj_io_drive_sel[21] 0.01
+*END
+
+*D_NET *92 0
+
+*CONN
+*I *504:mprj_io_drive_sel[22] O *C 3518.5000 3462.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[21] B *C 3529.0000 3248.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[21] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[21] *504:mprj_io_drive_sel[22] 0.01
+*END
+
+*D_NET *93 0
+
+*CONN
+*I *504:mprj_io_drive_sel[23] O *C 3516.0000 3463.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[22] B *C 3529.0000 3462.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[22] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[22] *504:mprj_io_drive_sel[23] 0.01
+*END
+
+*D_NET *94 0
+
+*CONN
+*I *504:mprj_io_drive_sel[24] O *C 3518.5000 3677.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[23] B *C 3529.0000 3463.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[23] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[23] *504:mprj_io_drive_sel[24] 0.01
+*END
+
+*D_NET *95 0
+
+*CONN
+*I *504:mprj_io_drive_sel[25] O *C 3516.0000 3678.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[24] B *C 3529.0000 3677.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[24] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[24] *504:mprj_io_drive_sel[25] 0.01
+*END
+
+*D_NET *96 0
+
+*CONN
+*I *504:mprj_io_drive_sel[26] O *C 3518.5000 4107.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[25] B *C 3529.0000 3678.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[25] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[25] *504:mprj_io_drive_sel[26] 0.01
+*END
+
+*D_NET *97 0
+
+*CONN
+*I *504:mprj_io_drive_sel[27] O *C 3516.0000 4108.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[26] B *C 3529.0000 4107.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[26] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[26] *504:mprj_io_drive_sel[27] 0.01
+*END
+
+*D_NET *98 0
+
+*CONN
+*I *504:mprj_io_drive_sel[28] O *C 3518.5000 4537.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[27] B *C 3529.0000 4108.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[27] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[27] *504:mprj_io_drive_sel[28] 0.01
+*END
+
+*D_NET *99 0
+
+*CONN
+*I *504:mprj_io_drive_sel[29] O *C 3516.0000 4538.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[28] B *C 3529.0000 4537.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[28] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[28] *504:mprj_io_drive_sel[29] 0.01
+*END
+
+*D_NET *100 0
+
+*CONN
+*I *504:mprj_io_drive_sel[2] O *C 3518.5000 667.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[1] B *C 3529.0000 453.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[1] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[1] *504:mprj_io_drive_sel[2] 0.01
+*END
+
+*D_NET *101 0
+
+*CONN
+*I *504:mprj_io_drive_sel[30] O *C 3337.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[29] B *C 3529.0000 4538.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[29] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[29] *504:mprj_io_drive_sel[30] 0.01
+*END
+
+*D_NET *102 0
+
+*CONN
+*I *504:mprj_io_drive_sel[31] O *C 3336.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[30] B *C 3337.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[30] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[30] *504:mprj_io_drive_sel[31] 0.01
+*END
+
+*D_NET *103 0
+
+*CONN
+*I *504:mprj_io_drive_sel[32] O *C 2787.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[31] B *C 3336.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[31] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[31] *504:mprj_io_drive_sel[32] 0.01
+*END
+
+*D_NET *104 0
+
+*CONN
+*I *504:mprj_io_drive_sel[33] O *C 2786.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[32] B *C 2787.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[32] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[32] *504:mprj_io_drive_sel[33] 0.01
+*END
+
+*D_NET *105 0
+
+*CONN
+*I *504:mprj_io_drive_sel[34] O *C 2512.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[33] B *C 2786.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[33] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[33] *504:mprj_io_drive_sel[34] 0.01
+*END
+
+*D_NET *106 0
+
+*CONN
+*I *504:mprj_io_drive_sel[35] O *C 2511.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[34] B *C 2512.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[34] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[34] *504:mprj_io_drive_sel[35] 0.01
+*END
+
+*D_NET *107 0
+
+*CONN
+*I *504:mprj_io_drive_sel[36] O *C 2237.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[35] B *C 2511.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[35] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[35] *504:mprj_io_drive_sel[36] 0.01
+*END
+
+*D_NET *108 0
+
+*CONN
+*I *504:mprj_io_drive_sel[37] O *C 2236.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[36] B *C 2237.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[36] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[36] *504:mprj_io_drive_sel[37] 0.01
+*END
+
+*D_NET *109 0
+
+*CONN
+*I *504:mprj_io_drive_sel[38] O *C 1687.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[37] B *C 2236.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[37] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[37] *504:mprj_io_drive_sel[38] 0.01
+*END
+
+*D_NET *110 0
+
+*CONN
+*I *504:mprj_io_drive_sel[39] O *C 1686.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[38] B *C 1687.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[38] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[38] *504:mprj_io_drive_sel[39] 0.01
+*END
+
+*D_NET *111 0
+
+*CONN
+*I *504:mprj_io_drive_sel[3] O *C 3516.0000 668.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[2] B *C 3528.1050 667.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[2] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[2] *504:mprj_io_drive_sel[3] 0.01
+*END
+
+*D_NET *112 0
+
+*CONN
+*I *504:mprj_io_drive_sel[40] O *C 1412.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[39] B *C 1686.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[39] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[39] *504:mprj_io_drive_sel[40] 0.01
+*END
+
+*D_NET *113 0
+
+*CONN
+*I *504:mprj_io_drive_sel[41] O *C 1411.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[40] B *C 1412.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[40] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[40] *504:mprj_io_drive_sel[41] 0.01
+*END
+
+*D_NET *114 0
+
+*CONN
+*I *504:mprj_io_drive_sel[42] O *C 1137.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[41] B *C 1411.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[41] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[41] *504:mprj_io_drive_sel[42] 0.01
+*END
+
+*D_NET *115 0
+
+*CONN
+*I *504:mprj_io_drive_sel[43] O *C 1136.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[42] B *C 1137.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[42] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[42] *504:mprj_io_drive_sel[43] 0.01
+*END
+
+*D_NET *116 0
+
+*CONN
+*I *504:mprj_io_drive_sel[44] O *C 862.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[43] B *C 1136.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[43] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[43] *504:mprj_io_drive_sel[44] 0.01
+*END
+
+*D_NET *117 0
+
+*CONN
+*I *504:mprj_io_drive_sel[45] O *C 861.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[44] B *C 862.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[44] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[44] *504:mprj_io_drive_sel[45] 0.01
+*END
+
+*D_NET *118 0
+
+*CONN
+*I *504:mprj_io_drive_sel[46] O *C 587.7000 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[45] B *C 861.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[45] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[45] *504:mprj_io_drive_sel[46] 0.01
+*END
+
+*D_NET *119 0
+
+*CONN
+*I *504:mprj_io_drive_sel[47] O *C 586.9900 4711.0000 *D caravel_core
+*I *505:mprj_io_drive_sel[46] B *C 587.7000 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[46] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[46] *504:mprj_io_drive_sel[47] 0.01
+*END
+
+*D_NET *120 0
+
+*CONN
+*I *504:mprj_io_drive_sel[48] O *C 351.0000 4592.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[47] B *C 586.9900 4725.0000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[47] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[47] *504:mprj_io_drive_sel[48] 0.01
+*END
+
+*D_NET *121 0
+
+*CONN
+*I *504:mprj_io_drive_sel[49] O *C 351.0000 4591.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[48] B *C 264.6650 4592.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[48] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[48] *504:mprj_io_drive_sel[49] 0.01
+*END
+
+*D_NET *122 0
+
+*CONN
+*I *504:mprj_io_drive_sel[4] O *C 3518.5000 882.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[3] B *C 3528.1050 668.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[3] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[3] *504:mprj_io_drive_sel[4] 0.01
+*END
+
+*D_NET *123 0
+
+*CONN
+*I *504:mprj_io_drive_sel[50] O *C 351.0000 3772.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[49] B *C 264.9900 4591.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[49] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[49] *504:mprj_io_drive_sel[50] 0.01
+*END
+
+*D_NET *124 0
+
+*CONN
+*I *504:mprj_io_drive_sel[51] O *C 351.0000 3771.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[50] B *C 264.6650 3772.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[50] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[50] *504:mprj_io_drive_sel[51] 0.01
+*END
+
+*D_NET *125 0
+
+*CONN
+*I *504:mprj_io_drive_sel[52] O *C 351.0000 3567.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[51] B *C 264.9900 3771.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[51] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[51] *504:mprj_io_drive_sel[52] 0.01
+*END
+
+*D_NET *126 0
+
+*CONN
+*I *504:mprj_io_drive_sel[53] O *C 351.0000 3566.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[52] B *C 264.6650 3567.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[52] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[52] *504:mprj_io_drive_sel[53] 0.01
+*END
+
+*D_NET *127 0
+
+*CONN
+*I *504:mprj_io_drive_sel[54] O *C 351.0000 3362.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[53] B *C 264.9900 3566.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[53] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[53] *504:mprj_io_drive_sel[54] 0.01
+*END
+
+*D_NET *128 0
+
+*CONN
+*I *504:mprj_io_drive_sel[55] O *C 351.0000 3361.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[54] B *C 264.6650 3362.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[54] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[54] *504:mprj_io_drive_sel[55] 0.01
+*END
+
+*D_NET *129 0
+
+*CONN
+*I *504:mprj_io_drive_sel[56] O *C 351.0000 3157.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[55] B *C 264.9900 3361.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[55] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[55] *504:mprj_io_drive_sel[56] 0.01
+*END
+
+*D_NET *130 0
+
+*CONN
+*I *504:mprj_io_drive_sel[57] O *C 351.0000 3156.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[56] B *C 264.6650 3157.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[56] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[56] *504:mprj_io_drive_sel[57] 0.01
+*END
+
+*D_NET *131 0
+
+*CONN
+*I *504:mprj_io_drive_sel[58] O *C 351.0000 2952.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[57] B *C 264.9900 3156.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[57] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[57] *504:mprj_io_drive_sel[58] 0.01
+*END
+
+*D_NET *132 0
+
+*CONN
+*I *504:mprj_io_drive_sel[59] O *C 351.0000 2951.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[58] B *C 264.6650 2952.7000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[58] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[58] *504:mprj_io_drive_sel[59] 0.01
+*END
+
+*D_NET *133 0
+
+*CONN
+*I *504:mprj_io_drive_sel[5] O *C 3516.0000 883.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[4] B *C 3529.0000 882.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[4] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[4] *504:mprj_io_drive_sel[5] 0.01
+*END
+
+*D_NET *134 0
+
+*CONN
+*I *504:mprj_io_drive_sel[60] O *C 351.0000 2747.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[59] B *C 264.9900 2951.9900 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[59] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[59] *504:mprj_io_drive_sel[60] 0.01
+*END
+
+*D_NET *135 0
+
+*CONN
+*I *504:mprj_io_drive_sel[61] O *C 351.0000 2746.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[61] B *C 351.0000 2746.9900 *D chip_io
+
+*CAP
+1 *135:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[61] *505:mprj_io_drive_sel[61] 0.001
+2 *505:mprj_io_drive_sel[61] *135:2 20.3708
+3 *505:mprj_io_drive_sel[61] *135:3 3.07895
+*END
+
+*D_NET *136 0
+
+*CONN
+*I *504:mprj_io_drive_sel[62] O *C 351.0000 2542.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[62] B *C 351.0000 2542.7000 *D chip_io
+
+*CAP
+1 *136:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[62] *505:mprj_io_drive_sel[62] 0.001
+2 *505:mprj_io_drive_sel[62] *136:2 20.4478
+3 *505:mprj_io_drive_sel[62] *136:3 2.48684
+*END
+
+*D_NET *137 0
+
+*CONN
+*I *504:mprj_io_drive_sel[63] O *C 351.0000 2541.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[63] B *C 351.0000 2541.9900 *D chip_io
+
+*CAP
+1 *137:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[63] *505:mprj_io_drive_sel[63] 0.001
+2 *505:mprj_io_drive_sel[63] *137:2 20.3708
+3 *505:mprj_io_drive_sel[63] *137:3 3.07895
+*END
+
+*D_NET *138 0
+
+*CONN
+*I *504:mprj_io_drive_sel[64] O *C 351.0000 1927.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[64] B *C 351.0000 1927.7000 *D chip_io
+
+*CAP
+1 *138:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[64] *505:mprj_io_drive_sel[64] 0.001
+2 *505:mprj_io_drive_sel[64] *138:2 20.4478
+3 *505:mprj_io_drive_sel[64] *138:3 2.48684
+*END
+
+*D_NET *139 0
+
+*CONN
+*I *504:mprj_io_drive_sel[65] O *C 351.0000 1926.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[65] B *C 351.0000 1926.9900 *D chip_io
+
+*CAP
+1 *139:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[65] *505:mprj_io_drive_sel[65] 0.001
+2 *505:mprj_io_drive_sel[65] *139:2 20.3708
+3 *505:mprj_io_drive_sel[65] *139:3 3.07895
+*END
+
+*D_NET *140 0
+
+*CONN
+*I *504:mprj_io_drive_sel[66] O *C 351.0000 1722.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[66] B *C 351.0000 1722.7000 *D chip_io
+
+*CAP
+1 *140:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[66] *505:mprj_io_drive_sel[66] 0.001
+2 *505:mprj_io_drive_sel[66] *140:2 20.4478
+3 *505:mprj_io_drive_sel[66] *140:3 2.48684
+*END
+
+*D_NET *141 0
+
+*CONN
+*I *504:mprj_io_drive_sel[67] O *C 351.0000 1721.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[67] B *C 351.0000 1721.9900 *D chip_io
+
+*CAP
+1 *141:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[67] *505:mprj_io_drive_sel[67] 0.001
+2 *505:mprj_io_drive_sel[67] *141:2 20.3708
+3 *505:mprj_io_drive_sel[67] *141:3 3.07895
+*END
+
+*D_NET *142 0
+
+*CONN
+*I *504:mprj_io_drive_sel[68] O *C 351.0000 1517.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[68] B *C 351.0000 1517.7000 *D chip_io
+
+*CAP
+1 *142:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[68] *505:mprj_io_drive_sel[68] 0.001
+2 *505:mprj_io_drive_sel[68] *142:2 20.4478
+3 *505:mprj_io_drive_sel[68] *142:3 2.48684
+*END
+
+*D_NET *143 0
+
+*CONN
+*I *504:mprj_io_drive_sel[69] O *C 351.0000 1516.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[69] B *C 351.0000 1516.9900 *D chip_io
+
+*CAP
+1 *143:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[69] *505:mprj_io_drive_sel[69] 0.001
+2 *505:mprj_io_drive_sel[69] *143:2 20.3708
+3 *505:mprj_io_drive_sel[69] *143:3 3.07895
+*END
+
+*D_NET *144 0
+
+*CONN
+*I *504:mprj_io_drive_sel[6] O *C 3518.5000 1097.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[5] B *C 3529.0000 883.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[5] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[5] *504:mprj_io_drive_sel[6] 0.01
+*END
+
+*D_NET *145 0
+
+*CONN
+*I *504:mprj_io_drive_sel[70] O *C 351.0000 1312.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[70] B *C 351.0000 1312.7000 *D chip_io
+
+*CAP
+1 *145:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[70] *505:mprj_io_drive_sel[70] 0.001
+2 *505:mprj_io_drive_sel[70] *145:2 20.4478
+3 *505:mprj_io_drive_sel[70] *145:3 2.48684
+*END
+
+*D_NET *146 0
+
+*CONN
+*I *504:mprj_io_drive_sel[71] O *C 351.0000 1311.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[71] B *C 351.0000 1311.9900 *D chip_io
+
+*CAP
+1 *146:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[71] *505:mprj_io_drive_sel[71] 0.001
+2 *505:mprj_io_drive_sel[71] *146:2 20.3708
+3 *505:mprj_io_drive_sel[71] *146:3 3.07895
+*END
+
+*D_NET *147 0
+
+*CONN
+*I *504:mprj_io_drive_sel[72] O *C 351.0000 1107.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[72] B *C 351.0000 1107.7000 *D chip_io
+
+*CAP
+1 *147:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[72] *505:mprj_io_drive_sel[72] 0.001
+2 *505:mprj_io_drive_sel[72] *147:2 20.4478
+3 *505:mprj_io_drive_sel[72] *147:3 2.48684
+*END
+
+*D_NET *148 0
+
+*CONN
+*I *504:mprj_io_drive_sel[73] O *C 351.0000 1106.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[73] B *C 351.0000 1106.9900 *D chip_io
+
+*CAP
+1 *148:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[73] *505:mprj_io_drive_sel[73] 0.001
+2 *505:mprj_io_drive_sel[73] *148:2 20.3708
+3 *505:mprj_io_drive_sel[73] *148:3 3.07895
+*END
+
+*D_NET *149 0
+
+*CONN
+*I *504:mprj_io_drive_sel[74] O *C 351.0000 902.7000 *D caravel_core
+*I *505:mprj_io_drive_sel[74] B *C 351.0000 902.7000 *D chip_io
+
+*CAP
+1 *149:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[74] *505:mprj_io_drive_sel[74] 0.001
+2 *505:mprj_io_drive_sel[74] *149:2 20.4478
+3 *505:mprj_io_drive_sel[74] *149:3 2.48684
+*END
+
+*D_NET *150 0
+
+*CONN
+*I *504:mprj_io_drive_sel[75] O *C 351.0000 901.9900 *D caravel_core
+*I *505:mprj_io_drive_sel[75] B *C 351.0000 901.9900 *D chip_io
+
+*CAP
+1 *150:3 0.0
+
+*RES
+1 *504:mprj_io_drive_sel[75] *505:mprj_io_drive_sel[75] 0.001
+2 *505:mprj_io_drive_sel[75] *150:2 20.3708
+3 *505:mprj_io_drive_sel[75] *150:3 3.07895
+*END
+
+*D_NET *151 0
+
+*CONN
+*I *504:mprj_io_drive_sel[7] O *C 3516.0000 1098.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[6] B *C 3529.0000 1097.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[6] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[6] *504:mprj_io_drive_sel[7] 0.01
+*END
+
+*D_NET *152 0
+
+*CONN
+*I *504:mprj_io_drive_sel[8] O *C 3518.5000 1312.3000 *D caravel_core
+*I *505:mprj_io_drive_sel[7] B *C 3529.0000 1098.0100 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[7] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[7] *504:mprj_io_drive_sel[8] 0.01
+*END
+
+*D_NET *153 0
+
+*CONN
+*I *504:mprj_io_drive_sel[9] O *C 3516.0000 1313.0100 *D caravel_core
+*I *505:mprj_io_drive_sel[8] B *C 3529.0000 1312.3000 *D chip_io
+
+*CAP
+1 *505:mprj_io_drive_sel[8] 0.0
+
+*RES
+1 *505:mprj_io_drive_sel[8] *504:mprj_io_drive_sel[9] 0.01
+*END
+
+*D_NET *154 0
+
+*CONN
+*I *504:mprj_io_ie[0] O *C 3511.0000 456.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[0] 0.0
+*END
+
+*D_NET *155 0
+
+*CONN
+*I *504:mprj_io_ie[10] O *C 3511.0000 3251.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[10] 0.0
+*END
+
+*D_NET *156 0
+
+*CONN
+*I *504:mprj_io_ie[11] O *C 3511.0000 3466.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[11] 0.0
+*END
+
+*D_NET *157 0
+
+*CONN
+*I *504:mprj_io_ie[12] O *C 3511.0000 3681.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[12] 0.0
+*END
+
+*D_NET *158 0
+
+*CONN
+*I *504:mprj_io_ie[13] O *C 3511.0000 4111.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[13] 0.0
+*END
+
+*D_NET *159 0
+
+*CONN
+*I *504:mprj_io_ie[14] O *C 3511.0000 4541.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[14] 0.0
+*END
+
+*D_NET *160 0
+
+*CONN
+*I *504:mprj_io_ie[15] O *C 3333.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[15] 0.0
+*END
+
+*D_NET *161 0
+
+*CONN
+*I *504:mprj_io_ie[16] O *C 2783.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[16] 0.0
+*END
+
+*D_NET *162 0
+
+*CONN
+*I *504:mprj_io_ie[17] O *C 2508.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[17] 0.0
+*END
+
+*D_NET *163 0
+
+*CONN
+*I *504:mprj_io_ie[18] O *C 2233.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[18] 0.0
+*END
+
+*D_NET *164 0
+
+*CONN
+*I *504:mprj_io_ie[19] O *C 1683.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[19] 0.0
+*END
+
+*D_NET *165 0
+
+*CONN
+*I *504:mprj_io_ie[1] O *C 3511.0000 671.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[1] 0.0
+*END
+
+*D_NET *166 0
+
+*CONN
+*I *504:mprj_io_ie[20] O *C 1408.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[20] 0.0
+*END
+
+*D_NET *167 0
+
+*CONN
+*I *504:mprj_io_ie[21] O *C 1133.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[21] 0.0
+*END
+
+*D_NET *168 0
+
+*CONN
+*I *504:mprj_io_ie[22] O *C 858.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[22] 0.0
+*END
+
+*D_NET *169 0
+
+*CONN
+*I *504:mprj_io_ie[23] O *C 583.4250 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[23] 0.0
+*END
+
+*D_NET *170 0
+
+*CONN
+*I *504:mprj_io_ie[24] O *C 351.0000 4588.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[24] 0.0
+*END
+
+*D_NET *171 0
+
+*CONN
+*I *504:mprj_io_ie[25] O *C 351.0000 3768.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[25] 0.0
+*END
+
+*D_NET *172 0
+
+*CONN
+*I *504:mprj_io_ie[26] O *C 351.0000 3563.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[26] 0.0
+*END
+
+*D_NET *173 0
+
+*CONN
+*I *504:mprj_io_ie[27] O *C 351.0000 3358.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[27] 0.0
+*END
+
+*D_NET *174 0
+
+*CONN
+*I *504:mprj_io_ie[28] O *C 351.0000 3153.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[28] 0.0
+*END
+
+*D_NET *175 0
+
+*CONN
+*I *504:mprj_io_ie[29] O *C 351.0000 2948.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[29] 0.0
+*END
+
+*D_NET *176 0
+
+*CONN
+*I *504:mprj_io_ie[2] O *C 3511.0000 886.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[2] 0.0
+*END
+
+*D_NET *177 0
+
+*CONN
+*I *504:mprj_io_ie[30] O *C 351.0000 2743.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[30] 0.0
+*END
+
+*D_NET *178 0
+
+*CONN
+*I *504:mprj_io_ie[31] O *C 351.0000 2538.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[31] 0.0
+*END
+
+*D_NET *179 0
+
+*CONN
+*I *504:mprj_io_ie[32] O *C 351.0000 1923.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[32] 0.0
+*END
+
+*D_NET *180 0
+
+*CONN
+*I *504:mprj_io_ie[33] O *C 351.0000 1718.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[33] 0.0
+*END
+
+*D_NET *181 0
+
+*CONN
+*I *504:mprj_io_ie[34] O *C 351.0000 1513.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[34] 0.0
+*END
+
+*D_NET *182 0
+
+*CONN
+*I *504:mprj_io_ie[35] O *C 351.0000 1308.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[35] 0.0
+*END
+
+*D_NET *183 0
+
+*CONN
+*I *504:mprj_io_ie[36] O *C 351.0000 1103.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[36] 0.0
+*END
+
+*D_NET *184 0
+
+*CONN
+*I *504:mprj_io_ie[37] O *C 351.0000 898.4250 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[37] 0.0
+*END
+
+*D_NET *185 0
+
+*CONN
+*I *504:mprj_io_ie[3] O *C 3511.0000 1101.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[3] 0.0
+*END
+
+*D_NET *186 0
+
+*CONN
+*I *504:mprj_io_ie[4] O *C 3511.0000 1316.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[4] 0.0
+*END
+
+*D_NET *187 0
+
+*CONN
+*I *504:mprj_io_ie[5] O *C 3511.0000 1531.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[5] 0.0
+*END
+
+*D_NET *188 0
+
+*CONN
+*I *504:mprj_io_ie[6] O *C 3511.0000 1746.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[6] 0.0
+*END
+
+*D_NET *189 0
+
+*CONN
+*I *504:mprj_io_ie[7] O *C 3511.0000 2606.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[7] 0.0
+*END
+
+*D_NET *190 0
+
+*CONN
+*I *504:mprj_io_ie[8] O *C 3511.0000 2821.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[8] 0.0
+*END
+
+*D_NET *191 0
+
+*CONN
+*I *504:mprj_io_ie[9] O *C 3511.0000 3036.5750 *D caravel_core
+
+*CAP
+1 *504:mprj_io_ie[9] 0.0
+*END
+
+*D_NET *192 0
+
+*CONN
+*I *504:mprj_io_in[0] I *C 3529.0000 516.0500
+*I *505:mprj_io_in[0] B *C 3529.0000 516.0500 *D chip_io
+
+*CAP
+1 *192:3 0.0
+
+*RES
+1 *504:mprj_io_in[0] *505:mprj_io_in[0] 0.001
+2 *505:mprj_io_in[0] *192:2 3.07895
+3 *505:mprj_io_in[0] *192:3 7.3658
+*END
+
+*D_NET *193 0
+
+*CONN
+*I *504:mprj_io_in[10] I *C 3529.0000 3311.0500
+*I *505:mprj_io_in[10] B *C 3529.0000 3311.0500 *D chip_io
+
+*CAP
+1 *193:3 0.0
+
+*RES
+1 *504:mprj_io_in[10] *505:mprj_io_in[10] 0.001
+2 *505:mprj_io_in[10] *193:2 3.07895
+3 *505:mprj_io_in[10] *193:3 7.3658
+*END
+
+*D_NET *194 0
+
+*CONN
+*I *504:mprj_io_in[11] I *C 3529.0000 3526.0500
+*I *505:mprj_io_in[11] B *C 3529.0000 3526.0500 *D chip_io
+
+*CAP
+1 *194:3 0.0
+
+*RES
+1 *504:mprj_io_in[11] *505:mprj_io_in[11] 0.001
+2 *505:mprj_io_in[11] *194:2 3.07895
+3 *505:mprj_io_in[11] *194:3 7.3658
+*END
+
+*D_NET *195 0
+
+*CONN
+*I *504:mprj_io_in[12] I *C 3529.0000 3741.0500
+*I *505:mprj_io_in[12] B *C 3529.0000 3741.0500 *D chip_io
+
+*CAP
+1 *195:3 0.0
+
+*RES
+1 *504:mprj_io_in[12] *505:mprj_io_in[12] 0.001
+2 *505:mprj_io_in[12] *195:2 3.07895
+3 *505:mprj_io_in[12] *195:3 7.3658
+*END
+
+*D_NET *196 0
+
+*CONN
+*I *504:mprj_io_in[13] I *C 3529.0000 4171.0500
+*I *505:mprj_io_in[13] B *C 3529.0000 4171.0500 *D chip_io
+
+*CAP
+1 *196:3 0.0
+
+*RES
+1 *504:mprj_io_in[13] *505:mprj_io_in[13] 0.001
+2 *505:mprj_io_in[13] *196:2 3.07895
+3 *505:mprj_io_in[13] *196:3 7.3658
+*END
+
+*D_NET *197 0
+
+*CONN
+*I *504:mprj_io_in[14] I *C 3529.0000 4601.0500
+*I *505:mprj_io_in[14] B *C 3529.0000 4601.0500 *D chip_io
+
+*CAP
+1 *197:3 0.0
+
+*RES
+1 *504:mprj_io_in[14] *505:mprj_io_in[14] 0.001
+2 *505:mprj_io_in[14] *197:2 3.07895
+3 *505:mprj_io_in[14] *197:3 7.3658
+*END
+
+*D_NET *198 0
+
+*CONN
+*I *504:mprj_io_in[15] I *C 3273.9500 4719.0000
+*I *505:mprj_io_in[15] B *C 3273.9500 4719.0000 *D chip_io
+
+*CAP
+1 *198:3 0.0
+
+*RES
+1 *504:mprj_io_in[15] *505:mprj_io_in[15] 0.001
+2 *505:mprj_io_in[15] *198:2 1.89474
+3 *505:mprj_io_in[15] *198:3 1.42105
+*END
+
+*D_NET *199 0
+
+*CONN
+*I *504:mprj_io_in[16] I *C 2723.9500 4719.0000
+*I *505:mprj_io_in[16] B *C 2723.9500 4719.0000 *D chip_io
+
+*CAP
+1 *199:3 0.0
+
+*RES
+1 *504:mprj_io_in[16] *505:mprj_io_in[16] 0.001
+2 *505:mprj_io_in[16] *199:2 1.89474
+3 *505:mprj_io_in[16] *199:3 1.42105
+*END
+
+*D_NET *200 0
+
+*CONN
+*I *504:mprj_io_in[17] I *C 2448.9500 4719.0000
+*I *505:mprj_io_in[17] B *C 2448.9500 4719.0000 *D chip_io
+
+*CAP
+1 *200:3 0.0
+
+*RES
+1 *504:mprj_io_in[17] *505:mprj_io_in[17] 0.001
+2 *505:mprj_io_in[17] *200:2 1.89474
+3 *505:mprj_io_in[17] *200:3 1.42105
+*END
+
+*D_NET *201 0
+
+*CONN
+*I *504:mprj_io_in[18] I *C 2173.9500 4719.0000
+*I *505:mprj_io_in[18] B *C 2173.9500 4719.0000 *D chip_io
+
+*CAP
+1 *201:3 0.0
+
+*RES
+1 *504:mprj_io_in[18] *505:mprj_io_in[18] 0.001
+2 *505:mprj_io_in[18] *201:2 1.89474
+3 *505:mprj_io_in[18] *201:3 1.42105
+*END
+
+*D_NET *202 0
+
+*CONN
+*I *504:mprj_io_in[19] I *C 1623.9500 4719.0000
+*I *505:mprj_io_in[19] B *C 1623.9500 4719.0000 *D chip_io
+
+*CAP
+1 *202:3 0.0
+
+*RES
+1 *504:mprj_io_in[19] *505:mprj_io_in[19] 0.001
+2 *505:mprj_io_in[19] *202:2 1.89474
+3 *505:mprj_io_in[19] *202:3 1.42105
+*END
+
+*D_NET *203 0
+
+*CONN
+*I *504:mprj_io_in[1] I *C 3528.5525 731.0500
+*I *505:mprj_io_in[1] B *C 3528.5525 731.0500 *D chip_io
+
+*CAP
+1 *203:3 0.0
+
+*RES
+1 *504:mprj_io_in[1] *505:mprj_io_in[1] 0.001
+2 *505:mprj_io_in[1] *203:3 7.47178
+3 *505:mprj_io_in[1] *203:2 2.97296
+*END
+
+*D_NET *204 0
+
+*CONN
+*I *504:mprj_io_in[20] I *C 1348.9500 4719.0000
+*I *505:mprj_io_in[20] B *C 1348.9500 4719.0000 *D chip_io
+
+*CAP
+1 *204:3 0.0
+
+*RES
+1 *504:mprj_io_in[20] *505:mprj_io_in[20] 0.001
+2 *505:mprj_io_in[20] *204:2 1.89474
+3 *505:mprj_io_in[20] *204:3 1.42105
+*END
+
+*D_NET *205 0
+
+*CONN
+*I *504:mprj_io_in[21] I *C 1073.9500 4719.0000
+*I *505:mprj_io_in[21] B *C 1073.9500 4719.0000 *D chip_io
+
+*CAP
+1 *205:3 0.0
+
+*RES
+1 *504:mprj_io_in[21] *505:mprj_io_in[21] 0.001
+2 *505:mprj_io_in[21] *205:2 1.89474
+3 *505:mprj_io_in[21] *205:3 1.42105
+*END
+
+*D_NET *206 0
+
+*CONN
+*I *504:mprj_io_in[22] I *C 798.9500 4719.0000
+*I *505:mprj_io_in[22] B *C 798.9500 4719.0000 *D chip_io
+
+*CAP
+1 *206:3 0.0
+
+*RES
+1 *504:mprj_io_in[22] *505:mprj_io_in[22] 0.001
+2 *505:mprj_io_in[22] *206:2 1.89474
+3 *505:mprj_io_in[22] *206:3 1.42105
+*END
+
+*D_NET *207 0
+
+*CONN
+*I *504:mprj_io_in[23] I *C 523.9500 4719.0000
+*I *505:mprj_io_in[23] B *C 523.9500 4719.0000 *D chip_io
+
+*CAP
+1 *207:3 0.0
+
+*RES
+1 *504:mprj_io_in[23] *505:mprj_io_in[23] 0.001
+2 *505:mprj_io_in[23] *207:2 1.89474
+3 *505:mprj_io_in[23] *207:3 1.42105
+*END
+
+*D_NET *208 0
+
+*CONN
+*I *504:mprj_io_in[24] I *C 351.0000 4528.9500
+*I *505:mprj_io_in[24] B *C 351.0000 4528.9500 *D chip_io
+
+*CAP
+1 *208:3 0.0
+
+*RES
+1 *504:mprj_io_in[24] *505:mprj_io_in[24] 0.001
+2 *505:mprj_io_in[24] *208:2 7.3658
+3 *505:mprj_io_in[24] *208:3 3.07895
+*END
+
+*D_NET *209 0
+
+*CONN
+*I *504:mprj_io_in[25] I *C 351.0000 3708.9500
+*I *505:mprj_io_in[25] B *C 351.0000 3708.9500 *D chip_io
+
+*CAP
+1 *209:3 0.0
+
+*RES
+1 *504:mprj_io_in[25] *505:mprj_io_in[25] 0.001
+2 *505:mprj_io_in[25] *209:2 7.3658
+3 *505:mprj_io_in[25] *209:3 3.07895
+*END
+
+*D_NET *210 0
+
+*CONN
+*I *504:mprj_io_in[26] I *C 351.0000 3503.9500
+*I *505:mprj_io_in[26] B *C 351.0000 3503.9500 *D chip_io
+
+*CAP
+1 *210:3 0.0
+
+*RES
+1 *504:mprj_io_in[26] *505:mprj_io_in[26] 0.001
+2 *505:mprj_io_in[26] *210:2 7.3658
+3 *505:mprj_io_in[26] *210:3 3.07895
+*END
+
+*D_NET *211 0
+
+*CONN
+*I *504:mprj_io_in[27] I *C 351.0000 3298.9500
+*I *505:mprj_io_in[27] B *C 351.0000 3298.9500 *D chip_io
+
+*CAP
+1 *211:3 0.0
+
+*RES
+1 *504:mprj_io_in[27] *505:mprj_io_in[27] 0.001
+2 *505:mprj_io_in[27] *211:2 7.3658
+3 *505:mprj_io_in[27] *211:3 3.07895
+*END
+
+*D_NET *212 0
+
+*CONN
+*I *504:mprj_io_in[28] I *C 351.0000 3093.9500
+*I *505:mprj_io_in[28] B *C 351.0000 3093.9500 *D chip_io
+
+*CAP
+1 *212:3 0.0
+
+*RES
+1 *504:mprj_io_in[28] *505:mprj_io_in[28] 0.001
+2 *505:mprj_io_in[28] *212:2 7.3658
+3 *505:mprj_io_in[28] *212:3 3.07895
+*END
+
+*D_NET *213 0
+
+*CONN
+*I *504:mprj_io_in[29] I *C 351.0000 2888.9500
+*I *505:mprj_io_in[29] B *C 351.0000 2888.9500 *D chip_io
+
+*CAP
+1 *213:3 0.0
+
+*RES
+1 *504:mprj_io_in[29] *505:mprj_io_in[29] 0.001
+2 *505:mprj_io_in[29] *213:2 7.3658
+3 *505:mprj_io_in[29] *213:3 3.07895
+*END
+
+*D_NET *214 0
+
+*CONN
+*I *504:mprj_io_in[2] I *C 3529.0000 946.0500
+*I *505:mprj_io_in[2] B *C 3529.0000 946.0500 *D chip_io
+
+*CAP
+1 *214:3 0.0
+
+*RES
+1 *504:mprj_io_in[2] *505:mprj_io_in[2] 0.001
+2 *505:mprj_io_in[2] *214:2 3.07895
+3 *505:mprj_io_in[2] *214:3 7.3658
+*END
+
+*D_NET *215 0
+
+*CONN
+*I *504:mprj_io_in[30] I *C 351.0000 2683.9500
+*I *505:mprj_io_in[30] B *C 351.0000 2683.9500 *D chip_io
+
+*CAP
+1 *215:3 0.0
+
+*RES
+1 *504:mprj_io_in[30] *505:mprj_io_in[30] 0.001
+2 *505:mprj_io_in[30] *215:2 7.3658
+3 *505:mprj_io_in[30] *215:3 3.07895
+*END
+
+*D_NET *216 0
+
+*CONN
+*I *504:mprj_io_in[31] I *C 351.0000 2478.9500
+*I *505:mprj_io_in[31] B *C 351.0000 2478.9500 *D chip_io
+
+*CAP
+1 *216:3 0.0
+
+*RES
+1 *504:mprj_io_in[31] *505:mprj_io_in[31] 0.001
+2 *505:mprj_io_in[31] *216:2 7.3658
+3 *505:mprj_io_in[31] *216:3 3.07895
+*END
+
+*D_NET *217 0
+
+*CONN
+*I *504:mprj_io_in[32] I *C 351.0000 1863.9500
+*I *505:mprj_io_in[32] B *C 351.0000 1863.9500 *D chip_io
+
+*CAP
+1 *217:3 0.0
+
+*RES
+1 *504:mprj_io_in[32] *505:mprj_io_in[32] 0.001
+2 *505:mprj_io_in[32] *217:2 7.3658
+3 *505:mprj_io_in[32] *217:3 3.07895
+*END
+
+*D_NET *218 0
+
+*CONN
+*I *504:mprj_io_in[33] I *C 351.0000 1658.9500
+*I *505:mprj_io_in[33] B *C 351.0000 1658.9500 *D chip_io
+
+*CAP
+1 *218:3 0.0
+
+*RES
+1 *504:mprj_io_in[33] *505:mprj_io_in[33] 0.001
+2 *505:mprj_io_in[33] *218:2 7.3658
+3 *505:mprj_io_in[33] *218:3 3.07895
+*END
+
+*D_NET *219 0
+
+*CONN
+*I *504:mprj_io_in[34] I *C 351.0000 1453.9500
+*I *505:mprj_io_in[34] B *C 351.0000 1453.9500 *D chip_io
+
+*CAP
+1 *219:3 0.0
+
+*RES
+1 *504:mprj_io_in[34] *505:mprj_io_in[34] 0.001
+2 *505:mprj_io_in[34] *219:2 7.3658
+3 *505:mprj_io_in[34] *219:3 3.07895
+*END
+
+*D_NET *220 0
+
+*CONN
+*I *504:mprj_io_in[35] I *C 351.0000 1248.9500
+*I *505:mprj_io_in[35] B *C 351.0000 1248.9500 *D chip_io
+
+*CAP
+1 *220:3 0.0
+
+*RES
+1 *504:mprj_io_in[35] *505:mprj_io_in[35] 0.001
+2 *505:mprj_io_in[35] *220:2 7.3658
+3 *505:mprj_io_in[35] *220:3 3.07895
+*END
+
+*D_NET *221 0
+
+*CONN
+*I *504:mprj_io_in[36] I *C 351.0000 1043.9500
+*I *505:mprj_io_in[36] B *C 351.0000 1043.9500 *D chip_io
+
+*CAP
+1 *221:3 0.0
+
+*RES
+1 *504:mprj_io_in[36] *505:mprj_io_in[36] 0.001
+2 *505:mprj_io_in[36] *221:2 7.3658
+3 *505:mprj_io_in[36] *221:3 3.07895
+*END
+
+*D_NET *222 0
+
+*CONN
+*I *504:mprj_io_in[37] I *C 351.0000 838.9500
+*I *505:mprj_io_in[37] B *C 351.0000 838.9500 *D chip_io
+
+*CAP
+1 *222:3 0.0
+
+*RES
+1 *504:mprj_io_in[37] *505:mprj_io_in[37] 0.001
+2 *505:mprj_io_in[37] *222:2 7.3658
+3 *505:mprj_io_in[37] *222:3 3.07895
+*END
+
+*D_NET *223 0
+
+*CONN
+*I *504:mprj_io_in[3] I *C 3529.0000 1161.0500
+*I *505:mprj_io_in[3] B *C 3529.0000 1161.0500 *D chip_io
+
+*CAP
+1 *223:3 0.0
+
+*RES
+1 *504:mprj_io_in[3] *505:mprj_io_in[3] 0.001
+2 *505:mprj_io_in[3] *223:2 3.07895
+3 *505:mprj_io_in[3] *223:3 7.3658
+*END
+
+*D_NET *224 0
+
+*CONN
+*I *504:mprj_io_in[4] I *C 3529.0000 1376.0500
+*I *505:mprj_io_in[4] B *C 3529.0000 1376.0500 *D chip_io
+
+*CAP
+1 *224:3 0.0
+
+*RES
+1 *504:mprj_io_in[4] *505:mprj_io_in[4] 0.001
+2 *505:mprj_io_in[4] *224:2 3.07895
+3 *505:mprj_io_in[4] *224:3 7.3658
+*END
+
+*D_NET *225 0
+
+*CONN
+*I *504:mprj_io_in[5] I *C 3529.0000 1591.0500
+*I *505:mprj_io_in[5] B *C 3529.0000 1591.0500 *D chip_io
+
+*CAP
+1 *225:3 0.0
+
+*RES
+1 *504:mprj_io_in[5] *505:mprj_io_in[5] 0.001
+2 *505:mprj_io_in[5] *225:2 3.07895
+3 *505:mprj_io_in[5] *225:3 7.3658
+*END
+
+*D_NET *226 0
+
+*CONN
+*I *504:mprj_io_in[6] I *C 3529.0000 1806.0500
+*I *505:mprj_io_in[6] B *C 3529.0000 1806.0500 *D chip_io
+
+*CAP
+1 *226:3 0.0
+
+*RES
+1 *504:mprj_io_in[6] *505:mprj_io_in[6] 0.001
+2 *505:mprj_io_in[6] *226:2 3.07895
+3 *505:mprj_io_in[6] *226:3 7.3658
+*END
+
+*D_NET *227 0
+
+*CONN
+*I *504:mprj_io_in[7] I *C 3529.0000 2666.0500
+*I *505:mprj_io_in[7] B *C 3529.0000 2666.0500 *D chip_io
+
+*CAP
+1 *227:3 0.0
+
+*RES
+1 *504:mprj_io_in[7] *505:mprj_io_in[7] 0.001
+2 *505:mprj_io_in[7] *227:2 3.07895
+3 *505:mprj_io_in[7] *227:3 7.3658
+*END
+
+*D_NET *228 0
+
+*CONN
+*I *504:mprj_io_in[8] I *C 3529.0000 2881.0500
+*I *505:mprj_io_in[8] B *C 3529.0000 2881.0500 *D chip_io
+
+*CAP
+1 *228:3 0.0
+
+*RES
+1 *504:mprj_io_in[8] *505:mprj_io_in[8] 0.001
+2 *505:mprj_io_in[8] *228:2 3.07895
+3 *505:mprj_io_in[8] *228:3 7.3658
+*END
+
+*D_NET *229 0
+
+*CONN
+*I *504:mprj_io_in[9] I *C 3529.0000 3096.0500
+*I *505:mprj_io_in[9] B *C 3529.0000 3096.0500 *D chip_io
+
+*CAP
+1 *229:3 0.0
+
+*RES
+1 *504:mprj_io_in[9] *505:mprj_io_in[9] 0.001
+2 *505:mprj_io_in[9] *229:2 3.07895
+3 *505:mprj_io_in[9] *229:3 7.3658
+*END
+
+*D_NET *230 0
+
+*CONN
+*I *504:mprj_io_oe[0] O *C 3518.5000 515.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[0] 0.0
+*END
+
+*D_NET *231 0
+
+*CONN
+*I *504:mprj_io_oe[10] O *C 3518.5000 3310.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[10] 0.0
+*END
+
+*D_NET *232 0
+
+*CONN
+*I *504:mprj_io_oe[11] O *C 3518.5000 3525.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[11] 0.0
+*END
+
+*D_NET *233 0
+
+*CONN
+*I *504:mprj_io_oe[12] O *C 3518.5000 3740.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[12] 0.0
+*END
+
+*D_NET *234 0
+
+*CONN
+*I *504:mprj_io_oe[13] O *C 3518.5000 4170.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[13] 0.0
+*END
+
+*D_NET *235 0
+
+*CONN
+*I *504:mprj_io_oe[14] O *C 3518.5000 4600.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[14] 0.0
+*END
+
+*D_NET *236 0
+
+*CONN
+*I *504:mprj_io_oe[15] O *C 3274.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[15] 0.0
+*END
+
+*D_NET *237 0
+
+*CONN
+*I *504:mprj_io_oe[16] O *C 2724.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[16] 0.0
+*END
+
+*D_NET *238 0
+
+*CONN
+*I *504:mprj_io_oe[17] O *C 2449.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[17] 0.0
+*END
+
+*D_NET *239 0
+
+*CONN
+*I *504:mprj_io_oe[18] O *C 2174.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[18] 0.0
+*END
+
+*D_NET *240 0
+
+*CONN
+*I *504:mprj_io_oe[19] O *C 1624.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[19] 0.0
+*END
+
+*D_NET *241 0
+
+*CONN
+*I *504:mprj_io_oe[1] O *C 3518.5000 730.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[1] 0.0
+*END
+
+*D_NET *242 0
+
+*CONN
+*I *504:mprj_io_oe[20] O *C 1349.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[20] 0.0
+*END
+
+*D_NET *243 0
+
+*CONN
+*I *504:mprj_io_oe[21] O *C 1074.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[21] 0.0
+*END
+
+*D_NET *244 0
+
+*CONN
+*I *504:mprj_io_oe[22] O *C 799.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[22] 0.0
+*END
+
+*D_NET *245 0
+
+*CONN
+*I *504:mprj_io_oe[23] O *C 524.6800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[23] 0.0
+*END
+
+*D_NET *246 0
+
+*CONN
+*I *504:mprj_io_oe[24] O *C 351.0000 4529.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[24] 0.0
+*END
+
+*D_NET *247 0
+
+*CONN
+*I *504:mprj_io_oe[25] O *C 351.0000 3709.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[25] 0.0
+*END
+
+*D_NET *248 0
+
+*CONN
+*I *504:mprj_io_oe[26] O *C 351.0000 3504.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[26] 0.0
+*END
+
+*D_NET *249 0
+
+*CONN
+*I *504:mprj_io_oe[27] O *C 351.0000 3299.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[27] 0.0
+*END
+
+*D_NET *250 0
+
+*CONN
+*I *504:mprj_io_oe[28] O *C 351.0000 3094.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[28] 0.0
+*END
+
+*D_NET *251 0
+
+*CONN
+*I *504:mprj_io_oe[29] O *C 351.0000 2889.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[29] 0.0
+*END
+
+*D_NET *252 0
+
+*CONN
+*I *504:mprj_io_oe[2] O *C 3518.5000 945.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[2] 0.0
+*END
+
+*D_NET *253 0
+
+*CONN
+*I *504:mprj_io_oe[30] O *C 351.0000 2684.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[30] 0.0
+*END
+
+*D_NET *254 0
+
+*CONN
+*I *504:mprj_io_oe[31] O *C 351.0000 2479.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[31] 0.0
+*END
+
+*D_NET *255 0
+
+*CONN
+*I *504:mprj_io_oe[32] O *C 351.0000 1864.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[32] 0.0
+*END
+
+*D_NET *256 0
+
+*CONN
+*I *504:mprj_io_oe[33] O *C 351.0000 1659.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[33] 0.0
+*END
+
+*D_NET *257 0
+
+*CONN
+*I *504:mprj_io_oe[34] O *C 351.0000 1454.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[34] 0.0
+*END
+
+*D_NET *258 0
+
+*CONN
+*I *504:mprj_io_oe[35] O *C 351.0000 1249.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[35] 0.0
+*END
+
+*D_NET *259 0
+
+*CONN
+*I *504:mprj_io_oe[36] O *C 351.0000 1044.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[36] 0.0
+*END
+
+*D_NET *260 0
+
+*CONN
+*I *504:mprj_io_oe[37] O *C 351.0000 839.6800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[37] 0.0
+*END
+
+*D_NET *261 0
+
+*CONN
+*I *504:mprj_io_oe[3] O *C 3518.5000 1160.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[3] 0.0
+*END
+
+*D_NET *262 0
+
+*CONN
+*I *504:mprj_io_oe[4] O *C 3518.5000 1375.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[4] 0.0
+*END
+
+*D_NET *263 0
+
+*CONN
+*I *504:mprj_io_oe[5] O *C 3518.5000 1590.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[5] 0.0
+*END
+
+*D_NET *264 0
+
+*CONN
+*I *504:mprj_io_oe[6] O *C 3518.5000 1805.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[6] 0.0
+*END
+
+*D_NET *265 0
+
+*CONN
+*I *504:mprj_io_oe[7] O *C 3518.5000 2665.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[7] 0.0
+*END
+
+*D_NET *266 0
+
+*CONN
+*I *504:mprj_io_oe[8] O *C 3518.5000 2880.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[8] 0.0
+*END
+
+*D_NET *267 0
+
+*CONN
+*I *504:mprj_io_oe[9] O *C 3518.5000 3095.3200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_oe[9] 0.0
+*END
+
+*D_NET *268 0
+
+*CONN
+*I *504:mprj_io_out[0] O *C 3529.0000 514.5900 *D caravel_core
+*I *505:mprj_io_out[0] B *C 3529.0000 514.5900 *D chip_io
+
+*CAP
+1 *268:3 0.0
+
+*RES
+1 *504:mprj_io_out[0] *505:mprj_io_out[0] 0.001
+2 *505:mprj_io_out[0] *268:2 1.89474
+3 *505:mprj_io_out[0] *268:3 20.4963
+*END
+
+*D_NET *269 0
+
+*CONN
+*I *504:mprj_io_out[10] O *C 3529.0000 3309.5900 *D caravel_core
+*I *505:mprj_io_out[10] B *C 3529.0000 3309.5900 *D chip_io
+
+*CAP
+1 *269:3 0.0
+
+*RES
+1 *504:mprj_io_out[10] *505:mprj_io_out[10] 0.001
+2 *505:mprj_io_out[10] *269:2 1.89474
+3 *505:mprj_io_out[10] *269:3 20.4963
+*END
+
+*D_NET *270 0
+
+*CONN
+*I *504:mprj_io_out[11] O *C 3529.0000 3524.5900 *D caravel_core
+*I *505:mprj_io_out[11] B *C 3529.0000 3524.5900 *D chip_io
+
+*CAP
+1 *270:3 0.0
+
+*RES
+1 *504:mprj_io_out[11] *505:mprj_io_out[11] 0.001
+2 *505:mprj_io_out[11] *270:2 1.89474
+3 *505:mprj_io_out[11] *270:3 20.4963
+*END
+
+*D_NET *271 0
+
+*CONN
+*I *504:mprj_io_out[12] O *C 3529.0000 3739.5900 *D caravel_core
+*I *505:mprj_io_out[12] B *C 3529.0000 3739.5900 *D chip_io
+
+*CAP
+1 *271:3 0.0
+
+*RES
+1 *504:mprj_io_out[12] *505:mprj_io_out[12] 0.001
+2 *505:mprj_io_out[12] *271:2 1.89474
+3 *505:mprj_io_out[12] *271:3 20.4963
+*END
+
+*D_NET *272 0
+
+*CONN
+*I *504:mprj_io_out[13] O *C 3529.0000 4169.5900 *D caravel_core
+*I *505:mprj_io_out[13] B *C 3529.0000 4169.5900 *D chip_io
+
+*CAP
+1 *272:3 0.0
+
+*RES
+1 *504:mprj_io_out[13] *505:mprj_io_out[13] 0.001
+2 *505:mprj_io_out[13] *272:2 1.89474
+3 *505:mprj_io_out[13] *272:3 20.4963
+*END
+
+*D_NET *273 0
+
+*CONN
+*I *504:mprj_io_out[14] O *C 3529.0000 4599.5900 *D caravel_core
+*I *505:mprj_io_out[14] B *C 3529.0000 4599.5900 *D chip_io
+
+*CAP
+1 *273:3 0.0
+
+*RES
+1 *504:mprj_io_out[14] *505:mprj_io_out[14] 0.001
+2 *505:mprj_io_out[14] *273:2 1.89474
+3 *505:mprj_io_out[14] *273:3 20.4963
+*END
+
+*D_NET *274 0
+
+*CONN
+*I *504:mprj_io_out[15] O *C 3275.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[15] B *C 3275.4100 4719.0000 *D chip_io
+
+*CAP
+1 *274:3 0.0
+
+*RES
+1 *504:mprj_io_out[15] *505:mprj_io_out[15] 0.001
+2 *505:mprj_io_out[15] *274:2 1.89474
+3 *505:mprj_io_out[15] *274:3 1.42105
+*END
+
+*D_NET *275 0
+
+*CONN
+*I *504:mprj_io_out[16] O *C 2725.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[16] B *C 2725.4100 4719.0000 *D chip_io
+
+*CAP
+1 *275:3 0.0
+
+*RES
+1 *504:mprj_io_out[16] *505:mprj_io_out[16] 0.001
+2 *505:mprj_io_out[16] *275:2 1.89474
+3 *505:mprj_io_out[16] *275:3 1.42105
+*END
+
+*D_NET *276 0
+
+*CONN
+*I *504:mprj_io_out[17] O *C 2450.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[17] B *C 2450.4100 4719.0000 *D chip_io
+
+*CAP
+1 *276:3 0.0
+
+*RES
+1 *504:mprj_io_out[17] *505:mprj_io_out[17] 0.001
+2 *505:mprj_io_out[17] *276:2 1.89474
+3 *505:mprj_io_out[17] *276:3 1.42105
+*END
+
+*D_NET *277 0
+
+*CONN
+*I *504:mprj_io_out[18] O *C 2175.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[18] B *C 2175.4100 4719.0000 *D chip_io
+
+*CAP
+1 *277:3 0.0
+
+*RES
+1 *504:mprj_io_out[18] *505:mprj_io_out[18] 0.001
+2 *505:mprj_io_out[18] *277:2 1.89474
+3 *505:mprj_io_out[18] *277:3 1.42105
+*END
+
+*D_NET *278 0
+
+*CONN
+*I *504:mprj_io_out[19] O *C 1625.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[19] B *C 1625.4100 4719.0000 *D chip_io
+
+*CAP
+1 *278:3 0.0
+
+*RES
+1 *504:mprj_io_out[19] *505:mprj_io_out[19] 0.001
+2 *505:mprj_io_out[19] *278:2 1.89474
+3 *505:mprj_io_out[19] *278:3 1.42105
+*END
+
+*D_NET *279 0
+
+*CONN
+*I *504:mprj_io_out[1] O *C 3528.5525 729.5900 *D caravel_core
+*I *505:mprj_io_out[1] B *C 3528.5525 729.5900 *D chip_io
+
+*CAP
+1 *279:3 0.0
+
+*RES
+1 *504:mprj_io_out[1] *505:mprj_io_out[1] 0.001
+2 *505:mprj_io_out[1] *279:3 20.6023
+3 *505:mprj_io_out[1] *279:2 1.78875
+*END
+
+*D_NET *280 0
+
+*CONN
+*I *504:mprj_io_out[20] O *C 1350.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[20] B *C 1350.4100 4719.0000 *D chip_io
+
+*CAP
+1 *280:3 0.0
+
+*RES
+1 *504:mprj_io_out[20] *505:mprj_io_out[20] 0.001
+2 *505:mprj_io_out[20] *280:2 1.89474
+3 *505:mprj_io_out[20] *280:3 1.42105
+*END
+
+*D_NET *281 0
+
+*CONN
+*I *504:mprj_io_out[21] O *C 1075.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[21] B *C 1075.4100 4719.0000 *D chip_io
+
+*CAP
+1 *281:3 0.0
+
+*RES
+1 *504:mprj_io_out[21] *505:mprj_io_out[21] 0.001
+2 *505:mprj_io_out[21] *281:2 1.89474
+3 *505:mprj_io_out[21] *281:3 1.42105
+*END
+
+*D_NET *282 0
+
+*CONN
+*I *504:mprj_io_out[22] O *C 800.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[22] B *C 800.4100 4719.0000 *D chip_io
+
+*CAP
+1 *282:3 0.0
+
+*RES
+1 *504:mprj_io_out[22] *505:mprj_io_out[22] 0.001
+2 *505:mprj_io_out[22] *282:2 1.89474
+3 *505:mprj_io_out[22] *282:3 1.42105
+*END
+
+*D_NET *283 0
+
+*CONN
+*I *504:mprj_io_out[23] O *C 525.4100 4719.0000 *D caravel_core
+*I *505:mprj_io_out[23] B *C 525.4100 4719.0000 *D chip_io
+
+*CAP
+1 *283:3 0.0
+
+*RES
+1 *504:mprj_io_out[23] *505:mprj_io_out[23] 0.001
+2 *505:mprj_io_out[23] *283:2 1.89474
+3 *505:mprj_io_out[23] *283:3 1.42105
+*END
+
+*D_NET *284 0
+
+*CONN
+*I *504:mprj_io_out[24] O *C 351.0000 4530.4100 *D caravel_core
+*I *505:mprj_io_out[24] B *C 351.0000 4530.4100 *D chip_io
+
+*CAP
+1 *284:3 0.0
+
+*RES
+1 *504:mprj_io_out[24] *505:mprj_io_out[24] 0.001
+2 *505:mprj_io_out[24] *284:2 20.4963
+3 *505:mprj_io_out[24] *284:3 1.89474
+*END
+
+*D_NET *285 0
+
+*CONN
+*I *504:mprj_io_out[25] O *C 351.0000 3710.4100 *D caravel_core
+*I *505:mprj_io_out[25] B *C 351.0000 3710.4100 *D chip_io
+
+*CAP
+1 *285:3 0.0
+
+*RES
+1 *504:mprj_io_out[25] *505:mprj_io_out[25] 0.001
+2 *505:mprj_io_out[25] *285:2 20.4963
+3 *505:mprj_io_out[25] *285:3 1.89474
+*END
+
+*D_NET *286 0
+
+*CONN
+*I *504:mprj_io_out[26] O *C 351.0000 3505.4100 *D caravel_core
+*I *505:mprj_io_out[26] B *C 351.0000 3505.4100 *D chip_io
+
+*CAP
+1 *286:3 0.0
+
+*RES
+1 *504:mprj_io_out[26] *505:mprj_io_out[26] 0.001
+2 *505:mprj_io_out[26] *286:2 20.4963
+3 *505:mprj_io_out[26] *286:3 1.89474
+*END
+
+*D_NET *287 0
+
+*CONN
+*I *504:mprj_io_out[27] O *C 351.0000 3300.4100 *D caravel_core
+*I *505:mprj_io_out[27] B *C 351.0000 3300.4100 *D chip_io
+
+*CAP
+1 *287:3 0.0
+
+*RES
+1 *504:mprj_io_out[27] *505:mprj_io_out[27] 0.001
+2 *505:mprj_io_out[27] *287:2 20.4963
+3 *505:mprj_io_out[27] *287:3 1.89474
+*END
+
+*D_NET *288 0
+
+*CONN
+*I *504:mprj_io_out[28] O *C 351.0000 3095.4100 *D caravel_core
+*I *505:mprj_io_out[28] B *C 351.0000 3095.4100 *D chip_io
+
+*CAP
+1 *288:3 0.0
+
+*RES
+1 *504:mprj_io_out[28] *505:mprj_io_out[28] 0.001
+2 *505:mprj_io_out[28] *288:2 20.4963
+3 *505:mprj_io_out[28] *288:3 1.89474
+*END
+
+*D_NET *289 0
+
+*CONN
+*I *504:mprj_io_out[29] O *C 351.0000 2890.4100 *D caravel_core
+*I *505:mprj_io_out[29] B *C 351.0000 2890.4100 *D chip_io
+
+*CAP
+1 *289:3 0.0
+
+*RES
+1 *504:mprj_io_out[29] *505:mprj_io_out[29] 0.001
+2 *505:mprj_io_out[29] *289:2 20.4963
+3 *505:mprj_io_out[29] *289:3 1.89474
+*END
+
+*D_NET *290 0
+
+*CONN
+*I *504:mprj_io_out[2] O *C 3529.0000 944.5900 *D caravel_core
+*I *505:mprj_io_out[2] B *C 3529.0000 944.5900 *D chip_io
+
+*CAP
+1 *290:3 0.0
+
+*RES
+1 *504:mprj_io_out[2] *505:mprj_io_out[2] 0.001
+2 *505:mprj_io_out[2] *290:2 1.89474
+3 *505:mprj_io_out[2] *290:3 20.4963
+*END
+
+*D_NET *291 0
+
+*CONN
+*I *504:mprj_io_out[30] O *C 351.0000 2685.4100 *D caravel_core
+*I *505:mprj_io_out[30] B *C 351.0000 2685.4100 *D chip_io
+
+*CAP
+1 *291:3 0.0
+
+*RES
+1 *504:mprj_io_out[30] *505:mprj_io_out[30] 0.001
+2 *505:mprj_io_out[30] *291:2 20.4963
+3 *505:mprj_io_out[30] *291:3 1.89474
+*END
+
+*D_NET *292 0
+
+*CONN
+*I *504:mprj_io_out[31] O *C 351.0000 2480.4100 *D caravel_core
+*I *505:mprj_io_out[31] B *C 351.0000 2480.4100 *D chip_io
+
+*CAP
+1 *292:3 0.0
+
+*RES
+1 *504:mprj_io_out[31] *505:mprj_io_out[31] 0.001
+2 *505:mprj_io_out[31] *292:2 20.4963
+3 *505:mprj_io_out[31] *292:3 1.89474
+*END
+
+*D_NET *293 0
+
+*CONN
+*I *504:mprj_io_out[32] O *C 351.0000 1865.4100 *D caravel_core
+*I *505:mprj_io_out[32] B *C 351.0000 1865.4100 *D chip_io
+
+*CAP
+1 *293:3 0.0
+
+*RES
+1 *504:mprj_io_out[32] *505:mprj_io_out[32] 0.001
+2 *505:mprj_io_out[32] *293:2 20.4963
+3 *505:mprj_io_out[32] *293:3 1.89474
+*END
+
+*D_NET *294 0
+
+*CONN
+*I *504:mprj_io_out[33] O *C 351.0000 1660.4100 *D caravel_core
+*I *505:mprj_io_out[33] B *C 351.0000 1660.4100 *D chip_io
+
+*CAP
+1 *294:3 0.0
+
+*RES
+1 *504:mprj_io_out[33] *505:mprj_io_out[33] 0.001
+2 *505:mprj_io_out[33] *294:2 20.4963
+3 *505:mprj_io_out[33] *294:3 1.89474
+*END
+
+*D_NET *295 0
+
+*CONN
+*I *504:mprj_io_out[34] O *C 351.0000 1455.4100 *D caravel_core
+*I *505:mprj_io_out[34] B *C 351.0000 1455.4100 *D chip_io
+
+*CAP
+1 *295:3 0.0
+
+*RES
+1 *504:mprj_io_out[34] *505:mprj_io_out[34] 0.001
+2 *505:mprj_io_out[34] *295:2 20.4963
+3 *505:mprj_io_out[34] *295:3 1.89474
+*END
+
+*D_NET *296 0
+
+*CONN
+*I *504:mprj_io_out[35] O *C 351.0000 1250.4100 *D caravel_core
+*I *505:mprj_io_out[35] B *C 351.0000 1250.4100 *D chip_io
+
+*CAP
+1 *296:3 0.0
+
+*RES
+1 *504:mprj_io_out[35] *505:mprj_io_out[35] 0.001
+2 *505:mprj_io_out[35] *296:2 20.4963
+3 *505:mprj_io_out[35] *296:3 1.89474
+*END
+
+*D_NET *297 0
+
+*CONN
+*I *504:mprj_io_out[36] O *C 351.0000 1045.4100 *D caravel_core
+*I *505:mprj_io_out[36] B *C 351.0000 1045.4100 *D chip_io
+
+*CAP
+1 *297:3 0.0
+
+*RES
+1 *504:mprj_io_out[36] *505:mprj_io_out[36] 0.001
+2 *505:mprj_io_out[36] *297:2 20.4963
+3 *505:mprj_io_out[36] *297:3 1.89474
+*END
+
+*D_NET *298 0
+
+*CONN
+*I *504:mprj_io_out[37] O *C 351.0000 840.4100 *D caravel_core
+*I *505:mprj_io_out[37] B *C 351.0000 840.4100 *D chip_io
+
+*CAP
+1 *298:3 0.0
+
+*RES
+1 *504:mprj_io_out[37] *505:mprj_io_out[37] 0.001
+2 *505:mprj_io_out[37] *298:2 20.4963
+3 *505:mprj_io_out[37] *298:3 1.89474
+*END
+
+*D_NET *299 0
+
+*CONN
+*I *504:mprj_io_out[3] O *C 3529.0000 1159.5900 *D caravel_core
+*I *505:mprj_io_out[3] B *C 3529.0000 1159.5900 *D chip_io
+
+*CAP
+1 *299:3 0.0
+
+*RES
+1 *504:mprj_io_out[3] *505:mprj_io_out[3] 0.001
+2 *505:mprj_io_out[3] *299:2 1.89474
+3 *505:mprj_io_out[3] *299:3 20.4963
+*END
+
+*D_NET *300 0
+
+*CONN
+*I *504:mprj_io_out[4] O *C 3529.0000 1374.5900 *D caravel_core
+*I *505:mprj_io_out[4] B *C 3529.0000 1374.5900 *D chip_io
+
+*CAP
+1 *300:3 0.0
+
+*RES
+1 *504:mprj_io_out[4] *505:mprj_io_out[4] 0.001
+2 *505:mprj_io_out[4] *300:2 1.89474
+3 *505:mprj_io_out[4] *300:3 20.4963
+*END
+
+*D_NET *301 0
+
+*CONN
+*I *504:mprj_io_out[5] O *C 3529.0000 1589.5900 *D caravel_core
+*I *505:mprj_io_out[5] B *C 3529.0000 1589.5900 *D chip_io
+
+*CAP
+1 *301:3 0.0
+
+*RES
+1 *504:mprj_io_out[5] *505:mprj_io_out[5] 0.001
+2 *505:mprj_io_out[5] *301:2 1.89474
+3 *505:mprj_io_out[5] *301:3 20.4963
+*END
+
+*D_NET *302 0
+
+*CONN
+*I *504:mprj_io_out[6] O *C 3529.0000 1804.5900 *D caravel_core
+*I *505:mprj_io_out[6] B *C 3529.0000 1804.5900 *D chip_io
+
+*CAP
+1 *302:3 0.0
+
+*RES
+1 *504:mprj_io_out[6] *505:mprj_io_out[6] 0.001
+2 *505:mprj_io_out[6] *302:2 1.89474
+3 *505:mprj_io_out[6] *302:3 20.4963
+*END
+
+*D_NET *303 0
+
+*CONN
+*I *504:mprj_io_out[7] O *C 3529.0000 2664.5900 *D caravel_core
+*I *505:mprj_io_out[7] B *C 3529.0000 2664.5900 *D chip_io
+
+*CAP
+1 *303:3 0.0
+
+*RES
+1 *504:mprj_io_out[7] *505:mprj_io_out[7] 0.001
+2 *505:mprj_io_out[7] *303:2 1.89474
+3 *505:mprj_io_out[7] *303:3 20.4963
+*END
+
+*D_NET *304 0
+
+*CONN
+*I *504:mprj_io_out[8] O *C 3529.0000 2879.5900 *D caravel_core
+*I *505:mprj_io_out[8] B *C 3529.0000 2879.5900 *D chip_io
+
+*CAP
+1 *304:3 0.0
+
+*RES
+1 *504:mprj_io_out[8] *505:mprj_io_out[8] 0.001
+2 *505:mprj_io_out[8] *304:2 1.89474
+3 *505:mprj_io_out[8] *304:3 20.4963
+*END
+
+*D_NET *305 0
+
+*CONN
+*I *504:mprj_io_out[9] O *C 3529.0000 3094.5900 *D caravel_core
+*I *505:mprj_io_out[9] B *C 3529.0000 3094.5900 *D chip_io
+
+*CAP
+1 *305:3 0.0
+
+*RES
+1 *504:mprj_io_out[9] *505:mprj_io_out[9] 0.001
+2 *505:mprj_io_out[9] *305:2 1.89474
+3 *505:mprj_io_out[9] *305:3 20.4963
+*END
+
+*D_NET *306 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[0] O *C 3513.5000 455.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[0] 0.0
+*END
+
+*D_NET *307 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[10] O *C 3513.5000 3250.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[10] 0.0
+*END
+
+*D_NET *308 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[11] O *C 3513.5000 3465.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[11] 0.0
+*END
+
+*D_NET *309 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[12] O *C 3513.5000 3680.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[12] 0.0
+*END
+
+*D_NET *310 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[13] O *C 3513.5000 4110.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[13] 0.0
+*END
+
+*D_NET *311 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[14] O *C 3513.5000 4540.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[14] 0.0
+*END
+
+*D_NET *312 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[15] O *C 3334.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[15] 0.0
+*END
+
+*D_NET *313 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[16] O *C 2784.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[16] 0.0
+*END
+
+*D_NET *314 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[17] O *C 2509.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[17] 0.0
+*END
+
+*D_NET *315 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[18] O *C 2234.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[18] 0.0
+*END
+
+*D_NET *316 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[19] O *C 1684.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[19] 0.0
+*END
+
+*D_NET *317 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[1] O *C 3513.5000 670.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[1] 0.0
+*END
+
+*D_NET *318 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[20] O *C 1409.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[20] 0.0
+*END
+
+*D_NET *319 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[21] O *C 1134.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[21] 0.0
+*END
+
+*D_NET *320 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[22] O *C 859.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[22] 0.0
+*END
+
+*D_NET *321 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[23] O *C 584.4800 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[23] 0.0
+*END
+
+*D_NET *322 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[24] O *C 351.0000 4589.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[24] 0.0
+*END
+
+*D_NET *323 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[25] O *C 351.0000 3769.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[25] 0.0
+*END
+
+*D_NET *324 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[26] O *C 351.0000 3564.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[26] 0.0
+*END
+
+*D_NET *325 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[27] O *C 351.0000 3359.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[27] 0.0
+*END
+
+*D_NET *326 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[28] O *C 351.0000 3154.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[28] 0.0
+*END
+
+*D_NET *327 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[29] O *C 351.0000 2949.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[29] 0.0
+*END
+
+*D_NET *328 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[2] O *C 3513.5000 885.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[2] 0.0
+*END
+
+*D_NET *329 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[30] O *C 351.0000 2744.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[30] 0.0
+*END
+
+*D_NET *330 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[31] O *C 351.0000 2539.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[31] 0.0
+*END
+
+*D_NET *331 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[32] O *C 351.0000 1924.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[32] 0.0
+*END
+
+*D_NET *332 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[33] O *C 351.0000 1719.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[33] 0.0
+*END
+
+*D_NET *333 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[34] O *C 351.0000 1514.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[34] 0.0
+*END
+
+*D_NET *334 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[35] O *C 351.0000 1309.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[35] 0.0
+*END
+
+*D_NET *335 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[36] O *C 351.0000 1104.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[36] 0.0
+*END
+
+*D_NET *336 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[37] O *C 351.0000 899.4800 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[37] 0.0
+*END
+
+*D_NET *337 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[3] O *C 3513.5000 1100.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[3] 0.0
+*END
+
+*D_NET *338 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[4] O *C 3513.5000 1315.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[4] 0.0
+*END
+
+*D_NET *339 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[5] O *C 3513.5000 1530.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[5] 0.0
+*END
+
+*D_NET *340 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[6] O *C 3513.5000 1745.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[6] 0.0
+*END
+
+*D_NET *341 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[7] O *C 3513.5000 2605.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[7] 0.0
+*END
+
+*D_NET *342 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[8] O *C 3513.5000 2820.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[8] 0.0
+*END
+
+*D_NET *343 0
+
+*CONN
+*I *504:mprj_io_pulldown_sel[9] O *C 3513.5000 3035.5200 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pulldown_sel[9] 0.0
+*END
+
+*D_NET *344 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[0] O *C 3521.0000 451.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[0] 0.0
+*END
+
+*D_NET *345 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[10] O *C 3521.0000 3246.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[10] 0.0
+*END
+
+*D_NET *346 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[11] O *C 3521.0000 3461.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[11] 0.0
+*END
+
+*D_NET *347 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[12] O *C 3521.0000 3676.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[12] 0.0
+*END
+
+*D_NET *348 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[13] O *C 3521.0000 4106.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[13] 0.0
+*END
+
+*D_NET *349 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[14] O *C 3521.0000 4536.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[14] 0.0
+*END
+
+*D_NET *350 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[15] O *C 3338.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[15] 0.0
+*END
+
+*D_NET *351 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[16] O *C 2788.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[16] 0.0
+*END
+
+*D_NET *352 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[17] O *C 2513.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[17] 0.0
+*END
+
+*D_NET *353 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[18] O *C 2238.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[18] 0.0
+*END
+
+*D_NET *354 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[19] O *C 1688.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[19] 0.0
+*END
+
+*D_NET *355 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[1] O *C 3521.0000 666.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[1] 0.0
+*END
+
+*D_NET *356 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[20] O *C 1413.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[20] 0.0
+*END
+
+*D_NET *357 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[21] O *C 1138.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[21] 0.0
+*END
+
+*D_NET *358 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[22] O *C 863.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[22] 0.0
+*END
+
+*D_NET *359 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[23] O *C 588.8450 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[23] 0.0
+*END
+
+*D_NET *360 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[24] O *C 351.0000 4593.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[24] 0.0
+*END
+
+*D_NET *361 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[25] O *C 351.0000 3773.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[25] 0.0
+*END
+
+*D_NET *362 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[26] O *C 351.0000 3568.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[26] 0.0
+*END
+
+*D_NET *363 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[27] O *C 351.0000 3363.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[27] 0.0
+*END
+
+*D_NET *364 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[28] O *C 351.0000 3158.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[28] 0.0
+*END
+
+*D_NET *365 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[29] O *C 351.0000 2953.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[29] 0.0
+*END
+
+*D_NET *366 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[2] O *C 3521.0000 881.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[2] 0.0
+*END
+
+*D_NET *367 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[30] O *C 351.0000 2748.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[30] 0.0
+*END
+
+*D_NET *368 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[31] O *C 351.0000 2543.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[31] 0.0
+*END
+
+*D_NET *369 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[32] O *C 351.0000 1928.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[32] 0.0
+*END
+
+*D_NET *370 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[33] O *C 351.0000 1723.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[33] 0.0
+*END
+
+*D_NET *371 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[34] O *C 351.0000 1518.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[34] 0.0
+*END
+
+*D_NET *372 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[35] O *C 351.0000 1313.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[35] 0.0
+*END
+
+*D_NET *373 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[36] O *C 351.0000 1108.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[36] 0.0
+*END
+
+*D_NET *374 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[37] O *C 351.0000 903.8450 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[37] 0.0
+*END
+
+*D_NET *375 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[3] O *C 3521.0000 1096.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[3] 0.0
+*END
+
+*D_NET *376 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[4] O *C 3521.0000 1311.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[4] 0.0
+*END
+
+*D_NET *377 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[5] O *C 3521.0000 1526.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[5] 0.0
+*END
+
+*D_NET *378 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[6] O *C 3521.0000 1741.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[6] 0.0
+*END
+
+*D_NET *379 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[7] O *C 3521.0000 2601.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[7] 0.0
+*END
+
+*D_NET *380 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[8] O *C 3521.0000 2816.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[8] 0.0
+*END
+
+*D_NET *381 0
+
+*CONN
+*I *504:mprj_io_pullup_sel[9] O *C 3521.0000 3031.1550 *D caravel_core
+
+*CAP
+1 *504:mprj_io_pullup_sel[9] 0.0
+*END
+
+*D_NET *382 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[0] O *C 3523.5000 448.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[0] 0.0
+*END
+
+*D_NET *383 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[10] O *C 3523.5000 3243.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[10] 0.0
+*END
+
+*D_NET *384 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[11] O *C 3523.5000 3458.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[11] 0.0
+*END
+
+*D_NET *385 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[12] O *C 3523.5000 3673.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[12] 0.0
+*END
+
+*D_NET *386 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[13] O *C 3523.5000 4103.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[13] 0.0
+*END
+
+*D_NET *387 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[14] O *C 3523.5000 4533.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[14] 0.0
+*END
+
+*D_NET *388 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[15] O *C 3341.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[15] 0.0
+*END
+
+*D_NET *389 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[16] O *C 2791.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[16] 0.0
+*END
+
+*D_NET *390 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[17] O *C 2516.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[17] 0.0
+*END
+
+*D_NET *391 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[18] O *C 2241.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[18] 0.0
+*END
+
+*D_NET *392 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[19] O *C 1691.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[19] 0.0
+*END
+
+*D_NET *393 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[1] O *C 3523.5000 663.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[1] 0.0
+*END
+
+*D_NET *394 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[20] O *C 1416.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[20] 0.0
+*END
+
+*D_NET *395 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[21] O *C 1141.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[21] 0.0
+*END
+
+*D_NET *396 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[22] O *C 866.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[22] 0.0
+*END
+
+*D_NET *397 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[23] O *C 591.4500 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[23] 0.0
+*END
+
+*D_NET *398 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[24] O *C 351.0000 4596.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[24] 0.0
+*END
+
+*D_NET *399 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[25] O *C 351.0000 3776.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[25] 0.0
+*END
+
+*D_NET *400 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[26] O *C 351.0000 3571.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[26] 0.0
+*END
+
+*D_NET *401 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[27] O *C 351.0000 3366.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[27] 0.0
+*END
+
+*D_NET *402 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[28] O *C 351.0000 3161.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[28] 0.0
+*END
+
+*D_NET *403 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[29] O *C 351.0000 2956.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[29] 0.0
+*END
+
+*D_NET *404 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[2] O *C 3523.5000 878.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[2] 0.0
+*END
+
+*D_NET *405 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[30] O *C 351.0000 2751.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[30] 0.0
+*END
+
+*D_NET *406 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[31] O *C 351.0000 2546.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[31] 0.0
+*END
+
+*D_NET *407 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[32] O *C 351.0000 1931.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[32] 0.0
+*END
+
+*D_NET *408 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[33] O *C 351.0000 1726.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[33] 0.0
+*END
+
+*D_NET *409 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[34] O *C 351.0000 1521.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[34] 0.0
+*END
+
+*D_NET *410 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[35] O *C 351.0000 1316.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[35] 0.0
+*END
+
+*D_NET *411 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[36] O *C 351.0000 1111.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[36] 0.0
+*END
+
+*D_NET *412 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[37] O *C 351.0000 906.4500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[37] 0.0
+*END
+
+*D_NET *413 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[3] O *C 3523.5000 1093.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[3] 0.0
+*END
+
+*D_NET *414 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[4] O *C 3523.5000 1308.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[4] 0.0
+*END
+
+*D_NET *415 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[5] O *C 3523.5000 1523.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[5] 0.0
+*END
+
+*D_NET *416 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[6] O *C 3523.5000 1738.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[6] 0.0
+*END
+
+*D_NET *417 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[7] O *C 3523.5000 2598.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[7] 0.0
+*END
+
+*D_NET *418 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[8] O *C 3523.5000 2813.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[8] 0.0
+*END
+
+*D_NET *419 0
+
+*CONN
+*I *504:mprj_io_schmitt_sel[9] O *C 3523.5000 3028.5500 *D caravel_core
+
+*CAP
+1 *504:mprj_io_schmitt_sel[9] 0.0
+*END
+
+*D_NET *420 0
+
+*CONN
+*I *504:mprj_io_slew_sel[0] O *C 3523.5000 513.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[0] 0.0
+*END
+
+*D_NET *421 0
+
+*CONN
+*I *504:mprj_io_slew_sel[10] O *C 3523.5000 3308.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[10] 0.0
+*END
+
+*D_NET *422 0
+
+*CONN
+*I *504:mprj_io_slew_sel[11] O *C 3523.5000 3523.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[11] 0.0
+*END
+
+*D_NET *423 0
+
+*CONN
+*I *504:mprj_io_slew_sel[12] O *C 3523.5000 3738.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[12] 0.0
+*END
+
+*D_NET *424 0
+
+*CONN
+*I *504:mprj_io_slew_sel[13] O *C 3523.5000 4168.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[13] 0.0
+*END
+
+*D_NET *425 0
+
+*CONN
+*I *504:mprj_io_slew_sel[14] O *C 3523.5000 4598.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[14] 0.0
+*END
+
+*D_NET *426 0
+
+*CONN
+*I *504:mprj_io_slew_sel[15] O *C 3276.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[15] 0.0
+*END
+
+*D_NET *427 0
+
+*CONN
+*I *504:mprj_io_slew_sel[16] O *C 2726.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[16] 0.0
+*END
+
+*D_NET *428 0
+
+*CONN
+*I *504:mprj_io_slew_sel[17] O *C 2451.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[17] 0.0
+*END
+
+*D_NET *429 0
+
+*CONN
+*I *504:mprj_io_slew_sel[18] O *C 2176.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[18] 0.0
+*END
+
+*D_NET *430 0
+
+*CONN
+*I *504:mprj_io_slew_sel[19] O *C 1626.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[19] 0.0
+*END
+
+*D_NET *431 0
+
+*CONN
+*I *504:mprj_io_slew_sel[1] O *C 3523.5000 728.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[1] 0.0
+*END
+
+*D_NET *432 0
+
+*CONN
+*I *504:mprj_io_slew_sel[20] O *C 1351.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[20] 0.0
+*END
+
+*D_NET *433 0
+
+*CONN
+*I *504:mprj_io_slew_sel[21] O *C 1076.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[21] 0.0
+*END
+
+*D_NET *434 0
+
+*CONN
+*I *504:mprj_io_slew_sel[22] O *C 801.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[22] 0.0
+*END
+
+*D_NET *435 0
+
+*CONN
+*I *504:mprj_io_slew_sel[23] O *C 526.1400 4711.0000 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[23] 0.0
+*END
+
+*D_NET *436 0
+
+*CONN
+*I *504:mprj_io_slew_sel[24] O *C 351.0000 4531.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[24] 0.0
+*END
+
+*D_NET *437 0
+
+*CONN
+*I *504:mprj_io_slew_sel[25] O *C 351.0000 3711.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[25] 0.0
+*END
+
+*D_NET *438 0
+
+*CONN
+*I *504:mprj_io_slew_sel[26] O *C 351.0000 3506.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[26] 0.0
+*END
+
+*D_NET *439 0
+
+*CONN
+*I *504:mprj_io_slew_sel[27] O *C 351.0000 3301.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[27] 0.0
+*END
+
+*D_NET *440 0
+
+*CONN
+*I *504:mprj_io_slew_sel[28] O *C 351.0000 3096.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[28] 0.0
+*END
+
+*D_NET *441 0
+
+*CONN
+*I *504:mprj_io_slew_sel[29] O *C 351.0000 2891.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[29] 0.0
+*END
+
+*D_NET *442 0
+
+*CONN
+*I *504:mprj_io_slew_sel[2] O *C 3523.5000 943.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[2] 0.0
+*END
+
+*D_NET *443 0
+
+*CONN
+*I *504:mprj_io_slew_sel[30] O *C 351.0000 2686.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[30] 0.0
+*END
+
+*D_NET *444 0
+
+*CONN
+*I *504:mprj_io_slew_sel[31] O *C 351.0000 2481.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[31] 0.0
+*END
+
+*D_NET *445 0
+
+*CONN
+*I *504:mprj_io_slew_sel[32] O *C 351.0000 1866.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[32] 0.0
+*END
+
+*D_NET *446 0
+
+*CONN
+*I *504:mprj_io_slew_sel[33] O *C 351.0000 1661.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[33] 0.0
+*END
+
+*D_NET *447 0
+
+*CONN
+*I *504:mprj_io_slew_sel[34] O *C 351.0000 1456.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[34] 0.0
+*END
+
+*D_NET *448 0
+
+*CONN
+*I *504:mprj_io_slew_sel[35] O *C 351.0000 1251.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[35] 0.0
+*END
+
+*D_NET *449 0
+
+*CONN
+*I *504:mprj_io_slew_sel[36] O *C 351.0000 1046.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[36] 0.0
+*END
+
+*D_NET *450 0
+
+*CONN
+*I *504:mprj_io_slew_sel[37] O *C 351.0000 841.1400 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[37] 0.0
+*END
+
+*D_NET *451 0
+
+*CONN
+*I *504:mprj_io_slew_sel[3] O *C 3523.5000 1158.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[3] 0.0
+*END
+
+*D_NET *452 0
+
+*CONN
+*I *504:mprj_io_slew_sel[4] O *C 3523.5000 1373.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[4] 0.0
+*END
+
+*D_NET *453 0
+
+*CONN
+*I *504:mprj_io_slew_sel[5] O *C 3523.5000 1588.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[5] 0.0
+*END
+
+*D_NET *454 0
+
+*CONN
+*I *504:mprj_io_slew_sel[6] O *C 3523.5000 1803.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[6] 0.0
+*END
+
+*D_NET *455 0
+
+*CONN
+*I *504:mprj_io_slew_sel[7] O *C 3523.5000 2663.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[7] 0.0
+*END
+
+*D_NET *456 0
+
+*CONN
+*I *504:mprj_io_slew_sel[8] O *C 3523.5000 2878.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[8] 0.0
+*END
+
+*D_NET *457 0
+
+*CONN
+*I *504:mprj_io_slew_sel[9] O *C 3523.5000 3093.8600 *D caravel_core
+
+*CAP
+1 *504:mprj_io_slew_sel[9] 0.0
+*END
+
+*D_NET *458 0
+
+*CONN
+*I *504:rstb I *C 871.0500 351.0000
+*I *505:resetb_core B *C 871.0500 351.0000 *D chip_io
+
+*CAP
+1 *458:3 0.0
+
+*RES
+1 *504:rstb *505:resetb_core 0.001
+2 *505:resetb_core *458:2 7.40132
+3 *505:resetb_core *458:3 1.89474
+*END
