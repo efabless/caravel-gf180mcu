@@ -16,6 +16,20 @@
 echo ${PDK_ROOT:=/usr/share/pdk} > /dev/null
 echo ${PDK:=gf180mcuC} > /dev/null
 
+# Generate GDS of chip_io
+echo "Generating GDS view of chip_io"
+magic -dnull -noconsole -rcfile ${PDK_ROOT}/${PDK}/libs.tech/magic/${PDK}.magicrc << EOF
+load chip_io -dereference
+gds compress 9
+cif *hier write disable
+cif *array write disable
+gds write chip_io
+quit -noprompt
+EOF
+
+# Use abstract views for DEF and LEF generation
+export MAGTYPE=maglef
+
 # Generate DEF of chip_io
 echo "Generating DEF view of chip_io"
 magic -dnull -noconsole -rcfile ${PDK_ROOT}/${PDK}/libs.tech/magic/${PDK}.magicrc << EOF
@@ -34,20 +48,8 @@ EOF
 
 rm *.ext
 
-# Generate GDS of chip_io
-echo "Generating GDS view of chip_io"
-magic -dnull -noconsole -rcfile ${PDK_ROOT}/${PDK}/libs.tech/magic/${PDK}.magicrc << EOF
-load chip_io -dereference
-gds compress 9
-cif *hier write disable
-cif *array write disable
-gds write chip_io
-quit -noprompt
-EOF
-
 # Generate LEF of chip_io
 echo "Generating LEF view of chip_io"
-export MAGTYPE=maglef
 magic -dnull -noconsole -rcfile ${PDK_ROOT}/${PDK}/libs.tech/magic/${PDK}.magicrc << EOF
 load chip_io -dereference
 select top cell
