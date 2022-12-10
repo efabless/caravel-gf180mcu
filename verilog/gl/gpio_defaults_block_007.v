@@ -153,7 +153,9 @@ module gpio_defaults_block_007(VDD, VSS, gpio_defaults);
    assign gpio_defaults[4] = \gpio_defaults_low[4] ;
    assign gpio_defaults[5] = \gpio_defaults_low[5] ;
    assign gpio_defaults[6] = \gpio_defaults_low[6] ;
-   assign gpio_defaults[7] = \gpio_defaults_low[7] ;
-   assign gpio_defaults[8] = \gpio_defaults_low[8] ;
-   assign gpio_defaults[9] = \gpio_defaults_low[9] ;
+ 
+   /* connected to the closest tie pin in the layout */
+   assign gpio_defaults[7] = \gpio_defaults_low[9] ;
+   assign gpio_defaults[8] = \gpio_defaults_low[7] ;
+   assign gpio_defaults[9] = \gpio_defaults_low[8] ;
  endmodule
