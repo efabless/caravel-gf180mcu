@@ -343,23 +343,29 @@ module chip_io(
 		.VSS(vss)
     	);
 
-	gf180mcu_fd_io__bi_t mprj_pads[`MPRJ_IO_PADS-1:0] (
-		.DVDD(vdd),
-		.DVSS(vss),
-		.VDD(vdd),
-		.VSS(vss),
-		.PAD(mprj_io),
-		.CS(mprj_io_schmitt_select),
-		.SL(mprj_io_slew_select),
-		.IE(mprj_io_inen),
-		.OE(mprj_io_outen),
-		.PU(mprj_io_pu_select),
-		.PD(mprj_io_pd_select),
-		.PDRV0(mprj_io_drive_sel[0]),
-		.PDRV1(mprj_io_drive_sel[1]),
-		.A(mprj_io_out),
-		.Y(mprj_io_in)
-	);
+    genvar i;
+    generate
+        for (i = 0; i < `MPRJ_IO_PADS; i = i+1) begin
+    	    gf180mcu_fd_io__bi_t mprj_pads[i] (
+				.DVDD(vdd),
+				.DVSS(vss),
+				.VDD(vdd),
+				.VSS(vss),
+				.PAD(mprj_io[i]),
+				.CS(mprj_io_schmitt_select[i]),
+				.SL(mprj_io_slew_select[i]),
+				.IE(mprj_io_inen[i]),
+				.OE(mprj_io_outen[i]),
+				.PU(mprj_io_pu_select[i]),
+				.PD(mprj_io_pd_select[i]),
+				.PDRV0(mprj_io_drive_sel[i*2]),
+				.PDRV1(mprj_io_drive_sel[i*2+1]),
+				.A(mprj_io_out[i]),
+				.Y(mprj_io_in[i])
+			);
+
+	end
+    endgenerate
 
 endmodule
 // `default_nettype wire
