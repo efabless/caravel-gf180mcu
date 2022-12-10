@@ -20,7 +20,7 @@ if {\
     link
 
     # Reading constraints (signoff)
-    if {$::env(DESIGN) == "mgmt_core_wrapper" | $::env(DESIGN) == "RAM256" | $::env(DESIGN) == "RAM128"} {
+    if {$::env(DESIGN) == "mgmt_core_wrapper" | $::env(DESIGN) == "RAM256" | $::env(DESIGN) == "RAM128" | $::env(DESIGN) == "gf180_ram_512x8_wrapper"} {
       read_sdc $::env(MCW_ROOT)/signoff/$::env(DESIGN)/$::env(DESIGN).sdc
     } else {
       read_sdc $::env(CARAVEL_ROOT)/signoff/$::env(DESIGN)/$::env(DESIGN).sdc
@@ -35,8 +35,8 @@ if {\
       # add -complete_with wlm to let PT complete incomplete RC networks at the top-level
       if {$design == "mgmt_core_wrapper" | $design == "RAM128" | $design == "RAM256" | $design == "gf180_ram_512x8_wrapper"} {
         # read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -complete_with wlm -pin_cap_included 
-        read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -pin_cap_included 
-        read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included 
+        # read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -pin_cap_included 
+        read_parasitics -keep_capacitive_coupling -verbose $::env(MCW_ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included -complete_with wlm
       } else {
         # read_parasitics -keep_capacitive_coupling -verbose $::env(CARAVEL_ROOT)/signoff/${design}/openlane-signoff/spef/${design}.${rc_corner}.spef -complete_with wlm -pin_cap_included
         # read_parasitics -keep_capacitive_coupling -verbose $::env(CARAVEL_ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included
@@ -60,6 +60,19 @@ if {\
       report_si_bottleneck -significant_digits 4 -nosplit -slack_lesser_than 10 -all_nets > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-si_bottleneck.rpt
 
       if {$design == "caravel" | $design == "caravel_core"} {
+        if {$design == "caravel"} {
+          report_timing -unique_pins -delay min -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
+
+          report_timing -unique_pins -delay max -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
+        } else {
+          report_timing -unique_pins -delay min -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
+
+          report_timing -unique_pins -delay max -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
+        }
         report_timing -unique_pins -delay min -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit -group clk \
         -max_paths 10000 -nworst 5 -slack_lesser_than 10 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-clk-min_timing.rpt
         
@@ -80,12 +93,6 @@ if {\
 
         report_case_analysis -nosplit > $::env(OUT_DIR)/reports/${design}.case_analysis.rpt
         report_exceptions -nosplit > $::env(OUT_DIR)/reports/${design}.false_paths.rpt
-
-        report_timing -unique_pins -delay min -through [get_cells *mprj*] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-        -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
-
-        report_timing -unique_pins -delay max -through [get_cells *mprj*] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-        -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
       }
 
       write_sdf -version 3.0 -significant_digits 3 $::env(OUT_DIR)/sdf/${proc_corner}${proc_corner}/${design}.${rc_corner}.sdf

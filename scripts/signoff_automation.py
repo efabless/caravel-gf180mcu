@@ -157,7 +157,7 @@ def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design, t
         "-d",
         f"{design}",
         "-o",
-        f"{signoff_dir}/{design}/primetime/{timestr}/",
+        f"{signoff_dir}/{design}/primetime/{timestr}",
         "-l",
         f"{log_dir}",
     ]
@@ -311,6 +311,32 @@ def check_errors(
         else:
             logging.error(f"Antenna checks failed find report at {antenna_report}")
             f.write("Antenna checks:    Failed\n")
+
+def save_latest_run (lvs, drc, antenna, sta, spef, run_dir):
+    if spef:
+        if os.path.exists(f"{run_dir}/../logs"):
+            shutil.rmtree(f"{run_dir}/../logs")
+        shutil.copytree(f"{run_dir}/logs", f"{run_dir}/../logs")
+        spef_files = glob.glob(f"{run_dir}/*.spef")
+        for spef_f in spef_files:
+            spef_name =spef_f.split("/")[-1]
+            shutil.copyfile(spef_f,f"{run_dir}/../{spef_name}")
+
+    elif sta:
+        dirs = ['lib', 'sdf', 'reports', 'logs']
+        for dir in dirs:
+            if os.path.exists(f"{run_dir}/../{dir}"):
+                shutil.rmtree(f"{run_dir}/../{dir}")
+            shutil.copytree(f"{run_dir}/{dir}", f"{run_dir}/../{dir}")
+    # if lvs or drc or antenna :
+    #     if os.path.exists(f"{run_dir}/../logs"):
+    #         shutil.rmtree(f"{run_dir}/../logs")
+    #     shutil.copytree(f"{run_dir}/logs", f"{run_dir}/../logs")
+    #     files = glob.glob(f"{run_dir}/*")
+    #     for f in files:
+    #         f_name = f.split("/")[-1]
+    #         shutil.copyfile(spef_f,f"{run_dir}/../{f_name}")
+    
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -533,13 +559,50 @@ if __name__ == "__main__":
             ) 
         logging.info(f"Running StarRC all corners extraction on {design}")
 
-    if sta:
-        if spef:
-            spef_p.wait()
-            spef_files = glob.glob(f"{signoff_dir}/{design}/StarRC/{timestr}/*.spef")
-            for spef_f in spef_files:
-                spef_name =spef_f.split("/")[-1]
-                shutil.copyfile(spef_f,f"{signoff_dir}/{design}/StarRC/{spef_name}")
+    if sta and spef:
+        out, err = spef_p.communicate()
+        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
+        if err:
+            if "ERROR" in err:
+                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.close()
+            else:
+                logging.info(f"StarRC spef extraction done")
+                os.remove(f"{spef_log_dir}/{design}-error.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/StarRC/{timestr}")
+        spef = False
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime")
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime/{timestr}"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime/{timestr}")
+        sta_log_dir = os.path.join(signoff_dir, f"{design}/primetime/{timestr}/logs")
+        if not os.path.exists(f"{sta_log_dir}"):
+            os.makedirs(f"{sta_log_dir}")
+
+        logging.info(f"Running PrimeTime STA all corners on {design}")
+        sta_p = run_sta(
+            caravel_root,
+            mcw_root,
+            f"{caravel_root}/scripts/pt_libs",
+            sta_log_dir,
+            signoff_dir,
+            design,
+            timestr
+        )
+    elif spef:
+        out, err = spef_p.communicate()
+        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
+        if err:
+            if "ERROR" in err:
+                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.close()
+            else:
+                logging.info(f"StarRC spef extraction done")
+                os.remove(f"{spef_log_dir}/{design}-error.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/StarRC/{timestr}")
+    elif sta:
         if not os.path.exists(f"{signoff_dir}/{design}/primetime"):
             os.makedirs(f"{signoff_dir}/{design}/primetime")
         if not os.path.exists(f"{signoff_dir}/{design}/primetime/{timestr}"):
@@ -594,18 +657,6 @@ if __name__ == "__main__":
                 ver_log.write(err)
             if out:
                 ver_log.write(out)
-
-    if spef:
-        out, err = spef_p.communicate()
-        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
-        if err:
-            if "ERROR" in err:
-                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
-                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
-                spef_log.close()
-            else:
-                logging.info(f"StarRC spef extraction done")
-                os.remove(f"{spef_log_dir}/{design}-error.log")
     
     if sta:
         out, err = sta_p.communicate()
@@ -616,6 +667,7 @@ if __name__ == "__main__":
             sta_log.close()
         else:
             os.remove(f"{sta_log_dir}/PT_STA_{design}.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/primetime/{timestr}")
 
     if lvs:
         lvs_p1.wait()

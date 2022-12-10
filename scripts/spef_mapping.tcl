@@ -10,6 +10,7 @@ if {$design == "caravel_core"} {
     #caravel macros
     set spef_mapping(housekeeping)                             $::env(CARAVEL_ROOT)/signoff/housekeeping/StarRC/housekeeping.${rc_corner}.spef
     set spef_mapping(gpio_buf)                                 $::env(CARAVEL_ROOT)/signoff/mprj_io_buffer/StarRC/mprj_io_buffer.${rc_corner}.spef
+    set spef_mapping(user_id_value)                            $::env(CARAVEL_ROOT)/signoff/user_id_programming/StarRC/user_id_programming.${rc_corner}.spef
     # set spef_mapping(gf180_ram_512x8_wrapper)                  $::env(MCW_ROOT)/signoff/gf180_ram_512x8_wrapper/StarRC/gf180_ram_512x8_wrapper.${rc_corner}.spef
 
     set spef_mapping(\spare_logic[0])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/StarRC/spare_logic_block.${rc_corner}.spef
@@ -80,6 +81,7 @@ if {$design == "caravel_core"} {
     #caravel macros
     set spef_mapping(chip_core/housekeeping)                             $::env(CARAVEL_ROOT)/signoff/housekeeping/StarRC/housekeeping.${rc_corner}.spef
     set spef_mapping(chip_core/gpio_buf)                                 $::env(CARAVEL_ROOT)/signoff/mprj_io_buffer/StarRC/mprj_io_buffer.${rc_corner}.spef
+    set spef_mapping(chip_core/user_id_value)                            $::env(CARAVEL_ROOT)/signoff/user_id_programming/StarRC/user_id_programming.${rc_corner}.spef
 
     set spef_mapping(chip_core/\spare_logic[0])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/StarRC/spare_logic_block.${rc_corner}.spef
     set spef_mapping(chip_core/\spare_logic[1])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/StarRC/spare_logic_block.${rc_corner}.spef
