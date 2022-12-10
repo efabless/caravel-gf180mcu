@@ -17,8 +17,8 @@
 module chip_io(
 `ifdef USE_POWER_PINS
 	// Power buses
-	inout  VSS,	// Common padframe/ESD 5.0V ground
-	inout  VDD,	// Management padframe/ESD 5.0V supply
+	inout  vss,	// Common padframe/ESD 5.0V ground
+	inout  vdd,	// Management padframe/ESD 5.0V supply
 `endif
 
 	inout  gpio,
@@ -36,10 +36,10 @@ module chip_io(
 	input  gpio_out_core,
 	input  gpio_outen_core,
 	input  gpio_inen_core,
-	input  gpio_pu_select_core,
-	input  gpio_pd_select_core,
-	input  gpio_schmitt_select_core,
-	input  gpio_slew_select_core,
+	input  gpio_pu_select,
+	input  gpio_pd_select,
+	input  gpio_schmitt_select,
+	input  gpio_slew_select,
 	input  [1:0] gpio_drive_select_core,
 	input  flash_csb_core,
 	input  flash_clk_core,
@@ -61,12 +61,12 @@ module chip_io(
 	// User project IOs
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,
 	input [`MPRJ_IO_PADS-1:0] mprj_io_out,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_oe,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_ie,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_schmitt_sel,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_slew_sel,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_pullup_sel,
-	input [`MPRJ_IO_PADS-1:0] mprj_io_pulldown_sel,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_outen,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_inen,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_schmitt_select,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_slew_select,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_pu_select,
+	input [`MPRJ_IO_PADS-1:0] mprj_io_pd_select,
 	input [`MPRJ_IO_PADS*2-1:0] mprj_io_drive_sel,
 	output [`MPRJ_IO_PADS-1:0] mprj_io_in
 );
@@ -86,128 +86,128 @@ module chip_io(
 	// however, all VSS domains are tied together.
 
     	gf180mcu_fd_io__dvdd mgmt_vddio_pad_0 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
 	// lies in user area---Does not belong to management domain
 	// like it does on the Sky130 version.
     	gf180mcu_fd_io__dvdd mgmt_vddio_pad_1 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvdd mgmt_vdda_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvdd mgmt_vccd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvss mgmt_vssio_pad_0 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
     	gf180mcu_fd_io__dvss mgmt_vssio_pad_1 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
     	gf180mcu_fd_io__dvss mgmt_vssa_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
     	gf180mcu_fd_io__dvss mgmt_vssd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
 	// Instantiate power and ground pads for user 1 domain
 	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
 
     	gf180mcu_fd_io__dvdd user1_vdda_pad_0 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
 	gf180mcu_fd_io__dvdd user1_vdda_pad_1 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvdd user1_vccd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvss user1_vssa_pad_0 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
 
     	gf180mcu_fd_io__dvss user1_vssa_pad_1 (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
     	gf180mcu_fd_io__dvss user1_vssd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
 	// Instantiate power and ground pads for user 2 domain
 	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
 
     	gf180mcu_fd_io__dvdd user2_vdda_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvdd user2_vccd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VSS(vss)
     	);
 
     	gf180mcu_fd_io__dvss user2_vssa_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
     	gf180mcu_fd_io__dvss user2_vssd_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd)
     	);
 
 	// Management clock input pad
 	gf180mcu_fd_io__in_c mgmt_clock_input_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PU(const_zero[4]),
 		.PD(const_zero[4]),
 		.PAD(clock),
@@ -216,17 +216,17 @@ module chip_io(
 
 	// Management GPIO pad
 	gf180mcu_fd_io__bi_t mgmt_gpio_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(gpio),
-		.CS(gpio_schmitt_select_core),
-		.SL(gpio_slew_select_core),
+		.CS(gpio_schmitt_select),
+		.SL(gpio_slew_select),
 		.IE(gpio_inen_core),
 		.OE(gpio_outen_core),
-		.PU(gpio_pu_select_core),
-		.PD(gpio_pd_select_core),
+		.PU(gpio_pu_select),
+		.PD(gpio_pd_select),
 		.PDRV0(gpio_drive_select_core[0]),
 		.PDRV1(gpio_drive_select_core[1]),
 		.A(gpio_out_core),
@@ -235,10 +235,10 @@ module chip_io(
 
 	// Management Flash SPI pads
 	gf180mcu_fd_io__bi_t flash_io0_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(flash_io0),
 		.CS(const_zero[1]),
 		.SL(const_zero[1]),
@@ -253,10 +253,10 @@ module chip_io(
 	);
 	
 	gf180mcu_fd_io__bi_t flash_io1_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(flash_io1),
 		.CS(const_zero[0]),
 		.SL(const_zero[0]),
@@ -271,10 +271,10 @@ module chip_io(
 	);
 
 	gf180mcu_fd_io__bi_t flash_csb_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(flash_csb),
 		.CS(const_zero[3]),
 		.SL(const_zero[3]),
@@ -289,10 +289,10 @@ module chip_io(
 	);
 
 	gf180mcu_fd_io__bi_t flash_clk_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(flash_clk),
 		.CS(const_zero[2]),
 		.SL(const_zero[2]),
@@ -309,10 +309,10 @@ module chip_io(
 	// NOTE:  Resetb is active low and is configured as a pull-up
 
 	gf180mcu_fd_io__in_s resetb_pad (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PU(const_one[1]),
 		.PD(const_zero[5]),
 		.PAD(resetb),
@@ -323,38 +323,38 @@ module chip_io(
     	// supposed to go under them.)
 
 	gf180mcu_fd_io__cor mgmt_corner [1:0] (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss)
 	);
 
 	gf180mcu_fd_io__cor user1_corner (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss)
     	);
 
 	gf180mcu_fd_io__cor user2_corner (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS)
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss)
     	);
 
 	gf180mcu_fd_io__bi_t mprj_pads[`MPRJ_IO_PADS-1:0] (
-		.DVDD(VDD),
-		.DVSS(VSS),
-		.VDD(VDD),
-		.VSS(VSS),
+		.DVDD(vdd),
+		.DVSS(vss),
+		.VDD(vdd),
+		.VSS(vss),
 		.PAD(mprj_io),
-		.CS(mprj_io_schmitt_sel),
-		.SL(mprj_io_slew_sel),
-		.IE(mprj_io_ie),
-		.OE(mprj_io_oe),
-		.PU(mprj_io_pullup_sel),
-		.PD(mprj_io_pulldown_sel),
+		.CS(mprj_io_schmitt_select),
+		.SL(mprj_io_slew_select),
+		.IE(mprj_io_inen),
+		.OE(mprj_io_outen),
+		.PU(mprj_io_pu_select),
+		.PD(mprj_io_pd_select),
 		.PDRV0(mprj_io_drive_sel[0]),
 		.PDRV1(mprj_io_drive_sel[1]),
 		.A(mprj_io_out),
