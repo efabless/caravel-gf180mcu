@@ -517,6 +517,4 @@ module caravel(VSS, VDD, gpio, mprj_io, clock, resetb, flash_csb, flash_clk, fla
     .resetb(resetb),
     .resetb_core(rstb)
   );
-  user_id_textblock user_id_textblock (
-  );
 endmodule
