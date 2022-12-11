@@ -98,13 +98,13 @@ module caravel (
     chip_io padframe(
 	// Package Pins
 `ifdef USE_POWER_PINS
-	.VDD	(VDD),		// Common padframe/ESD supply
-	.VSS	(VSS),		// Common digital ground
+	.vdd	(VDD),		// Common padframe/ESD supply
+	.vss	(VSS),		// Common digital ground
 `endif
-	.gpio_pu_select_core(const_zero[7]),
-	.gpio_pd_select_core(const_zero[8]),
-	.gpio_schmitt_select_core(const_zero[6]),
-	.gpio_slew_select_core(const_zero[9]),
+	.gpio_pu_select(const_zero[7]),
+	.gpio_pd_select(const_zero[8]),
+	.gpio_schmitt_select(const_zero[6]),
+	.gpio_slew_select(const_zero[9]),
 	//
 	.gpio(gpio),
 	.mprj_io(mprj_io),
@@ -143,12 +143,12 @@ module caravel (
 	.flash_io1_di_core(flash_io1_di),
 	.mprj_io_in(mprj_io_in),
 	.mprj_io_out(mprj_io_out),
-	.mprj_io_oe(mprj_io_oe),
-	.mprj_io_ie(mprj_io_ie),
-	.mprj_io_schmitt_sel(mprj_io_schmitt_sel),
-	.mprj_io_pullup_sel(mprj_io_pullup_sel),
-	.mprj_io_pulldown_sel(mprj_io_pulldown_sel),
-	.mprj_io_slew_sel(mprj_io_slew_sel),
+	.mprj_io_outen(mprj_io_oe),
+	.mprj_io_inen(mprj_io_ie),
+	.mprj_io_schmitt_select(mprj_io_schmitt_sel),
+	.mprj_io_pu_select(mprj_io_pullup_sel),
+	.mprj_io_pd_select(mprj_io_pulldown_sel),
+	.mprj_io_slew_select(mprj_io_slew_sel),
 	.mprj_io_drive_sel(mprj_io_drive_sel),
 
 	// constant value inputs

@@ -1,8 +1,8 @@
-* Simple POR testbench
+* Simple Schmitt trigger inverter testbench (No. 1:  Using hand-written netlist)
 
-.include /usr/share/pdk/gf180mcuC/libs.ref/gf180mcu_pr/spice/design.hspice
-.lib /usr/share/pdk/gf180mcuC/libs.ref/gf180mcu_pr/spice/sm141064.hspice typical
-.lib /usr/share/pdk/gf180mcuC/libs.ref/gf180mcu_pr/spice/sm141064.hspice res_typical
+.include /usr/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
 .include simple_por.spice
 
 V0 VDD 0 5
