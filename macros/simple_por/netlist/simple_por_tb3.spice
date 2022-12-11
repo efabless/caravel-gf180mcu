@@ -1,10 +1,10 @@
-* Simple POR testbench (No. 1:  Using hand-written netlist)
+* Simple POR testbench (No. 3:  Running on the layout-extracted netlist)
 
 .include /usr/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
 .lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
 .lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
 .lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice mimcap_typical
-.include simple_por.spice
+.include ../mag/simple_por.spice
 
 V0 VDD 0 PWL(0 0 100u 5 5m 5)
 
@@ -12,5 +12,5 @@ X0 VDD 0 PORB POR simple_por
 
 .control
 tran 1u 100m
-plot V(VDD) V(POR) V(PORB)
+plot V(VDD) V(PORB) V(POR)
 .endc
