@@ -1317,7 +1317,15 @@ COMPONENTS 8 ;
     - padframe chip_io + PLACED ( 0 0 ) N ;
     - user_id_textblock user_id_textblock + PLACED ( 520000 8000 ) N ;
 END COMPONENTS
-PINS 45 ;
+PINS 47 ;
+    - VDD + NET VDD + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 6625000 64000 ) N ;
+    - VSS + NET VSS + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1125000 64000 ) N ;
     - clock + NET clock + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
@@ -1499,7 +1507,9 @@ PINS 45 ;
         + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
         + PLACED ( 1675000 64000 ) N ;
 END PINS
-NETS 457 ;
+NETS 459 ;
+    - VDD ( PIN VDD ) ( padframe vdd ) ( chip_core VDD ) + USE SIGNAL ;
+    - VSS ( PIN VSS ) ( padframe vss ) ( chip_core VSS ) + USE SIGNAL ;
     - clock ( PIN clock ) ( padframe clock ) + USE SIGNAL ;
     - clock_core ( padframe clock_core ) ( chip_core clock_core ) + USE SIGNAL ;
     - const_one\[0\] ( padframe const_one[0] ) ( chip_core const_one[0] ) + USE SIGNAL ;
