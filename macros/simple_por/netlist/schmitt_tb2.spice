@@ -1,9 +1,9 @@
-* Simple Schmitt trigger inverter testbench (No. 1:  Using hand-written netlist)
+* Simple Schmitt trigger inverter testbench (No. 2:  Using layout-extracted netlist)
 
 .include /usr/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
 .lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
 .lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
-.include simple_por.spice
+.include ../mag/simple_por.spice
 
 V0 VDD 0 5
 V1 In 0 PWL(0 0 100u 5 200u 5 300u 0)

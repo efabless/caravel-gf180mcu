@@ -1,21 +1,21 @@
 * NGSPICE file created from simple_por.ext - technology: gf180mcuC
 
 .subckt pmos_6p0_GUW2N9 a_50_n324# w_n378_n586# a_n148_n324# a_n60_n368#
-X0 a_50_n324# a_n60_n368# a_n148_n324# w_n378_n586# pmos_6p0 w=3u l=0.55u
+X0 a_50_n324# a_n60_n368# a_n148_n324# w_n378_n586# pfet_06v0 w=3u l=0.55u
 .ends
 
 .subckt nmos_6p0_BUMBUS a_n302_n300# a_n70_n168# a_n158_n76# a_70_n76#
-X0 a_70_n76# a_n70_n168# a_n158_n76# a_n302_n300# nmos_6p0 w=1u l=0.7u
+X0 a_70_n76# a_n70_n168# a_n158_n76# a_n302_n300# nfet_06v0 w=1u l=0.7u
 .ends
 
 .subckt pmos_6p0_MUW2NR a_n52_n524# w_n480_n786# a_162_n524# a_n162_n568# a_n250_n524#
 + a_52_n568#
-X0 a_n52_n524# a_n162_n568# a_n250_n524# w_n480_n786# pmos_6p0 w=5u l=0.55u
-X1 a_162_n524# a_52_n568# a_n52_n524# w_n480_n786# pmos_6p0 w=5u l=0.55u
+X0 a_n52_n524# a_n162_n568# a_n250_n524# w_n480_n786# pfet_06v0 w=5u l=0.55u
+X1 a_162_n524# a_52_n568# a_n52_n524# w_n480_n786# pfet_06v0 w=5u l=0.55u
 .ends
 
 .subckt nmos_6p0_BUMBJU a_n158_n276# a_n302_n500# a_n70_n368# a_70_n276#
-X0 a_70_n276# a_n70_n368# a_n158_n276# a_n302_n500# nmos_6p0 w=3u l=0.7u
+X0 a_70_n276# a_n70_n368# a_n158_n276# a_n302_n500# nfet_06v0 w=3u l=0.7u
 .ends
 
 .subckt std_inverter VDD Vin Vout VSS
@@ -30,39 +30,39 @@ XX0 VDD X0/Vin Vout VSS std_inverter
 .ends
 
 .subckt nmos_6p0_BJPB5U a_n70_n268# a_n158_n224# a_70_n224# a_n302_n400#
-X0 a_70_n224# a_n70_n268# a_n158_n224# a_n302_n400# nmos_6p0 w=2u l=0.7u
+X0 a_70_n224# a_n70_n268# a_n158_n224# a_n302_n400# nfet_06v0 w=2u l=0.7u
 .ends
 
 .subckt pmos_6p0_EYEQQM a_n304_n268# a_n622_n176# a_234_n176# a_n408_n176# a_124_n268#
 + a_n732_n268# w_n1050_n486# a_n518_n268# a_n90_n268# a_662_n176# a_n820_n176# a_448_n176#
 + a_n194_n176# a_552_n268# a_20_n176# a_338_n268#
-X0 a_20_n176# a_n90_n268# a_n194_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X1 a_n622_n176# a_n732_n268# a_n820_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X2 a_234_n176# a_124_n268# a_20_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X3 a_448_n176# a_338_n268# a_234_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X4 a_n194_n176# a_n304_n268# a_n408_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X5 a_n408_n176# a_n518_n268# a_n622_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
-X6 a_662_n176# a_552_n268# a_448_n176# w_n1050_n486# pmos_6p0 w=2u l=0.55u
+X0 a_20_n176# a_n90_n268# a_n194_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X1 a_n622_n176# a_n732_n268# a_n820_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X2 a_234_n176# a_124_n268# a_20_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X3 a_448_n176# a_338_n268# a_234_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X4 a_n194_n176# a_n304_n268# a_n408_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X5 a_n408_n176# a_n518_n268# a_n622_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
+X6 a_662_n176# a_552_n268# a_448_n176# w_n1050_n486# pfet_06v0 w=2u l=0.55u
 .ends
 
 .subckt nmos_6p0_B4TB5U a_n70_n268# a_70_n176# a_n158_n176# a_n302_n400#
-X0 a_70_n176# a_n70_n268# a_n158_n176# a_n302_n400# nmos_6p0 w=2u l=0.7u
+X0 a_70_n176# a_n70_n268# a_n158_n176# a_n302_n400# nfet_06v0 w=2u l=0.7u
 .ends
 
 .subckt pmos_6p0_CYEQN4 a_n138_n176# a_60_n176# a_n50_n268# w_n368_n486#
-X0 a_60_n176# a_n50_n268# a_n138_n176# w_n368_n486# pmos_6p0 w=2u l=0.55u
+X0 a_60_n176# a_n50_n268# a_n138_n176# w_n368_n486# pfet_06v0 w=2u l=0.55u
 .ends
 
 .subckt nmos_6p0_BJXXPT a_662_n268# a_n314_n268# a_n70_n268# a_n418_n224# a_n1034_n400#
 + a_n174_n224# a_802_n224# a_n802_n268# a_n890_n224# a_n662_n224# a_418_n268# a_174_n268#
 + a_558_n224# a_314_n224# a_70_n224# a_n558_n268#
-X0 a_70_n224# a_n70_n268# a_n174_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X1 a_314_n224# a_174_n268# a_70_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X2 a_558_n224# a_418_n268# a_314_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X3 a_n662_n224# a_n802_n268# a_n890_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X4 a_n174_n224# a_n314_n268# a_n418_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X5 a_802_n224# a_662_n268# a_558_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
-X6 a_n418_n224# a_n558_n268# a_n662_n224# a_n1034_n400# nmos_6p0 w=2u l=0.7u
+X0 a_70_n224# a_n70_n268# a_n174_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X1 a_314_n224# a_174_n268# a_70_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X2 a_558_n224# a_418_n268# a_314_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X3 a_n662_n224# a_n802_n268# a_n890_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X4 a_n174_n224# a_n314_n268# a_n418_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X5 a_802_n224# a_662_n268# a_558_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
+X6 a_n418_n224# a_n558_n268# a_n662_n224# a_n1034_n400# nfet_06v0 w=2u l=0.7u
 .ends
 
 .subckt ppolyf_u_1k_6p0_TRTT7C a_7600_n2622# a_5360_2500# a_2560_n2622# a_3120_n2622#
@@ -188,14 +188,14 @@ X87 a_9280_n2622# a_9280_2500# a_n12492_n2834# ppolyf_u_1k_6p0 r_width=1u r_leng
 .subckt pmos_6p0_HUEQQM a_375_n176# a_265_n268# a_n810_n268# a_n596_n268# a_803_n176#
 + a_n272_n176# a_589_n176# a_161_n176# a_693_n268# a_n58_n176# a_479_n268# a_51_n268#
 + a_n382_n268# w_n1128_n486# a_n168_n268# a_n898_n176# a_n700_n176# a_n486_n176#
-X0 a_n58_n176# a_n168_n268# a_n272_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X1 a_803_n176# a_693_n268# a_589_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X2 a_375_n176# a_265_n268# a_161_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X3 a_n272_n176# a_n382_n268# a_n486_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X4 a_n700_n176# a_n810_n268# a_n898_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X5 a_589_n176# a_479_n268# a_375_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X6 a_n486_n176# a_n596_n268# a_n700_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
-X7 a_161_n176# a_51_n268# a_n58_n176# w_n1128_n486# pmos_6p0 w=2u l=0.55u
+X0 a_n58_n176# a_n168_n268# a_n272_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X1 a_803_n176# a_693_n268# a_589_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X2 a_375_n176# a_265_n268# a_161_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X3 a_n272_n176# a_n382_n268# a_n486_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X4 a_n700_n176# a_n810_n268# a_n898_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X5 a_589_n176# a_479_n268# a_375_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X6 a_n486_n176# a_n596_n268# a_n700_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
+X7 a_161_n176# a_51_n268# a_n58_n176# w_n1128_n486# pfet_06v0 w=2u l=0.55u
 .ends
 
 .subckt reduction_mirror VDD VSS Vout
@@ -249,7 +249,7 @@ Xpmos_6p0_HUEQQM_0 m2_921_1004# m2_921_1004# m2_921_1004# m2_921_1004# m2_921_10
 .ends
 
 .subckt mim_2p0fF_8KW78G m4_n1220_n1120# m4_n1100_n1000#
-X0 m4_n1100_n1000# m4_n1220_n1120# mim_2p0fF c_width=10u c_length=10u
+X0 m4_n1100_n1000# m4_n1220_n1120# cap_mim_2f0_m4m5_noshield c_width=10u c_length=10u
 .ends
 
 .subckt large_mimcap In VSS
@@ -265,19 +265,19 @@ XXC1[2|2] VSS In mim_2p0fF_8KW78G
 .ends
 
 .subckt pmos_6p0_UXEQNM a_n60_n168# a_n148_n76# w_n378_n386# a_50_n76#
-X0 a_50_n76# a_n60_n168# a_n148_n76# w_n378_n386# pmos_6p0 w=1u l=0.55u
+X0 a_50_n76# a_n60_n168# a_n148_n76# w_n378_n386# pfet_06v0 w=1u l=0.55u
 .ends
 
 .subckt nmos_6p0_L3YBEV a_n188_n724# a_100_n724# a_n332_n900# a_n100_n768#
-X0 a_100_n724# a_n100_n768# a_n188_n724# a_n332_n900# nmos_6p0 w=7u l=1u
+X0 a_100_n724# a_n100_n768# a_n188_n724# a_n332_n900# nfet_06v0 w=7u l=1u
 .ends
 
 .subckt pmos_6p0_9YEQN4 a_50_n576# w_n378_n886# a_n148_n576# a_n60_n668#
-X0 a_50_n576# a_n60_n668# a_n148_n576# w_n378_n886# pmos_6p0 w=6u l=0.55u
+X0 a_50_n576# a_n60_n668# a_n148_n576# w_n378_n886# pfet_06v0 w=6u l=0.55u
 .ends
 
 .subckt pmos_6p0_9859UL a_n288_n26# a_n200_n118# a_200_n26# w_n518_n336#
-X0 a_200_n26# a_n200_n118# a_n288_n26# w_n518_n336# pmos_6p0 w=0.5u l=2u
+X0 a_200_n26# a_n200_n118# a_n288_n26# w_n518_n336# pfet_06v0 w=0.5u l=2u
 .ends
 
 .subckt schmitt_inverter VDD VSS Vin Vout
