@@ -36,6 +36,10 @@ add_macro_placement caravel_motto 1474.0 17.0 N
 
 manual_macro_placement f
 
+label_macro_pins \
+    -lef $::env(CARAVEL_ROOT)/lef/caravel.lef \
+    -netlist_def $::env(CURRENT_DEF)
+
 run_magic
 
 ##saves to <RUN_DIR>/results/final

@@ -1318,51 +1318,186 @@ COMPONENTS 8 ;
     - user_id_textblock user_id_textblock + PLACED ( 520000 8000 ) N ;
 END COMPONENTS
 PINS 45 ;
-    - clock + NET clock + DIRECTION INPUT + USE SIGNAL ;
-    - flash_clk + NET flash_clk + DIRECTION INOUT + USE SIGNAL ;
-    - flash_csb + NET flash_csb + DIRECTION INOUT + USE SIGNAL ;
-    - flash_io0 + NET flash_io0 + DIRECTION INOUT + USE SIGNAL ;
-    - flash_io1 + NET flash_io1 + DIRECTION INOUT + USE SIGNAL ;
-    - gpio + NET gpio + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[0] + NET mprj_io[0] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[10] + NET mprj_io[10] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[11] + NET mprj_io[11] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[12] + NET mprj_io[12] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[13] + NET mprj_io[13] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[14] + NET mprj_io[14] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[15] + NET mprj_io[15] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[16] + NET mprj_io[16] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[17] + NET mprj_io[17] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[18] + NET mprj_io[18] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[19] + NET mprj_io[19] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[1] + NET mprj_io[1] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[20] + NET mprj_io[20] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[21] + NET mprj_io[21] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[22] + NET mprj_io[22] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[23] + NET mprj_io[23] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[24] + NET mprj_io[24] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[25] + NET mprj_io[25] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[26] + NET mprj_io[26] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[27] + NET mprj_io[27] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[28] + NET mprj_io[28] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[29] + NET mprj_io[29] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[2] + NET mprj_io[2] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[30] + NET mprj_io[30] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[31] + NET mprj_io[31] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[32] + NET mprj_io[32] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[33] + NET mprj_io[33] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[34] + NET mprj_io[34] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[35] + NET mprj_io[35] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[36] + NET mprj_io[36] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[37] + NET mprj_io[37] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[3] + NET mprj_io[3] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[4] + NET mprj_io[4] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[5] + NET mprj_io[5] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[6] + NET mprj_io[6] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[7] + NET mprj_io[7] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[8] + NET mprj_io[8] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[9] + NET mprj_io[9] + DIRECTION INOUT + USE SIGNAL ;
-    - resetb + NET resetb + DIRECTION INPUT + USE SIGNAL ;
+    - clock + NET clock + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2225000 64000 ) N ;
+    - flash_clk + NET flash_clk + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3875000 64000 ) N ;
+    - flash_csb + NET flash_csb + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3325000 64000 ) N ;
+    - flash_io0 + NET flash_io0 + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4425000 64000 ) N ;
+    - flash_io1 + NET flash_io1 + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4975000 64000 ) N ;
+    - gpio + NET gpio + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 5525000 64000 ) N ;
+    - mprj_io[0] + NET mprj_io[0] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 965000 ) N ;
+    - mprj_io[10] + NET mprj_io[10] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6555000 ) N ;
+    - mprj_io[11] + NET mprj_io[11] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6985000 ) N ;
+    - mprj_io[12] + NET mprj_io[12] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 7415000 ) N ;
+    - mprj_io[13] + NET mprj_io[13] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 8275000 ) N ;
+    - mprj_io[14] + NET mprj_io[14] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 9135000 ) N ;
+    - mprj_io[15] + NET mprj_io[15] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 6615000 10076000 ) N ;
+    - mprj_io[16] + NET mprj_io[16] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 5515000 10076000 ) N ;
+    - mprj_io[17] + NET mprj_io[17] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4965000 10076000 ) N ;
+    - mprj_io[18] + NET mprj_io[18] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4415000 10076000 ) N ;
+    - mprj_io[19] + NET mprj_io[19] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3315000 10076000 ) N ;
+    - mprj_io[1] + NET mprj_io[1] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 1395000 ) N ;
+    - mprj_io[20] + NET mprj_io[20] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2765000 10076000 ) N ;
+    - mprj_io[21] + NET mprj_io[21] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2215000 10076000 ) N ;
+    - mprj_io[22] + NET mprj_io[22] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1665000 10076000 ) N ;
+    - mprj_io[23] + NET mprj_io[23] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1115000 10076000 ) N ;
+    - mprj_io[24] + NET mprj_io[24] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 9125000 ) N ;
+    - mprj_io[25] + NET mprj_io[25] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 7485000 ) N ;
+    - mprj_io[26] + NET mprj_io[26] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 7075000 ) N ;
+    - mprj_io[27] + NET mprj_io[27] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 6665000 ) N ;
+    - mprj_io[28] + NET mprj_io[28] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 6255000 ) N ;
+    - mprj_io[29] + NET mprj_io[29] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5845000 ) N ;
+    - mprj_io[2] + NET mprj_io[2] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 1825000 ) N ;
+    - mprj_io[30] + NET mprj_io[30] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5435000 ) N ;
+    - mprj_io[31] + NET mprj_io[31] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5025000 ) N ;
+    - mprj_io[32] + NET mprj_io[32] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 3795000 ) N ;
+    - mprj_io[33] + NET mprj_io[33] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 3385000 ) N ;
+    - mprj_io[34] + NET mprj_io[34] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2975000 ) N ;
+    - mprj_io[35] + NET mprj_io[35] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2565000 ) N ;
+    - mprj_io[36] + NET mprj_io[36] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2155000 ) N ;
+    - mprj_io[37] + NET mprj_io[37] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 1745000 ) N ;
+    - mprj_io[3] + NET mprj_io[3] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 2255000 ) N ;
+    - mprj_io[4] + NET mprj_io[4] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 2685000 ) N ;
+    - mprj_io[5] + NET mprj_io[5] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 3115000 ) N ;
+    - mprj_io[6] + NET mprj_io[6] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 3545000 ) N ;
+    - mprj_io[7] + NET mprj_io[7] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 5265000 ) N ;
+    - mprj_io[8] + NET mprj_io[8] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 5695000 ) N ;
+    - mprj_io[9] + NET mprj_io[9] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6125000 ) N ;
+    - resetb + NET resetb + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1675000 64000 ) N ;
 END PINS
 NETS 457 ;
     - clock ( PIN clock ) ( padframe clock ) + USE SIGNAL ;
