@@ -10,7 +10,6 @@ prep -design $script_dir -tag user_project_wrapper_pdn -overwrite -ignore_mismat
 set_netlist $::env(DESIGN_DIR)/../../verilog/gl/__user_project_wrapper.v
 set ::env(FP_PDN_SKIPTRIM) 1
 init_floorplan
-place_io
 apply_def_template
 run_power_grid_generation
 

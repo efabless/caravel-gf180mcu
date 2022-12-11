@@ -1,7 +1,7 @@
 magic
 tech gf180mcuC
 magscale 1 5
-timestamp 1670501001
+timestamp 1670682483
 << metal2 >>
 rect 5516 297780 5628 298500
 rect 16548 297780 16660 298500
@@ -364,7 +364,6 @@ rect -480 201852 240 201964
 rect 297780 201796 298500 201908
 rect 297780 195188 298500 195300
 rect -480 194796 240 194908
-rect -480 190820 240 190932
 rect 297780 188580 298500 188692
 rect -480 187740 240 187852
 rect 297780 181972 298500 182084
@@ -379,7 +378,6 @@ rect 297780 155540 298500 155652
 rect -480 152460 240 152572
 rect 297780 148932 298500 149044
 rect -480 145404 240 145516
-rect -480 145124 240 145236
 rect 297780 142324 298500 142436
 rect -480 138348 240 138460
 rect 297780 135716 298500 135828
@@ -1185,8 +1183,6 @@ rlabel metal2 s 291284 -480 291396 240 8 user_irq[1]
 port 309 nsew signal output
 rlabel metal2 s 292236 -480 292348 240 8 user_irq[2]
 port 310 nsew signal output
-rlabel metal3 s -480 145124 240 145236 4 vdd
-port 311 nsew signal input
 rlabel metal4 s -478 -342 -168 298654 4 vdd
 port 311 nsew signal input
 rlabel metal5 s -478 -342 298510 -32 8 vdd
@@ -1327,8 +1323,6 @@ rlabel metal5 s -958 280913 298990 281223 6 vdd
 port 311 nsew signal input
 rlabel metal5 s -958 289913 298990 290223 6 vdd
 port 311 nsew signal input
-rlabel metal3 s -480 190820 240 190932 4 vss
-port 312 nsew signal input
 rlabel metal4 s -958 -822 -648 299134 4 vss
 port 312 nsew signal input
 rlabel metal5 s -958 -822 298990 -512 8 vss
@@ -1685,8 +1679,8 @@ port 418 nsew signal input
 string FIXED_BBOX 0 0 298020 298020
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2624540
-string GDS_FILE /home/hosni/GF180/physical_verification/caravel-gf180mcu/openlane/user_project_wrapper/runs/user_project_wrapper_pdn/results/signoff/user_project_wrapper.magic.gds
+string GDS_END 2624156
+string GDS_FILE /home/hosni/GF180/rerun/caravel-gf180mcu/openlane/user_project_wrapper/runs/user_project_wrapper_pdn/results/signoff/user_project_wrapper.magic.gds
 string GDS_START 130
 << end >>
 
