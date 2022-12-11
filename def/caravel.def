@@ -1317,54 +1317,199 @@ COMPONENTS 8 ;
     - padframe chip_io + PLACED ( 0 0 ) N ;
     - user_id_textblock user_id_textblock + PLACED ( 520000 8000 ) N ;
 END COMPONENTS
-PINS 45 ;
-    - clock + NET clock + DIRECTION INPUT + USE SIGNAL ;
-    - flash_clk + NET flash_clk + DIRECTION INOUT + USE SIGNAL ;
-    - flash_csb + NET flash_csb + DIRECTION INOUT + USE SIGNAL ;
-    - flash_io0 + NET flash_io0 + DIRECTION INOUT + USE SIGNAL ;
-    - flash_io1 + NET flash_io1 + DIRECTION INOUT + USE SIGNAL ;
-    - gpio + NET gpio + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[0] + NET mprj_io[0] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[10] + NET mprj_io[10] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[11] + NET mprj_io[11] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[12] + NET mprj_io[12] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[13] + NET mprj_io[13] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[14] + NET mprj_io[14] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[15] + NET mprj_io[15] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[16] + NET mprj_io[16] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[17] + NET mprj_io[17] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[18] + NET mprj_io[18] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[19] + NET mprj_io[19] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[1] + NET mprj_io[1] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[20] + NET mprj_io[20] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[21] + NET mprj_io[21] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[22] + NET mprj_io[22] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[23] + NET mprj_io[23] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[24] + NET mprj_io[24] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[25] + NET mprj_io[25] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[26] + NET mprj_io[26] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[27] + NET mprj_io[27] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[28] + NET mprj_io[28] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[29] + NET mprj_io[29] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[2] + NET mprj_io[2] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[30] + NET mprj_io[30] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[31] + NET mprj_io[31] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[32] + NET mprj_io[32] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[33] + NET mprj_io[33] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[34] + NET mprj_io[34] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[35] + NET mprj_io[35] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[36] + NET mprj_io[36] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[37] + NET mprj_io[37] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[3] + NET mprj_io[3] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[4] + NET mprj_io[4] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[5] + NET mprj_io[5] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[6] + NET mprj_io[6] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[7] + NET mprj_io[7] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[8] + NET mprj_io[8] + DIRECTION INOUT + USE SIGNAL ;
-    - mprj_io[9] + NET mprj_io[9] + DIRECTION INOUT + USE SIGNAL ;
-    - resetb + NET resetb + DIRECTION INPUT + USE SIGNAL ;
+PINS 47 ;
+    - VDD + NET VDD + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 6625000 64000 ) N ;
+    - VSS + NET VSS + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1125000 64000 ) N ;
+    - clock + NET clock + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2225000 64000 ) N ;
+    - flash_clk + NET flash_clk + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3875000 64000 ) N ;
+    - flash_csb + NET flash_csb + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3325000 64000 ) N ;
+    - flash_io0 + NET flash_io0 + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4425000 64000 ) N ;
+    - flash_io1 + NET flash_io1 + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4975000 64000 ) N ;
+    - gpio + NET gpio + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 5525000 64000 ) N ;
+    - mprj_io[0] + NET mprj_io[0] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 965000 ) N ;
+    - mprj_io[10] + NET mprj_io[10] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6555000 ) N ;
+    - mprj_io[11] + NET mprj_io[11] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6985000 ) N ;
+    - mprj_io[12] + NET mprj_io[12] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 7415000 ) N ;
+    - mprj_io[13] + NET mprj_io[13] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 8275000 ) N ;
+    - mprj_io[14] + NET mprj_io[14] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 9135000 ) N ;
+    - mprj_io[15] + NET mprj_io[15] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 6615000 10076000 ) N ;
+    - mprj_io[16] + NET mprj_io[16] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 5515000 10076000 ) N ;
+    - mprj_io[17] + NET mprj_io[17] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4965000 10076000 ) N ;
+    - mprj_io[18] + NET mprj_io[18] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 4415000 10076000 ) N ;
+    - mprj_io[19] + NET mprj_io[19] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 3315000 10076000 ) N ;
+    - mprj_io[1] + NET mprj_io[1] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 1395000 ) N ;
+    - mprj_io[20] + NET mprj_io[20] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2765000 10076000 ) N ;
+    - mprj_io[21] + NET mprj_io[21] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 2215000 10076000 ) N ;
+    - mprj_io[22] + NET mprj_io[22] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1665000 10076000 ) N ;
+    - mprj_io[23] + NET mprj_io[23] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1115000 10076000 ) N ;
+    - mprj_io[24] + NET mprj_io[24] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 9125000 ) N ;
+    - mprj_io[25] + NET mprj_io[25] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 7485000 ) N ;
+    - mprj_io[26] + NET mprj_io[26] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 7075000 ) N ;
+    - mprj_io[27] + NET mprj_io[27] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 6665000 ) N ;
+    - mprj_io[28] + NET mprj_io[28] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 6255000 ) N ;
+    - mprj_io[29] + NET mprj_io[29] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5845000 ) N ;
+    - mprj_io[2] + NET mprj_io[2] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 1825000 ) N ;
+    - mprj_io[30] + NET mprj_io[30] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5435000 ) N ;
+    - mprj_io[31] + NET mprj_io[31] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 5025000 ) N ;
+    - mprj_io[32] + NET mprj_io[32] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 3795000 ) N ;
+    - mprj_io[33] + NET mprj_io[33] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 3385000 ) N ;
+    - mprj_io[34] + NET mprj_io[34] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2975000 ) N ;
+    - mprj_io[35] + NET mprj_io[35] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2565000 ) N ;
+    - mprj_io[36] + NET mprj_io[36] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 2155000 ) N ;
+    - mprj_io[37] + NET mprj_io[37] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 64000 1745000 ) N ;
+    - mprj_io[3] + NET mprj_io[3] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 2255000 ) N ;
+    - mprj_io[4] + NET mprj_io[4] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 2685000 ) N ;
+    - mprj_io[5] + NET mprj_io[5] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 3115000 ) N ;
+    - mprj_io[6] + NET mprj_io[6] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 3545000 ) N ;
+    - mprj_io[7] + NET mprj_io[7] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 5265000 ) N ;
+    - mprj_io[8] + NET mprj_io[8] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 5695000 ) N ;
+    - mprj_io[9] + NET mprj_io[9] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 7696000 6125000 ) N ;
+    - resetb + NET resetb + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal5 ( -60000 -60000 ) ( 60000 60000 )
+        + PLACED ( 1675000 64000 ) N ;
 END PINS
-NETS 457 ;
+NETS 459 ;
+    - VDD ( PIN VDD ) ( padframe vdd ) ( chip_core VDD ) + USE SIGNAL ;
+    - VSS ( PIN VSS ) ( padframe vss ) ( chip_core VSS ) + USE SIGNAL ;
     - clock ( PIN clock ) ( padframe clock ) + USE SIGNAL ;
     - clock_core ( padframe clock_core ) ( chip_core clock_core ) + USE SIGNAL ;
     - const_one\[0\] ( padframe const_one[0] ) ( chip_core const_one[0] ) + USE SIGNAL ;
@@ -1375,10 +1520,10 @@ NETS 457 ;
     - const_zero\[3\] ( padframe const_zero[3] ) ( chip_core const_zero[3] ) + USE SIGNAL ;
     - const_zero\[4\] ( padframe const_zero[4] ) ( chip_core const_zero[4] ) + USE SIGNAL ;
     - const_zero\[5\] ( padframe const_zero[5] ) ( chip_core const_zero[5] ) + USE SIGNAL ;
-    - const_zero\[6\] ( chip_core const_zero[6] ) + USE SIGNAL ;
-    - const_zero\[7\] ( chip_core const_zero[7] ) + USE SIGNAL ;
-    - const_zero\[8\] ( chip_core const_zero[8] ) + USE SIGNAL ;
-    - const_zero\[9\] ( chip_core const_zero[9] ) + USE SIGNAL ;
+    - const_zero\[6\] ( padframe gpio_schmitt_select ) ( chip_core const_zero[6] ) + USE SIGNAL ;
+    - const_zero\[7\] ( padframe gpio_pu_select ) ( chip_core const_zero[7] ) + USE SIGNAL ;
+    - const_zero\[8\] ( padframe gpio_pd_select ) ( chip_core const_zero[8] ) + USE SIGNAL ;
+    - const_zero\[9\] ( padframe gpio_slew_select ) ( chip_core const_zero[9] ) + USE SIGNAL ;
     - flash_clk ( PIN flash_clk ) ( padframe flash_clk ) + USE SIGNAL ;
     - flash_clk_frame ( padframe flash_clk_core ) ( chip_core flash_clk_frame ) + USE SIGNAL ;
     - flash_clk_oe ( padframe flash_clk_oe_core ) ( chip_core flash_clk_oe ) + USE SIGNAL ;
@@ -1516,44 +1661,44 @@ NETS 457 ;
     - mprj_io_drive_sel\[7\] ( padframe mprj_io_drive_sel[6] ) ( chip_core mprj_io_drive_sel[7] ) + USE SIGNAL ;
     - mprj_io_drive_sel\[8\] ( padframe mprj_io_drive_sel[7] ) ( chip_core mprj_io_drive_sel[8] ) + USE SIGNAL ;
     - mprj_io_drive_sel\[9\] ( padframe mprj_io_drive_sel[8] ) ( chip_core mprj_io_drive_sel[9] ) + USE SIGNAL ;
-    - mprj_io_ie\[0\] ( chip_core mprj_io_ie[0] ) + USE SIGNAL ;
-    - mprj_io_ie\[10\] ( chip_core mprj_io_ie[10] ) + USE SIGNAL ;
-    - mprj_io_ie\[11\] ( chip_core mprj_io_ie[11] ) + USE SIGNAL ;
-    - mprj_io_ie\[12\] ( chip_core mprj_io_ie[12] ) + USE SIGNAL ;
-    - mprj_io_ie\[13\] ( chip_core mprj_io_ie[13] ) + USE SIGNAL ;
-    - mprj_io_ie\[14\] ( chip_core mprj_io_ie[14] ) + USE SIGNAL ;
-    - mprj_io_ie\[15\] ( chip_core mprj_io_ie[15] ) + USE SIGNAL ;
-    - mprj_io_ie\[16\] ( chip_core mprj_io_ie[16] ) + USE SIGNAL ;
-    - mprj_io_ie\[17\] ( chip_core mprj_io_ie[17] ) + USE SIGNAL ;
-    - mprj_io_ie\[18\] ( chip_core mprj_io_ie[18] ) + USE SIGNAL ;
-    - mprj_io_ie\[19\] ( chip_core mprj_io_ie[19] ) + USE SIGNAL ;
-    - mprj_io_ie\[1\] ( chip_core mprj_io_ie[1] ) + USE SIGNAL ;
-    - mprj_io_ie\[20\] ( chip_core mprj_io_ie[20] ) + USE SIGNAL ;
-    - mprj_io_ie\[21\] ( chip_core mprj_io_ie[21] ) + USE SIGNAL ;
-    - mprj_io_ie\[22\] ( chip_core mprj_io_ie[22] ) + USE SIGNAL ;
-    - mprj_io_ie\[23\] ( chip_core mprj_io_ie[23] ) + USE SIGNAL ;
-    - mprj_io_ie\[24\] ( chip_core mprj_io_ie[24] ) + USE SIGNAL ;
-    - mprj_io_ie\[25\] ( chip_core mprj_io_ie[25] ) + USE SIGNAL ;
-    - mprj_io_ie\[26\] ( chip_core mprj_io_ie[26] ) + USE SIGNAL ;
-    - mprj_io_ie\[27\] ( chip_core mprj_io_ie[27] ) + USE SIGNAL ;
-    - mprj_io_ie\[28\] ( chip_core mprj_io_ie[28] ) + USE SIGNAL ;
-    - mprj_io_ie\[29\] ( chip_core mprj_io_ie[29] ) + USE SIGNAL ;
-    - mprj_io_ie\[2\] ( chip_core mprj_io_ie[2] ) + USE SIGNAL ;
-    - mprj_io_ie\[30\] ( chip_core mprj_io_ie[30] ) + USE SIGNAL ;
-    - mprj_io_ie\[31\] ( chip_core mprj_io_ie[31] ) + USE SIGNAL ;
-    - mprj_io_ie\[32\] ( chip_core mprj_io_ie[32] ) + USE SIGNAL ;
-    - mprj_io_ie\[33\] ( chip_core mprj_io_ie[33] ) + USE SIGNAL ;
-    - mprj_io_ie\[34\] ( chip_core mprj_io_ie[34] ) + USE SIGNAL ;
-    - mprj_io_ie\[35\] ( chip_core mprj_io_ie[35] ) + USE SIGNAL ;
-    - mprj_io_ie\[36\] ( chip_core mprj_io_ie[36] ) + USE SIGNAL ;
-    - mprj_io_ie\[37\] ( chip_core mprj_io_ie[37] ) + USE SIGNAL ;
-    - mprj_io_ie\[3\] ( chip_core mprj_io_ie[3] ) + USE SIGNAL ;
-    - mprj_io_ie\[4\] ( chip_core mprj_io_ie[4] ) + USE SIGNAL ;
-    - mprj_io_ie\[5\] ( chip_core mprj_io_ie[5] ) + USE SIGNAL ;
-    - mprj_io_ie\[6\] ( chip_core mprj_io_ie[6] ) + USE SIGNAL ;
-    - mprj_io_ie\[7\] ( chip_core mprj_io_ie[7] ) + USE SIGNAL ;
-    - mprj_io_ie\[8\] ( chip_core mprj_io_ie[8] ) + USE SIGNAL ;
-    - mprj_io_ie\[9\] ( chip_core mprj_io_ie[9] ) + USE SIGNAL ;
+    - mprj_io_ie\[0\] ( padframe mprj_io_inen[0] ) ( chip_core mprj_io_ie[0] ) + USE SIGNAL ;
+    - mprj_io_ie\[10\] ( padframe mprj_io_inen[10] ) ( chip_core mprj_io_ie[10] ) + USE SIGNAL ;
+    - mprj_io_ie\[11\] ( padframe mprj_io_inen[11] ) ( chip_core mprj_io_ie[11] ) + USE SIGNAL ;
+    - mprj_io_ie\[12\] ( padframe mprj_io_inen[12] ) ( chip_core mprj_io_ie[12] ) + USE SIGNAL ;
+    - mprj_io_ie\[13\] ( padframe mprj_io_inen[13] ) ( chip_core mprj_io_ie[13] ) + USE SIGNAL ;
+    - mprj_io_ie\[14\] ( padframe mprj_io_inen[14] ) ( chip_core mprj_io_ie[14] ) + USE SIGNAL ;
+    - mprj_io_ie\[15\] ( padframe mprj_io_inen[15] ) ( chip_core mprj_io_ie[15] ) + USE SIGNAL ;
+    - mprj_io_ie\[16\] ( padframe mprj_io_inen[16] ) ( chip_core mprj_io_ie[16] ) + USE SIGNAL ;
+    - mprj_io_ie\[17\] ( padframe mprj_io_inen[17] ) ( chip_core mprj_io_ie[17] ) + USE SIGNAL ;
+    - mprj_io_ie\[18\] ( padframe mprj_io_inen[18] ) ( chip_core mprj_io_ie[18] ) + USE SIGNAL ;
+    - mprj_io_ie\[19\] ( padframe mprj_io_inen[19] ) ( chip_core mprj_io_ie[19] ) + USE SIGNAL ;
+    - mprj_io_ie\[1\] ( padframe mprj_io_inen[1] ) ( chip_core mprj_io_ie[1] ) + USE SIGNAL ;
+    - mprj_io_ie\[20\] ( padframe mprj_io_inen[20] ) ( chip_core mprj_io_ie[20] ) + USE SIGNAL ;
+    - mprj_io_ie\[21\] ( padframe mprj_io_inen[21] ) ( chip_core mprj_io_ie[21] ) + USE SIGNAL ;
+    - mprj_io_ie\[22\] ( padframe mprj_io_inen[22] ) ( chip_core mprj_io_ie[22] ) + USE SIGNAL ;
+    - mprj_io_ie\[23\] ( padframe mprj_io_inen[23] ) ( chip_core mprj_io_ie[23] ) + USE SIGNAL ;
+    - mprj_io_ie\[24\] ( padframe mprj_io_inen[24] ) ( chip_core mprj_io_ie[24] ) + USE SIGNAL ;
+    - mprj_io_ie\[25\] ( padframe mprj_io_inen[25] ) ( chip_core mprj_io_ie[25] ) + USE SIGNAL ;
+    - mprj_io_ie\[26\] ( padframe mprj_io_inen[26] ) ( chip_core mprj_io_ie[26] ) + USE SIGNAL ;
+    - mprj_io_ie\[27\] ( padframe mprj_io_inen[27] ) ( chip_core mprj_io_ie[27] ) + USE SIGNAL ;
+    - mprj_io_ie\[28\] ( padframe mprj_io_inen[28] ) ( chip_core mprj_io_ie[28] ) + USE SIGNAL ;
+    - mprj_io_ie\[29\] ( padframe mprj_io_inen[29] ) ( chip_core mprj_io_ie[29] ) + USE SIGNAL ;
+    - mprj_io_ie\[2\] ( padframe mprj_io_inen[2] ) ( chip_core mprj_io_ie[2] ) + USE SIGNAL ;
+    - mprj_io_ie\[30\] ( padframe mprj_io_inen[30] ) ( chip_core mprj_io_ie[30] ) + USE SIGNAL ;
+    - mprj_io_ie\[31\] ( padframe mprj_io_inen[31] ) ( chip_core mprj_io_ie[31] ) + USE SIGNAL ;
+    - mprj_io_ie\[32\] ( padframe mprj_io_inen[32] ) ( chip_core mprj_io_ie[32] ) + USE SIGNAL ;
+    - mprj_io_ie\[33\] ( padframe mprj_io_inen[33] ) ( chip_core mprj_io_ie[33] ) + USE SIGNAL ;
+    - mprj_io_ie\[34\] ( padframe mprj_io_inen[34] ) ( chip_core mprj_io_ie[34] ) + USE SIGNAL ;
+    - mprj_io_ie\[35\] ( padframe mprj_io_inen[35] ) ( chip_core mprj_io_ie[35] ) + USE SIGNAL ;
+    - mprj_io_ie\[36\] ( padframe mprj_io_inen[36] ) ( chip_core mprj_io_ie[36] ) + USE SIGNAL ;
+    - mprj_io_ie\[37\] ( padframe mprj_io_inen[37] ) ( chip_core mprj_io_ie[37] ) + USE SIGNAL ;
+    - mprj_io_ie\[3\] ( padframe mprj_io_inen[3] ) ( chip_core mprj_io_ie[3] ) + USE SIGNAL ;
+    - mprj_io_ie\[4\] ( padframe mprj_io_inen[4] ) ( chip_core mprj_io_ie[4] ) + USE SIGNAL ;
+    - mprj_io_ie\[5\] ( padframe mprj_io_inen[5] ) ( chip_core mprj_io_ie[5] ) + USE SIGNAL ;
+    - mprj_io_ie\[6\] ( padframe mprj_io_inen[6] ) ( chip_core mprj_io_ie[6] ) + USE SIGNAL ;
+    - mprj_io_ie\[7\] ( padframe mprj_io_inen[7] ) ( chip_core mprj_io_ie[7] ) + USE SIGNAL ;
+    - mprj_io_ie\[8\] ( padframe mprj_io_inen[8] ) ( chip_core mprj_io_ie[8] ) + USE SIGNAL ;
+    - mprj_io_ie\[9\] ( padframe mprj_io_inen[9] ) ( chip_core mprj_io_ie[9] ) + USE SIGNAL ;
     - mprj_io_in\[0\] ( padframe mprj_io_in[0] ) ( chip_core mprj_io_in[0] ) + USE SIGNAL ;
     - mprj_io_in\[10\] ( padframe mprj_io_in[10] ) ( chip_core mprj_io_in[10] ) + USE SIGNAL ;
     - mprj_io_in\[11\] ( padframe mprj_io_in[11] ) ( chip_core mprj_io_in[11] ) + USE SIGNAL ;
@@ -1592,44 +1737,44 @@ NETS 457 ;
     - mprj_io_in\[7\] ( padframe mprj_io_in[7] ) ( chip_core mprj_io_in[7] ) + USE SIGNAL ;
     - mprj_io_in\[8\] ( padframe mprj_io_in[8] ) ( chip_core mprj_io_in[8] ) + USE SIGNAL ;
     - mprj_io_in\[9\] ( padframe mprj_io_in[9] ) ( chip_core mprj_io_in[9] ) + USE SIGNAL ;
-    - mprj_io_oe\[0\] ( chip_core mprj_io_oe[0] ) + USE SIGNAL ;
-    - mprj_io_oe\[10\] ( chip_core mprj_io_oe[10] ) + USE SIGNAL ;
-    - mprj_io_oe\[11\] ( chip_core mprj_io_oe[11] ) + USE SIGNAL ;
-    - mprj_io_oe\[12\] ( chip_core mprj_io_oe[12] ) + USE SIGNAL ;
-    - mprj_io_oe\[13\] ( chip_core mprj_io_oe[13] ) + USE SIGNAL ;
-    - mprj_io_oe\[14\] ( chip_core mprj_io_oe[14] ) + USE SIGNAL ;
-    - mprj_io_oe\[15\] ( chip_core mprj_io_oe[15] ) + USE SIGNAL ;
-    - mprj_io_oe\[16\] ( chip_core mprj_io_oe[16] ) + USE SIGNAL ;
-    - mprj_io_oe\[17\] ( chip_core mprj_io_oe[17] ) + USE SIGNAL ;
-    - mprj_io_oe\[18\] ( chip_core mprj_io_oe[18] ) + USE SIGNAL ;
-    - mprj_io_oe\[19\] ( chip_core mprj_io_oe[19] ) + USE SIGNAL ;
-    - mprj_io_oe\[1\] ( chip_core mprj_io_oe[1] ) + USE SIGNAL ;
-    - mprj_io_oe\[20\] ( chip_core mprj_io_oe[20] ) + USE SIGNAL ;
-    - mprj_io_oe\[21\] ( chip_core mprj_io_oe[21] ) + USE SIGNAL ;
-    - mprj_io_oe\[22\] ( chip_core mprj_io_oe[22] ) + USE SIGNAL ;
-    - mprj_io_oe\[23\] ( chip_core mprj_io_oe[23] ) + USE SIGNAL ;
-    - mprj_io_oe\[24\] ( chip_core mprj_io_oe[24] ) + USE SIGNAL ;
-    - mprj_io_oe\[25\] ( chip_core mprj_io_oe[25] ) + USE SIGNAL ;
-    - mprj_io_oe\[26\] ( chip_core mprj_io_oe[26] ) + USE SIGNAL ;
-    - mprj_io_oe\[27\] ( chip_core mprj_io_oe[27] ) + USE SIGNAL ;
-    - mprj_io_oe\[28\] ( chip_core mprj_io_oe[28] ) + USE SIGNAL ;
-    - mprj_io_oe\[29\] ( chip_core mprj_io_oe[29] ) + USE SIGNAL ;
-    - mprj_io_oe\[2\] ( chip_core mprj_io_oe[2] ) + USE SIGNAL ;
-    - mprj_io_oe\[30\] ( chip_core mprj_io_oe[30] ) + USE SIGNAL ;
-    - mprj_io_oe\[31\] ( chip_core mprj_io_oe[31] ) + USE SIGNAL ;
-    - mprj_io_oe\[32\] ( chip_core mprj_io_oe[32] ) + USE SIGNAL ;
-    - mprj_io_oe\[33\] ( chip_core mprj_io_oe[33] ) + USE SIGNAL ;
-    - mprj_io_oe\[34\] ( chip_core mprj_io_oe[34] ) + USE SIGNAL ;
-    - mprj_io_oe\[35\] ( chip_core mprj_io_oe[35] ) + USE SIGNAL ;
-    - mprj_io_oe\[36\] ( chip_core mprj_io_oe[36] ) + USE SIGNAL ;
-    - mprj_io_oe\[37\] ( chip_core mprj_io_oe[37] ) + USE SIGNAL ;
-    - mprj_io_oe\[3\] ( chip_core mprj_io_oe[3] ) + USE SIGNAL ;
-    - mprj_io_oe\[4\] ( chip_core mprj_io_oe[4] ) + USE SIGNAL ;
-    - mprj_io_oe\[5\] ( chip_core mprj_io_oe[5] ) + USE SIGNAL ;
-    - mprj_io_oe\[6\] ( chip_core mprj_io_oe[6] ) + USE SIGNAL ;
-    - mprj_io_oe\[7\] ( chip_core mprj_io_oe[7] ) + USE SIGNAL ;
-    - mprj_io_oe\[8\] ( chip_core mprj_io_oe[8] ) + USE SIGNAL ;
-    - mprj_io_oe\[9\] ( chip_core mprj_io_oe[9] ) + USE SIGNAL ;
+    - mprj_io_oe\[0\] ( padframe mprj_io_outen[0] ) ( chip_core mprj_io_oe[0] ) + USE SIGNAL ;
+    - mprj_io_oe\[10\] ( padframe mprj_io_outen[10] ) ( chip_core mprj_io_oe[10] ) + USE SIGNAL ;
+    - mprj_io_oe\[11\] ( padframe mprj_io_outen[11] ) ( chip_core mprj_io_oe[11] ) + USE SIGNAL ;
+    - mprj_io_oe\[12\] ( padframe mprj_io_outen[12] ) ( chip_core mprj_io_oe[12] ) + USE SIGNAL ;
+    - mprj_io_oe\[13\] ( padframe mprj_io_outen[13] ) ( chip_core mprj_io_oe[13] ) + USE SIGNAL ;
+    - mprj_io_oe\[14\] ( padframe mprj_io_outen[14] ) ( chip_core mprj_io_oe[14] ) + USE SIGNAL ;
+    - mprj_io_oe\[15\] ( padframe mprj_io_outen[15] ) ( chip_core mprj_io_oe[15] ) + USE SIGNAL ;
+    - mprj_io_oe\[16\] ( padframe mprj_io_outen[16] ) ( chip_core mprj_io_oe[16] ) + USE SIGNAL ;
+    - mprj_io_oe\[17\] ( padframe mprj_io_outen[17] ) ( chip_core mprj_io_oe[17] ) + USE SIGNAL ;
+    - mprj_io_oe\[18\] ( padframe mprj_io_outen[18] ) ( chip_core mprj_io_oe[18] ) + USE SIGNAL ;
+    - mprj_io_oe\[19\] ( padframe mprj_io_outen[19] ) ( chip_core mprj_io_oe[19] ) + USE SIGNAL ;
+    - mprj_io_oe\[1\] ( padframe mprj_io_outen[1] ) ( chip_core mprj_io_oe[1] ) + USE SIGNAL ;
+    - mprj_io_oe\[20\] ( padframe mprj_io_outen[20] ) ( chip_core mprj_io_oe[20] ) + USE SIGNAL ;
+    - mprj_io_oe\[21\] ( padframe mprj_io_outen[21] ) ( chip_core mprj_io_oe[21] ) + USE SIGNAL ;
+    - mprj_io_oe\[22\] ( padframe mprj_io_outen[22] ) ( chip_core mprj_io_oe[22] ) + USE SIGNAL ;
+    - mprj_io_oe\[23\] ( padframe mprj_io_outen[23] ) ( chip_core mprj_io_oe[23] ) + USE SIGNAL ;
+    - mprj_io_oe\[24\] ( padframe mprj_io_outen[24] ) ( chip_core mprj_io_oe[24] ) + USE SIGNAL ;
+    - mprj_io_oe\[25\] ( padframe mprj_io_outen[25] ) ( chip_core mprj_io_oe[25] ) + USE SIGNAL ;
+    - mprj_io_oe\[26\] ( padframe mprj_io_outen[26] ) ( chip_core mprj_io_oe[26] ) + USE SIGNAL ;
+    - mprj_io_oe\[27\] ( padframe mprj_io_outen[27] ) ( chip_core mprj_io_oe[27] ) + USE SIGNAL ;
+    - mprj_io_oe\[28\] ( padframe mprj_io_outen[28] ) ( chip_core mprj_io_oe[28] ) + USE SIGNAL ;
+    - mprj_io_oe\[29\] ( padframe mprj_io_outen[29] ) ( chip_core mprj_io_oe[29] ) + USE SIGNAL ;
+    - mprj_io_oe\[2\] ( padframe mprj_io_outen[2] ) ( chip_core mprj_io_oe[2] ) + USE SIGNAL ;
+    - mprj_io_oe\[30\] ( padframe mprj_io_outen[30] ) ( chip_core mprj_io_oe[30] ) + USE SIGNAL ;
+    - mprj_io_oe\[31\] ( padframe mprj_io_outen[31] ) ( chip_core mprj_io_oe[31] ) + USE SIGNAL ;
+    - mprj_io_oe\[32\] ( padframe mprj_io_outen[32] ) ( chip_core mprj_io_oe[32] ) + USE SIGNAL ;
+    - mprj_io_oe\[33\] ( padframe mprj_io_outen[33] ) ( chip_core mprj_io_oe[33] ) + USE SIGNAL ;
+    - mprj_io_oe\[34\] ( padframe mprj_io_outen[34] ) ( chip_core mprj_io_oe[34] ) + USE SIGNAL ;
+    - mprj_io_oe\[35\] ( padframe mprj_io_outen[35] ) ( chip_core mprj_io_oe[35] ) + USE SIGNAL ;
+    - mprj_io_oe\[36\] ( padframe mprj_io_outen[36] ) ( chip_core mprj_io_oe[36] ) + USE SIGNAL ;
+    - mprj_io_oe\[37\] ( padframe mprj_io_outen[37] ) ( chip_core mprj_io_oe[37] ) + USE SIGNAL ;
+    - mprj_io_oe\[3\] ( padframe mprj_io_outen[3] ) ( chip_core mprj_io_oe[3] ) + USE SIGNAL ;
+    - mprj_io_oe\[4\] ( padframe mprj_io_outen[4] ) ( chip_core mprj_io_oe[4] ) + USE SIGNAL ;
+    - mprj_io_oe\[5\] ( padframe mprj_io_outen[5] ) ( chip_core mprj_io_oe[5] ) + USE SIGNAL ;
+    - mprj_io_oe\[6\] ( padframe mprj_io_outen[6] ) ( chip_core mprj_io_oe[6] ) + USE SIGNAL ;
+    - mprj_io_oe\[7\] ( padframe mprj_io_outen[7] ) ( chip_core mprj_io_oe[7] ) + USE SIGNAL ;
+    - mprj_io_oe\[8\] ( padframe mprj_io_outen[8] ) ( chip_core mprj_io_oe[8] ) + USE SIGNAL ;
+    - mprj_io_oe\[9\] ( padframe mprj_io_outen[9] ) ( chip_core mprj_io_oe[9] ) + USE SIGNAL ;
     - mprj_io_out\[0\] ( padframe mprj_io_out[0] ) ( chip_core mprj_io_out[0] ) + USE SIGNAL ;
     - mprj_io_out\[10\] ( padframe mprj_io_out[10] ) ( chip_core mprj_io_out[10] ) + USE SIGNAL ;
     - mprj_io_out\[11\] ( padframe mprj_io_out[11] ) ( chip_core mprj_io_out[11] ) + USE SIGNAL ;
@@ -1668,158 +1813,158 @@ NETS 457 ;
     - mprj_io_out\[7\] ( padframe mprj_io_out[7] ) ( chip_core mprj_io_out[7] ) + USE SIGNAL ;
     - mprj_io_out\[8\] ( padframe mprj_io_out[8] ) ( chip_core mprj_io_out[8] ) + USE SIGNAL ;
     - mprj_io_out\[9\] ( padframe mprj_io_out[9] ) ( chip_core mprj_io_out[9] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[0\] ( chip_core mprj_io_pulldown_sel[0] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[10\] ( chip_core mprj_io_pulldown_sel[10] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[11\] ( chip_core mprj_io_pulldown_sel[11] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[12\] ( chip_core mprj_io_pulldown_sel[12] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[13\] ( chip_core mprj_io_pulldown_sel[13] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[14\] ( chip_core mprj_io_pulldown_sel[14] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[15\] ( chip_core mprj_io_pulldown_sel[15] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[16\] ( chip_core mprj_io_pulldown_sel[16] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[17\] ( chip_core mprj_io_pulldown_sel[17] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[18\] ( chip_core mprj_io_pulldown_sel[18] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[19\] ( chip_core mprj_io_pulldown_sel[19] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[1\] ( chip_core mprj_io_pulldown_sel[1] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[20\] ( chip_core mprj_io_pulldown_sel[20] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[21\] ( chip_core mprj_io_pulldown_sel[21] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[22\] ( chip_core mprj_io_pulldown_sel[22] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[23\] ( chip_core mprj_io_pulldown_sel[23] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[24\] ( chip_core mprj_io_pulldown_sel[24] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[25\] ( chip_core mprj_io_pulldown_sel[25] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[26\] ( chip_core mprj_io_pulldown_sel[26] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[27\] ( chip_core mprj_io_pulldown_sel[27] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[28\] ( chip_core mprj_io_pulldown_sel[28] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[29\] ( chip_core mprj_io_pulldown_sel[29] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[2\] ( chip_core mprj_io_pulldown_sel[2] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[30\] ( chip_core mprj_io_pulldown_sel[30] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[31\] ( chip_core mprj_io_pulldown_sel[31] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[32\] ( chip_core mprj_io_pulldown_sel[32] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[33\] ( chip_core mprj_io_pulldown_sel[33] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[34\] ( chip_core mprj_io_pulldown_sel[34] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[35\] ( chip_core mprj_io_pulldown_sel[35] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[36\] ( chip_core mprj_io_pulldown_sel[36] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[37\] ( chip_core mprj_io_pulldown_sel[37] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[3\] ( chip_core mprj_io_pulldown_sel[3] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[4\] ( chip_core mprj_io_pulldown_sel[4] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[5\] ( chip_core mprj_io_pulldown_sel[5] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[6\] ( chip_core mprj_io_pulldown_sel[6] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[7\] ( chip_core mprj_io_pulldown_sel[7] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[8\] ( chip_core mprj_io_pulldown_sel[8] ) + USE SIGNAL ;
-    - mprj_io_pulldown_sel\[9\] ( chip_core mprj_io_pulldown_sel[9] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[0\] ( chip_core mprj_io_pullup_sel[0] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[10\] ( chip_core mprj_io_pullup_sel[10] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[11\] ( chip_core mprj_io_pullup_sel[11] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[12\] ( chip_core mprj_io_pullup_sel[12] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[13\] ( chip_core mprj_io_pullup_sel[13] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[14\] ( chip_core mprj_io_pullup_sel[14] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[15\] ( chip_core mprj_io_pullup_sel[15] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[16\] ( chip_core mprj_io_pullup_sel[16] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[17\] ( chip_core mprj_io_pullup_sel[17] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[18\] ( chip_core mprj_io_pullup_sel[18] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[19\] ( chip_core mprj_io_pullup_sel[19] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[1\] ( chip_core mprj_io_pullup_sel[1] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[20\] ( chip_core mprj_io_pullup_sel[20] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[21\] ( chip_core mprj_io_pullup_sel[21] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[22\] ( chip_core mprj_io_pullup_sel[22] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[23\] ( chip_core mprj_io_pullup_sel[23] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[24\] ( chip_core mprj_io_pullup_sel[24] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[25\] ( chip_core mprj_io_pullup_sel[25] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[26\] ( chip_core mprj_io_pullup_sel[26] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[27\] ( chip_core mprj_io_pullup_sel[27] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[28\] ( chip_core mprj_io_pullup_sel[28] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[29\] ( chip_core mprj_io_pullup_sel[29] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[2\] ( chip_core mprj_io_pullup_sel[2] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[30\] ( chip_core mprj_io_pullup_sel[30] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[31\] ( chip_core mprj_io_pullup_sel[31] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[32\] ( chip_core mprj_io_pullup_sel[32] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[33\] ( chip_core mprj_io_pullup_sel[33] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[34\] ( chip_core mprj_io_pullup_sel[34] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[35\] ( chip_core mprj_io_pullup_sel[35] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[36\] ( chip_core mprj_io_pullup_sel[36] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[37\] ( chip_core mprj_io_pullup_sel[37] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[3\] ( chip_core mprj_io_pullup_sel[3] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[4\] ( chip_core mprj_io_pullup_sel[4] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[5\] ( chip_core mprj_io_pullup_sel[5] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[6\] ( chip_core mprj_io_pullup_sel[6] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[7\] ( chip_core mprj_io_pullup_sel[7] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[8\] ( chip_core mprj_io_pullup_sel[8] ) + USE SIGNAL ;
-    - mprj_io_pullup_sel\[9\] ( chip_core mprj_io_pullup_sel[9] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[0\] ( chip_core mprj_io_schmitt_sel[0] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[10\] ( chip_core mprj_io_schmitt_sel[10] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[11\] ( chip_core mprj_io_schmitt_sel[11] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[12\] ( chip_core mprj_io_schmitt_sel[12] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[13\] ( chip_core mprj_io_schmitt_sel[13] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[14\] ( chip_core mprj_io_schmitt_sel[14] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[15\] ( chip_core mprj_io_schmitt_sel[15] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[16\] ( chip_core mprj_io_schmitt_sel[16] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[17\] ( chip_core mprj_io_schmitt_sel[17] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[18\] ( chip_core mprj_io_schmitt_sel[18] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[19\] ( chip_core mprj_io_schmitt_sel[19] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[1\] ( chip_core mprj_io_schmitt_sel[1] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[20\] ( chip_core mprj_io_schmitt_sel[20] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[21\] ( chip_core mprj_io_schmitt_sel[21] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[22\] ( chip_core mprj_io_schmitt_sel[22] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[23\] ( chip_core mprj_io_schmitt_sel[23] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[24\] ( chip_core mprj_io_schmitt_sel[24] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[25\] ( chip_core mprj_io_schmitt_sel[25] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[26\] ( chip_core mprj_io_schmitt_sel[26] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[27\] ( chip_core mprj_io_schmitt_sel[27] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[28\] ( chip_core mprj_io_schmitt_sel[28] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[29\] ( chip_core mprj_io_schmitt_sel[29] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[2\] ( chip_core mprj_io_schmitt_sel[2] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[30\] ( chip_core mprj_io_schmitt_sel[30] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[31\] ( chip_core mprj_io_schmitt_sel[31] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[32\] ( chip_core mprj_io_schmitt_sel[32] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[33\] ( chip_core mprj_io_schmitt_sel[33] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[34\] ( chip_core mprj_io_schmitt_sel[34] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[35\] ( chip_core mprj_io_schmitt_sel[35] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[36\] ( chip_core mprj_io_schmitt_sel[36] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[37\] ( chip_core mprj_io_schmitt_sel[37] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[3\] ( chip_core mprj_io_schmitt_sel[3] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[4\] ( chip_core mprj_io_schmitt_sel[4] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[5\] ( chip_core mprj_io_schmitt_sel[5] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[6\] ( chip_core mprj_io_schmitt_sel[6] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[7\] ( chip_core mprj_io_schmitt_sel[7] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[8\] ( chip_core mprj_io_schmitt_sel[8] ) + USE SIGNAL ;
-    - mprj_io_schmitt_sel\[9\] ( chip_core mprj_io_schmitt_sel[9] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[0\] ( chip_core mprj_io_slew_sel[0] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[10\] ( chip_core mprj_io_slew_sel[10] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[11\] ( chip_core mprj_io_slew_sel[11] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[12\] ( chip_core mprj_io_slew_sel[12] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[13\] ( chip_core mprj_io_slew_sel[13] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[14\] ( chip_core mprj_io_slew_sel[14] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[15\] ( chip_core mprj_io_slew_sel[15] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[16\] ( chip_core mprj_io_slew_sel[16] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[17\] ( chip_core mprj_io_slew_sel[17] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[18\] ( chip_core mprj_io_slew_sel[18] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[19\] ( chip_core mprj_io_slew_sel[19] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[1\] ( chip_core mprj_io_slew_sel[1] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[20\] ( chip_core mprj_io_slew_sel[20] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[21\] ( chip_core mprj_io_slew_sel[21] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[22\] ( chip_core mprj_io_slew_sel[22] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[23\] ( chip_core mprj_io_slew_sel[23] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[24\] ( chip_core mprj_io_slew_sel[24] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[25\] ( chip_core mprj_io_slew_sel[25] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[26\] ( chip_core mprj_io_slew_sel[26] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[27\] ( chip_core mprj_io_slew_sel[27] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[28\] ( chip_core mprj_io_slew_sel[28] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[29\] ( chip_core mprj_io_slew_sel[29] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[2\] ( chip_core mprj_io_slew_sel[2] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[30\] ( chip_core mprj_io_slew_sel[30] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[31\] ( chip_core mprj_io_slew_sel[31] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[32\] ( chip_core mprj_io_slew_sel[32] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[33\] ( chip_core mprj_io_slew_sel[33] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[34\] ( chip_core mprj_io_slew_sel[34] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[35\] ( chip_core mprj_io_slew_sel[35] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[36\] ( chip_core mprj_io_slew_sel[36] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[37\] ( chip_core mprj_io_slew_sel[37] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[3\] ( chip_core mprj_io_slew_sel[3] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[4\] ( chip_core mprj_io_slew_sel[4] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[5\] ( chip_core mprj_io_slew_sel[5] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[6\] ( chip_core mprj_io_slew_sel[6] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[7\] ( chip_core mprj_io_slew_sel[7] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[8\] ( chip_core mprj_io_slew_sel[8] ) + USE SIGNAL ;
-    - mprj_io_slew_sel\[9\] ( chip_core mprj_io_slew_sel[9] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[0\] ( padframe mprj_io_pd_select[0] ) ( chip_core mprj_io_pulldown_sel[0] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[10\] ( padframe mprj_io_pd_select[10] ) ( chip_core mprj_io_pulldown_sel[10] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[11\] ( padframe mprj_io_pd_select[11] ) ( chip_core mprj_io_pulldown_sel[11] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[12\] ( padframe mprj_io_pd_select[12] ) ( chip_core mprj_io_pulldown_sel[12] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[13\] ( padframe mprj_io_pd_select[13] ) ( chip_core mprj_io_pulldown_sel[13] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[14\] ( padframe mprj_io_pd_select[14] ) ( chip_core mprj_io_pulldown_sel[14] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[15\] ( padframe mprj_io_pd_select[15] ) ( chip_core mprj_io_pulldown_sel[15] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[16\] ( padframe mprj_io_pd_select[16] ) ( chip_core mprj_io_pulldown_sel[16] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[17\] ( padframe mprj_io_pd_select[17] ) ( chip_core mprj_io_pulldown_sel[17] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[18\] ( padframe mprj_io_pd_select[18] ) ( chip_core mprj_io_pulldown_sel[18] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[19\] ( padframe mprj_io_pd_select[19] ) ( chip_core mprj_io_pulldown_sel[19] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[1\] ( padframe mprj_io_pd_select[1] ) ( chip_core mprj_io_pulldown_sel[1] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[20\] ( padframe mprj_io_pd_select[20] ) ( chip_core mprj_io_pulldown_sel[20] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[21\] ( padframe mprj_io_pd_select[21] ) ( chip_core mprj_io_pulldown_sel[21] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[22\] ( padframe mprj_io_pd_select[22] ) ( chip_core mprj_io_pulldown_sel[22] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[23\] ( padframe mprj_io_pd_select[23] ) ( chip_core mprj_io_pulldown_sel[23] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[24\] ( padframe mprj_io_pd_select[24] ) ( chip_core mprj_io_pulldown_sel[24] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[25\] ( padframe mprj_io_pd_select[25] ) ( chip_core mprj_io_pulldown_sel[25] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[26\] ( padframe mprj_io_pd_select[26] ) ( chip_core mprj_io_pulldown_sel[26] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[27\] ( padframe mprj_io_pd_select[27] ) ( chip_core mprj_io_pulldown_sel[27] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[28\] ( padframe mprj_io_pd_select[28] ) ( chip_core mprj_io_pulldown_sel[28] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[29\] ( padframe mprj_io_pd_select[29] ) ( chip_core mprj_io_pulldown_sel[29] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[2\] ( padframe mprj_io_pd_select[2] ) ( chip_core mprj_io_pulldown_sel[2] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[30\] ( padframe mprj_io_pd_select[30] ) ( chip_core mprj_io_pulldown_sel[30] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[31\] ( padframe mprj_io_pd_select[31] ) ( chip_core mprj_io_pulldown_sel[31] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[32\] ( padframe mprj_io_pd_select[32] ) ( chip_core mprj_io_pulldown_sel[32] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[33\] ( padframe mprj_io_pd_select[33] ) ( chip_core mprj_io_pulldown_sel[33] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[34\] ( padframe mprj_io_pd_select[34] ) ( chip_core mprj_io_pulldown_sel[34] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[35\] ( padframe mprj_io_pd_select[35] ) ( chip_core mprj_io_pulldown_sel[35] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[36\] ( padframe mprj_io_pd_select[36] ) ( chip_core mprj_io_pulldown_sel[36] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[37\] ( padframe mprj_io_pd_select[37] ) ( chip_core mprj_io_pulldown_sel[37] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[3\] ( padframe mprj_io_pd_select[3] ) ( chip_core mprj_io_pulldown_sel[3] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[4\] ( padframe mprj_io_pd_select[4] ) ( chip_core mprj_io_pulldown_sel[4] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[5\] ( padframe mprj_io_pd_select[5] ) ( chip_core mprj_io_pulldown_sel[5] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[6\] ( padframe mprj_io_pd_select[6] ) ( chip_core mprj_io_pulldown_sel[6] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[7\] ( padframe mprj_io_pd_select[7] ) ( chip_core mprj_io_pulldown_sel[7] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[8\] ( padframe mprj_io_pd_select[8] ) ( chip_core mprj_io_pulldown_sel[8] ) + USE SIGNAL ;
+    - mprj_io_pulldown_sel\[9\] ( padframe mprj_io_pd_select[9] ) ( chip_core mprj_io_pulldown_sel[9] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[0\] ( padframe mprj_io_pu_select[0] ) ( chip_core mprj_io_pullup_sel[0] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[10\] ( padframe mprj_io_pu_select[10] ) ( chip_core mprj_io_pullup_sel[10] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[11\] ( padframe mprj_io_pu_select[11] ) ( chip_core mprj_io_pullup_sel[11] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[12\] ( padframe mprj_io_pu_select[12] ) ( chip_core mprj_io_pullup_sel[12] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[13\] ( padframe mprj_io_pu_select[13] ) ( chip_core mprj_io_pullup_sel[13] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[14\] ( padframe mprj_io_pu_select[14] ) ( chip_core mprj_io_pullup_sel[14] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[15\] ( padframe mprj_io_pu_select[15] ) ( chip_core mprj_io_pullup_sel[15] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[16\] ( padframe mprj_io_pu_select[16] ) ( chip_core mprj_io_pullup_sel[16] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[17\] ( padframe mprj_io_pu_select[17] ) ( chip_core mprj_io_pullup_sel[17] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[18\] ( padframe mprj_io_pu_select[18] ) ( chip_core mprj_io_pullup_sel[18] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[19\] ( padframe mprj_io_pu_select[19] ) ( chip_core mprj_io_pullup_sel[19] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[1\] ( padframe mprj_io_pu_select[1] ) ( chip_core mprj_io_pullup_sel[1] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[20\] ( padframe mprj_io_pu_select[20] ) ( chip_core mprj_io_pullup_sel[20] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[21\] ( padframe mprj_io_pu_select[21] ) ( chip_core mprj_io_pullup_sel[21] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[22\] ( padframe mprj_io_pu_select[22] ) ( chip_core mprj_io_pullup_sel[22] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[23\] ( padframe mprj_io_pu_select[23] ) ( chip_core mprj_io_pullup_sel[23] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[24\] ( padframe mprj_io_pu_select[24] ) ( chip_core mprj_io_pullup_sel[24] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[25\] ( padframe mprj_io_pu_select[25] ) ( chip_core mprj_io_pullup_sel[25] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[26\] ( padframe mprj_io_pu_select[26] ) ( chip_core mprj_io_pullup_sel[26] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[27\] ( padframe mprj_io_pu_select[27] ) ( chip_core mprj_io_pullup_sel[27] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[28\] ( padframe mprj_io_pu_select[28] ) ( chip_core mprj_io_pullup_sel[28] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[29\] ( padframe mprj_io_pu_select[29] ) ( chip_core mprj_io_pullup_sel[29] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[2\] ( padframe mprj_io_pu_select[2] ) ( chip_core mprj_io_pullup_sel[2] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[30\] ( padframe mprj_io_pu_select[30] ) ( chip_core mprj_io_pullup_sel[30] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[31\] ( padframe mprj_io_pu_select[31] ) ( chip_core mprj_io_pullup_sel[31] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[32\] ( padframe mprj_io_pu_select[32] ) ( chip_core mprj_io_pullup_sel[32] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[33\] ( padframe mprj_io_pu_select[33] ) ( chip_core mprj_io_pullup_sel[33] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[34\] ( padframe mprj_io_pu_select[34] ) ( chip_core mprj_io_pullup_sel[34] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[35\] ( padframe mprj_io_pu_select[35] ) ( chip_core mprj_io_pullup_sel[35] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[36\] ( padframe mprj_io_pu_select[36] ) ( chip_core mprj_io_pullup_sel[36] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[37\] ( padframe mprj_io_pu_select[37] ) ( chip_core mprj_io_pullup_sel[37] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[3\] ( padframe mprj_io_pu_select[3] ) ( chip_core mprj_io_pullup_sel[3] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[4\] ( padframe mprj_io_pu_select[4] ) ( chip_core mprj_io_pullup_sel[4] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[5\] ( padframe mprj_io_pu_select[5] ) ( chip_core mprj_io_pullup_sel[5] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[6\] ( padframe mprj_io_pu_select[6] ) ( chip_core mprj_io_pullup_sel[6] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[7\] ( padframe mprj_io_pu_select[7] ) ( chip_core mprj_io_pullup_sel[7] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[8\] ( padframe mprj_io_pu_select[8] ) ( chip_core mprj_io_pullup_sel[8] ) + USE SIGNAL ;
+    - mprj_io_pullup_sel\[9\] ( padframe mprj_io_pu_select[9] ) ( chip_core mprj_io_pullup_sel[9] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[0\] ( padframe mprj_io_schmitt_select[0] ) ( chip_core mprj_io_schmitt_sel[0] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[10\] ( padframe mprj_io_schmitt_select[10] ) ( chip_core mprj_io_schmitt_sel[10] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[11\] ( padframe mprj_io_schmitt_select[11] ) ( chip_core mprj_io_schmitt_sel[11] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[12\] ( padframe mprj_io_schmitt_select[12] ) ( chip_core mprj_io_schmitt_sel[12] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[13\] ( padframe mprj_io_schmitt_select[13] ) ( chip_core mprj_io_schmitt_sel[13] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[14\] ( padframe mprj_io_schmitt_select[14] ) ( chip_core mprj_io_schmitt_sel[14] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[15\] ( padframe mprj_io_schmitt_select[15] ) ( chip_core mprj_io_schmitt_sel[15] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[16\] ( padframe mprj_io_schmitt_select[16] ) ( chip_core mprj_io_schmitt_sel[16] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[17\] ( padframe mprj_io_schmitt_select[17] ) ( chip_core mprj_io_schmitt_sel[17] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[18\] ( padframe mprj_io_schmitt_select[18] ) ( chip_core mprj_io_schmitt_sel[18] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[19\] ( padframe mprj_io_schmitt_select[19] ) ( chip_core mprj_io_schmitt_sel[19] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[1\] ( padframe mprj_io_schmitt_select[1] ) ( chip_core mprj_io_schmitt_sel[1] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[20\] ( padframe mprj_io_schmitt_select[20] ) ( chip_core mprj_io_schmitt_sel[20] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[21\] ( padframe mprj_io_schmitt_select[21] ) ( chip_core mprj_io_schmitt_sel[21] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[22\] ( padframe mprj_io_schmitt_select[22] ) ( chip_core mprj_io_schmitt_sel[22] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[23\] ( padframe mprj_io_schmitt_select[23] ) ( chip_core mprj_io_schmitt_sel[23] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[24\] ( padframe mprj_io_schmitt_select[24] ) ( chip_core mprj_io_schmitt_sel[24] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[25\] ( padframe mprj_io_schmitt_select[25] ) ( chip_core mprj_io_schmitt_sel[25] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[26\] ( padframe mprj_io_schmitt_select[26] ) ( chip_core mprj_io_schmitt_sel[26] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[27\] ( padframe mprj_io_schmitt_select[27] ) ( chip_core mprj_io_schmitt_sel[27] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[28\] ( padframe mprj_io_schmitt_select[28] ) ( chip_core mprj_io_schmitt_sel[28] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[29\] ( padframe mprj_io_schmitt_select[29] ) ( chip_core mprj_io_schmitt_sel[29] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[2\] ( padframe mprj_io_schmitt_select[2] ) ( chip_core mprj_io_schmitt_sel[2] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[30\] ( padframe mprj_io_schmitt_select[30] ) ( chip_core mprj_io_schmitt_sel[30] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[31\] ( padframe mprj_io_schmitt_select[31] ) ( chip_core mprj_io_schmitt_sel[31] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[32\] ( padframe mprj_io_schmitt_select[32] ) ( chip_core mprj_io_schmitt_sel[32] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[33\] ( padframe mprj_io_schmitt_select[33] ) ( chip_core mprj_io_schmitt_sel[33] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[34\] ( padframe mprj_io_schmitt_select[34] ) ( chip_core mprj_io_schmitt_sel[34] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[35\] ( padframe mprj_io_schmitt_select[35] ) ( chip_core mprj_io_schmitt_sel[35] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[36\] ( padframe mprj_io_schmitt_select[36] ) ( chip_core mprj_io_schmitt_sel[36] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[37\] ( padframe mprj_io_schmitt_select[37] ) ( chip_core mprj_io_schmitt_sel[37] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[3\] ( padframe mprj_io_schmitt_select[3] ) ( chip_core mprj_io_schmitt_sel[3] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[4\] ( padframe mprj_io_schmitt_select[4] ) ( chip_core mprj_io_schmitt_sel[4] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[5\] ( padframe mprj_io_schmitt_select[5] ) ( chip_core mprj_io_schmitt_sel[5] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[6\] ( padframe mprj_io_schmitt_select[6] ) ( chip_core mprj_io_schmitt_sel[6] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[7\] ( padframe mprj_io_schmitt_select[7] ) ( chip_core mprj_io_schmitt_sel[7] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[8\] ( padframe mprj_io_schmitt_select[8] ) ( chip_core mprj_io_schmitt_sel[8] ) + USE SIGNAL ;
+    - mprj_io_schmitt_sel\[9\] ( padframe mprj_io_schmitt_select[9] ) ( chip_core mprj_io_schmitt_sel[9] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[0\] ( padframe mprj_io_slew_select[0] ) ( chip_core mprj_io_slew_sel[0] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[10\] ( padframe mprj_io_slew_select[10] ) ( chip_core mprj_io_slew_sel[10] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[11\] ( padframe mprj_io_slew_select[11] ) ( chip_core mprj_io_slew_sel[11] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[12\] ( padframe mprj_io_slew_select[12] ) ( chip_core mprj_io_slew_sel[12] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[13\] ( padframe mprj_io_slew_select[13] ) ( chip_core mprj_io_slew_sel[13] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[14\] ( padframe mprj_io_slew_select[14] ) ( chip_core mprj_io_slew_sel[14] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[15\] ( padframe mprj_io_slew_select[15] ) ( chip_core mprj_io_slew_sel[15] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[16\] ( padframe mprj_io_slew_select[16] ) ( chip_core mprj_io_slew_sel[16] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[17\] ( padframe mprj_io_slew_select[17] ) ( chip_core mprj_io_slew_sel[17] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[18\] ( padframe mprj_io_slew_select[18] ) ( chip_core mprj_io_slew_sel[18] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[19\] ( padframe mprj_io_slew_select[19] ) ( chip_core mprj_io_slew_sel[19] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[1\] ( padframe mprj_io_slew_select[1] ) ( chip_core mprj_io_slew_sel[1] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[20\] ( padframe mprj_io_slew_select[20] ) ( chip_core mprj_io_slew_sel[20] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[21\] ( padframe mprj_io_slew_select[21] ) ( chip_core mprj_io_slew_sel[21] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[22\] ( padframe mprj_io_slew_select[22] ) ( chip_core mprj_io_slew_sel[22] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[23\] ( padframe mprj_io_slew_select[23] ) ( chip_core mprj_io_slew_sel[23] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[24\] ( padframe mprj_io_slew_select[24] ) ( chip_core mprj_io_slew_sel[24] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[25\] ( padframe mprj_io_slew_select[25] ) ( chip_core mprj_io_slew_sel[25] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[26\] ( padframe mprj_io_slew_select[26] ) ( chip_core mprj_io_slew_sel[26] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[27\] ( padframe mprj_io_slew_select[27] ) ( chip_core mprj_io_slew_sel[27] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[28\] ( padframe mprj_io_slew_select[28] ) ( chip_core mprj_io_slew_sel[28] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[29\] ( padframe mprj_io_slew_select[29] ) ( chip_core mprj_io_slew_sel[29] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[2\] ( padframe mprj_io_slew_select[2] ) ( chip_core mprj_io_slew_sel[2] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[30\] ( padframe mprj_io_slew_select[30] ) ( chip_core mprj_io_slew_sel[30] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[31\] ( padframe mprj_io_slew_select[31] ) ( chip_core mprj_io_slew_sel[31] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[32\] ( padframe mprj_io_slew_select[32] ) ( chip_core mprj_io_slew_sel[32] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[33\] ( padframe mprj_io_slew_select[33] ) ( chip_core mprj_io_slew_sel[33] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[34\] ( padframe mprj_io_slew_select[34] ) ( chip_core mprj_io_slew_sel[34] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[35\] ( padframe mprj_io_slew_select[35] ) ( chip_core mprj_io_slew_sel[35] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[36\] ( padframe mprj_io_slew_select[36] ) ( chip_core mprj_io_slew_sel[36] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[37\] ( padframe mprj_io_slew_select[37] ) ( chip_core mprj_io_slew_sel[37] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[3\] ( padframe mprj_io_slew_select[3] ) ( chip_core mprj_io_slew_sel[3] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[4\] ( padframe mprj_io_slew_select[4] ) ( chip_core mprj_io_slew_sel[4] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[5\] ( padframe mprj_io_slew_select[5] ) ( chip_core mprj_io_slew_sel[5] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[6\] ( padframe mprj_io_slew_select[6] ) ( chip_core mprj_io_slew_sel[6] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[7\] ( padframe mprj_io_slew_select[7] ) ( chip_core mprj_io_slew_sel[7] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[8\] ( padframe mprj_io_slew_select[8] ) ( chip_core mprj_io_slew_sel[8] ) + USE SIGNAL ;
+    - mprj_io_slew_sel\[9\] ( padframe mprj_io_slew_select[9] ) ( chip_core mprj_io_slew_sel[9] ) + USE SIGNAL ;
     - resetb ( PIN resetb ) ( padframe resetb ) + USE SIGNAL ;
     - rstb ( padframe resetb_core ) ( chip_core rstb ) + USE SIGNAL ;
 END NETS

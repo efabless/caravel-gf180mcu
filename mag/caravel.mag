@@ -1,7 +1,55 @@
 magic
 tech gf180mcuC
 magscale 1 10
-timestamp 1670523938
+timestamp 1670797023
+<< metal5 >>
+rect 105500 1001600 117500 1013600
+rect 160500 1001600 172500 1013600
+rect 215500 1001600 227500 1013600
+rect 270500 1001600 282500 1013600
+rect 325500 1001600 337500 1013600
+rect 435500 1001600 447500 1013600
+rect 490500 1001600 502500 1013600
+rect 545500 1001600 557500 1013600
+rect 655500 1001600 667500 1013600
+rect 400 906500 12400 918500
+rect 763600 907500 775600 919500
+rect 763600 821500 775600 833500
+rect 400 742500 12400 754500
+rect 763600 735500 775600 747500
+rect 400 701500 12400 713500
+rect 763600 692500 775600 704500
+rect 400 660500 12400 672500
+rect 763600 649500 775600 661500
+rect 400 619500 12400 631500
+rect 763600 606500 775600 618500
+rect 400 578500 12400 590500
+rect 763600 563500 775600 575500
+rect 400 537500 12400 549500
+rect 763600 520500 775600 532500
+rect 400 496500 12400 508500
+rect 400 373500 12400 385500
+rect 763600 348500 775600 360500
+rect 400 332500 12400 344500
+rect 763600 305500 775600 317500
+rect 400 291500 12400 303500
+rect 763600 262500 775600 274500
+rect 400 250500 12400 262500
+rect 400 209500 12400 221500
+rect 763600 219500 775600 231500
+rect 400 168500 12400 180500
+rect 763600 176500 775600 188500
+rect 763600 133500 775600 145500
+rect 763600 90500 775600 102500
+rect 106500 400 118500 12400
+rect 161500 400 173500 12400
+rect 216500 400 228500 12400
+rect 326500 400 338500 12400
+rect 381500 400 393500 12400
+rect 436500 400 448500 12400
+rect 491500 400 503500 12400
+rect 546500 400 558500 12400
+rect 656500 400 668500 12400
 use caravel_logo  caravel_logo
 timestamp 0
 transform 1 0 243800 0 1 800
@@ -21,7 +69,7 @@ box -800 -900 634800 872800
 use copyright_block  copyright_block
 timestamp 0
 transform 1 0 130000 0 1 1600
-box -158 -6016 17950 2312
+box 271 315 18379 8643
 use open_source  open_source
 timestamp 0
 transform 1 0 187800 0 1 2400
@@ -34,6 +82,101 @@ use user_id_textblock  user_id_textblock
 timestamp 0
 transform 1 0 52000 0 1 800
 box 960 890 40783 9962
+<< labels >>
+flabel metal5 s 656500 400 668500 12400 0 FreeSans 73728 0 0 0 VDD
+port 0 nsew signal bidirectional
+flabel metal5 s 106500 400 118500 12400 0 FreeSans 73728 0 0 0 VSS
+port 1 nsew signal bidirectional
+flabel metal5 s 216500 400 228500 12400 0 FreeSans 73728 0 0 0 clock
+port 2 nsew signal input
+flabel metal5 s 381500 400 393500 12400 0 FreeSans 73728 0 0 0 flash_clk
+port 3 nsew signal bidirectional
+flabel metal5 s 326500 400 338500 12400 0 FreeSans 73728 0 0 0 flash_csb
+port 4 nsew signal bidirectional
+flabel metal5 s 436500 400 448500 12400 0 FreeSans 73728 0 0 0 flash_io0
+port 5 nsew signal bidirectional
+flabel metal5 s 491500 400 503500 12400 0 FreeSans 73728 0 0 0 flash_io1
+port 6 nsew signal bidirectional
+flabel metal5 s 546500 400 558500 12400 0 FreeSans 73728 0 0 0 gpio
+port 7 nsew signal bidirectional
+flabel metal5 s 763600 90500 775600 102500 0 FreeSans 73728 0 0 0 mprj_io[0]
+port 8 nsew signal bidirectional
+flabel metal5 s 763600 649500 775600 661500 0 FreeSans 73728 0 0 0 mprj_io[10]
+port 9 nsew signal bidirectional
+flabel metal5 s 763600 692500 775600 704500 0 FreeSans 73728 0 0 0 mprj_io[11]
+port 10 nsew signal bidirectional
+flabel metal5 s 763600 735500 775600 747500 0 FreeSans 73728 0 0 0 mprj_io[12]
+port 11 nsew signal bidirectional
+flabel metal5 s 763600 821500 775600 833500 0 FreeSans 73728 0 0 0 mprj_io[13]
+port 12 nsew signal bidirectional
+flabel metal5 s 763600 907500 775600 919500 0 FreeSans 73728 0 0 0 mprj_io[14]
+port 13 nsew signal bidirectional
+flabel metal5 s 655500 1001600 667500 1013600 0 FreeSans 73728 0 0 0 mprj_io[15]
+port 14 nsew signal bidirectional
+flabel metal5 s 545500 1001600 557500 1013600 0 FreeSans 73728 0 0 0 mprj_io[16]
+port 15 nsew signal bidirectional
+flabel metal5 s 490500 1001600 502500 1013600 0 FreeSans 73728 0 0 0 mprj_io[17]
+port 16 nsew signal bidirectional
+flabel metal5 s 435500 1001600 447500 1013600 0 FreeSans 73728 0 0 0 mprj_io[18]
+port 17 nsew signal bidirectional
+flabel metal5 s 325500 1001600 337500 1013600 0 FreeSans 73728 0 0 0 mprj_io[19]
+port 18 nsew signal bidirectional
+flabel metal5 s 763600 133500 775600 145500 0 FreeSans 73728 0 0 0 mprj_io[1]
+port 19 nsew signal bidirectional
+flabel metal5 s 270500 1001600 282500 1013600 0 FreeSans 73728 0 0 0 mprj_io[20]
+port 20 nsew signal bidirectional
+flabel metal5 s 215500 1001600 227500 1013600 0 FreeSans 73728 0 0 0 mprj_io[21]
+port 21 nsew signal bidirectional
+flabel metal5 s 160500 1001600 172500 1013600 0 FreeSans 73728 0 0 0 mprj_io[22]
+port 22 nsew signal bidirectional
+flabel metal5 s 105500 1001600 117500 1013600 0 FreeSans 73728 0 0 0 mprj_io[23]
+port 23 nsew signal bidirectional
+flabel metal5 s 400 906500 12400 918500 0 FreeSans 73728 0 0 0 mprj_io[24]
+port 24 nsew signal bidirectional
+flabel metal5 s 400 742500 12400 754500 0 FreeSans 73728 0 0 0 mprj_io[25]
+port 25 nsew signal bidirectional
+flabel metal5 s 400 701500 12400 713500 0 FreeSans 73728 0 0 0 mprj_io[26]
+port 26 nsew signal bidirectional
+flabel metal5 s 400 660500 12400 672500 0 FreeSans 73728 0 0 0 mprj_io[27]
+port 27 nsew signal bidirectional
+flabel metal5 s 400 619500 12400 631500 0 FreeSans 73728 0 0 0 mprj_io[28]
+port 28 nsew signal bidirectional
+flabel metal5 s 400 578500 12400 590500 0 FreeSans 73728 0 0 0 mprj_io[29]
+port 29 nsew signal bidirectional
+flabel metal5 s 763600 176500 775600 188500 0 FreeSans 73728 0 0 0 mprj_io[2]
+port 30 nsew signal bidirectional
+flabel metal5 s 400 537500 12400 549500 0 FreeSans 73728 0 0 0 mprj_io[30]
+port 31 nsew signal bidirectional
+flabel metal5 s 400 496500 12400 508500 0 FreeSans 73728 0 0 0 mprj_io[31]
+port 32 nsew signal bidirectional
+flabel metal5 s 400 373500 12400 385500 0 FreeSans 73728 0 0 0 mprj_io[32]
+port 33 nsew signal bidirectional
+flabel metal5 s 400 332500 12400 344500 0 FreeSans 73728 0 0 0 mprj_io[33]
+port 34 nsew signal bidirectional
+flabel metal5 s 400 291500 12400 303500 0 FreeSans 73728 0 0 0 mprj_io[34]
+port 35 nsew signal bidirectional
+flabel metal5 s 400 250500 12400 262500 0 FreeSans 73728 0 0 0 mprj_io[35]
+port 36 nsew signal bidirectional
+flabel metal5 s 400 209500 12400 221500 0 FreeSans 73728 0 0 0 mprj_io[36]
+port 37 nsew signal bidirectional
+flabel metal5 s 400 168500 12400 180500 0 FreeSans 73728 0 0 0 mprj_io[37]
+port 38 nsew signal bidirectional
+flabel metal5 s 763600 219500 775600 231500 0 FreeSans 73728 0 0 0 mprj_io[3]
+port 39 nsew signal bidirectional
+flabel metal5 s 763600 262500 775600 274500 0 FreeSans 73728 0 0 0 mprj_io[4]
+port 40 nsew signal bidirectional
+flabel metal5 s 763600 305500 775600 317500 0 FreeSans 73728 0 0 0 mprj_io[5]
+port 41 nsew signal bidirectional
+flabel metal5 s 763600 348500 775600 360500 0 FreeSans 73728 0 0 0 mprj_io[6]
+port 42 nsew signal bidirectional
+flabel metal5 s 763600 520500 775600 532500 0 FreeSans 73728 0 0 0 mprj_io[7]
+port 43 nsew signal bidirectional
+flabel metal5 s 763600 563500 775600 575500 0 FreeSans 73728 0 0 0 mprj_io[8]
+port 44 nsew signal bidirectional
+flabel metal5 s 763600 606500 775600 618500 0 FreeSans 73728 0 0 0 mprj_io[9]
+port 45 nsew signal bidirectional
+flabel metal5 s 161500 400 173500 12400 0 FreeSans 73728 0 0 0 resetb
+port 46 nsew signal input
 << properties >>
 string FIXED_BBOX 0 0 778000 1020000
 << end >>

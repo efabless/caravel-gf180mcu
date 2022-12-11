@@ -85,3 +85,5 @@ set ::env(MAGIC_GENERATE_LEF) 0
 set ::env(QUIT_ON_ILLEGAL_OVERLAPS) 0
 set ::env(QUIT_ON_TR_DRC) 0
 set ::env(QUIT_ON_LVS_ERROR) 1
+
+set ::env(SYNTH_DEFINES) "USE_POWER_PINS"

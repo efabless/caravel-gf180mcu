@@ -95,7 +95,7 @@ if { ! [ info exists ::env(DRC_CURRENT_DEF) ] } {
 ##saves to <RUN_DIR>/results/final
     save_final_views
     ##saving views
-    save_views -save_path $save_path -tag $::env(OPENLANE_RUN_TAG)
+    save_views -save_path .. -tag $::env(OPENLANE_RUN_TAG)
 ## 
     calc_total_runtime
     save_state

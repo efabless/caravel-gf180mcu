@@ -163,7 +163,7 @@ set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.15
 set ::env(PL_RESIZER_ALLOW_SETUP_VIOS) 0
 set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 1
-set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 1200
+set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 800
 set ::env(PL_RESIZER_MAX_SLEW_MARGIN) 20
 set ::env(PL_RESIZER_CAP_SLEW_MARGIN) 20
 
@@ -175,12 +175,12 @@ set ::env(GRT_OBS) "\
     Metal3 0 1698 25 1799,\
     Metal3 0 1911 25 1994,\
     Metal3 0 3544 25 4061,\
-    Metal3 3144 1579 3147 1683,\
-    Metal2 3144 1797 3147 1895,\
-    Metal3 3144 1797 3147 1895,\
-    Metal3 3144 2010 3147 2111,\
-    Metal3 3144 3516 3147 3616,\
-    Metal3 3144 3950 3147 4044"
+    Metal3 3144 1579 3167 1683,\
+    Metal2 3144 1797 3167 1895,\
+    Metal3 3144 1797 3167 1895,\
+    Metal3 3144 2010 3167 2111,\
+    Metal3 3144 3516 3167 3616,\
+    Metal3 3144 3950 3167 4044"
 
 set ::env(GRT_ADJUSTMENT) 0.4
 # ##                                met1,met2,met3,met4,met5
@@ -198,7 +198,7 @@ set ::env(GLB_RESIZER_CAP_SLEW_MARGIN) 20
 
 ## Antenna
 set ::env(DIODE_INSERTION_STRATEGY) 3
-set ::env(GRT_ANT_ITERS) 40
+set ::env(GRT_ANT_ITERS) 100
 set ::env(GRT_MAX_DIODE_INS_ITERS) 40
 set ::env(DIODE_PADDING) 0
 
@@ -248,6 +248,6 @@ set ::env(QUIT_ON_LVS_ERROR) 0
 set ::env(QUIT_ON_MAGIC_DRC) 0
 
 set ::env(MAGIC_DEF_LABELS) 0
-set ::env(MAGIC_EXT_USE_GDS) 1
+set ::env(MAGIC_EXT_USE_GDS) 0
 
 set ::env(RSZ_DONT_TOUCH_RX) "serial_clock_out|serial_load_out|ringosc"
