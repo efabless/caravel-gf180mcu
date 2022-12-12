@@ -1,0 +1,93 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel
+Version: T-2022.03-SP3
+Date   : Mon Dec 12 04:02:18 2022
+****************************************
+
+
+
+   min_delay/hold ('hkspi_clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   chip_core/housekeeping/_6872_/D                         -0.3753  (VIOLATED)
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   chip_core/gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   padframe/flash_clk_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/flash_csb_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/flash_io0_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mgmt_clock_input_pad/PAD   1.0000   3.5000     -2.5000  (VIOLATED)
+   padframe/mgmt_gpio_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[0]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[1]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[2]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[3]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[4]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[5]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[6]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[7]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[8]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[9]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[10]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[11]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[12]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[13]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[14]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[15]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[16]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[17]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[18]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[19]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[20]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[21]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[22]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[23]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[24]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[25]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[26]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[27]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[28]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[29]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[30]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[31]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[32]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[33]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[34]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[35]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[36]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[37]/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/resetb_pad/PAD    1.0000         3.5000        -2.5000  (VIOLATED)
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   chip_core/housekeeping/clkbuf_3_6__f_wb_clk_i/Z  22.0000  23.0000  -1.0000 (VIOLATED)
+
+
+1
