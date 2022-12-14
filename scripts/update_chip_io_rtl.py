@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# This script txt.writes mprj_pads and filler pads instantiation in chip_io.txt to add in chip_io RTL
+# This script prints mprj_pads and filler pads instantiation in chip_io.txt to add in chip_io RTL
 # Rev 1 
 # 12/12/2022  
 
@@ -10,11 +10,13 @@ MPRJ_IO_PADS = 38
 txt = open(f"{CARAVEL_ROOT}/scripts/chip_io.txt","w")
 
 for i in range (0,MPRJ_IO_PADS):
-    txt.write(f"\tgf180mcu_fd_io__bi_t mprj_pads[{i}] (\n")
+    txt.write(f"\tgf180mcu_fd_io__bi_t \mprj_pads[{i}]  (\n")
+    txt.write(f"\t`ifdef USE_POWER_PINS\n")
     txt.write(f"\t\t.DVDD(vdd),\n")
     txt.write(f"\t\t.DVSS(vss),\n")
     txt.write(f"\t\t.VDD(vdd),\n")
     txt.write(f"\t\t.VSS(vss),\n")
+    txt.write(f"\t`endif\n")
     txt.write(f"\t\t.PAD(mprj_io[{i}]),\n")
     txt.write(f"\t\t.CS(mprj_io_schmitt_select[{i}]),\n")
     txt.write(f"\t\t.SL(mprj_io_slew_select[{i}]),\n")
@@ -25,16 +27,18 @@ for i in range (0,MPRJ_IO_PADS):
     txt.write(f"\t\t.PDRV0(mprj_io_drive_sel[{i*2}]),\n")
     txt.write(f"\t\t.PDRV1(mprj_io_drive_sel[{i*2+1}]),\n")
     txt.write(f"\t\t.A(mprj_io_out[{i}]),\n")
-    txt.write(f"\t\t.Y(mprj_io_in[{i}]),\n")
+    txt.write(f"\t\t.Y(mprj_io_in[{i}])\n")
     txt.write(f"\t);\n")
 
 
 for i in range (0,3):
     txt.write(f"\tgf180mcu_fd_io__fill5 gf180mcu_fd_io__fill5_{i} (\n")
+    txt.write(f"\t`ifdef USE_POWER_PINS\n")
     txt.write(f"\t\t.DVDD(vdd),\n")
     txt.write(f"\t\t.DVSS(vss),\n")
     txt.write(f"\t\t.VDD(vdd),\n")
-    txt.write(f"\t\t.VSS(vss),\n")
+    txt.write(f"\t\t.VSS(vss)\n")
+    txt.write(f"\t`endif\n")
     txt.write(f"\t);\n")
     
 arr_indx = []
@@ -49,10 +53,12 @@ with open(f"{CARAVEL_ROOT}/mag/chip_io.mag", "r") as mag:
 
 for i in arr_indx:
     txt.write(f"\tgf180mcu_fd_io__fill10 gf180mcu_fd_io__fill10_{i} (\n")
+    txt.write(f"\t`ifdef USE_POWER_PINS\n")
     txt.write(f"\t\t.DVDD(vdd),\n")
     txt.write(f"\t\t.DVSS(vss),\n")
     txt.write(f"\t\t.VDD(vdd),\n")
-    txt.write(f"\t\t.VSS(vss),\n")
+    txt.write(f"\t\t.VSS(vss)\n")
+    txt.write(f"\t`endif\n")
     txt.write(f"\t);\n")
 
 txt.close()
