@@ -1,0 +1,51 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel_core
+Version: T-2022.03-SP3
+Date   : Tue Dec 13 23:45:19 2022
+****************************************
+
+
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[0]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[1]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[2]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   soc.core.sram.ram512x32.RAM02/RAM/GWEN   1.5470   1.9581  -0.4111 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/GWEN   1.5470   1.9554  -0.4084 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/D[3]   1.5470   1.7294  -0.1824 (VIOLATED)
+   soc.core.sram.ram512x32.RAM00/RAM/CLK   1.5470   1.6439  -0.0969 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/CLK   1.5470   1.6098  -0.0628 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/D[6]   1.5470   1.5813  -0.0343 (VIOLATED)
+   soc.core.sram.ram512x32.RAM01/RAM/CLK   1.5470   1.5658  -0.0188 (VIOLATED)
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   wire2087/Z                22.0000       115.0000       -93.0000  (VIOLATED)
+   housekeeping/clkbuf_3_6__f_wb_clk_i/Z  22.0000  23.0000  -1.0000 (VIOLATED)
+
+
+1

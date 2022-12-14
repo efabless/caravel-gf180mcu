@@ -1,0 +1,75 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel_core
+Version: T-2022.03-SP3
+Date   : Tue Dec 13 23:47:39 2022
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   housekeeping/_6860_/D                                   -2.6942  (VIOLATED)
+   housekeeping/_6859_/D                                   -1.7862  (VIOLATED)
+   _33702_/D                                               -0.5719  (VIOLATED)
+   _33711_/D                                               -0.5089  (VIOLATED)
+   _33698_/D                                               -0.5018  (VIOLATED)
+   _33704_/D                                               -0.4825  (VIOLATED)
+   _33701_/D                                               -0.4708  (VIOLATED)
+   _33685_/D                                               -0.4130  (VIOLATED)
+   _33706_/D                                               -0.2947  (VIOLATED)
+   _33705_/D                                               -0.2797  (VIOLATED)
+   _33708_/D                                               -0.1989  (VIOLATED)
+   _33653_/D                                               -0.1877  (VIOLATED)
+   _33699_/D                                               -0.1787  (VIOLATED)
+   _33649_/D                                               -0.1469  (VIOLATED)
+   _33659_/D                                               -0.1397  (VIOLATED)
+   _33707_/D                                               -0.1144  (VIOLATED)
+   _33655_/D                                               -0.0847  (VIOLATED)
+   _33681_/D                                               -0.0667  (VIOLATED)
+   _33669_/D                                               -0.0270  (VIOLATED)
+
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[0]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[1]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[2]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   soc.core.sram.ram512x32.RAM02/RAM/GWEN   2.7750   3.6683  -0.8933 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/GWEN   2.7750   3.6677  -0.8927 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/D[3]   2.7750   3.2627  -0.4877 (VIOLATED)
+   soc.core.sram.ram512x32.RAM00/RAM/CLK   2.7750   3.0282  -0.2532 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/D[6]   2.7750   3.0022  -0.2272 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/CLK   2.7750   2.9642  -0.1892 (VIOLATED)
+   soc.core.sram.ram512x32.RAM01/RAM/CLK   2.7750   2.8916  -0.1166 (VIOLATED)
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   wire2087/Z                22.0000       115.0000       -93.0000  (VIOLATED)
+   housekeeping/clkbuf_3_6__f_wb_clk_i/Z  22.0000  23.0000  -1.0000 (VIOLATED)
+
+
+1

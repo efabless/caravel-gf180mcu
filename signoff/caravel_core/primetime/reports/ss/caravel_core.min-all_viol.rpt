@@ -1,0 +1,56 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel_core
+Version: T-2022.03-SP3
+Date   : Tue Dec 13 23:48:20 2022
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   housekeeping/_6860_/D                                   -0.3476  (VIOLATED)
+
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[0]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[1]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[2]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   housekeeping/output181/Z   0.0010         0.0010         0.0000  (VIOLATED: increase significant digits)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   soc.core.sram.ram512x32.RAM02/RAM/GWEN   2.7750   3.2698  -0.4948 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/GWEN   2.7750   3.2680  -0.4930 (VIOLATED)
+   soc.core.sram.ram512x32.RAM00/RAM/CLK   2.7750   2.9106  -0.1356 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/CLK   2.7750   2.8613  -0.0863 (VIOLATED)
+   soc.core.sram.ram512x32.RAM01/RAM/CLK   2.7750   2.7805  -0.0055 (VIOLATED)
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   wire2087/Z                22.0000       115.0000       -93.0000  (VIOLATED)
+   housekeeping/clkbuf_3_6__f_wb_clk_i/Z  22.0000  23.0000  -1.0000 (VIOLATED)
+
+
+1
