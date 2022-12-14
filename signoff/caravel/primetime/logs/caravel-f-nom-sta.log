@@ -33,8 +33,8 @@ if {\
         read_parasitics -keep_capacitive_coupling -path $key $spef_mapping($key)
       }
       # add -complete_with wlm to let PT complete incomplete RC networks at the top-level
-      # read_parasitics -keep_capacitive_coupling $::env(ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included -complete_with wlm
-      read_parasitics -keep_capacitive_coupling $::env(ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included 
+      read_parasitics -keep_capacitive_coupling $::env(ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included -complete_with wlm
+      # read_parasitics -keep_capacitive_coupling $::env(ROOT)/signoff/${design}/StarRC/${design}.${rc_corner}.spef -pin_cap_included 
       report_annotated_parasitics
     }
 
@@ -54,18 +54,18 @@ if {\
 
       if {$design == "caravel" | $design == "caravel_core"} {
         if {$::env(UPW) && $design == "caravel"} {
-        if {[string match gf180* $::env(PDK)]} {
-          report_timing -unique_pins -delay min -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
+          if {[string match gf180* $::env(PDK)]} {
+            report_timing -unique_pins -delay min -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+            -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
 
-          report_timing -unique_pins -delay max -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
+            report_timing -unique_pins -delay max -through [get_cells chip_core/mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+            -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
         } elseif {[string match sky130* $::env(PDK)]} {
-          report_timing -unique_pins -delay min -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
+            report_timing -unique_pins -delay min -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+            -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-min_timing.rpt
 
-          report_timing -unique_pins -delay max -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
-          -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
+            report_timing -unique_pins -delay max -through [get_cells mprj] -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit \
+            -max_paths 10000 -nworst 5 -slack_lesser_than 100 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-mprj-max_timing.rpt
         } }
         report_timing -unique_pins -delay min -path_type full_clock_expanded -transition_time -capacitance -nets -crosstalk_delta -derate -nosplit -group clk \
         -max_paths 10000 -nworst 5 -slack_lesser_than 10 -significant_digits 4 -include_hierarchical_pins > $::env(OUT_DIR)/reports/${proc_corner}${proc_corner}/${design}.${rc_corner}-clk-min_timing.rpt
@@ -135,7 +135,6 @@ list of verilog files:
 /home/passant/caravel-gf180mcu/verilog/gl/mprj_io_buffer.v
 /home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_009.v
 /home/passant/caravel-gf180mcu/verilog/gl/chip_io.v
-/home/passant/caravel-gf180mcu/verilog/gl/caravel.nl.v
 /home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/gf180_ram_512x8_wrapper.v
 /home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/__user_project_wrapper.v
 Information: current_design won't return any data before link (DES-071)
@@ -11384,7 +11383,6 @@ Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel_core.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/__user_project_wrapper.v'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'
 Loading verilog file '/home/passant/caravel_user_project-gf180mcu/verilog/gl/user_proj_example.v'
-Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel.nl.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/caravel.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/mprj_io_buffer.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/spare_logic_block.v'
@@ -11397,76 +11395,72 @@ Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_bl
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block.v'
 Loading verilog file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v'
 Loading verilog file '/home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/gf180_ram_512x8_wrapper.v'
-Loading db file '/tmp/_pt1rqyLod4/1.db'
+Loading db file '/tmp/_pt1rcRDp2s/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__ff_n40C_5v50.lib'
-Loading db file '/tmp/_pt1rbcCLu1/1.db'
+Loading db file '/tmp/_pt1rCtJYQZ/1.db'
 Loading db file '/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/liberty/gf180mcu_fd_io__ff_n40C_5v50.lib'
-Loading db file '/tmp/_pt1ruGYEle/1.db'
+Loading db file '/tmp/_pt1rUvEsAM/1.db'
 Warning: Ignoring user_project_wrapper in verilog file /home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v, as another module with same name is read already. (LNK-067)
-Warning: Ignoring caravel in verilog file /home/passant/caravel-gf180mcu/verilog/gl/caravel.nl.v, as another module with same name is read already. (LNK-067)
 Warning: Ignoring user_project_wrapper in verilog file /home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/__user_project_wrapper.v, as another module with same name is read already. (LNK-067)
 Linking design caravel...
 Warning: Unable to resolve reference to 'simple_por' in 'caravel'. (LNK-005)
 Information: Creating black box for chip_core/por_inst/simple_por... (LNK-043)
 Removed 127203 unconnected cells and blackboxes.
-Information: Removing 16 unneeded designs..... (LNK-034)
+Information: Removing 15 unneeded designs..... (LNK-034)
 Information: Module 'gpio_defaults_block_007' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_007.v' is not used in the current design.  (LNK-039)
 Information: Module 'user_project_wrapper' in file '/home/passant/caravel-gf180mcu/verilog/gl/__user_project_wrapper.v' is not used in the current design.  (LNK-039)
 Information: Module 'gpio_defaults_block_087' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_087.v' is not used in the current design.  (LNK-039)
 Information: Module 'gpio_defaults_block_009' in file '/home/passant/caravel-gf180mcu/verilog/gl/gpio_defaults_block_009.v' is not used in the current design.  (LNK-039)
-Information: Module 'caravel' in file '/home/passant/caravel-gf180mcu/verilog/gl/caravel.nl.v' is not used in the current design.  (LNK-039)
 Information: Module 'user_project_wrapper' in file '/home/passant/caravel_mgmt_soc_gf180mcu/verilog/gl/__user_project_wrapper.v' is not used in the current design.  (LNK-039)
 Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
 Design 'caravel' was successfully linked.
 Information: There are 35678 leaf cells, ports, hiers and 39462 nets in the design (LNK-047)
 
 Reading SDC version 2.1...
+[INFO]: IO[4] is set as: SCK
 Warning: Creating a clock on internal pin 'chip_core/housekeeping/serial_clock'. (UITE-130)
 Warning: Creating 'clock' on a hierarchical pin 'chip_core/housekeeping/serial_clock'. (UITE-137)
 Warning: Creating a clock on internal pin 'chip_core/housekeeping/serial_load'. (UITE-130)
 Warning: Creating 'clock' on a hierarchical pin 'chip_core/housekeeping/serial_load'. (UITE-137)
+[INFO]: Clock transition range: 2 : 3.5
 Warning: Creating a clock source on inout port 'mprj_io[4]'. (UITE-123)
-[INFO]: Setting output delay to: 4
 [INFO]: Setting input delay to: 4
-[INFO]: Cap load range: 4 : 7
+[INFO]: Setting output delay to: 4
 [INFO]: Input transition range: 1 : 3.5
+[INFO]: Cap load range: 4 : 7
+[INFO]: Flash interface transition range: 4 : 6
+[INFO]: Flash interface cap load range: 6 : 8
+[INFO]: Flash interface delay: input 5 output 5
 [INFO]: Setting derate factor to: 3.75 %
 1
 [INFO]: Spef mapping done
 Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Log for 'read_parasitics command' will be generated in '/home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_12_03_55_29/logs/caravel-nom-parasitics.log'. (PARA-107)
-Information: Log for 'report_annotated_parasitics command' will be generated in '/home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_12_03_55_29/logs/caravel-nom-parasitics.log'. (PARA-107)
+Information: Log for 'read_parasitics command' will be generated in '/home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_13_14_09_54/logs/caravel-nom-parasitics.log'. (PARA-107)
+Information: Log for 'report_annotated_parasitics command' will be generated in '/home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_13_14_09_54/logs/caravel-nom-parasitics.log'. (PARA-107)
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Building multi voltage information for entire design. (MV-022)
 Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
-Warning: Conflicted logic driving pin padframe/flash_io1_pad/IE, setting resolved logic value 0 on pin padframe/flash_io1_pad/IE. (PTE-042)
-Warning: Conflicted logic driving pin padframe/flash_clk_pad/SL, setting resolved logic value 1 on pin padframe/flash_clk_pad/SL. (PTE-042)
-Warning: Conflicted logic driving pin padframe/flash_io1_pad/OE, setting resolved logic value 1 on pin padframe/flash_io1_pad/OE. (PTE-042)
-Warning: Conflicted logic driving pin padframe/flash_io1_pad/SL, setting resolved logic value 1 on pin padframe/flash_io1_pad/SL. (PTE-042)
-Warning: Conflicted logic driving pin padframe/flash_io0_pad/SL, setting resolved logic value 1 on pin padframe/flash_io0_pad/SL. (PTE-042)
-Warning: Conflicted logic driving pin padframe/mgmt_gpio_pad/SL, setting resolved logic value 1 on pin padframe/mgmt_gpio_pad/SL. (PTE-042)
-Warning: Conflicted logic driving pin padframe/flash_csb_pad/SL, setting resolved logic value 1 on pin padframe/flash_csb_pad/SL. (PTE-042)
-Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4057_/I0 and chip_core/housekeeping/_4057_/I1 of cell chip_core/housekeeping/_4057_. (PTE-060)
-Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4057_/S and chip_core/housekeeping/_4057_/I1 of cell chip_core/housekeeping/_4057_. (PTE-060)
+Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/A2 and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
+Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/B and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
+Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/C and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/_21594_/I0 and chip_core/_21594_/I1 of cell chip_core/_21594_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/_21594_/S and chip_core/_21594_/I1 of cell chip_core/_21594_. (PTE-060)
+Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4057_/I0 and chip_core/housekeeping/_4057_/I1 of cell chip_core/housekeeping/_4057_. (PTE-060)
+Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4057_/S and chip_core/housekeeping/_4057_/I1 of cell chip_core/housekeeping/_4057_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4075_/I0 and chip_core/housekeeping/_4075_/I1 of cell chip_core/housekeeping/_4075_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4075_/S and chip_core/housekeeping/_4075_/I1 of cell chip_core/housekeeping/_4075_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4072_/A1 and chip_core/housekeeping/_4072_/B2 of cell chip_core/housekeeping/_4072_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4072_/A2 and chip_core/housekeeping/_4072_/B2 of cell chip_core/housekeeping/_4072_. (PTE-060)
 Warning: No clock-gating check is inferred for clock hkspi_clk at pins chip_core/housekeeping/_4072_/B1 and chip_core/housekeeping/_4072_/B2 of cell chip_core/housekeeping/_4072_. (PTE-060)
-Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/A2 and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
-Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/B and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
-Warning: No clock-gating check is inferred for clock clk at pins chip_core/_21442_/C and chip_core/_21442_/A1 of cell chip_core/_21442_. (PTE-060)
 Information: Inferring 1 clock-gating checks. (PTE-017)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
 Information: Number of nets evaluated in the previous iteration: 34264. (XTALK-105)
 ****************************************
-Report : write_sdf /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_12_03_55_29/sdf/ff/caravel.nom.sdf
+Report : write_sdf /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_13_14_09_54/sdf/ff/caravel.nom.sdf
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:30 2022
+Date   : Tue Dec 13 14:14:17 2022
 ****************************************
 
 Warning: Clock 'hk_serial_clk'has source on hierachical pin 'chip_core/housekeeping/serial_clock'. Consider moving to: chip_core/housekeeping/output300/Z
@@ -11474,9 +11468,163 @@ Warning: Clock 'hk_serial_clk'has source on hierachical pin 'chip_core/housekeep
 Warning: Clock 'hk_serial_load'has source on hierachical pin 'chip_core/housekeeping/serial_load'. Consider moving to: chip_core/housekeeping/output303/Z
  (MEXT-20)
 Warning: Variable si_filter_keep_all_port_aggressors is set to FALSE (MEXT-80)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[14]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[14]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[14]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[14]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[13]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[13]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[13]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[13]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[15]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[15]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[15]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[15]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_csb. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_csb. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_csb. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_csb. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[26]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[26]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[26]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[26]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[27]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[27]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[27]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[27]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[28]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[28]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[28]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[28]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[33]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[33]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[33]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[33]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[32]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[32]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[32]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[32]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[19]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[19]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[19]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[19]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[12]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[12]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[12]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[12]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[11]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[11]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[11]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[11]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[21]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[21]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[21]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[21]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[22]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[22]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[22]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[22]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[23]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[23]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[23]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[23]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[24]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[24]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[24]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[24]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_clk. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_clk. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_clk. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_clk. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[7]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[7]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[7]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[7]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[35]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[35]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[35]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[35]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[5]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[5]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[5]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[5]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[2]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[2]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[25]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[25]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[25]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[25]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[36]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[36]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[36]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[36]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[37]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[37]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[37]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[37]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_io0. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_io0. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_io0. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port flash_io0. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[0]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[0]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[0]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[0]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[34]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[34]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[34]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[34]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[31]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[31]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[31]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[31]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[29]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[29]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[29]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[29]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[30]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[30]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[30]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[30]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[18]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[18]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[18]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[18]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[17]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[17]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[17]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[17]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[16]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[16]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[16]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[16]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[20]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[20]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[20]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[20]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[10]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[10]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[10]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[10]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[8]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[8]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[8]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[8]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[9]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[9]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[9]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[9]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[1]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[1]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[1]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[1]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[6]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[6]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[6]. (MEXT-46)
+Warning: The requested number of delay table points 5 does not fit into the 0.0000 to 0.0060 index range that is set on, or derived for, port mprj_io[6]. (MEXT-46)
 Information: For model extraction, min_period and min_pulse_width arcs are extracted at the context slew. (MEXT-105)
 Information: Elapsed time for model extraction: 3 seconds (MEXT-096)
-Wrote the LIB file /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_12_03_55_29/lib/ff/caravel.nom.lib
+Wrote the LIB file /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_13_14_09_54/lib/ff/caravel.nom.lib
 Information: Elapsed time for lib file writing: 0 seconds (MEXT-096)
 Information: Defining new variable 'verilog'. (CMD-041)
 Suppressed Messages Summary:
@@ -11484,11 +11632,11 @@ Id          Severity      Occurrences   Suppressed
 -------------------------------------------------------------------------------
 DB-1        Error                   4            4
 Total 1 type of message is suppressed
-Maximum memory usage for this session: 2890.15 MB
+Maximum memory usage for this session: 2934.25 MB
 CPU usage for this session: 96 seconds 
 Elapsed time for this session: 34 seconds
-Diagnostics summary: 43 warnings, 25 informationals
+Diagnostics summary: 189 warnings, 24 informationals
 
 Thank you for using pt_shell!
-STA run Failed!
-There are hold violations. check report: /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_12_03_55_29/reports/ff/caravel.nom-global.rpt
+STA run Passed!
+There are max_transition violations. check report: /home/passant/caravel-gf180mcu/signoff/caravel/primetime/2022_12_13_14_09_54/reports/ff/caravel.nom-all_viol.rpt

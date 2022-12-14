@@ -15,7 +15,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/gpio_defaults_bl
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:44 2022
+Date   : Tue Dec 13 14:14:32 2022
 ****************************************
 
         10 error(s)
@@ -34,7 +34,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/housekeeping/Sta
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:45 2022
+Date   : Tue Dec 13 14:14:33 2022
 ****************************************
 
         0 error(s)
@@ -53,7 +53,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/caravel_core/Sta
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
         0 error(s)
@@ -72,7 +72,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/spare_logic_bloc
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
         0 error(s)
@@ -85,14 +85,6 @@ Date   : Mon Dec 12 04:02:47 2022
         Annotated Elmore delays          :            0
 
 Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
-Error: Invalid resistor (*921 0.001) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*921 7.28742) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*921 0.10764) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*921 0.001) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*921 7.28742) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*921 0.10764) on net padframe/const_one[1]: Pin 'padframe/flash_csb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*964 0.001) on net padframe/const_one[0]: Pin 'padframe/resetb_pad/PU' is not connected to net (PARA-044)
-Error: Invalid resistor (*964 0.001) on net padframe/const_one[0]: Pin 'padframe/resetb_pad/PU' is not connected to net (PARA-044)
 Error: Cannot find net 'padframe/flash_clk_pad/Y' in design 'caravel' (PARA-124)
 Error: Cannot find net 'padframe/flash_csb_pad/Y' in design 'caravel' (PARA-124)
 
@@ -101,34 +93,15 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/chip_io/StarRC/c
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
-        10 error(s)
+        2 error(s)
         Format is SPEF
-        Annotated nets                   :          455
-        Annotated capacitances           :         4521
-        Annotated resistances            :         4175
-        Annotated coupling capacitances  :          566
-        Annotated PI models              :            0
-        Annotated Elmore delays          :            0
-
-Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
-
-****************************************
-Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/user_id_programming/StarRC/user_id_programming.max.spef
-	-keep_capacitive_coupling
-Design : caravel
-Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
-****************************************
-
-        0 error(s)
-        Format is SPEF
-        Annotated nets                   :           64
-        Annotated capacitances           :          229
-        Annotated resistances            :          165
-        Annotated coupling capacitances  :          102
+        Annotated nets                   :          457
+        Annotated capacitances           :         4533
+        Annotated resistances            :         4185
+        Annotated coupling capacitances  :          567
         Annotated PI models              :            0
         Annotated Elmore delays          :            0
 
@@ -139,7 +112,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/mprj_io_buffer/S
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
         0 error(s)
@@ -219,7 +192,7 @@ Report : read_parasitics /home/passant/caravel-gf180mcu/signoff/caravel/StarRC/c
 	-keep_capacitive_coupling
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
         60 error(s)
@@ -231,223 +204,6 @@ Date   : Mon Dec 12 04:02:47 2022
         Annotated PI models              :            0
         Annotated Elmore delays          :            0
 
-Error: Load pin 'padframe/flash_csb_pad/PU' is missing in the RC annotation for net 'const_one[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/resetb_pad/PU' is missing in the RC annotation for net 'const_one[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[0]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[1]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[2]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[2]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[3]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[4]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[4]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[5]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[5]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[6]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[6]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[7]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[7]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[8]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[8]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/gpio_defaults_block_34/gpio_default_value_zero[9]/ZN' is missing in the RC annotation for net 'chip_core/gpio_control_in_2[15].gpio_defaults[9]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[0]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[1]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[2]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[2]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[3]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[4]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[4]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[5]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[5]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[6]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[6]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/Q[7]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[7]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[0]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[8]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[1]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[9]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[2]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[10]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[3]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[11]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[4]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[12]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[5]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[13]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[6]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[14]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/Q[7]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[15]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[0]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[16]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[1]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[17]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[2]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[18]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[3]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[19]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[4]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[20]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[5]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[21]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[6]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[22]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/Q[7]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[23]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[0]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[24]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[1]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[25]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[2]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[26]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[3]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[27]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[4]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[28]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[5]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[29]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[6]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[30]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Driver pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/Q[7]' is missing in the RC annotation for net 'chip_core/soc.core.bus_dat_r[31]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[0]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[5]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[10]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[5]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[11]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[6]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[12]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[6]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[13]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[7]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[14]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[7]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[15]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[8]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[16]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[8]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[17]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[9]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[18]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[9]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[19]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[0]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[10]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[20]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[10]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[21]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[11]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[22]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[11]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[23]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[12]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[24]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[12]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[25]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[13]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[26]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[13]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[27]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[14]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[28]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[14]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[29]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[1]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[2]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[15]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[30]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[15]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[31]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[16]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[32]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[16]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[33]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[17]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[34]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[17]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[35]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[18]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[36]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[18]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[37]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[19]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[38]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[19]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[39]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[1]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[20]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[40]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[20]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[41]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[21]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[42]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[21]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[43]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[22]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[44]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[22]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[45]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[23]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[46]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[23]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[47]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[24]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[48]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[24]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[49]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[2]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[4]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[25]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[50]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[25]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[51]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[26]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[52]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[26]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[53]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[27]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[54]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[27]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[55]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[28]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[56]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[28]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[57]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[29]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[58]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[29]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[59]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[2]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[5]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[30]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[60]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[3]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[6]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[3]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[7]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[4]/PDRV0' is missing in the RC annotation for net 'mprj_io_drive_sel[8]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'padframe/mprj_pads[4]/PDRV1' is missing in the RC annotation for net 'mprj_io_drive_sel[9]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/CEN' is missing in the RC annotation for net 'chip_core/net1743'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/CEN' is missing in the RC annotation for net 'chip_core/net1743'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/CEN' is missing in the RC annotation for net 'chip_core/net1742'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/CEN' is missing in the RC annotation for net 'chip_core/net1742'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[3]' is missing in the RC annotation for net 'chip_core/mgmt_buffers.mprj_dat_o_core[19]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[0]' is missing in the RC annotation for net 'chip_core/mgmt_buffers.mprj_dat_o_core[24]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[7]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[6]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[5]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[4]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[3]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[2]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[1]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/WEN[0]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[1]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[1]' is missing in the RC annotation for net 'chip_core/net2841'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[2]' is missing in the RC annotation for net 'chip_core/net2844'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[7]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[6]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[5]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[4]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[3]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[2]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[1]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/WEN[0]' is missing in the RC annotation for net 'chip_core/net1315'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[6]' is missing in the RC annotation for net 'chip_core/net1328'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[6]' is missing in the RC annotation for net 'chip_core/net1328'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[0]' is missing in the RC annotation for net 'chip_core/net1450'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[1]' is missing in the RC annotation for net 'chip_core/net1453'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[2]' is missing in the RC annotation for net 'chip_core/net1456'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[3]' is missing in the RC annotation for net 'chip_core/net1459'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[0]' is missing in the RC annotation for net 'chip_core/net1477'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[1]' is missing in the RC annotation for net 'chip_core/net1479'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[2]' is missing in the RC annotation for net 'chip_core/net1482'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[4]' is missing in the RC annotation for net 'chip_core/net1489'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[5]' is missing in the RC annotation for net 'chip_core/net1491'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[6]' is missing in the RC annotation for net 'chip_core/net1494'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[7]' is missing in the RC annotation for net 'chip_core/net1497'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[3]' is missing in the RC annotation for net 'chip_core/net1510'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[4]' is missing in the RC annotation for net 'chip_core/net1513'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[5]' is missing in the RC annotation for net 'chip_core/net1516'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[6]' is missing in the RC annotation for net 'chip_core/net1519'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[7]' is missing in the RC annotation for net 'chip_core/net1523'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[7]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[6]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[5]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[4]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[3]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[2]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[1]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/WEN[0]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[0]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[7]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[6]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[5]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[4]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[3]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[2]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[1]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/WEN[0]' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.WEN[3]'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[0]' is missing in the RC annotation for net 'chip_core/net1158'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[0]' is missing in the RC annotation for net 'chip_core/net1158'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[1]' is missing in the RC annotation for net 'chip_core/net1163'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[2]' is missing in the RC annotation for net 'chip_core/net1166'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[4]' is missing in the RC annotation for net 'chip_core/net1169'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[4]' is missing in the RC annotation for net 'chip_core/net1169'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[6]' is missing in the RC annotation for net 'chip_core/net1327'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[6]' is missing in the RC annotation for net 'chip_core/net1327'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[1]' is missing in the RC annotation for net 'chip_core/net1347'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[2]' is missing in the RC annotation for net 'chip_core/net1350'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[3]' is missing in the RC annotation for net 'chip_core/net1353'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[4]' is missing in the RC annotation for net 'chip_core/net1462'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[5]' is missing in the RC annotation for net 'chip_core/net1466'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[6]' is missing in the RC annotation for net 'chip_core/net1468'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/D[7]' is missing in the RC annotation for net 'chip_core/net1471'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[0]' is missing in the RC annotation for net 'chip_core/net1157'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[0]' is missing in the RC annotation for net 'chip_core/net1157'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[1]' is missing in the RC annotation for net 'chip_core/net1162'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[1]' is missing in the RC annotation for net 'chip_core/net1162'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[2]' is missing in the RC annotation for net 'chip_core/net1165'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[2]' is missing in the RC annotation for net 'chip_core/net1165'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[4]' is missing in the RC annotation for net 'chip_core/net1168'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[4]' is missing in the RC annotation for net 'chip_core/net1168'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[7]' is missing in the RC annotation for net 'chip_core/net1325'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[7]' is missing in the RC annotation for net 'chip_core/net1325'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[0]' is missing in the RC annotation for net 'chip_core/net1343'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[4]' is missing in the RC annotation for net 'chip_core/net1356'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[5]' is missing in the RC annotation for net 'chip_core/net1360'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[6]' is missing in the RC annotation for net 'chip_core/net1364'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/D[7]' is missing in the RC annotation for net 'chip_core/net1368'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[1]' is missing in the RC annotation for net 'chip_core/net1161'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[2]' is missing in the RC annotation for net 'chip_core/net1164'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[8]' is missing in the RC annotation for net 'chip_core/net1322'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[8]' is missing in the RC annotation for net 'chip_core/net1322'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[7]' is missing in the RC annotation for net 'chip_core/net1324'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[7]' is missing in the RC annotation for net 'chip_core/net1324'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[3]' is missing in the RC annotation for net 'chip_core/net1373'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[3]' is missing in the RC annotation for net 'chip_core/net1373'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[5]' is missing in the RC annotation for net 'chip_core/net1376'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/A[5]' is missing in the RC annotation for net 'chip_core/net1376'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[8]' is missing in the RC annotation for net 'chip_core/net1321'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[8]' is missing in the RC annotation for net 'chip_core/net1321'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[3]' is missing in the RC annotation for net 'chip_core/net1372'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[3]' is missing in the RC annotation for net 'chip_core/net1372'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/A[5]' is missing in the RC annotation for net 'chip_core/net1375'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[5]' is missing in the RC annotation for net 'chip_core/net1375'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/GWEN' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.GWEN'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/GWEN' is missing in the RC annotation for net 'chip_core/soc.core.sram.ram512x32.GWEN'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/GWEN' is missing in the RC annotation for net 'chip_core/net847'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/GWEN' is missing in the RC annotation for net 'chip_core/net847'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM02/RAM/CLK' is missing in the RC annotation for net 'chip_core/clknet_7_25_0_clock_ctrl.core_clk'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM00/RAM/CLK' is missing in the RC annotation for net 'chip_core/clknet_7_0_0_clock_ctrl.core_clk'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM01/RAM/CLK' is missing in the RC annotation for net 'chip_core/clknet_7_16_0_clock_ctrl.core_clk'.  Ignoring the incomplete RC annotation. (PARA-006)
-Error: Load pin 'chip_core/soc.core.sram.ram512x32.RAM03/RAM/CLK' is missing in the RC annotation for net 'chip_core/clknet_leaf_1005_clock_ctrl.core_clk'.  Ignoring the incomplete RC annotation. (PARA-006)
 ****************************************
 Report : annotated_parasitics
 	-check
@@ -455,7 +211,7 @@ Report : annotated_parasitics
 	-boundary_nets
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:02:47 2022
+Date   : Tue Dec 13 14:14:34 2022
 ****************************************
 
                     |         |         |         |   RC    | Coupled |   Not   |
@@ -464,12 +220,12 @@ Net Type            |  Total  | Lumped  |  RC pi  | network | network |Annotated
 Internal nets       |         |         |         |         |         |         |
   - Pin to pin nets |   34221 |       0 |       0 |      31 |   34188 |       2 |
   - Driverless nets |    1211 |       0 |       0 |       1 |     177 |    1033 |
-  - Loadless nets   |     735 |       0 |       0 |       6 |     349 |     380 |
+  - Loadless nets   |     735 |       0 |       0 |       6 |     317 |     412 |
 --------------------+---------+---------+---------+---------+---------+---------+
 Boundary/port nets  |         |         |         |         |         |         |
   - Pin to pin nets |      45 |       0 |       0 |      45 |       0 |       0 |
   - Driverless nets |       0 |       0 |       0 |       0 |       0 |       0 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+---------+
-                    |   36212 |       0 |       0 |      83 |   34714 |    1415 |
+                    |   36212 |       0 |       0 |      83 |   34682 |    1447 |
 

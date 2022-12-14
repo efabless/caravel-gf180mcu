@@ -4,23 +4,23 @@ Report : analysis_coverage
 	-sort_by slack
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 03:59:37 2022
+Date   : Tue Dec 13 14:11:24 2022
 ****************************************
 
 Type of Check         Total              Met         Violated         Untested
 --------------------------------------------------------------------------------
-setup                  9149      5569 ( 61%)         0 (  0%)      3580 ( 39%)
-hold                   9149      5569 ( 61%)         0 (  0%)      3580 ( 39%)
+setup                  9149      5570 ( 61%)         0 (  0%)      3579 ( 39%)
+hold                   9149      5570 ( 61%)         0 (  0%)      3579 ( 39%)
 recovery               1881        75 (  4%)         0 (  0%)      1806 ( 96%)
 removal                1881        75 (  4%)         0 (  0%)      1806 ( 96%)
-min_period            17815     17552 ( 99%)         0 (  0%)       263 (  1%)
-min_pulse_width       45035     35104 ( 78%)         0 (  0%)      9931 ( 22%)
+min_period            17815     17554 ( 99%)         0 (  0%)       261 (  1%)
+min_pulse_width       45035     35108 ( 78%)         0 (  0%)      9927 ( 22%)
 clock_gating_setup        1         0 (  0%)         0 (  0%)         1 (100%)
 clock_gating_hold         1         0 (  0%)         0 (  0%)         1 (100%)
-out_setup                38         8 ( 21%)         0 (  0%)        30 ( 79%)
-out_hold                 38         8 ( 21%)         0 (  0%)        30 ( 79%)
+out_setup                38         9 ( 24%)         0 (  0%)        29 ( 76%)
+out_hold                 38         9 ( 24%)         0 (  0%)        29 ( 76%)
 --------------------------------------------------------------------------------
-All Checks            84988     63960 ( 75%)         0 (  0%)     21028 ( 25%)
+All Checks            84988     63970 ( 75%)         0 (  0%)     21018 ( 25%)
 
 
 Constrained          Related           Check
@@ -632,8 +632,6 @@ chip_core/_37956_/RN(low) -  -         min_pulse_width sdf_cond(ENABLE_NOT_CLK_A
 chip_core/_37956_/RN(low) -  -         min_pulse_width sdf_cond(ENABLE_NOT_CLK_AND_NOT_D===1'b1) untested no_clock
 chip_core/_37956_/RN(rise) CLK(rise) hk_serial_clk recovery - untested false_paths
 chip_core/_37956_/RN(rise) CLK(rise) hk_serial_clk removal - untested false_paths
-flash_io1            -       clk       out_hold -          untested  no_paths
-flash_io1            -       clk       out_setup -         untested  no_paths
 chip_core/housekeeping/_7228_/SETN(low) - - min_pulse_width - untested no_clock
 chip_core/housekeeping/_7228_/SETN(low) - - min_pulse_width sdf_cond(ENABLE_CLK_AND_D===1'b1) untested no_clock
 chip_core/housekeeping/_7228_/SETN(low) - - min_pulse_width sdf_cond(ENABLE_CLK_AND_NOT_D===1'b1) untested no_clock
@@ -3981,11 +3979,8 @@ chip_core/_38385_/SETN(rise) RN(rise) - setup  sdf_cond(ENABLE_CLK_AND_D===1'b1)
 chip_core/_38385_/SETN(rise) RN(rise) - setup  sdf_cond(ENABLE_CLK_AND_NOT_D===1'b1) untested constant_disabled
 chip_core/_38385_/SETN(rise) RN(rise) - setup  sdf_cond(ENABLE_NOT_CLK_AND_D===1'b1) untested constant_disabled
 chip_core/_38385_/SETN(rise) RN(rise) - setup  sdf_cond(ENABLE_NOT_CLK_AND_NOT_D===1'b1) untested constant_disabled
-chip_core/_36649_/D  CLK(rise) -       hold    -           untested  constant_disabled
-chip_core/_36649_/D  CLK(rise) -       setup   -           untested  constant_disabled
-chip_core/_36649_/CLK -      -         min_period sdf_cond(ENABLE_D===1'b1) untested constant_disabled
-chip_core/_36649_/CLK(high) - -        min_pulse_width sdf_cond(ENABLE_D===1'b1) untested constant_disabled
-chip_core/_36649_/CLK(low) - -         min_pulse_width sdf_cond(ENABLE_D===1'b1) untested constant_disabled
+chip_core/_36649_/D  CLK(rise) clk     hold    -           untested  false_paths
+chip_core/_36649_/D  CLK(rise) clk     setup   -           untested  false_paths
 chip_core/_37908_/D  CLK(rise) -       hold    sdf_cond(ENABLE_RN===1'b1) untested no_endpoint_clock
 chip_core/_37908_/D  CLK(rise) -       setup   sdf_cond(ENABLE_RN===1'b1) untested no_endpoint_clock
 chip_core/_37908_/CLK -      -         min_period -        untested  no_clock
@@ -6381,11 +6376,6 @@ mprj_io[22]          -       clk       out_hold -          untested  false_paths
 mprj_io[22]          -       clk       out_setup -         untested  false_paths
 mprj_io[21]          -       clk       out_hold -          untested  false_paths
 mprj_io[21]          -       clk       out_setup -         untested  false_paths
-chip_core/_35171_/D  CLK(rise) -       hold    -           untested  constant_disabled
-chip_core/_35171_/D  CLK(rise) -       setup   -           untested  constant_disabled
-chip_core/_35171_/CLK -      -         min_period sdf_cond(ENABLE_D===1'b1) untested constant_disabled
-chip_core/_35171_/CLK(high) - -        min_pulse_width sdf_cond(ENABLE_D===1'b1) untested constant_disabled
-chip_core/_35171_/CLK(low) - -         min_pulse_width sdf_cond(ENABLE_D===1'b1) untested constant_disabled
 chip_core/_38135_/RN(low) -  -         min_pulse_width -   untested  no_clock
 chip_core/_38135_/RN(low) -  -         min_pulse_width sdf_cond(ENABLE_CLKN_AND_D===1'b1) untested no_clock
 chip_core/_38135_/RN(low) -  -         min_pulse_width sdf_cond(ENABLE_CLKN_AND_NOT_D===1'b1) untested no_clock

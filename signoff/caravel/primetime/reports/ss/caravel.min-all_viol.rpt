@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : caravel
 Version: T-2022.03-SP3
-Date   : Mon Dec 12 04:01:37 2022
+Date   : Tue Dec 13 14:13:25 2022
 ****************************************
 
 
@@ -12,15 +12,15 @@ Date   : Mon Dec 12 04:01:37 2022
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
-   mprj_io[32]                                             -8.3797  (VIOLATED)
-   mprj_io[33]                                             -8.2361  (VIOLATED)
-   mprj_io[35]                                             -8.0504  (VIOLATED)
-   mprj_io[6]                                              -6.1017  (VIOLATED)
-   flash_csb                                               -5.2220  (VIOLATED)
-   mprj_io[0]                                              -4.0066  (VIOLATED)
-   flash_clk                                               -3.1121  (VIOLATED)
-   flash_io0                                               -1.5843  (VIOLATED)
-   chip_core/housekeeping/_6860_/D                         -0.2489  (VIOLATED)
+   mprj_io[32]                                             -8.3657  (VIOLATED)
+   mprj_io[33]                                             -8.2221  (VIOLATED)
+   mprj_io[35]                                             -8.0352  (VIOLATED)
+   mprj_io[6]                                              -6.0891  (VIOLATED)
+   flash_csb                                               -4.9788  (VIOLATED)
+   mprj_io[0]                                              -3.9951  (VIOLATED)
+   flash_clk                                               -2.9151  (VIOLATED)
+   flash_io0                                               -1.3366  (VIOLATED)
+   chip_core/housekeeping/_6860_/D                         -0.2262  (VIOLATED)
 
 
 
@@ -45,23 +45,19 @@ Date   : Mon Dec 12 04:01:37 2022
                              Required        Actual
    Pin                      Transition     Transition        Slack
    -----------------------------------------------------------------
+   padframe/flash_io1_pad/PAD   1.0000       6.0000        -5.0000  (VIOLATED)
    padframe/mprj_pads[15]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[16]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[20]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
-   padframe/flash_clk_pad/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[17]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[19]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
-   padframe/flash_csb_pad/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[22]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
-   padframe/flash_io0_pad/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
-   padframe/mgmt_gpio_pad/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[23]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[18]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[21]/PAD   1.0000       5.4284        -4.4284  (VIOLATED)
    padframe/mprj_pads[1]/PAD   1.0000        5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[0]/PAD   1.0000        5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[7]/PAD   1.0000        5.4249        -4.4249  (VIOLATED)
-   padframe/mprj_pads[3]/PAD   1.0000        5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[11]/PAD   1.0000       5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[14]/PAD   1.0000       5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[6]/PAD   1.0000        5.4249        -4.4249  (VIOLATED)
@@ -85,10 +81,18 @@ Date   : Mon Dec 12 04:01:37 2022
    padframe/mprj_pads[34]/PAD   1.0000       5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[24]/PAD   1.0000       5.4249        -4.4249  (VIOLATED)
    padframe/mprj_pads[36]/PAD   1.0000       5.4249        -4.4249  (VIOLATED)
+   padframe/flash_io0_pad/PAD   1.0000       4.5621        -3.5621  (VIOLATED)
+   padframe/flash_csb_pad/PAD   1.0000       4.5620        -3.5620  (VIOLATED)
+   padframe/flash_clk_pad/PAD   1.0000       4.5619        -3.5619  (VIOLATED)
    padframe/mgmt_clock_input_pad/PAD   1.0000   3.5000     -2.5000  (VIOLATED)
-   padframe/mprj_pads[2]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mgmt_gpio_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[3]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
    padframe/mprj_pads[4]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
-   padframe/resetb_pad/PAD    1.0000         3.5000        -2.5000  (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/GWEN   2.7750   3.2763  -0.5013 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM03/RAM/GWEN   2.7750   3.2745  -0.4995 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM00/RAM/CLK   2.7750   2.9258  -0.1508 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/CLK   2.7750   2.8832  -0.1082 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM01/RAM/CLK   2.7750   2.7952  -0.0202 (VIOLATED)
 
 
    max_fanout
