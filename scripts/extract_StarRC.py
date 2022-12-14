@@ -7,6 +7,16 @@ import argparse
 import os
 import glob
 
+def run_stxt_all (
+    design: str,
+    root_dir: str,
+    output_dir: str,
+    log_dir: str,
+):
+    rc_corners = ["nom", "max", "min"]
+    for rc_corner in rc_corners: 
+            run_stxt(args.design, rc_corner, root, output, log)
+
 def run_stxt (
     design: str,
     rc_corner: str,
@@ -14,6 +24,7 @@ def run_stxt (
     output_dir: str,
     log_dir: str,
 ):
+    print (f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
     star_sum, stxt_cmd_file_path = gen_stxt_cmd_file (design, rc_corner, root_dir, output_dir)
     extract (stxt_cmd_file_path)
     create_log (design, rc_corner, log_dir, stxt_cmd_file_path, star_sum)
@@ -62,11 +73,11 @@ def gen_stxt_cmd_file (
     map_file = "gf180mcu.starxt_map"
 
     # Create StarRC command file
-    stxt_cmd_file_path = f"{SCRIPT_DIR}/star_cmd.xtcmd"
+    stxt_cmd_file_path = f"{SCRIPT_DIR}/star_cmd-{rc_corner}.xtcmd"
     stxt_cmd_file = open(stxt_cmd_file_path,"w")
     stxt_cmd_file.write(f"BLOCK: {design}\n")
-    stxt_cmd_file.write(f"TCAD_GRD_FILE: {SCRIPT_DIR}/gf180-tech/{grd_file}\n")
-    stxt_cmd_file.write(f"MAPPING_FILE: {SCRIPT_DIR}/gf180-tech/{map_file}\n")
+    stxt_cmd_file.write(f"TCAD_GRD_FILE: {SCRIPT_DIR}/gf180mcu-tech/{grd_file}\n")
+    stxt_cmd_file.write(f"MAPPING_FILE: {SCRIPT_DIR}/gf180mcu-tech/{map_file}\n")
     stxt_cmd_file.write(f"OPERATING_TEMPERATURE: {temp}\n")
     stxt_cmd_file.write(f"NETLIST_FORMAT: SPEF\n")
     stxt_cmd_file.write(f"NETLIST_FILE: {output_dir}/{design}.{rc_corner}.spef\n")
@@ -88,8 +99,8 @@ def gen_stxt_cmd_file (
             stxt_cmd_file.write(f"LEF_FILE: {lef}\n")
     
     stxt_cmd_file.write(f"TOP_DEF_FILE: {root_dir}/def/{design}.def\n")
-    stxt_cmd_file.write(f"STAR_DIRECTORY: {star_dir}\n")
-    stxt_cmd_file.write(f"GPD: {star_dir}/{design}.{rc_corner}.gpd\n")
+    stxt_cmd_file.write(f"STAR_DIRECTORY: {star_dir}/{design}.{rc_corner}/\n")
+    stxt_cmd_file.write(f"GPD: {SCRIPT_DIR}/" + star_dir.split("/")[-1] + f"/{design}.{rc_corner}.gpd\n")
 
     # Global commands (are not affected by the corner or design)
     stxt_cmd_file.write(f"TRANSLATE_RETAIN_BULK_LAYERS: YES\n")
@@ -116,8 +127,7 @@ def create_log (
     star_log_path = os.path.join(log_dir, f"{design}-{rc_corner}.log")
     star_log = open(star_log_path, "w")
     star_log.write(f"StarRC extraction run for design: {design} at RC corner {rc_corner}\n\n")
-    print (f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
-    star_log.write(f"StarRC command file created:\tstar_cmd.xtcmd\n\n")
+    star_log.write(f"StarRC command file created:\tstar_cmd-{rc_corner}.xtcmd\n\n")
     with open(stxt_cmd_file_path,"r") as f:
         star_log.write(f.read())
     with open(star_sum,"r") as f:
@@ -216,8 +226,6 @@ if __name__ == "__main__":
         pass
 
     if args.all:
-        rc_corners = ["nom", "max", "min"]
-        for rc_corner in rc_corners: 
-            run_stxt(args.design, rc_corner, root, output, log)
+        run_stxt_all (args.design, root, output, log)
     else:
         run_stxt(args.design, args.rc_corner, root, output, log)

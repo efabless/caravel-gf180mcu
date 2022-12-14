@@ -1,12 +1,15 @@
 # mapping instances to a .spef to enable hierarchical parasitic annotation
-if {$design == "caravel_core"} {
-    # user_project_wrapper spefs
-    # update the path to match the spefs path
-    # set spef_mapping(mprj)                                     $::env(UPRJ_ROOT)/signoff/spef/user_project_wrapper.spef
+if {$design == "user_project_wrapper"} {
+    set spef_mapping(mprj)                             $::env(UPRJ_ROOT)/signoff/user_proj_example/StarRC/user_proj_example.${rc_corner}.spef
+} elseif {$design == "caravel_core"} {
+    if {$::env(UPW)} {
+        # user_project_wrapper spefs
+        # update the path to match the spefs path
+        set spef_mapping(mprj)                                     $::env(UPRJ_ROOT)/signoff/user_project_wrapper/StarRC/user_project_wrapper.${rc_corner}.spef
 
-    # add spefs of modules instantiated in user_project_wrapper/user_analog_project_wrapper here
-    # set spef_mapping(mprj/mprj)                                $::env(UPRJ_ROOT)/signoff/spef/user_proj_example.spef
-    
+        # add spefs of modules instantiated in user_project_wrapper/user_analog_project_wrapper here
+        set spef_mapping(mprj/mprj)                                $::env(UPRJ_ROOT)/signoff/user_proj_example/StarRC/user_proj_example.${rc_corner}.spef
+    }
     #caravel macros
     set spef_mapping(housekeeping)                             $::env(CARAVEL_ROOT)/signoff/housekeeping/StarRC/housekeeping.${rc_corner}.spef
     set spef_mapping(gpio_buf)                                 $::env(CARAVEL_ROOT)/signoff/mprj_io_buffer/StarRC/mprj_io_buffer.${rc_corner}.spef
@@ -56,26 +59,18 @@ if {$design == "caravel_core"} {
     set spef_mapping(gpio_defaults_block_8)                    $::env(CARAVEL_ROOT)/signoff/gpio_defaults_block/StarRC/gpio_defaults_block.${rc_corner}.spef
     set spef_mapping(gpio_defaults_block_9)                    $::env(CARAVEL_ROOT)/signoff/gpio_defaults_block/StarRC/gpio_defaults_block.${rc_corner}.spef
 
-    # set spef_mapping(housekeeping)                             $::env(CARAVEL_ROOT)/signoff/housekeeping/openlane-signoff/spef/housekeeping.${rc_corner}.spef
-    # set spef_mapping(gpio_buf)                                 $::env(CARAVEL_ROOT)/signoff/mprj_io_buffer/openlane-signoff/spef/mprj_io_buffer.${rc_corner}.spef
-
-    # set spef_mapping(\spare_logic[0])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/openlane-signoff/spef/spare_logic_block.${rc_corner}.spef
-    # set spef_mapping(\spare_logic[1])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/openlane-signoff/spef/spare_logic_block.${rc_corner}.spef
-    # set spef_mapping(\spare_logic[2])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/openlane-signoff/spef/spare_logic_block.${rc_corner}.spef
-    # set spef_mapping(\spare_logic[3])                          $::env(CARAVEL_ROOT)/signoff/spare_logic_block/openlane-signoff/spef/spare_logic_block.${rc_corner}.spef
-
 } elseif {$design == "caravel"} {
+    if {$::env(UPW)} {
+        # user_project_wrapper spefs
+        # update the path to match the spefs path
+        set spef_mapping(chip_core/mprj)                                 $::env(UPRJ_ROOT)/signoff/user_project_wrapper/StarRC/user_project_wrapper.${rc_corner}.spef
 
-    set spef_mapping(padframe)                                 $::env(CARAVEL_ROOT)/signoff/chip_io/StarRC/chip_io.${rc_corner}.spef
-    
-    set spef_mapping(chip_core)                                $::env(CARAVEL_ROOT)/signoff/caravel_core/StarRC/caravel_core.${rc_corner}.spef
-    
-    # user_project_wrapper spefs
-    # update the path to match the spefs path
-    # set spef_mapping(chip_core/mprj)                           $::env(UPRJ_ROOT)/signoff/user_project_wrapper/openlane-signoff/spef/user_project_wrapper.${rc_corner}.spef
+        # add spefs of modules instantiated in user_project_wrapper/user_analog_project_wrapper here
+        set spef_mapping(chip_core/mprj/mprj)                            $::env(UPRJ_ROOT)/signoff/user_proj_example/StarRC/user_proj_example.${rc_corner}.spef
+    }
 
-    # add spefs of modules instantiated in user_project_wrapper/user_analog_project_wrapper here
-    # set spef_mapping(chip_core/mprj/mprj)                      $::env(UPRJ_ROOT)/signoff/user_proj_example/openlane-signoff/spef/user_proj_example.${rc_corner}.spef
+    set spef_mapping(padframe)                                           $::env(CARAVEL_ROOT)/signoff/chip_io/StarRC/chip_io.${rc_corner}.spef
+    set spef_mapping(chip_core)                                          $::env(CARAVEL_ROOT)/signoff/caravel_core/StarRC/caravel_core.${rc_corner}.spef
     
     #caravel macros
     set spef_mapping(chip_core/housekeeping)                             $::env(CARAVEL_ROOT)/signoff/housekeeping/StarRC/housekeeping.${rc_corner}.spef

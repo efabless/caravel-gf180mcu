@@ -9,20 +9,22 @@ import os
 def run_sta_all (
     design: str,
     output_dir: str,
-    log_dir: str
+    log_dir: str,
+    root_dir: str,
 ):
     proc_corners = ["t", "s", "f"]
     rc_corners = ["nom", "max", "min"]
     for proc in proc_corners:
         for rc in rc_corners:
-            run_sta (design, proc, rc, output_dir, log_dir)
+            run_sta (design, proc, rc, output_dir, log_dir, root_dir)
 
 def run_sta (
     design: str,
     proc_corner: str,
     rc_corner: str,
     output_dir: str,
-    log_dir: str
+    log_dir: str,
+    root_dir: str,
 ):
     print (f"PrimeTime STA run for design: {design} at process corner {proc_corner} and RC corner {rc_corner}")
     
@@ -47,6 +49,7 @@ def run_sta (
     os.environ["UPRJ_ROOT"] = os.getenv('UPRJ_ROOT')
     os.environ["MCW_ROOT"] = os.getenv('MCW_ROOT')
     os.environ["OUT_DIR"] = output_dir
+    os.environ["ROOT"] = root_dir
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     os.environ["DESIGN"] = design
     os.environ["PROC_CORNER"] = proc_corner
@@ -78,6 +81,9 @@ def run_sta (
             log.write(f"STA run Passed!\n")
             print (f"There are max_capacitance violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
             log.write(f"There are max_capacitance violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
+        elif sta_pass == "viol":
+                print(f"There are other violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
+                log.write(f"There are other violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
         else:  
             print (f"STA run Failed!")
             log.write(f"STA run Failed!\n")
@@ -87,9 +93,6 @@ def run_sta (
             elif sta_pass == "hold":
                 print(f"There are hold violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-global.rpt")
                 log.write(f"There are hold violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-global.rpt")
-            elif sta_pass == "viol":
-                print(f"There are violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
-                log.write(f"There are violations. check report: {output_dir}/reports/{proc_corner}{proc_corner}/{design}.{rc_corner}-all_viol.rpt")
             elif sta_pass == "no cons":
                 print(f"Reading constraints SDC failed. check log: {log_dir}/{design}-{proc_corner}-{rc_corner}-sta.log")
                 log.write(f"Reading constraints SDC failed. check log: {log_dir}/{design}-{proc_corner}-{rc_corner}-sta.log")
@@ -197,6 +200,12 @@ if __name__ == "__main__":
         required=True
     )
     parser.add_argument(
+        "-r",
+        "--root_dir",
+        help="design root directory",
+        required=True
+    )
+    parser.add_argument(
         "-rc",
         "--rc_corner",
         help="Specify the RC corner for the parasitics (Values are nom, max, or min) <default is nom>",
@@ -216,11 +225,20 @@ if __name__ == "__main__":
         help="Specify to run all the process corners and rc corners combinations for the design",
         action='store_true'
     )
+    parser.add_argument(
+        "-upw",
+        "--upw",
+        help="Specify to run with non-empty user project wrapper <default is false",
+        nargs="?",
+        default="0"
+    )
 
     args = parser.parse_args()
 
     output = os.path.abspath(args.output_dir)
     log = os.path.abspath(args.logs_dir)
+    root = os.path.abspath(args.root_dir)
+    os.environ["UPW"] = args.upw
 
     try:
         os.makedirs(output)
@@ -243,6 +261,6 @@ if __name__ == "__main__":
             pass
 
     if args.all:
-        run_sta_all (args.design, output, log) 
+        run_sta_all (args.design, output, log, root) 
     else:
-        run_sta (args.design, args.proc_corner, args.rc_corner, output, log)
+        run_sta (args.design, args.proc_corner, args.rc_corner, output, log, root)
