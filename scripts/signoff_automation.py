@@ -134,10 +134,8 @@ def run_verification(caravel_root, pdk_root, pdk_env, sim, simulator="vcs"):
     return p1
 
 
-def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design, timestr):
+def run_sta(root, pt_lib_root, log_dir, signoff_dir, design, timestr, upw):
     myenv = os.environ.copy()
-    myenv["CARAVEL_ROOT"] = caravel_root
-    myenv["MCW_ROOT"] = mcw_root
     myenv["PT_LIB_ROOT"] = pt_lib_root
     if "sky130" in os.getenv('PDK'):
         if not os.path.exists(f"{pt_lib_root}"):
@@ -157,9 +155,13 @@ def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design, t
         "-d",
         f"{design}",
         "-o",
-        f"{signoff_dir}/{design}/primetime/{timestr}/",
+        f"{signoff_dir}/{design}/primetime/{timestr}",
         "-l",
         f"{log_dir}",
+        "-r",
+        f"{root}",
+        "-upw",
+        f"{upw}"
     ]
     p1 = subprocess.Popen(
         sta_cmd,
@@ -173,6 +175,17 @@ def run_sta(caravel_root, mcw_root, pt_lib_root, log_dir, signoff_dir, design, t
 
 def run_starxt (design_root, log_dir, signoff_dir, design, timestr):
     myenv = os.environ.copy()
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(f"{SCRIPT_DIR}/gf180mcu-tech/"):
+        subprocess.run(
+            [
+                "git",
+                "clone",
+                "git@github.com:efabless/gf180mcu-tech.git",
+            ],
+            cwd=f"{caravel_root}/scripts",
+            stdout=subprocess.PIPE,
+        )
     starxt_cmd = [
         "python3",
         "extract_StarRC.py",
@@ -288,6 +301,10 @@ def check_errors(
                     logging.warning(lines[-1])
                     logging.info(f"{log_name} STA:    Passed (except: max_cap)")
                     f.write(f"{log_name} STA:    Passed (except: max_cap)\n")
+                elif "other violations" in lines[-1]:
+                    logging.warning(lines[-1])
+                    logging.info(f"{log_name} STA:    Passed")
+                    f.write(f"{log_name} STA:    Passed\n")
                 else:
                     logging.error(lines[-1])
                     logging.error(f"{log_name} STA:    Failed")
@@ -311,6 +328,34 @@ def check_errors(
         else:
             logging.error(f"Antenna checks failed find report at {antenna_report}")
             f.write("Antenna checks:    Failed\n")
+
+def save_latest_run (lvs, drc, antenna, sta, spef, run_dir):
+    if spef:
+        if os.path.exists(f"{run_dir}/../logs"):
+            shutil.rmtree(f"{run_dir}/../logs")
+        shutil.copytree(f"{run_dir}/logs", f"{run_dir}/../logs")
+        spef_files = glob.glob(f"{run_dir}/*.spef")
+        for spef_f in spef_files:
+            spef_name =spef_f.split("/")[-1]
+            shutil.copyfile(spef_f,f"{run_dir}/../{spef_name}")
+
+    elif sta:
+        dirs = ['lib', 'sdf', 'reports', 'logs']
+        for dir in dirs:
+            if os.path.exists(f"{run_dir}/../{dir}"):
+                shutil.rmtree(f"{run_dir}/../{dir}")
+            shutil.copytree(f"{run_dir}/{dir}", f"{run_dir}/../{dir}")
+        cmd = f"sed -i -E 's#original_pin :.*##g' {run_dir}/../lib/*/*.lib"
+        os.system(cmd)
+    # if lvs or drc or antenna :
+    #     if os.path.exists(f"{run_dir}/../logs"):
+    #         shutil.rmtree(f"{run_dir}/../logs")
+    #     shutil.copytree(f"{run_dir}/logs", f"{run_dir}/../logs")
+    #     files = glob.glob(f"{run_dir}/*")
+    #     for f in files:
+    #         f_name = f.split("/")[-1]
+    #         shutil.copyfile(spef_f,f"{run_dir}/../{f_name}")
+    
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -368,9 +413,16 @@ if __name__ == "__main__":
         action="store_true",
     )
     parser.add_argument(
+        "-upw",
+        "--upw",
+        help="Specify to run STA with non-empty user project wrapper <default is false",
+        nargs="?",
+        default="0"
+    )
+    parser.add_argument(
         "-spef",
         "--starRC_extract",
-        help="run spef extraction using StarRC",
+        help="run spef extraction using StarRC (gf180)",
         action="store_true",
     )
     parser.add_argument(
@@ -433,13 +485,21 @@ if __name__ == "__main__":
     iverilog = args.iverilog
     verification = args.vcs
     sta = args.primetime_sta
+    upw = args.upw
     spef = args.starRC_extract
+    if spef and "sky130" in pdk_env:
+        logging.erro(f"Spef extraction is available for gf180mcu only")
+        spef = False
     design = args.design
     antenna = args.antenna
     log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
 
     if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
         signoff_dir = os.path.join(mcw_root, "signoff")
+        log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
+    elif (design == "user_project_wrapper" or design == "user_proj_example"):
+        uprj_root = os.getenv("UPRJ_ROOT")
+        signoff_dir = os.path.join(uprj_root, "signoff")
         log_dir = os.path.join(signoff_dir, f"{design}/standalone_pvr/logs")
     
     timestr = time.strftime("%Y_%m_%d_%H_%M_%S")
@@ -513,7 +573,7 @@ if __name__ == "__main__":
             os.makedirs(f"{signoff_dir}/{design}/StarRC/{timestr}")
         spef_log_dir = os.path.join(signoff_dir, f"{design}/StarRC/{timestr}/logs")
         if not os.path.exists(f"{spef_log_dir}"):
-            os.makedirs(f"{spef_log_dir}")
+            os.makedirs(f"{spef_log_dir}")            
 
         if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
             spef_p = run_starxt(
@@ -523,6 +583,14 @@ if __name__ == "__main__":
                 design,
                 timestr,
             )          
+        elif (design == "user_project_wrapper" or design == "user_proj_example"):
+            spef_p = run_starxt(
+                uprj_root,
+                spef_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+            )                      
         else:
             spef_p = run_starxt(
                 caravel_root,
@@ -533,13 +601,19 @@ if __name__ == "__main__":
             ) 
         logging.info(f"Running StarRC all corners extraction on {design}")
 
-    if sta:
-        if spef:
-            spef_p.wait()
-            spef_files = glob.glob(f"{signoff_dir}/{design}/StarRC/{timestr}/*.spef")
-            for spef_f in spef_files:
-                spef_name =spef_f.split("/")[-1]
-                shutil.copyfile(spef_f,f"{signoff_dir}/{design}/StarRC/{spef_name}")
+    if sta and spef:
+        out, err = spef_p.communicate()
+        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
+        if err:
+            if "ERROR" in err:
+                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.close()
+            else:
+                logging.info(f"StarRC spef extraction done")
+                os.remove(f"{spef_log_dir}/{design}-error.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/StarRC/{timestr}")
+        spef = False
         if not os.path.exists(f"{signoff_dir}/{design}/primetime"):
             os.makedirs(f"{signoff_dir}/{design}/primetime")
         if not os.path.exists(f"{signoff_dir}/{design}/primetime/{timestr}"):
@@ -549,15 +623,88 @@ if __name__ == "__main__":
             os.makedirs(f"{sta_log_dir}")
 
         logging.info(f"Running PrimeTime STA all corners on {design}")
-        sta_p = run_sta(
-            caravel_root,
-            mcw_root,
-            f"{caravel_root}/scripts/pt_libs",
-            sta_log_dir,
-            signoff_dir,
-            design,
-            timestr
-        )
+        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
+            sta_p = run_sta(
+                mcw_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            )          
+        elif (design == "user_project_wrapper" or design == "user_proj_example"):
+            sta_p = run_sta(
+                uprj_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            )                     
+        else:
+            sta_p = run_sta(
+                caravel_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            ) 
+    elif spef:
+        out, err = spef_p.communicate()
+        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
+        if err:
+            if "ERROR" in err:
+                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
+                spef_log.close()
+            else:
+                logging.info(f"StarRC spef extraction done")
+                os.remove(f"{spef_log_dir}/{design}-error.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/StarRC/{timestr}")
+    elif sta:
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime")
+        if not os.path.exists(f"{signoff_dir}/{design}/primetime/{timestr}"):
+            os.makedirs(f"{signoff_dir}/{design}/primetime/{timestr}")
+        sta_log_dir = os.path.join(signoff_dir, f"{design}/primetime/{timestr}/logs")
+        if not os.path.exists(f"{sta_log_dir}"):
+            os.makedirs(f"{sta_log_dir}")
+        
+        logging.info(f"Running PrimeTime STA all corners on {design}")
+        if (design == "mgmt_core_wrapper" or design == "RAM128" or design == "RAM256" or design == "gf180_ram_512x8_wrapper"):
+            sta_p = run_sta(
+                mcw_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            )          
+        elif (design == "user_project_wrapper" or design == "user_proj_example"):
+            sta_p = run_sta(
+                uprj_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            )                     
+        else:
+            sta_p = run_sta(
+                caravel_root,
+                f"{caravel_root}/scripts/pt_libs",
+                sta_log_dir,
+                signoff_dir,
+                design,
+                timestr,
+                upw
+            ) 
     
     if antenna:
         logging.info(f"Running antenna checks on {design}")
@@ -594,18 +741,6 @@ if __name__ == "__main__":
                 ver_log.write(err)
             if out:
                 ver_log.write(out)
-
-    if spef:
-        out, err = spef_p.communicate()
-        spef_log = open(f"{spef_log_dir}/{design}-error.log", "w")
-        if err:
-            if "ERROR" in err:
-                logging.error(err[err.find("ERROR"):].split(')',1)[0]+")")
-                spef_log.write(err[err.find("ERROR"):].split(')',1)[0]+")")
-                spef_log.close()
-            else:
-                logging.info(f"StarRC spef extraction done")
-                os.remove(f"{spef_log_dir}/{design}-error.log")
     
     if sta:
         out, err = sta_p.communicate()
@@ -616,6 +751,7 @@ if __name__ == "__main__":
             sta_log.close()
         else:
             os.remove(f"{sta_log_dir}/PT_STA_{design}.log")
+        save_latest_run (lvs, drc, antenna, sta, spef, f"{signoff_dir}/{design}/primetime/{timestr}")
 
     if lvs:
         lvs_p1.wait()
