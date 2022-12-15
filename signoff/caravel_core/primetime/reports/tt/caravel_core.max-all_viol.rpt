@@ -1,0 +1,53 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel_core
+Version: T-2022.03-SP3
+Date   : Tue Dec 13 23:45:53 2022
+****************************************
+
+
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[0]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[1]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+   gpio_control_in_2[0].BUF[2]/Z   0.0010    0.0000        -0.0010  (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   soc.core.sram.ram512x32.RAM02/RAM/GWEN   1.5470   2.0855  -0.5385 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/GWEN   1.5470   2.0844  -0.5374 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/D[3]   1.5470   1.9702  -0.4232 (VIOLATED)
+   soc.core.sram.ram512x32.RAM03/RAM/D[6]   1.5470   1.8409  -0.2939 (VIOLATED)
+   soc.core.sram.ram512x32.RAM00/RAM/CLK   1.5470   1.6955  -0.1485 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/CLK   1.5470   1.6548  -0.1078 (VIOLATED)
+   soc.core.sram.ram512x32.RAM01/RAM/CLK   1.5470   1.6143  -0.0673 (VIOLATED)
+   soc.core.sram.ram512x32.RAM01/RAM/A[1]   1.5470   1.6120  -0.0650 (VIOLATED)
+   soc.core.sram.ram512x32.RAM02/RAM/A[1]   1.5470   1.6077  -0.0607 (VIOLATED)
+
+
+   max_fanout
+
+                             Required        Actual
+   Pin                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   wire2087/Z                22.0000       115.0000       -93.0000  (VIOLATED)
+   housekeeping/clkbuf_3_6__f_wb_clk_i/Z  22.0000  23.0000  -1.0000 (VIOLATED)
+
+
+1
