@@ -1,0 +1,17 @@
+* Simple POR testbench (No. 4:  Test ramp up to 3.3V)
+
+.include /usr/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /usr/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+.include simple_por.spice
+
+V0 VDD 0 PWL(0 0 100u 3.3 100m 3.3)
+
+X0 VDD 0 PORB POR simple_por
+
+.control
+tran 1u 2000m
+plot V(VDD) V(POR) V(PORB)
+plot V(x0.cap)
+.endc
