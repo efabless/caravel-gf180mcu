@@ -183,7 +183,7 @@ if __name__ == '__main__':
             idrex = re.compile("parameter USER_PROJECT_ID = 32'h([0-9A-F]+);")
 
             # Check if USER_PROJECT_ID has a non-zero value in caravel.v
-            rtl_top_path = user_project_path + '/verilog/rtl/caravel.v'
+            rtl_top_path = user_project_path + '/verilog/rtl/caravel_core.v'
             if os.path.isfile(rtl_top_path):
                 with open(rtl_top_path, 'r') as ifile:
                     vlines = ifile.read().splitlines()
