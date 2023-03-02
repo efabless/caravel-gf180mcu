@@ -107,6 +107,7 @@ __ship:
 #### Runs from the CARAVEL_ROOT mag directory 
 	@echo "\
 		random seed `$(CARAVEL_ROOT)/scripts/set_user_id.py -report`; \
+		locking disable; \
 		drc off; \
 		crashbackups stop; \
 		addpath hexdigits; \
@@ -159,6 +160,7 @@ __truck:
 #### Runs from the CARAVEL_ROOT mag directory 
 	@echo "\
 		random seed `$(CARAVEL_ROOT)/scripts/set_user_id.py -report`; \
+		locking disable; \
 		drc off; \
 		crashbackups stop; \
 		addpath hexdigits; \
