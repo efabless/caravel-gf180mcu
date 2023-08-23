@@ -135,7 +135,7 @@ if __name__ == '__main__':
         # Convert to binary
         try:
             user_id_int = int('0x' + user_id_value, 0)
-            user_id_bits = '{0:032b}'.format(user_id_int)
+            user_id_bits = '{0:032b}'.format(user_id_int)[::-1]
         except:
             user_project_path = arguments[0]
 
@@ -173,7 +173,7 @@ if __name__ == '__main__':
 
             try:
                 user_id_int = int('0x' + user_id_value, 0)
-                user_id_bits = '{0:032b}'.format(user_id_int)
+                user_id_bits = '{0:032b}'.format(user_id_int)[::-1]
             except:
                 print('Error:  Cannot parse user ID "' + user_id_value + '" as an 8-digit hex number.')
                 sys.exit(1)
@@ -182,8 +182,8 @@ if __name__ == '__main__':
             found = False
             idrex = re.compile("parameter USER_PROJECT_ID = 32'h([0-9A-F]+);")
 
-            # Check if USER_PROJECT_ID has a non-zero value in caravel.v
-            rtl_top_path = user_project_path + '/verilog/rtl/caravel.v'
+            # Check if USER_PROJECT_ID has a non-zero value in caravel_core.v
+            rtl_top_path = user_project_path + '/verilog/rtl/caravel_core.v'
             if os.path.isfile(rtl_top_path):
                 with open(rtl_top_path, 'r') as ifile:
                     vlines = ifile.read().splitlines()
@@ -327,7 +327,7 @@ if __name__ == '__main__':
                 print(line, file=ofile)
             print('Done!')
     else:
-        print('Error:  No substitutions done on verilog/rtl/caravel.v.')
+        print('Error:  No substitutions done on verilog/rtl/caravel_core.v.')
         print('Ending process.')
         sys.exit(1)
 
