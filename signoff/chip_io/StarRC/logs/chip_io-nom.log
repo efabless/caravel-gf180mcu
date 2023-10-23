@@ -3,42 +3,46 @@ StarRC extraction run for design: chip_io at RC corner nom
 StarRC command file created:	star_cmd-nom.xtcmd
 
 BLOCK: chip_io
-TCAD_GRD_FILE: /home/passant/gf180_timing/caravel-gf180mcu/scripts/gf180-tech/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_typ.nxtgrd
-MAPPING_FILE: /home/passant/gf180_timing/caravel-gf180mcu/scripts/gf180-tech/gf180mcu.starxt_map
+TCAD_GRD_FILE: /home/passant/caravel-gf180mcu/scripts/gf180mcu-tech/gf180mcu_1p5m_1tm_11k_sp_smim_OPTB_typ.nxtgrd
+MAPPING_FILE: /home/passant/caravel-gf180mcu/scripts/gf180mcu-tech/gf180mcu.starxt_map
 OPERATING_TEMPERATURE: 25
 NETLIST_FORMAT: SPEF
-NETLIST_FILE: /home/passant/gf180_timing/caravel-gf180mcu/signoff/chip_io/StarRC/2022_12_11_07_35_52/chip_io.nom.spef
+NETLIST_FILE: /home/passant/caravel-gf180mcu/signoff/chip_io/StarRC/2023_10_17_02_21_38/chip_io.nom.spef
 SUMMARY_FILE: ./star_dir_temp/chip_io.nom.star_sum
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_motto.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_programming.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/housekeeping.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_logo.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_power_routing.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/spare_logic_block.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/copyright_block.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_core.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/open_source.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/mprj_io_buffer.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_textblock.lef
-LEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/lef/chip_io.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram128x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram256x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram64x8m8wm1.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_motto.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_id_programming.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/gpio_defaults_block.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/housekeeping.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_logo.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_project_wrapper.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_power_routing.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/spare_logic_block.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/copyright_block.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_core.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/open_source.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/simple_por.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/mprj_io_buffer.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_id_textblock.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/chip_io.lef
 LEF_FILE: /home/passant/caravel_mgmt_soc_gf180mcu/lef/gf180_ram_512x8_wrapper.lef
 LEF_FILE: /home/passant/caravel_user_project-gf180mcu/lef/user_proj_example.lef
 LEF_FILE: /home/passant/caravel_user_project-gf180mcu/lef/user_project_wrapper.lef
-TOP_DEF_FILE: /home/passant/gf180_timing/caravel-gf180mcu/def/chip_io.def
+TOP_DEF_FILE: /home/passant/caravel-gf180mcu/def/chip_io.def
 STAR_DIRECTORY: ./star_dir_temp/chip_io.nom/
-GPD: /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_dir_temp/chip_io.nom.gpd
+GPD: /home/passant/caravel-gf180mcu/scripts/star_dir_temp/chip_io.nom.gpd
 TRANSLATE_RETAIN_BULK_LAYERS: YES
 IGNORE_CAPACITANCE: NONE
 TRANSLATE_RETAIN_BULK_LAYERS: YES
@@ -51,9 +55,9 @@ REDUCTION: NO_EXTRA_LOOPS
 
                                   StarRC (TM)
 
-               Version T-2022.03-SP3 for linux64 - Jul 12, 2022 
+               Version U-2022.12-SP4 for linux64 - May 24, 2023 
 
-                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+                    Copyright (c) 1999 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
  Inc. This software may only be used in accordance with the terms and conditions
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
@@ -69,257 +73,554 @@ REDUCTION: NO_EXTRA_LOOPS
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-ExecName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/StarXtract
-Version: T-2022.03-SP3
-Built on: Jul 12 2022 19:20:26
-Start Time: Sun Dec 11 07:35:52 2022
+ExecName: /tools/snps/starrc/U-2022.12-SP4/linux64_starrc/bin/StarXtract
+Version: U-2022.12-SP4
+Built on: May 25 2023 00:01:43
+Start Time: Tue Oct 17 02:21:38 2023
 
 Host ............ license-server-00
 
-xTractorName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/xTractor
-Version: T-2022.03-SP3
-Built on: Jul 12 2022 19:20:14
+xTractorName: /tools/snps/starrc/U-2022.12-SP4/linux64_starrc/bin/xTractor
+Version: U-2022.12-SP4
+Built on: May 25 2023 00:01:29
 
-Called as: StarXtract /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_cmd-nom.xtcmd 
-Run Directory: /home/passant/gf180_timing/caravel-gf180mcu/scripts
+Called as: StarXtract /home/passant/caravel-gf180mcu/scripts/star_cmd-nom.xtcmd 
+Run Directory: /home/passant/caravel-gf180mcu/scripts
 Read unit 2000 from tech LEF file
-/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef.
+/home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef.
 Using Units:2000 to translate LEF. (SX-2158)
-Read unit 400 from top DEF file /home/passant/gf180_timing/caravel-gf180mcu/def/chip_io.def. Using
-Units:2000 to translate top DEF. (SX-2158)
+Read unit 400 from top DEF file /home/passant/caravel-gf180mcu/def/chip_io.def. Using Units:2000 to
+translate top DEF. (SX-2158)
 WARNING: DEF_MASKSHIFT_CONSISTENCY_CHECK may incur performance penalty in preXtraction. (SX-2105)
 WARNING: INPUT_NAMES_ESCAPE_REMOVAL is enabled, please make sure that the net select commands remove
          the escape at the same time. (SX-3860)
 
 Block ........... chip_io
-Star Directory .. /home/passant/gf180_timing/caravel-gf180mcu/scripts/star_dir_temp/chip_io.nom
+Star Directory .. /home/passant/caravel-gf180mcu/scripts/star_dir_temp/chip_io.nom
 WARNING: Running StarRC in single corner mode will result in degraded runtime for design flows where
          multiple corners are used.  For optimal runtime, add the necessary commands to configure
          the Simultaneous Multicorner flow (CORNERS_FILE and SELECTED_CORNERS). (SX-3552)
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef
 
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
 
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram128x8m8wm1.lef
 
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_motto.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_programming.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/housekeeping.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_logo.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_project_wrapper.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_power_routing.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/spare_logic_block.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/copyright_block.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel_core.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/caravel.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/open_source.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/mprj_io_buffer.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/user_id_textblock.lef
-LEF file ........ /home/passant/gf180_timing/caravel-gf180mcu/lef/chip_io.lef
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram256x8m8wm1.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram64x8m8wm1.lef
+
+LEF file ........ /home/passant/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_motto.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/user_id_programming.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_007.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/user_project_wrapper_PnR.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/gpio_defaults_block.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/housekeeping.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_logo.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/user_project_wrapper.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_power_routing.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/spare_logic_block.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_087.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/copyright_block.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_core.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/open_source.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/simple_por.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/mprj_io_buffer.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/user_id_textblock.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/chip_io.lef
 LEF file ........ /home/passant/caravel_mgmt_soc_gf180mcu/lef/gf180_ram_512x8_wrapper.lef
 LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_proj_example.lef
 LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_project_wrapper.lef
-Top DEF File .... /home/passant/gf180_timing/caravel-gf180mcu/def/chip_io.def
-  Setup         Elp=00:00:02 Cpu=00:00:01 Usr=1.0    Sys=0.0    Mem=378.1 
+Top DEF File .... /home/passant/caravel-gf180mcu/def/chip_io.def
+  Setup         Elp=00:00:01 Cpu=00:00:00 Usr=0.9    Sys=0.0    Mem=464.4 
 Done
 
-Map Layers:  Sun Dec 11 07:35:54 2022
-    Parsing LEF file
+Map Layers:  Tue Oct 17 02:21:39 2023
+WARNING: LEF LAYER 'Pwell' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'Nwell' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'CON' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'PR_bndry' is not defined in mapping file (SX-2086)
 WARNING: LAYER 'CON' has no VIA connection (SX-2076)
 WARNING: Layer "Poly2" has no connections. (SX-1851)
   Warnings: 6    Errors: 0    (See file summary/layers.sum)
-  Layers        Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=408.4 
+  Layers        Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=495.7 
 Done
 
-Build HN:  Sun Dec 11 07:35:57 2022
-    Parsing LEF file
+Build HN:  Tue Oct 17 02:21:41 2023
 WARNING: Invalid pairings of the LEF dbuPerMicron '2000' and the corresponding DEF dbuPerMircon
          '400' (SX-2150)
 WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
          'gf180mcu_fd_io__fill10_526' (cell 'gf180mcu_fd_io__fill10') would take them as power net
  (SX-2227)
-WARNING: Detected the net 'vss' connected to the P/G port 'VSS' of instance
-         'gf180mcu_fd_io__fill10_526' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_527' (cell 'gf180mcu_fd_io__fill10') would take them as power net
  (SX-2227)
-WARNING: Detected the net 'mprj_pads[23]/VDD' connected to the P/G port 'VDD' of instance
-         'mprj_pads[23]' (cell 'gf180mcu_fd_io__bi_t') would take them as power net (SX-2227)
-    
-  Warnings: 4    Errors: 0    (See file summary/hn.sum)
-  HN            Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.1    Mem=412.3 
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_528' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_529' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_530' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_525' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_537' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_524' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_538' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_536' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_535' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_534' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_533' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_532' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_531' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_540' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_539' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_541' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance 'mprj_pads[15]' (cell
+         'gf180mcu_fd_io__bi_t') would take them as power net (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_545' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_553' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_542' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_543' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_544' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_550' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_549' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_552' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_551' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_548' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_546' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_547' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_560' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_557' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_558' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_559' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_561' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_554' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_555' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_556' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance 'user1_vssa_pad_0'
+         (cell 'gf180mcu_fd_io__dvss') would take them as power net (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_568' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_567' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_566' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_565' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_564' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_563' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_562' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_575' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_574' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_573' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_571' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_572' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_579' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_569' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_570' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_581' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_580' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_578' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_576' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_577' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance 'mprj_pads[16]' (cell
+         'gf180mcu_fd_io__bi_t') would take them as power net (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_591' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_582' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_583' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_590' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_589' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_587' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_588' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_585' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_598' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_584' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_586' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_597' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_596' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_595' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_594' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_593' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_601' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_592' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_600' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_599' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance 'mprj_pads[17]' (cell
+         'gf180mcu_fd_io__bi_t') would take them as power net (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_606' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_605' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_604' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_613' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_602' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_603' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_612' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_611' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_610' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_609' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_608' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_621' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_607' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_620' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_617' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_616' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_619' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+WARNING: Detected the net 'vdd' connected to the P/G port 'DVDD' of instance
+         'gf180mcu_fd_io__fill10_618' (cell 'gf180mcu_fd_io__fill10') would take them as power net
+ (SX-2227)
+Suppression: Message (SX-2227) suppressed beyond 100 times
+  Warnings: 101    Errors: 0    (See file summary/hn.sum)
+  HN            Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=499.5 
 Done
 
-Process Cells:  Sun Dec 11 07:35:58 2022
+Process Cells:  Tue Oct 17 02:21:41 2023
   Warnings: 0    Errors: 0
-  Cells         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=396.9 
+  Cells         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=483.8 
 Done
 
-Translate_part1 DB:  Sun Dec 11 07:36:00 2022
+Translate_part1 DB:  Tue Oct 17 02:21:43 2023
   Warnings: 0    Errors: 0
-  Translate_part1 Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=378.2 
+  Translate_part1 Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=464.6 
 Done
 
-XinCombine:  Sun Dec 11 07:36:02 2022
+XinCombine:  Tue Oct 17 02:21:45 2023
   Warnings: 0    Errors: 0
-  XinCombine    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  XinCombine    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-PartitionPP:  Sun Dec 11 07:36:05 2022
+PartitionPP:  Tue Oct 17 02:21:47 2023
   Warnings: 0    Errors: 0
-  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
 Done
 
-Merge Index Pins:  Sun Dec 11 07:36:07 2022
+Merge Index Pins:  Tue Oct 17 02:21:49 2023
   Warnings: 0    Errors: 0
-  MergeIndexPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeIndexPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
 Done
 
-Merge Index:  Sun Dec 11 07:36:09 2022
+Merge Index:  Tue Oct 17 02:21:52 2023
   Warnings: 0    Errors: 0
-  MergeIndex    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeIndex    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
 Done
 
-Merge GPD Instance Pins:  Sun Dec 11 07:36:11 2022
+Merge GPD Instance Pins:  Tue Oct 17 02:21:54 2023
   Warnings: 0    Errors: 0
-  MergeGpdInstPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeGpdInstPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
 Done
 
-GPD XtractSetup:  Sun Dec 11 07:36:13 2022
+GPD XtractSetup:  Tue Oct 17 02:21:56 2023
   Warnings: 0    Errors: 0
-  GPD_XtractSetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  GPD_XtractSetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
 Done
 
-Netlist Setup:  Sun Dec 11 07:36:15 2022
+Netlist Setup:  Tue Oct 17 02:21:58 2023
   Warnings: 0    Errors: 0
-  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
+  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.0 
 Done
 
-Netlist Assembly Setup:  Sun Dec 11 07:36:17 2022
+Netlist Assembly Setup:  Tue Oct 17 02:22:00 2023
   Warnings: 0    Errors: 0
-  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-Clean Directory:  Sun Dec 11 07:36:19 2022
+Clean Directory:  Tue Oct 17 02:22:02 2023
   Warnings: 0    Errors: 0
-  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-GPD NameMap:  Sun Dec 11 07:36:21 2022
+GPD NameMap:  Tue Oct 17 02:22:04 2023
   Warnings: 0    Errors: 0
-  GPD_NameMap   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
+  GPD_NameMap   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.7 
 Done
 
-xTract_part1 DB:  Sun Dec 11 07:36:25 2022
+xTract_part1 DB:  Tue Oct 17 02:22:06 2023
 Extracting partition 1
-Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  33%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  57%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  62%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  81%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed  96%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=1461.86
-Extracted 3435 capacitors, 7035 resistors, 6715 nodes
-Reduced to 4535 nodes,  (32.4646%)
-Reduced to 4185 resistors,  (40.5117%)
-Reduced to 2835 capacitors: -1700 Cc and 4535 Cg (17.4672%)
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  33%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  57%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  62%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  81%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed  96%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=1514.55
+Extracted 2772 capacitors, 6618 resistors, 6935 nodes
+Reduced to 4750 nodes,  (31.5068%)
+Reduced to 4328 resistors,  (34.6026%)
+Reduced to 2375 capacitors: -2375 Cc and 4750 Cg (14.3218%)
   Warnings: 0    Errors: 0
-  xTract_part1  Elp=00:00:01 Cpu=00:00:01 Usr=0.7    Sys=0.6    Mem=1462.4
+  xTract_part1  Elp=00:00:01 Cpu=00:00:00 Usr=0.5    Sys=0.2    Mem=1515.1
 Done
 
-xTract Post Process DB:  Sun Dec 11 07:36:30 2022
+xTract Post Process DB:  Tue Oct 17 02:22:11 2023
   Warnings: 0    Errors: 0
-  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
+  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=321.2 
 Done
 
-Report Violations:  Sun Dec 11 07:36:32 2022
+Report Violations:  Tue Oct 17 02:22:13 2023
   Warnings: 0    Errors: 0
-  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-Report Opens:  Sun Dec 11 07:36:34 2022
+Report Opens:  Tue Oct 17 02:22:15 2023
   Warnings: 0    Errors: 0
-  ReportOpens   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  ReportOpens   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-GPD Post Process:  Sun Dec 11 07:36:36 2022
+GPD Post Process:  Tue Oct 17 02:22:17 2023
   Warnings: 0    Errors: 0
-  GPD_PostProcess Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
+  GPD_PostProcess Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.3 
 Done
 
-GPD Converter Part 1:  Sun Dec 11 07:36:38 2022
+GPD Converter Part 1:  Tue Oct 17 02:22:19 2023
   Warnings: 0    Errors: 0
-  GPD_Converter1 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
+  GPD_Converter1 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=316.8 
 Done
 
-GPD Converter Part 2:  Sun Dec 11 07:36:40 2022
+GPD Converter Part 2:  Tue Oct 17 02:22:21 2023
   Warnings: 0    Errors: 0
-  GPD_Converter2 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
+  GPD_Converter2 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
 Done
 
-GPD Converter Merge:  Sun Dec 11 07:36:44 2022
+GPD Converter Merge:  Tue Oct 17 02:22:23 2023
   Warnings: 0    Errors: 0
-  GPD_Converter_merge Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+  GPD_Converter_merge Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
 Done
   
-Setup                Elp=00:00:02 Cpu=00:00:01 Usr=1.0    Sys=0.0    Mem=378.1 
-Layers               Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=408.4 
-HN                   Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.1    Mem=412.3 
-Cells                Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=396.9 
-Translate_part1      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=378.2 
-XinCombine           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeIndexPins       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeIndex           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeGpdInstPins     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-GPD_XtractSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
-NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-GPD_NameMap          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
-xTract_part1         Elp=00:00:01 Cpu=00:00:01 Usr=0.7    Sys=0.6    Mem=1462.4
-xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
-ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-ReportOpens          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-GPD_PostProcess      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
-GPD_Converter1       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
-GPD_Converter2       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
-GPD_Converter_merge  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+Setup                Elp=00:00:01 Cpu=00:00:00 Usr=0.9    Sys=0.0    Mem=464.4 
+Layers               Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=495.7 
+HN                   Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=499.5 
+Cells                Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=483.8 
+Translate_part1      Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=464.6 
+XinCombine           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
+MergeIndexPins       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
+MergeIndex           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
+MergeGpdInstPins     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
+GPD_XtractSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.6 
+NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.0 
+NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+GPD_NameMap          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.7 
+xTract_part1         Elp=00:00:01 Cpu=00:00:00 Usr=0.5    Sys=0.2    Mem=1515.1
+xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=321.2 
+ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+ReportOpens          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+GPD_PostProcess      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.3 
+GPD_Converter1       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=316.8 
+GPD_Converter2       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
+GPD_Converter_merge  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
   
-Done          Elp=00:00:04 Cpu=00:00:03 Usr=2.4    Sys=0.7    Mem=1462.4
+Done          Elp=00:00:02 Cpu=00:00:02 Usr=2.0    Sys=0.2    Mem=1515.1
 
-End Time: Sun Dec 11 07:36:49 2022
+End Time: Tue Oct 17 02:22:27 2023
 
 
 
@@ -327,38 +628,38 @@ RUN-TIME SUMMARY:
 ----------------------------------------------------------------------------------------------
 CPU#   | STAGE SUMMARY                                            |END TIME             |HOST NAME
 ----------------------------------------------------------------------------------------------
-CPU_01 |*Setup                     Elp=00:00:02 Cpu=00:00:01 Mem=378.1  |Dec 11 07:35:54 |license-server-00
-CPU_01 |*Layers                    Elp=00:00:01 Cpu=00:00:00 Mem=408.4  |Dec 11 07:35:55 |license-server-00
-CPU_01 |*HN                        Elp=00:00:01 Cpu=00:00:00 Mem=412.3  |Dec 11 07:35:58 |license-server-00
-CPU_01 |*Cells                     Elp=00:00:00 Cpu=00:00:00 Mem=396.9  |Dec 11 07:35:58 |license-server-00
-CPU_01 |*Translate_DP              Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:00 |license-server-00
-CPU_01 |*XinCombine                Elp=00:00:01 Cpu=00:00:00 Mem=360.6  |Dec 11 07:36:03 |license-server-00
-CPU_01 |*PartitionPP               Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:05 |license-server-00
-CPU_01 |*MergeIndexPins            Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:07 |license-server-00
-CPU_01 |*MergeIndex                Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:09 |license-server-00
-CPU_01 |*MergeGpdInstPins          Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:11 |license-server-00
-CPU_01 |*GPD_XtractSetup           Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 11 07:36:13 |license-server-00
-CPU_01 |*NetlistSetup              Elp=00:00:00 Cpu=00:00:00 Mem=360.7  |Dec 11 07:36:15 |license-server-00
-CPU_01 |*NetlistAssemblySetup      Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 11 07:36:17 |license-server-00
-CPU_01 |*CleanDirectory            Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 11 07:36:19 |license-server-00
-CPU_01 |*GPD_NameMap               Elp=00:00:02 Cpu=00:00:00 Mem=361.4  |Dec 11 07:36:23 |license-server-00
-CPU_01 |*xTract_DP                 Elp=00:00:03 Cpu=00:00:01 Mem=1462.4 |Dec 11 07:36:26 |license-server-00
-CPU_01 |*xTractPP                  Elp=00:00:04 Cpu=00:00:00 Mem=258.7  |Dec 11 07:36:30 |license-server-00
-CPU_01 |*ReportViolations          Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 11 07:36:32 |license-server-00
-CPU_01 |*ReportOpens               Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 11 07:36:34 |license-server-00
-CPU_01 |*GPD_PostProcess           Elp=00:00:00 Cpu=00:00:00 Mem=361    |Dec 11 07:36:36 |license-server-00
-CPU_01 |*GPD_Converter_DP          Elp=00:00:04 Cpu=00:00:00 Mem=254.3  |Dec 11 07:36:42 |license-server-00
-CPU_01 |*GPD_Converter_merge       Elp=00:00:01 Cpu=00:00:00 Mem=252.9  |Dec 11 07:36:45 |license-server-00
+CPU_01 |*Setup                     Elp=00:00:01 Cpu=00:00:00 Mem=464.4  |Oct 17 02:21:39 |license-server-00
+CPU_01 |*Layers                    Elp=00:00:00 Cpu=00:00:00 Mem=495.7  |Oct 17 02:21:39 |license-server-00
+CPU_01 |*Cells                     Elp=00:00:00 Cpu=00:00:00 Mem=483.8  |Oct 17 02:21:41 |license-server-00
+CPU_01 |*HN                        Elp=00:00:00 Cpu=00:00:00 Mem=499.5  |Oct 17 02:21:41 |license-server-00
+CPU_01 |*Translate_DP              Elp=00:00:00 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:43 |license-server-00
+CPU_01 |*XinCombine                Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 02:21:45 |license-server-00
+CPU_01 |*PartitionPP               Elp=00:00:00 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:47 |license-server-00
+CPU_01 |*MergeIndexPins            Elp=00:00:01 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:50 |license-server-00
+CPU_01 |*MergeIndex                Elp=00:00:00 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:52 |license-server-00
+CPU_01 |*MergeGpdInstPins          Elp=00:00:00 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:54 |license-server-00
+CPU_01 |*GPD_XtractSetup           Elp=00:00:00 Cpu=00:00:00 Mem=464.6  |Oct 17 02:21:56 |license-server-00
+CPU_01 |*NetlistSetup              Elp=00:00:00 Cpu=00:00:00 Mem=447    |Oct 17 02:21:58 |license-server-00
+CPU_01 |*NetlistAssemblySetup      Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 02:22:00 |license-server-00
+CPU_01 |*CleanDirectory            Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 02:22:02 |license-server-00
+CPU_01 |*GPD_NameMap               Elp=00:00:00 Cpu=00:00:00 Mem=447.7  |Oct 17 02:22:04 |license-server-00
+CPU_01 |*xTract_DP                 Elp=00:00:03 Cpu=00:00:00 Mem=1515.1 |Oct 17 02:22:07 |license-server-00
+CPU_01 |*xTractPP                  Elp=00:00:04 Cpu=00:00:00 Mem=321.2  |Oct 17 02:22:11 |license-server-00
+CPU_01 |*ReportViolations          Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 02:22:13 |license-server-00
+CPU_01 |*ReportOpens               Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 02:22:15 |license-server-00
+CPU_01 |*GPD_PostProcess           Elp=00:00:00 Cpu=00:00:00 Mem=447.3  |Oct 17 02:22:17 |license-server-00
+CPU_01 |*GPD_Converter_DP          Elp=00:00:02 Cpu=00:00:00 Mem=316.8  |Oct 17 02:22:21 |license-server-00
+CPU_01 |*GPD_Converter_merge       Elp=00:00:00 Cpu=00:00:00 Mem=315.4  |Oct 17 02:22:23 |license-server-00
 ----------------------------------------------------------------------------------------------
-Start Time: Sun Dec 11 07:35:52 2022
-End Time: Sun Dec 11 07:36:36 2022
+Start Time: Tue Oct 17 02:21:38 2023
+End Time: Tue Oct 17 02:22:17 2023
 ----------------------------------------------------------------------------------------------
-Overall:         Elp=00:00:44 Cpu= 00:00:03 Peak_Mem(MB)=1462.4
-PreXtraction:    Elp=00:00:31 Cpu= 00:00:01 Peak_Mem(MB)=412.3
-Xtraction:       Elp=00:00:03 Cpu= 00:00:01 Peak_Mem(MB)=1462.4
-PostXtraction:   Elp=00:00:10 Cpu= 00:00:00 Peak_Mem(MB)=361
+Overall:         Elp=00:00:39 Cpu= 00:00:02 Peak_Mem(MB)=1515.1
+PreXtraction:    Elp=00:00:26 Cpu= 00:00:01 Peak_Mem(MB)=499.5
+Xtraction:       Elp=00:00:03 Cpu= 00:00:00 Peak_Mem(MB)=1515.1
+PostXtraction:   Elp=00:00:10 Cpu= 00:00:00 Peak_Mem(MB)=447.3
 ----------------------------------------------------------------------------------------------
-Spef Output:     Elp= 00:00:07 Cpu= 00:00:00 Peak_Mem(MB)=254.3
+Spef Output:     Elp= 00:00:04 Cpu= 00:00:00 Peak_Mem(MB)=316.8
 ----------------------------------------------------------------------------------------------
 
 
@@ -371,11 +672,11 @@ Message Summary:
 ----------------------------------------------------------------------------------------------
 SX-1851 (x   1)|Warning      |LAYER "()" HAS NO CONNECTIONS.
 SX-2076 (x   1)|Warning      |LAYER '()' HAS NO VIA CONNECTION
-SX-2086 (x   3)|Warning      |LEF LAYER '()' IS NOT DEFINED IN MAPPING FILE
+SX-2086 (x   4)|Warning      |LEF LAYER '()' IS NOT DEFINED IN MAPPING FILE
 SX-2105 (x   1)|Warning      |DEF_MASKSHIFT_CONSISTENCY_CHECK MAY INCUR PERFORMANCE PENALTY IN PREXTRACTION.
 SX-2150 (x   1)|Warning      |INVALID PAIRINGS OF THE LEF DBUPERMICRON '()' AND THE CORRESPONDING DEF DBUPERMIRCON '()'
 SX-2158 (x   2)|Information  |READ UNIT () FROM () FILE (). USING UNITS:() TO TRANSLATE ().
-SX-2227 (x   3)|Warning      |DETECTED THE NET '()' CONNECTED TO THE P/G PORT '()' OF INSTANCE '()' (CELL '()') WOULD TAKE THEM AS POWER NET
+SX-2227 (x 100)|Warning      |DETECTED THE NET '()' CONNECTED TO THE P/G PORT '()' OF INSTANCE '()' (CELL '()') WOULD TAKE THEM AS POWER NET
 SX-3552 (x   1)|Warning      |RUNNING STARRC IN SINGLE CORNER MODE WILL RESULT IN DEGRADED RUNTIME FOR DESIGN FLOWS WHERE MULTIPLE CORNERS ARE USED.  FOR OPTIMAL RUNTIME, ADD THE NECESSARY COMMANDS TO CONFIGURE THE SIMULTANEOUS MULTICORNER FLOW (CORNERS_FILE AND SELECTED_CORNERS).
 SX-3860 (x   1)|Warning      |INPUT_NAMES_ESCAPE_REMOVAL IS ENABLED, PLEASE MAKE SURE THAT THE NET SELECT COMMANDS REMOVE THE ESCAPE AT THE SAME TIME.
 
