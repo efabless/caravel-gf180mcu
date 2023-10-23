@@ -108,6 +108,7 @@ __ship:
 	@echo "\
 		random seed `$(CARAVEL_ROOT)/scripts/set_user_id.py -report`; \
 		drc off; \
+		locking disable; \
 		crashbackups stop; \
 		addpath hexdigits; \
 		addpath alpha; \
@@ -121,7 +122,7 @@ __ship:
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
 		load $(CARAVEL_ROOT)/macros/simple_por/maglef/simple_por; \
-		load $(UPRJ_ROOT)/mag/caravel_core; \
+		load $(UPRJ_ROOT)/mag/caravel_core -dereference; \
 		load $(CARAVEL_ROOT)/mag/caravel -dereference; \
 		select top cell; \
 		expand; \
@@ -129,6 +130,7 @@ __ship:
 		cif *array write disable; \
 		cellname rename caravel caravel_$(USER_ID); \
 		gds write $(UPRJ_ROOT)/gds/caravel_$(USER_ID).gds; \
+		feedback save $(UPRJ_ROOT)/gds/caravel_$(USER_ID).gds.feedback; \
 		quit -noprompt;" > $(UPRJ_ROOT)/mag/mag2gds_caravel.tcl
 ### Runs from CARAVEL_ROOT
 	@mkdir -p ./signoff/build
