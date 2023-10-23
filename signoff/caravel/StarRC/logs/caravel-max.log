@@ -3,16 +3,19 @@ StarRC extraction run for design: caravel at RC corner max
 StarRC command file created:	star_cmd-max.xtcmd
 
 BLOCK: caravel
-TCAD_GRD_FILE: /home/passant/caravel-gf180mcu/scripts/gf180-tech/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_wst.nxtgrd
-MAPPING_FILE: /home/passant/caravel-gf180mcu/scripts/gf180-tech/gf180mcu.starxt_map
+TCAD_GRD_FILE: /home/passant/caravel-gf180mcu/scripts/gf180mcu-tech/gf180mcu_1p5m_1tm_11k_sp_smim_OPTB_wst.nxtgrd
+MAPPING_FILE: /home/passant/caravel-gf180mcu/scripts/gf180mcu-tech/gf180mcu.starxt_map
 OPERATING_TEMPERATURE: 125
 NETLIST_FORMAT: SPEF
-NETLIST_FILE: /home/passant/caravel-gf180mcu/signoff/caravel/StarRC/2022_12_12_03_55_29/caravel.max.spef
+NETLIST_FILE: /home/passant/caravel-gf180mcu/signoff/caravel/StarRC/new_stack_starrc/caravel.max.spef
 SUMMARY_FILE: ./star_dir_temp/caravel.max.star_sum
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
-LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram128x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram256x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+LEF_FILE: /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram64x8m8wm1.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_motto.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_id_programming.lef
@@ -29,6 +32,7 @@ LEF_FILE: /home/passant/caravel-gf180mcu/lef/copyright_block.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel_core.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/caravel.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/open_source.lef
+LEF_FILE: /home/passant/caravel-gf180mcu/lef/simple_por.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/mprj_io_buffer.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
 LEF_FILE: /home/passant/caravel-gf180mcu/lef/user_id_textblock.lef
@@ -51,9 +55,9 @@ REDUCTION: NO_EXTRA_LOOPS
 
                                   StarRC (TM)
 
-               Version T-2022.03-SP3 for linux64 - Jul 12, 2022 
+               Version U-2022.12-SP4 for linux64 - May 24, 2023 
 
-                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+                    Copyright (c) 1999 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
  Inc. This software may only be used in accordance with the terms and conditions
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
@@ -69,21 +73,21 @@ REDUCTION: NO_EXTRA_LOOPS
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-ExecName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/StarXtract
-Version: T-2022.03-SP3
-Built on: Jul 12 2022 19:20:26
-Start Time: Mon Dec 12 03:56:21 2022
+ExecName: /tools/snps/starrc/U-2022.12-SP4/linux64_starrc/bin/StarXtract
+Version: U-2022.12-SP4
+Built on: May 25 2023 00:01:43
+Start Time: Tue Oct 17 03:14:43 2023
 
 Host ............ license-server-00
 
-xTractorName: /tools/snps/starrc/T-2022.03-SP3/linux64_starrc/bin/xTractor
-Version: T-2022.03-SP3
-Built on: Jul 12 2022 19:20:14
+xTractorName: /tools/snps/starrc/U-2022.12-SP4/linux64_starrc/bin/xTractor
+Version: U-2022.12-SP4
+Built on: May 25 2023 00:01:29
 
 Called as: StarXtract /home/passant/caravel-gf180mcu/scripts/star_cmd-max.xtcmd 
 Run Directory: /home/passant/caravel-gf180mcu/scripts
 Read unit 2000 from tech LEF file
-/home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef.
+/home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef.
 Using Units:2000 to translate LEF. (SX-2158)
 Read unit 2000 from top DEF file /home/passant/caravel-gf180mcu/def/caravel.def. Using Units:2000 to
 translate top DEF. (SX-2158)
@@ -97,15 +101,24 @@ WARNING: Running StarRC in single corner mode will result in degraded runtime fo
          multiple corners are used.  For optimal runtime, add the necessary commands to configure
          the Simultaneous Multicorner flow (CORNERS_FILE and SELECTED_CORNERS). (SX-3552)
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef
 
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef
 
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef
 LEF file ........
- /home/passant/OpenLane/pdks/gf180mcuC/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram128x8m8wm1.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram256x8m8wm1.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef
+
+LEF file ........
+ /home/passant/OpenLane/pdks/gf180mcuD/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram64x8m8wm1.lef
 
 LEF file ........ /home/passant/caravel-gf180mcu/macros/simple_por/lef/simple_por.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_motto.lef
@@ -123,6 +136,7 @@ LEF file ........ /home/passant/caravel-gf180mcu/lef/copyright_block.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel_core.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/caravel.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/open_source.lef
+LEF file ........ /home/passant/caravel-gf180mcu/lef/simple_por.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/mprj_io_buffer.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/gpio_defaults_block_009.lef
 LEF file ........ /home/passant/caravel-gf180mcu/lef/user_id_textblock.lef
@@ -131,189 +145,187 @@ LEF file ........ /home/passant/caravel_mgmt_soc_gf180mcu/lef/gf180_ram_512x8_wr
 LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_proj_example.lef
 LEF file ........ /home/passant/caravel_user_project-gf180mcu/lef/user_project_wrapper.lef
 Top DEF File .... /home/passant/caravel-gf180mcu/def/caravel.def
-  Setup         Elp=00:00:01 Cpu=00:00:01 Usr=1.2    Sys=0.0    Mem=378.1 
+  Setup         Elp=00:00:03 Cpu=00:00:01 Usr=1.7    Sys=0.0    Mem=464.4 
 Done
 
-Map Layers:  Mon Dec 12 03:56:22 2022
-    Parsing LEF file
+Map Layers:  Tue Oct 17 03:14:46 2023
+WARNING: LEF LAYER 'Pwell' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'Nwell' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'CON' is not defined in mapping file (SX-2086)
 WARNING: LEF LAYER 'PR_bndry' is not defined in mapping file (SX-2086)
 WARNING: LAYER 'CON' has no VIA connection (SX-2076)
 WARNING: Layer "Poly2" has no connections. (SX-1851)
   Warnings: 6    Errors: 0    (See file summary/layers.sum)
-  Layers        Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=408.4 
+  Layers        Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=495.7 
 Done
 
-Build HN:  Mon Dec 12 03:56:24 2022
-    Parsing LEF file
+Build HN:  Tue Oct 17 03:14:50 2023
 WARNING: Detected the net 'VDD' connected to the P/G port 'VDD' of instance 'chip_core' (cell
          'caravel_core') would take them as power net (SX-2227)
 WARNING: Detected the net 'VSS' connected to the P/G port 'VSS' of instance 'chip_core' (cell
          'caravel_core') would take them as power net (SX-2227)
-    
   Warnings: 2    Errors: 0    (See file summary/hn.sum)
-  HN            Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=412.0 
+  HN            Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=499.2 
 Done
 
-Process Cells:  Mon Dec 12 03:56:25 2022
+Process Cells:  Tue Oct 17 03:14:50 2023
   Warnings: 0    Errors: 0
-  Cells         Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=396.2 
+  Cells         Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=483.1 
 Done
 
-Translate_part1 DB:  Mon Dec 12 03:56:27 2022
+Translate_part1 DB:  Tue Oct 17 03:14:53 2023
   Warnings: 0    Errors: 0
-  Translate_part1 Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=378.4 
+  Translate_part1 Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=464.8 
 Done
 
-XinCombine:  Mon Dec 12 03:56:29 2022
+XinCombine:  Tue Oct 17 03:14:56 2023
   Warnings: 0    Errors: 0
-  XinCombine    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  XinCombine    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-PartitionPP:  Mon Dec 12 03:56:32 2022
+PartitionPP:  Tue Oct 17 03:14:59 2023
   Warnings: 0    Errors: 0
-  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
 Done
 
-Merge Index Pins:  Mon Dec 12 03:56:34 2022
+Merge Index Pins:  Tue Oct 17 03:15:03 2023
   Warnings: 0    Errors: 0
-  MergeIndexPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeIndexPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
 Done
 
-Merge Index:  Mon Dec 12 03:56:36 2022
+Merge Index:  Tue Oct 17 03:15:06 2023
   Warnings: 0    Errors: 0
-  MergeIndex    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeIndex    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
 Done
 
-Merge GPD Instance Pins:  Mon Dec 12 03:56:38 2022
+Merge GPD Instance Pins:  Tue Oct 17 03:15:08 2023
   Warnings: 0    Errors: 0
-  MergeGpdInstPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  MergeGpdInstPins Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
 Done
 
-GPD XtractSetup:  Mon Dec 12 03:56:40 2022
+GPD XtractSetup:  Tue Oct 17 03:15:11 2023
   Warnings: 0    Errors: 0
-  GPD_XtractSetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
+  GPD_XtractSetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
 Done
 
-Netlist Setup:  Mon Dec 12 03:56:43 2022
+Netlist Setup:  Tue Oct 17 03:15:14 2023
   Warnings: 0    Errors: 0
-  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
+  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.0 
 Done
 
-Netlist Assembly Setup:  Mon Dec 12 03:56:45 2022
+Netlist Assembly Setup:  Tue Oct 17 03:15:17 2023
   Warnings: 0    Errors: 0
-  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-Clean Directory:  Mon Dec 12 03:56:47 2022
+Clean Directory:  Tue Oct 17 03:15:20 2023
   Warnings: 0    Errors: 0
-  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-GPD NameMap:  Mon Dec 12 03:56:49 2022
+GPD NameMap:  Tue Oct 17 03:15:22 2023
   Warnings: 0    Errors: 0
-  GPD_NameMap   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
+  GPD_NameMap   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.7 
 Done
 
-xTract_part1 DB:  Mon Dec 12 03:56:52 2022
+xTract_part1 DB:  Tue Oct 17 03:15:25 2023
 Extracting partition 1
-Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed  96%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=1000.23
-Extracted 49 capacitors, 2396 resistors, 2909 nodes
-Reduced to 1643 nodes,  (43.5201%)
-Reduced to 1186 resistors,  (50.5008%)
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed  96%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=1063
+Extracted 49 capacitors, 2404 resistors, 2917 nodes
+Reduced to 1695 nodes,  (41.8924%)
+Reduced to 1238 resistors,  (48.5025%)
   Warnings: 0    Errors: 0
-  xTract_part1  Elp=00:00:01 Cpu=00:00:00 Usr=0.6    Sys=0.3    Mem=1000.8
+  xTract_part1  Elp=00:00:01 Cpu=00:00:00 Usr=0.6    Sys=0.2    Mem=1063.5
 Done
 
-xTract Post Process DB:  Mon Dec 12 03:56:57 2022
+xTract Post Process DB:  Tue Oct 17 03:15:30 2023
   Warnings: 0    Errors: 0
-  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
+  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=321.2 
 Done
 
-Report Violations:  Mon Dec 12 03:56:59 2022
+Report Violations:  Tue Oct 17 03:15:32 2023
   Warnings: 0    Errors: 0
-  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-Report Opens:  Mon Dec 12 03:57:02 2022
+Report Opens:  Tue Oct 17 03:15:34 2023
 WARNING: found open net(s) in the design. Check opens.sum file. (EX-414)
   Warnings: 1    Errors: 0    (See file summary/report_open.sum)
-  ReportOpens   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
+  ReportOpens   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
 Done
 
-GPD Post Process:  Mon Dec 12 03:57:05 2022
+GPD Post Process:  Tue Oct 17 03:15:36 2023
   Warnings: 0    Errors: 0
-  GPD_PostProcess Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
+  GPD_PostProcess Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.3 
 Done
 
-GPD Converter Part 1:  Mon Dec 12 03:57:07 2022
+GPD Converter Part 1:  Tue Oct 17 03:15:38 2023
   Warnings: 0    Errors: 0
-  GPD_Converter1 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
+  GPD_Converter1 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=316.8 
 Done
 
-GPD Converter Part 2:  Mon Dec 12 03:57:09 2022
+GPD Converter Part 2:  Tue Oct 17 03:15:40 2023
   Warnings: 0    Errors: 0
-  GPD_Converter2 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
+  GPD_Converter2 Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
 Done
 
-GPD Converter Merge:  Mon Dec 12 03:57:11 2022
+GPD Converter Merge:  Tue Oct 17 03:15:42 2023
   Warnings: 0    Errors: 0
-  GPD_Converter_merge Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+  GPD_Converter_merge Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
 Done
   
-Setup                Elp=00:00:01 Cpu=00:00:01 Usr=1.2    Sys=0.0    Mem=378.1 
-Layers               Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=408.4 
-HN                   Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=412.0 
-Cells                Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=396.2 
-Translate_part1      Elp=00:00:00 Cpu=00:00:00 Usr=0.2    Sys=0.0    Mem=378.4 
-XinCombine           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeIndexPins       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeIndex           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-MergeGpdInstPins     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-GPD_XtractSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=378.2 
-NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.7 
-NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-GPD_NameMap          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.4 
-xTract_part1         Elp=00:00:01 Cpu=00:00:00 Usr=0.6    Sys=0.3    Mem=1000.8
-xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=258.7 
-ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-ReportOpens          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=360.6 
-GPD_PostProcess      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=361.0 
-GPD_Converter1       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=254.3 
-GPD_Converter2       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=253.0 
-GPD_Converter_merge  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=252.9 
+Setup                Elp=00:00:03 Cpu=00:00:01 Usr=1.7    Sys=0.0    Mem=464.4 
+Layers               Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=495.7 
+HN                   Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=499.2 
+Cells                Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=483.1 
+Translate_part1      Elp=00:00:01 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=464.8 
+XinCombine           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
+MergeIndexPins       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
+MergeIndex           Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
+MergeGpdInstPins     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
+GPD_XtractSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=464.5 
+NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.0 
+NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+GPD_NameMap          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.7 
+xTract_part1         Elp=00:00:01 Cpu=00:00:00 Usr=0.6    Sys=0.2    Mem=1063.5
+xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=321.2 
+ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+ReportOpens          Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=446.9 
+GPD_PostProcess      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=447.3 
+GPD_Converter1       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=316.8 
+GPD_Converter2       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
+GPD_Converter_merge  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=315.4 
   
-Done          Elp=00:00:03 Cpu=00:00:02 Usr=2.6    Sys=0.3    Mem=1000.8
+Done          Elp=00:00:06 Cpu=00:00:03 Usr=3.3    Sys=0.2    Mem=1063.5
 
-End Time: Mon Dec 12 03:57:15 2022
+End Time: Tue Oct 17 03:15:46 2023
 
 
 
@@ -321,38 +333,38 @@ RUN-TIME SUMMARY:
 ----------------------------------------------------------------------------------------------
 CPU#   | STAGE SUMMARY                                            |END TIME             |HOST NAME
 ----------------------------------------------------------------------------------------------
-CPU_01 |*Setup                     Elp=00:00:01 Cpu=00:00:01 Mem=378.1  |Dec 12 03:56:22 |license-server-00
-CPU_01 |*Layers                    Elp=00:00:00 Cpu=00:00:00 Mem=408.4  |Dec 12 03:56:22 |license-server-00
-CPU_01 |*HN                        Elp=00:00:01 Cpu=00:00:00 Mem=412    |Dec 12 03:56:25 |license-server-00
-CPU_01 |*Cells                     Elp=00:00:00 Cpu=00:00:00 Mem=396.2  |Dec 12 03:56:25 |license-server-00
-CPU_01 |*Translate_DP              Elp=00:00:00 Cpu=00:00:00 Mem=378.4  |Dec 12 03:56:27 |license-server-00
-CPU_01 |*XinCombine                Elp=00:00:01 Cpu=00:00:00 Mem=360.6  |Dec 12 03:56:30 |license-server-00
-CPU_01 |*PartitionPP               Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 12 03:56:32 |license-server-00
-CPU_01 |*MergeIndexPins            Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 12 03:56:34 |license-server-00
-CPU_01 |*MergeIndex                Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 12 03:56:36 |license-server-00
-CPU_01 |*MergeGpdInstPins          Elp=00:00:00 Cpu=00:00:00 Mem=378.2  |Dec 12 03:56:38 |license-server-00
-CPU_01 |*GPD_XtractSetup           Elp=00:00:01 Cpu=00:00:00 Mem=378.2  |Dec 12 03:56:41 |license-server-00
-CPU_01 |*NetlistSetup              Elp=00:00:00 Cpu=00:00:00 Mem=360.7  |Dec 12 03:56:43 |license-server-00
-CPU_01 |*NetlistAssemblySetup      Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 12 03:56:45 |license-server-00
-CPU_01 |*CleanDirectory            Elp=00:00:00 Cpu=00:00:00 Mem=360.6  |Dec 12 03:56:47 |license-server-00
-CPU_01 |*GPD_NameMap               Elp=00:00:01 Cpu=00:00:00 Mem=361.4  |Dec 12 03:56:50 |license-server-00
-CPU_01 |*xTract_DP                 Elp=00:00:03 Cpu=00:00:00 Mem=1000.8 |Dec 12 03:56:53 |license-server-00
-CPU_01 |*xTractPP                  Elp=00:00:04 Cpu=00:00:00 Mem=258.7  |Dec 12 03:56:57 |license-server-00
-CPU_01 |*ReportViolations          Elp=00:00:01 Cpu=00:00:00 Mem=360.6  |Dec 12 03:57:00 |license-server-00
-CPU_01 |*ReportOpens               Elp=00:00:01 Cpu=00:00:00 Mem=360.6  |Dec 12 03:57:03 |license-server-00
-CPU_01 |*GPD_PostProcess           Elp=00:00:00 Cpu=00:00:00 Mem=361    |Dec 12 03:57:05 |license-server-00
-CPU_01 |*GPD_Converter_DP          Elp=00:00:02 Cpu=00:00:00 Mem=254.3  |Dec 12 03:57:09 |license-server-00
-CPU_01 |*GPD_Converter_merge       Elp=00:00:00 Cpu=00:00:00 Mem=252.9  |Dec 12 03:57:11 |license-server-00
+CPU_01 |*Setup                     Elp=00:00:03 Cpu=00:00:01 Mem=464.4  |Oct 17 03:14:46 |license-server-00
+CPU_01 |*Layers                    Elp=00:00:02 Cpu=00:00:00 Mem=495.7  |Oct 17 03:14:48 |license-server-00
+CPU_01 |*HN                        Elp=00:00:00 Cpu=00:00:00 Mem=499.2  |Oct 17 03:14:50 |license-server-00
+CPU_01 |*Cells                     Elp=00:00:01 Cpu=00:00:00 Mem=483.1  |Oct 17 03:14:51 |license-server-00
+CPU_01 |*Translate_DP              Elp=00:00:01 Cpu=00:00:00 Mem=464.8  |Oct 17 03:14:54 |license-server-00
+CPU_01 |*XinCombine                Elp=00:00:01 Cpu=00:00:00 Mem=446.9  |Oct 17 03:14:57 |license-server-00
+CPU_01 |*PartitionPP               Elp=00:00:02 Cpu=00:00:00 Mem=464.5  |Oct 17 03:15:01 |license-server-00
+CPU_01 |*MergeIndexPins            Elp=00:00:01 Cpu=00:00:00 Mem=464.5  |Oct 17 03:15:04 |license-server-00
+CPU_01 |*MergeIndex                Elp=00:00:00 Cpu=00:00:00 Mem=464.5  |Oct 17 03:15:06 |license-server-00
+CPU_01 |*MergeGpdInstPins          Elp=00:00:01 Cpu=00:00:00 Mem=464.5  |Oct 17 03:15:09 |license-server-00
+CPU_01 |*GPD_XtractSetup           Elp=00:00:01 Cpu=00:00:00 Mem=464.5  |Oct 17 03:15:12 |license-server-00
+CPU_01 |*NetlistSetup              Elp=00:00:01 Cpu=00:00:00 Mem=447    |Oct 17 03:15:15 |license-server-00
+CPU_01 |*NetlistAssemblySetup      Elp=00:00:01 Cpu=00:00:00 Mem=446.9  |Oct 17 03:15:18 |license-server-00
+CPU_01 |*CleanDirectory            Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 03:15:20 |license-server-00
+CPU_01 |*GPD_NameMap               Elp=00:00:01 Cpu=00:00:00 Mem=447.7  |Oct 17 03:15:23 |license-server-00
+CPU_01 |*xTract_DP                 Elp=00:00:03 Cpu=00:00:00 Mem=1063.5 |Oct 17 03:15:26 |license-server-00
+CPU_01 |*xTractPP                  Elp=00:00:04 Cpu=00:00:00 Mem=321.2  |Oct 17 03:15:30 |license-server-00
+CPU_01 |*ReportViolations          Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 03:15:32 |license-server-00
+CPU_01 |*ReportOpens               Elp=00:00:00 Cpu=00:00:00 Mem=446.9  |Oct 17 03:15:34 |license-server-00
+CPU_01 |*GPD_PostProcess           Elp=00:00:00 Cpu=00:00:00 Mem=447.3  |Oct 17 03:15:36 |license-server-00
+CPU_01 |*GPD_Converter_DP          Elp=00:00:02 Cpu=00:00:00 Mem=316.8  |Oct 17 03:15:40 |license-server-00
+CPU_01 |*GPD_Converter_merge       Elp=00:00:00 Cpu=00:00:00 Mem=315.4  |Oct 17 03:15:42 |license-server-00
 ----------------------------------------------------------------------------------------------
-Start Time: Mon Dec 12 03:56:21 2022
-End Time: Mon Dec 12 03:57:05 2022
+Start Time: Tue Oct 17 03:14:43 2023
+End Time: Tue Oct 17 03:15:36 2023
 ----------------------------------------------------------------------------------------------
-Overall:         Elp=00:00:44 Cpu= 00:00:02 Peak_Mem(MB)=1000.8
-PreXtraction:    Elp=00:00:29 Cpu= 00:00:02 Peak_Mem(MB)=412
-Xtraction:       Elp=00:00:03 Cpu= 00:00:00 Peak_Mem(MB)=1000.8
-PostXtraction:   Elp=00:00:12 Cpu= 00:00:00 Peak_Mem(MB)=361
+Overall:         Elp=00:00:53 Cpu= 00:00:03 Peak_Mem(MB)=1063.5
+PreXtraction:    Elp=00:00:40 Cpu= 00:00:02 Peak_Mem(MB)=499.2
+Xtraction:       Elp=00:00:03 Cpu= 00:00:00 Peak_Mem(MB)=1063.5
+PostXtraction:   Elp=00:00:10 Cpu= 00:00:00 Peak_Mem(MB)=447.3
 ----------------------------------------------------------------------------------------------
-Spef Output:     Elp= 00:00:04 Cpu= 00:00:00 Peak_Mem(MB)=254.3
+Spef Output:     Elp= 00:00:04 Cpu= 00:00:00 Peak_Mem(MB)=316.8
 ----------------------------------------------------------------------------------------------
 
 
@@ -366,7 +378,7 @@ Message Summary:
 EX-414  (x   1)|Warning      |FOUND OPEN NET(S) IN THE DESIGN. CHECK OPENS.SUM FILE.
 SX-1851 (x   1)|Warning      |LAYER "()" HAS NO CONNECTIONS.
 SX-2076 (x   1)|Warning      |LAYER '()' HAS NO VIA CONNECTION
-SX-2086 (x   3)|Warning      |LEF LAYER '()' IS NOT DEFINED IN MAPPING FILE
+SX-2086 (x   4)|Warning      |LEF LAYER '()' IS NOT DEFINED IN MAPPING FILE
 SX-2105 (x   1)|Warning      |DEF_MASKSHIFT_CONSISTENCY_CHECK MAY INCUR PERFORMANCE PENALTY IN PREXTRACTION.
 SX-2158 (x   2)|Information  |READ UNIT () FROM () FILE (). USING UNITS:() TO TRANSLATE ().
 SX-2227 (x   2)|Warning      |DETECTED THE NET '()' CONNECTED TO THE P/G PORT '()' OF INSTANCE '()' (CELL '()') WOULD TAKE THEM AS POWER NET
