@@ -44,8 +44,8 @@ LARGE_FILES_GZ_SPLIT += $(addsuffix .00.split, $(ARCHIVES))
 
 MCW_ROOT?=$(PWD)/mgmt_core_wrapper
 MCW ?=LITEX_VEXRISCV
-# MPW_TAG ?= gf180-0
-MPW_TAG ?= main
+MPW_TAG ?= gfmpw-1
+# MPW_TAG ?= main
 
 # PDK switch varient
 export PDK?=gf180mcuA
