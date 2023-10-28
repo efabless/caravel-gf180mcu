@@ -48,7 +48,7 @@ MPW_TAG ?= gfmpw-1a
 # MPW_TAG ?= main
 
 # PDK switch varient
-export PDK?=gf180mcuA
+export PDK?=gf180mcuD
 
 # Install lite version of caravel, (1): caravel-lite, (0): caravel
 MCW_LITE?=1
