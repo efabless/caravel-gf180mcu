@@ -60,6 +60,6 @@ set spef_mapping(chip_core/gpio_defaults_block_7)                    $::env(CARA
 set spef_mapping(chip_core/gpio_defaults_block_8)                    $::env(CARAVEL_ROOT)/signoff/gpio_defaults_block/StarRC/gpio_defaults_block.${rc_corner}.spef
 set spef_mapping(chip_core/gpio_defaults_block_9)                    $::env(CARAVEL_ROOT)/signoff/gpio_defaults_block/StarRC/gpio_defaults_block.${rc_corner}.spef
 set spef_mapping(chip_core/por_inst)                                 $::env(CARAVEL_ROOT)/signoff/not-found/simple_por.${rc_corner}.spef
-set spef_mapping(chip_core/user_id_value)                            $::env(CARAVEL_ROOT)/signoff/user_id_programming/StarRC/user_id_programming.${rc_corner}.spef"
+set spef_mapping(chip_core/user_id_value)                            $::env(CARAVEL_ROOT)/signoff/user_id_programming/StarRC/user_id_programming.${rc_corner}.spef
 
 puts "\[INFO\]: Spef mapping done"
