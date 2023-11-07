@@ -3,7 +3,7 @@
 ## Signoff Results 
 - Summary of the results could be found [here](https://docs.google.com/spreadsheets/d/1GMmoiLWkMgvjO97ckXByb3EMgSlGpi4iA3jRxzxHTbQ/edit#gid=0)
 - LVS: the full report could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/caravel_signoff/signoff/caravel/standalone_pvr/report.lvs)
-- DRC: the total number of violations could be found [here](./standalone_pvr/summary.drc) and the error database could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/caravel_signoff/signoff/caravel/standalone_pvr/results_db.drc) 
+- DRC: the total number of violations could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/caravel_signoff/signoff/caravel/standalone_pvr/summary.drc) and the error database could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/caravel_signoff/signoff/caravel/standalone_pvr/results_db.drc) 
 - STA: 
     - Generated logs could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/gf180mcuD-signoff/signoff/caravel/primetime/logs/). 
     - Generated reports could be found [here](https://github.com/efabless/caravel-gf180mcu/tree/gf180mcuD-signoff/signoff/caravel/primetime/reports/). 
