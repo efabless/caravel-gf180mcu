@@ -1,0 +1,137 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel
+Version: U-2022.12-SP5
+Date   : Tue Nov  7 13:33:29 2023
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   flash_csb                                               -7.6697  (VIOLATED)
+   flash_clk                                               -5.1374  (VIOLATED)
+   flash_io0                                               -3.4715  (VIOLATED)
+   chip_core/housekeeping/_6860_/D                         -2.9890  (VIOLATED)
+   chip_core/housekeeping/_6859_/D                         -2.0818  (VIOLATED)
+   chip_core/_33702_/D                                     -1.1164  (VIOLATED)
+   chip_core/_33698_/D                                     -1.0876  (VIOLATED)
+   chip_core/_33711_/D                                     -1.0527  (VIOLATED)
+   chip_core/_33701_/D                                     -1.0102  (VIOLATED)
+   chip_core/_33685_/D                                     -0.9999  (VIOLATED)
+   chip_core/_33704_/D                                     -0.9966  (VIOLATED)
+   chip_core/_33705_/D                                     -0.8463  (VIOLATED)
+   chip_core/_33706_/D                                     -0.8417  (VIOLATED)
+   chip_core/_33708_/D                                     -0.7893  (VIOLATED)
+   chip_core/_33653_/D                                     -0.7875  (VIOLATED)
+   chip_core/_33649_/D                                     -0.7321  (VIOLATED)
+   chip_core/_33699_/D                                     -0.7200  (VIOLATED)
+   chip_core/_33659_/D                                     -0.7125  (VIOLATED)
+   chip_core/_33681_/D                                     -0.6613  (VIOLATED)
+   chip_core/_33707_/D                                     -0.6374  (VIOLATED)
+   chip_core/_33655_/D                                     -0.6140  (VIOLATED)
+   chip_core/_33669_/D                                     -0.5612  (VIOLATED)
+   chip_core/_33696_/D                                     -0.4486  (VIOLATED)
+   chip_core/_33689_/D                                     -0.4393  (VIOLATED)
+   chip_core/_33679_/D                                     -0.4176  (VIOLATED)
+   chip_core/_33687_/D                                     -0.3716  (VIOLATED)
+   chip_core/_33710_/D                                     -0.2668  (VIOLATED)
+   chip_core/_33664_/D                                     -0.2497  (VIOLATED)
+   chip_core/_33697_/D                                     -0.2124  (VIOLATED)
+   chip_core/_33692_/D                                     -0.1920  (VIOLATED)
+   chip_core/_33688_/D                                     -0.1841  (VIOLATED)
+   chip_core/_33680_/D                                     -0.1633  (VIOLATED)
+   chip_core/_33678_/D                                     -0.1595  (VIOLATED)
+   chip_core/_33684_/D                                     -0.1538  (VIOLATED)
+   chip_core/_36967_/D                                     -0.1473  (VIOLATED)
+   chip_core/_36969_/D                                     -0.1426  (VIOLATED)
+   chip_core/_33666_/D                                     -0.0827  (VIOLATED)
+   chip_core/_33671_/D                                     -0.0813  (VIOLATED)
+   chip_core/_33691_/D                                     -0.0730  (VIOLATED)
+   chip_core/_33683_/D                                     -0.0687  (VIOLATED)
+   chip_core/_33686_/D                                     -0.0311  (VIOLATED)
+
+
+   min_delay/hold ('clk' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   chip_core/_35171_/D                                     -0.2000  (VIOLATED)
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   chip_core/gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   padframe/flash_io1_pad/PAD   1.0000       6.0000        -5.0000  (VIOLATED)
+   padframe/mprj_pads[15]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[23]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[22]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[17]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[19]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[20]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[16]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[21]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[18]/PAD   1.0000       5.4300        -4.4300  (VIOLATED)
+   padframe/mprj_pads[25]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[29]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[26]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[30]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[32]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[33]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[34]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[35]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[37]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[24]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[27]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[31]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[1]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[5]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[10]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[6]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[13]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[0]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[11]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[12]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[14]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[8]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[9]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[7]/PAD   1.0000        5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[28]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/mprj_pads[36]/PAD   1.0000       5.4257        -4.4257  (VIOLATED)
+   padframe/flash_io0_pad/PAD   1.0000       4.5639        -3.5639  (VIOLATED)
+   padframe/flash_csb_pad/PAD   1.0000       4.5639        -3.5639  (VIOLATED)
+   padframe/flash_clk_pad/PAD   1.0000       4.5638        -3.5638  (VIOLATED)
+   padframe/mgmt_clock_input_pad/PAD   1.0000   3.5000     -2.5000  (VIOLATED)
+   padframe/mgmt_gpio_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[3]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[4]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/GWEN   2.7750   3.7407  -0.9657 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM03/RAM/GWEN   2.7750   3.7401  -0.9651 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[3]   2.7750   3.2641  -0.4891 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM00/RAM/CLK   2.7750   3.0454  -0.2704 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[6]   2.7750   3.0042  -0.2292 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/CLK   2.7750   2.9969  -0.2219 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM01/RAM/CLK   2.7750   2.9070  -0.1320 (VIOLATED)
+
+
+1

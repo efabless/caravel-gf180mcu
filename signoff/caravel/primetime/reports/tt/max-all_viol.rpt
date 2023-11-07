@@ -1,0 +1,88 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : caravel
+Version: U-2022.12-SP5
+Date   : Tue Nov  7 13:30:53 2023
+****************************************
+
+
+
+
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   chip_core/gpio_control_in_1[10].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_1[10].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[0]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[1]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+   chip_core/gpio_control_in_2[0].BUF[2]/Z   0.0010   0.0000  -0.0010 (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   padframe/flash_io1_pad/PAD   1.0000       6.0000        -5.0000  (VIOLATED)
+   padframe/mgmt_clock_input_pad/PAD   1.0000   3.5000     -2.5000  (VIOLATED)
+   padframe/mgmt_gpio_pad/PAD   1.0000       3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[3]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[4]/PAD   1.0000        3.5000        -2.5000  (VIOLATED)
+   padframe/mprj_pads[18]/PAD   1.0000       3.2118        -2.2118  (VIOLATED)
+   padframe/mprj_pads[16]/PAD   1.0000       3.2118        -2.2118  (VIOLATED)
+   padframe/mprj_pads[21]/PAD   1.0000       3.2118        -2.2118  (VIOLATED)
+   padframe/mprj_pads[23]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[20]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[22]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[19]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[17]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[15]/PAD   1.0000       3.2117        -2.2117  (VIOLATED)
+   padframe/mprj_pads[31]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[7]/PAD   1.0000        3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[24]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[27]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[5]/PAD   1.0000        3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[30]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[8]/PAD   1.0000        3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[9]/PAD   1.0000        3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[37]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[32]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[33]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[34]/PAD   1.0000       3.2092        -2.2092  (VIOLATED)
+   padframe/mprj_pads[35]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[28]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[6]/PAD   1.0000        3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[26]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[13]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[25]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[29]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[36]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[10]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[11]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[0]/PAD   1.0000        3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[12]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[14]/PAD   1.0000       3.2091        -2.2091  (VIOLATED)
+   padframe/mprj_pads[1]/PAD   1.0000        3.2091        -2.2091  (VIOLATED)
+   padframe/flash_clk_pad/PAD   1.0000       2.7200        -1.7200  (VIOLATED)
+   padframe/flash_csb_pad/PAD   1.0000       2.7200        -1.7200  (VIOLATED)
+   padframe/flash_io0_pad/PAD   1.0000       2.7200        -1.7200  (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/GWEN   1.5470   2.1258  -0.5788 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM03/RAM/GWEN   1.5470   2.1247  -0.5777 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[3]   1.5470   1.9711  -0.4241 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM03/RAM/D[6]   1.5470   1.8420  -0.2950 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM00/RAM/CLK   1.5470   1.7054  -0.1584 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/CLK   1.5470   1.6616  -0.1146 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM01/RAM/CLK   1.5470   1.6232  -0.0762 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM01/RAM/A[1]   1.5470   1.6123  -0.0653 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/A[1]   1.5470   1.6079  -0.0609 (VIOLATED)
+   chip_core/soc.core.sram.ram512x32.RAM02/RAM/D[1]   1.5470   1.5872  -0.0402 (VIOLATED)
+
+
+1
