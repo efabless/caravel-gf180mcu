@@ -89,29 +89,8 @@ caravan uut (
 caravel uut (
 `endif // caravan
 `endif // CPU_TYPE_ARM
-		`ifdef sky130
-		.vddio	  (vddio_tb),
-		.vddio_2  (vddio_2_tb),		
-		.vssio	  (vssio_tb),
-		.vssio_2  (vssio_2_tb),
-		.vdda	  (vdda_tb),
-		.vssa	  (vssa_tb),
-		.vccd	  (vccd_tb),
-		.vssd	  (vssd_tb),
-		.vdda1    (vdda1_tb),
-		.vdda1_2  (vdda1_2_tb),
-		.vdda2    (vdda2_tb),
-		.vssa1	  (vssa1_tb),
-		.vssa1_2  (vssa1_2_tb),
-		.vssa2	  (vssa2_tb),
-		.vccd1	  (vccd1_tb),
-		.vccd2	  (vccd2_tb),
-		.vssd1	  (vssd1_tb),
-		.vssd2	  (vssd2_tb),
-		`elsif gf180 
 		.VDD (vddio_tb),
 		.VSS (vssio_tb),
-		`endif // sky130
 		.clock	  (clock_tb),
 		.gpio     (gpio_tb),
 		.mprj_io  (mprj_io_tb),
@@ -122,25 +101,7 @@ caravel uut (
 		.resetb	  (resetb_tb)
 	);
 
-	`ifdef CPU_TYPE_ARM 
-	sst26wf080b flash(
-		.SCK (flash_clk_tb),
-		.SIO ({mprj_io_tb[37], mprj_io_tb[36], flash_io1_tb, flash_io0_tb} ),
-		.CEb (flash_csb_tb)
-	);
-	initial begin
-	$display("Reading %s",  FILENAME);
-	#1 $readmemh(FILENAME, flash.I0.memory);
-	//$display("Memory 5 bytes = 0x%02x 0x%02x 0x%02x 0x%02x 0x%02x",
-	//	memory[0], memory[1], memory[2],
-	//	memory[3], memory[4]);
-	$display("%s loaded into memory", FILENAME);
-	$display("Memory 5 bytes = 0x%02x 0x%02x 0x%02x 0x%02x 0x%02x",
-		flash.I0.memory[0], flash.I0.memory[1], flash.I0.memory[2],
-		flash.I0.memory[3], flash.I0.memory[4]);
-	end
- 	
-	`else
+
 	spiflash #(
 		FILENAME
 	) spiflash (
@@ -151,7 +112,25 @@ caravel uut (
 		.io2(),			// not used
 		.io3()			// not used
 	);
-	`endif // CPU_TYPE_ARM
+	// tie unused power signals
+	assign vddio_tb       = 1'b0; 
+	assign vddio_2_tb	  = 1'b0;	
+	assign vssio_tb       = 1'b0;
+	assign vssio_2_tb     = 1'b0;
+	assign vdda_tb        = 1'b0;
+	assign vssa_tb        = 1'b0;
+	assign vccd_tb        = 1'b0;
+	assign vssd_tb        = 1'b0;
+	assign vdda1_tb       = 1'b0;
+	assign vdda1_2_tb     = 1'b0;
+	assign vdda2_tb       = 1'b0;
+	assign vssa1_tb       = 1'b0;  
+	assign vssa1_2_tb     = 1'b0;
+	assign vssa2_tb       = 1'b0;
+	assign vccd1_tb       = 1'b0;
+	assign vccd2_tb       = 1'b0;
+	assign vssd1_tb       = 1'b0;
+	assign vssd2_tb       = 1'b0;
 `else // ! openframe
 	assign mprj_io_tb[38] = clock_tb;
 	caravel_openframe uut (

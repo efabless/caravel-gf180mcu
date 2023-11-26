@@ -53,28 +53,28 @@ module gpio_control_block #(
 
     // Serial data chain for pad configuration
     input  	 serial_data_in,
-    output 	 serial_data_out,
+    output 	reg serial_data_out,
 
     // User-facing signals
-    output	 user_gpio_in,		// Pad to user space
+    output	wire user_gpio_in,		// Pad to user space
     input        user_gpio_out,		// User space to pad
     input        user_gpio_oeb,		// Output enable (user)
 
     // Pad-facing signals (Pad GPIOv2)
-    output       pad_gpio_inen,
-    output       pad_gpio_outen,
-    output	 pad_gpio_out,
-    input	 pad_gpio_in,
-    output	 pad_gpio_slew_sel,
-    output	 pad_gpio_schmitt_sel,
-    output [1:0] pad_gpio_drive_sel,
-    output	 pad_gpio_pullup_sel,
-    output	 pad_gpio_pulldown_sel,
+    output   wire       pad_gpio_inen,
+    output   wire       pad_gpio_outen,
+    output	 wire       pad_gpio_out,
+    input	 wire       pad_gpio_in,
+    output	 wire       pad_gpio_slew_sel,
+    output	 wire       pad_gpio_schmitt_sel,
+    output   wire [1:0] pad_gpio_drive_sel,
+    output	 wire       pad_gpio_pullup_sel,
+    output	 wire       pad_gpio_pulldown_sel,
 
     // to provide a way to automatically disable/enable output
     // from the outside with needing a tiehi or tielo cell
-    output	 one,
-    output	 zero
+    output	wire one,
+    output	wire zero
 );
 
     /* Parameters defining the bit offset of each function in the chain */
@@ -101,21 +101,6 @@ module gpio_control_block #(
     reg		gpio_pullup_sel;
     reg		gpio_pulldown_sel;
 
-    /* Derived output values */
-    wire	pad_gpio_slew_sel;
-    wire      	pad_gpio_inen;
-    wire        pad_gpio_outen;
-    wire	pad_gpio_out;
-    wire	pad_gpio_in;
-    wire [1:0]  pad_gpio_drive_sel;
-    wire	pad_gpio_schmitt_sel;
-    wire	pad_gpio_pullup_sel;
-    wire	pad_gpio_pulldown_sel;
-    wire	one;
-    wire	zero;
-
-    wire user_gpio_in;
-    reg  serial_data_out;
 
     /* Serial shift for the above (latched) values */
     reg [PAD_CTRL_BITS-1:0] shift_register;

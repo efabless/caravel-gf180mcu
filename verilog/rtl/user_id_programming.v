@@ -26,9 +26,8 @@ module user_id_programming #(
     inout VDD,
     inout VSS,
 `endif
-    output [31:0] mask_rev
+    output wire [31:0] mask_rev
 );
-    wire [31:0] mask_rev;
     wire [31:0] user_proj_id_high;
     wire [31:0] user_proj_id_low;
 

@@ -33,14 +33,13 @@ module caravel_clocking(
     output core_clk,	// Output core clock
     output user_clk,	// Output user (secondary) clock
     output resetb_sync,	// Output propagated and buffered reset
-    output resetb_async	// Output propagated asynchronous reset
+    output wire resetb_async	// Output propagated asynchronous reset
 );
 
     wire pll_clk_sel;
     wire pll_clk_divided;
     wire pll_clk90_divided;
     wire core_ext_clk;
-    wire resetb_async;
     reg  use_pll_first;
     reg  use_pll_second;
     reg	 ext_clk_syncd_pre;
