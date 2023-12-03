@@ -44,11 +44,11 @@ LARGE_FILES_GZ_SPLIT += $(addsuffix .00.split, $(ARCHIVES))
 
 MCW_ROOT?=$(PWD)/mgmt_core_wrapper
 MCW ?=LITEX_VEXRISCV
-# MPW_TAG ?= gf180-0
-MPW_TAG ?= main
+MPW_TAG ?= gfmpw-1b
+# MPW_TAG ?= main
 
 # PDK switch varient
-export PDK?=gf180mcuA
+export PDK?=gf180mcuD
 
 # Install lite version of caravel, (1): caravel-lite, (0): caravel
 MCW_LITE?=1
@@ -82,7 +82,7 @@ STD_CELL_LIBRARY ?= sky130_fd_sc_hd
 SPECIAL_VOLTAGE_LIBRARY ?= sky130_fd_sc_hvl
 IO_LIBRARY ?= sky130_fd_io
 PRIMITIVES_LIBRARY ?= sky130_fd_pr
-OPEN_PDKS_COMMIT ?= 120b0bd69c745825a0b8b76f364043a1cd08bb6a
+OPEN_PDKS_COMMIT ?= e0f692f46654d6c7c99fc70a0c94a080dab53571
 
 
 .DEFAULT_GOAL := ship
@@ -108,6 +108,7 @@ __ship:
 	@echo "\
 		random seed `$(CARAVEL_ROOT)/scripts/set_user_id.py -report`; \
 		drc off; \
+		locking disable; \
 		crashbackups stop; \
 		addpath hexdigits; \
 		addpath alpha; \
@@ -121,7 +122,7 @@ __ship:
 		load $(UPRJ_ROOT)/mag/user_id_programming; \
 		load $(UPRJ_ROOT)/mag/user_id_textblock; \
 		load $(CARAVEL_ROOT)/macros/simple_por/maglef/simple_por; \
-		load $(UPRJ_ROOT)/mag/caravel_core; \
+		load $(UPRJ_ROOT)/mag/caravel_core -dereference; \
 		load $(CARAVEL_ROOT)/mag/caravel -dereference; \
 		select top cell; \
 		expand; \
@@ -129,6 +130,7 @@ __ship:
 		cif *array write disable; \
 		cellname rename caravel caravel_$(USER_ID); \
 		gds write $(UPRJ_ROOT)/gds/caravel_$(USER_ID).gds; \
+		feedback save $(UPRJ_ROOT)/gds/caravel_$(USER_ID).gds.feedback; \
 		quit -noprompt;" > $(UPRJ_ROOT)/mag/mag2gds_caravel.tcl
 ### Runs from CARAVEL_ROOT
 	@mkdir -p ./signoff/build

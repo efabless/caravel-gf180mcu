@@ -7,36 +7,36 @@ import argparse
 import os
 import glob
 
-def run_stxt_all (
+def run_stxt_all(
     design: str,
     root_dir: str,
     output_dir: str,
     log_dir: str,
 ):
     rc_corners = ["nom", "max", "min"]
-    for rc_corner in rc_corners: 
-            run_stxt(args.design, rc_corner, root, output, log)
+    for rc_corner in rc_corners:
+        run_stxt(design, rc_corner, root_dir, output_dir, log_dir)
 
-def run_stxt (
+def run_stxt(
     design: str,
     rc_corner: str,
     root_dir: str,
     output_dir: str,
     log_dir: str,
 ):
-    print (f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
-    star_sum, stxt_cmd_file_path = gen_stxt_cmd_file (design, rc_corner, root_dir, output_dir)
-    extract (stxt_cmd_file_path)
-    create_log (design, rc_corner, log_dir, stxt_cmd_file_path, star_sum)
+    print(f"StarRC extraction run for design: {design} at RC corner {rc_corner}")
+    star_sum, stxt_cmd_file_path = gen_stxt_cmd_file(design, rc_corner, root_dir, output_dir)
+    extract(stxt_cmd_file_path)
+    create_log(design, rc_corner, log_dir, stxt_cmd_file_path, star_sum)
 
-def extract (
+def extract(
     stxt_cmd_file_path: str,
 ):
     # StarRC command
-    stxt_command = f"source /tools/bashrc_snps; StarXtract {stxt_cmd_file_path}"
+    stxt_command = f"StarXtract {stxt_cmd_file_path}"
     os.system(stxt_command)
 
-def gen_stxt_cmd_file (
+def gen_stxt_cmd_file(
     design: str,
     rc_corner: str,
     root_dir: str,
@@ -44,15 +44,18 @@ def gen_stxt_cmd_file (
 ):
     # Enviornment Variables
     check_env_vars()
-    PDK_ROOT= os.getenv('PDK_ROOT')
+    PDK_ROOT = os.getenv('PDK_ROOT')
     PDK = os.getenv('PDK')
+    metal_stack = "9k"
+    if PDK.endswith("D"):
+        metal_stack = "11k"
     SCL = os.getenv('STD_CELL_LIBRARY')
     CARAVEL_ROOT = os.getenv('CARAVEL_ROOT')
     UPRJ_ROOT = os.getenv('UPRJ_ROOT')
     MCW_ROOT = os.getenv('MCW_ROOT')
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    
-    #Temporary directory to store star directory (must be relative path to run dir)
+
+    # Temporary directory to store star directory (must be relative path to run dir)
     star_dir = f"./star_dir_temp"
     try:
         os.makedirs(star_dir)
@@ -60,21 +63,21 @@ def gen_stxt_cmd_file (
         # directory already exists
         pass
 
-    #gf180 techfiles and corner temperatures
+    # gf180 techfiles and corner temperatures
     if rc_corner == "nom":
-        grd_file = "gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_typ.nxtgrd"
+        grd_file = f"gf180mcu_1p5m_1tm_{metal_stack}_sp_smim_OPTB_typ.nxtgrd"
         temp = "25"
     elif rc_corner == "max":
-        grd_file = "gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_wst.nxtgrd"
+        grd_file = f"gf180mcu_1p5m_1tm_{metal_stack}_sp_smim_OPTB_wst.nxtgrd"
         temp = "125"
     elif rc_corner == "min":
-        grd_file = "gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_bst.nxtgrd"
+        grd_file = f"gf180mcu_1p5m_1tm_{metal_stack}_sp_smim_OPTB_bst.nxtgrd"
         temp = "-40"
     map_file = "gf180mcu.starxt_map"
 
     # Create StarRC command file
     stxt_cmd_file_path = f"{SCRIPT_DIR}/star_cmd-{rc_corner}.xtcmd"
-    stxt_cmd_file = open(stxt_cmd_file_path,"w")
+    stxt_cmd_file = open(stxt_cmd_file_path, "w")
     stxt_cmd_file.write(f"BLOCK: {design}\n")
     stxt_cmd_file.write(f"TCAD_GRD_FILE: {SCRIPT_DIR}/gf180mcu-tech/{grd_file}\n")
     stxt_cmd_file.write(f"MAPPING_FILE: {SCRIPT_DIR}/gf180mcu-tech/{map_file}\n")
@@ -90,14 +93,17 @@ def gen_stxt_cmd_file (
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/{SCL}/techlef/{SCL}__{rc_corner}.tlef\n")
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/{SCL}/lef/{SCL}.lef\n")
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io.lef\n")
+    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram128x8m8wm1.lef\n")
+    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram256x8m8wm1.lef\n")
     stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef\n")
+    stxt_cmd_file.write(f"LEF_FILE: {PDK_ROOT}/{PDK}/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram64x8m8wm1.lef\n")
     stxt_cmd_file.write(f"LEF_FILE: {CARAVEL_ROOT}/macros/simple_por/lef/simple_por.lef\n")
-    root_dirs = [f'{CARAVEL_ROOT}',f'{MCW_ROOT}', f'{UPRJ_ROOT}']
+    root_dirs = [f'{CARAVEL_ROOT}', f'{MCW_ROOT}', f'{UPRJ_ROOT}']
     for dir in root_dirs:
         lef_files = glob.glob(f"{dir}/lef/*.lef")
         for lef in lef_files:
             stxt_cmd_file.write(f"LEF_FILE: {lef}\n")
-    
+
     stxt_cmd_file.write(f"TOP_DEF_FILE: {root_dir}/def/{design}.def\n")
     stxt_cmd_file.write(f"STAR_DIRECTORY: {star_dir}/{design}.{rc_corner}/\n")
     stxt_cmd_file.write(f"GPD: {SCRIPT_DIR}/" + star_dir.split("/")[-1] + f"/{design}.{rc_corner}.gpd\n")
@@ -112,11 +118,11 @@ def gen_stxt_cmd_file (
     stxt_cmd_file.write(f"COUPLE_TO_GROUND: NO\n")
     stxt_cmd_file.write(f"COUPLING_ABS_THRESHOLD: 1e-19\n")
     stxt_cmd_file.write(f"REDUCTION: NO_EXTRA_LOOPS\n")
-    
+
     stxt_cmd_file.close()
     return star_sum, stxt_cmd_file_path
 
-def create_log (
+def create_log(
     design: str,
     rc_corner: str,
     log_dir: str,
@@ -167,9 +173,10 @@ def check_env_vars():
         "Please export UPRJ_ROOT to the Caravel User Project Wrapper repo path"
         )
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Run StarRC extraction for gf180 PDK"
+        description="Run StarRC extraction for gf180mcu PDK"
     )
     parser.add_argument(
         "-d",
@@ -226,6 +233,6 @@ if __name__ == "__main__":
         pass
 
     if args.all:
-        run_stxt_all (args.design, root, output, log)
+        run_stxt_all(args.design, root, output, log)
     else:
         run_stxt(args.design, args.rc_corner, root, output, log)
