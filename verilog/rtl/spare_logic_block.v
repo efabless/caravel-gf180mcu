@@ -25,27 +25,18 @@ module spare_logic_block (
         inout VSS,
     `endif
 
-    output [30:0] spare_xz,	// Constant 0 outputs (and block inputs)
-    output [3:0]  spare_xi,	// Inverter outputs
-    output	  spare_xib,	// Big inverter output
-    output [1:0]  spare_xna,	// NAND outputs
-    output [1:0]  spare_xno,	// NOR outputs
-    output [1:0]  spare_xmx,	// Mux outputs
-    output [1:0]  spare_xfq	// Flop noninverted output
+    output wire[30:0] spare_xz,	// Constant 0 outputs (and block inputs)
+    output wire[3:0]  spare_xi,	// Inverter outputs
+    output wire	      spare_xib,	// Big inverter output
+    output wire[1:0]  spare_xna,	// NAND outputs
+    output wire[1:0]  spare_xno,	// NOR outputs
+    output wire[1:0]  spare_xmx,	// Mux outputs
+    output wire[1:0]  spare_xfq	// Flop noninverted output
 );
 
     wire [3:0] spare_logic_nc;
-
-    wire [3:0] spare_xi;
-    wire       spare_xib;
-    wire [1:0] spare_xna;
-    wire [1:0] spare_xno;
-    wire [1:0] spare_xmx;
-    wire [1:0] spare_xfq;
-
     wire [26:0] spare_logic0;
     wire [3:0] spare_logic1;
-    wire [30:0] spare_xz;
 
     // Rename the logic0 outputs at the block pins.
     assign spare_xz = {spare_logic1, spare_logic0};

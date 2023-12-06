@@ -32,9 +32,8 @@ module gpio_defaults_block #(
     inout VDD,
     inout VSS,
 `endif
-    output [9:0] gpio_defaults
+    output wire [9:0] gpio_defaults
 );
-    wire [9:0] gpio_defaults;
     wire [9:0] gpio_defaults_high;
     wire [9:0] gpio_defaults_low;
 
